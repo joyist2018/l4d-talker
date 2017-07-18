@@ -1,0 +1,3296 @@
+//Finales Response Rule File
+//For L4D2 by Morning Nine Nine and Head;Closer
+
+//CHOPPER FINALE
+criterion "WayToLand" "Concept" "WayToLand" required
+Response WayToLand {
+	sequential
+	norepeat
+	speak "npc.ChopperPilot_hospital_finale_intransit_09" noscene //No way I can land, I'm going to have to come in hot next to the pad.
+	speak "npc.ChopperPilot_hospital_finale_intransit_10" noscene //Mercy Hospital, get to the landing pad! Repeat. Get to the landing pad!
+}
+Rule WayToLand {
+	criteria WayToLand ChanceToFire50Percent
+	Response WayToLand
+}
+
+criterion "WayToLand2" "Concept" "WayToLand2" required
+Response WayToLand2 {
+	speak "npc.ChopperPilot_hospital_finale_intransit_10" noscene //Mercy Hospital, get to the landing pad! Repeat. Get to the landing pad!
+}
+Rule WayToLand2 {
+	criteria WayToLand2 ChanceToFire50Percent
+	Response WayToLand2
+}
+
+//GENERAL CRITERIA
+
+criterion "ChurchGuyPhase1" "worldChurchguyPhase" "<1" required //Used to gate churchguy far babbling
+criterion "ChurchGuyPhase2" "worldChurchguyPhase2" "<1" required //Used to gate churchguy close babbling
+criterion "ChurchguyPhase3" "worldChurchguyPhase3" "<1" required //Used to gate churchguy button press speech
+criterion "FrancisTriedCopGambit" "worldFrancisTriedCopGambit" "=1" required //Francis tried the cop gambit
+criterion "BoatPhase1" "worldBoatPhase1" "<1" required //Used to gate boat couple initial attract announcement cycle
+criterion "NotAmandaScene1" "worldAmandaScene1" "<1" required //Gate for Amanda boradcast loop response
+criterion "NotAmandaScene2" "worldAmandaScene2" "<1" required //Gate for Amanda boradcast loop response
+criterion "NotAmandaScene3" "worldAmandaScene3" "<1" required //Gate for Amanda boradcast loop response
+criterion "NotAmandaScene4" "worldAmandaScene4" "<1" required //Gate for Amanda boradcast loop response
+criterion "BoatPhase2" "worldBoatPhase2" "<1" required //Used to gate boat couple button press 1
+criterion "BoatIntransit1" "worldBoatIntransit" "<1" required //First boat finale breather
+criterion "BoatIntransit2" "worldBoatIntransit" "=1" required //Second boat finale breather
+criterion "BoatIntransit3" "worldBoatIntransit" "=2" required //Third boat finale breather
+criterion "BoatIntransit4" "worldBoatIntransit" "=3" required //Fourth boat finale breather
+criterion "BoatIntransit5" "worldBoatIntransit" "=4" required //Fifth boat finale breather
+criterion "BoatIntransit6" "worldBoatIntransit" "=5" required //Sixth boat finale breather
+criterion "BoatIntransit7" "worldBoatIntransit" "=6" required //Seventh boat finale breather
+criterion "BoatIntransit8" "worldBoatIntransit" "=7" required //Eighth boat finale breather
+criterion "ChanceToFire25Percent" "randomnum" "<=25" required //25% chance
+criterion "ExtraWeight10" "randomnum" ">=0" required weight 10 //Add 10 extra weight to a rule
+criterion "BoatWaiting" "worldBoatLeaving" "<1" required //Set to 1 when the boat pulls out of the dock
+criterion "PlaneLoop1" "worldPlaneLoop1" "<1" required //Used to gate planeguy initial attract loop
+criterion "PlaneLoop2" "worldPlaneLoop2" "<1" required //Used to gate planeguy button 2 nag
+criterion "PlaneLoop3" "worldPlaneLoop3" "<1" required //Used to gate "GET TO THE PLANE!" loop.
+criterion "ChurchguyTurnLoop" "worldChurchguyTurnLoop" "<1" required //Used to gate the churchguy turning into a zombie loop
+criterion "FarmPhase2" "worldFarmPhase2" "<1" required //Used to gate farm button1 loop
+criterion "FarmPhase3" "worldFarmPhase3" "<1" required //Used to gate farm button2 loop
+criterion "PlaneIntransit1" "worldPlaneIntransit" "<1" required //First Plane finale breather
+criterion "PlaneIntransit2" "worldPlaneIntransit" "=1" required //2nd Plane finale breather
+criterion "PlaneIntransit3" "worldPlaneIntransit" "=2" required //3rd Plane finale breather
+criterion "PlaneIntransit4" "worldPlaneIntransit" "=3" required //4th Plane finale breather
+criterion "PlaneIntransit5" "worldPlaneIntransit" "=4" required //5th Plane finale breather
+criterion "IsTouchedDoor" "worldTouchedDoor" "=1" required //Gates churchguy trigger
+criterion "ConceptFartSorry" "Concept" "FartSorry" required
+criterion "MilitaryIntransit" "worldMilitaryIntransit" "<1" required
+
+
+//BOAT FINALE
+
+
+//Inital broadcast from boat couple as survivors approach boathouse (ONGOING LOOP)
+	criterion "ConceptBlock500" "Concept" "ConceptBlock500" required
+Response ConceptBlock500 {
+	scene "scenes/npcs/boatman_radioinitialbroadcast02.vcd" then self ConceptBlock500 foo:0 10 //If there is anyone out there. This is John and Amanda Slater. We are a small fishing vessel anchored off Riverside.
+	scene "scenes/npcs/boatman_radioinitialbroadcast03.vcd" then self ConceptBlock500 foo:0 10 //If there are any survivors, please respond.
+	scene "scenes/npcs/boatman_radioinitialbroadcast05.vcd" then self ConceptBlock500 foo:0 10 //If you can hear me, please respond!
+	scene "scenes/npcs/boatman_radioinitialbroadcast07.vcd" then self ConceptBlock500 foo:0 10 //Is there anybody out there?
+	scene "scenes/npcs/boatman_radioinitialbroadcast08.vcd" then self ConceptBlock500 foo:0 10 //John and Amanda Slater! We are a fishing vessel anchored off Riverside! Come in please!
+	scene "scenes/npcs/boatman_radioinitialbroadcast09.vcd" then self ConceptBlock500 foo:0 10 //Come in, refugees! If you can hear this.
+	scene "scenes/npcs/boatman_radioinitialbroadcast11.vcd" then self ConceptBlock500 foo:0 10 //Anybody? Come on, please respond.
+	scene "scenes/npcs/boatman_radioinitialbroadcast12.vcd" then self ConceptBlock500 foo:0 10 //We have provisions and a route to safety. We just need to get there alive. Anyone with firepower, respond.
+	scene "scenes/npcs/boatman_radioinitialbroadcast13.vcd" then self ConceptBlock500 foo:0 10 //We will ferry anyone with firearms and ammo. Please respond.
+	scene "scenes/npcs/boatman_radioinitialbroadcast14.vcd" then self ConceptBlock500 foo:0 10 //We are anchored off Riverside. Anyone on this frequency with weapons and ammo, please respond.
+	scene "scenes/npcs/boatman_radioinitialbroadcast15.vcd" then self ConceptBlock500 foo:0 10 //Attention anyone with ammo and firearms. If you can hear me, please respond.
+	scene "scenes/npcs/boatman_radioinitialbroadcast16.vcd" then self ConceptBlock500 foo:0 10 //Anyone with some firepower on this frequency, pick up.
+	scene "scenes/npcs/boatman_radioinitialbroadcast17.vcd" then self ConceptBlock500 foo:0 10 //Come in, anyone armed. Please pick up.
+	scene "scenes/npcs/boatman_radioinitialbroadcast18.vcd" then self ConceptBlock500 foo:0 10 //If you can hear me, pick up!
+	scene "scenes/npcs/boatman_radioinitialbroadcast19.vcd" then self ConceptBlock500 foo:0 10 //If you're out there and you're armed, pick up!
+}
+Rule ConceptBlock500 {
+	criteria ConceptBlock500 BoatPhase1
+	Response ConceptBlock500
+}
+
+//Inital broadcast from boat couple as survivors approach boathouse (FIRST FIRE ONLY)
+	criterion "ConceptBlock501" "Concept" "boat_radio_broadcast" required
+Response ConceptBlock501 {
+	scene "scenes/npcs/boatman_radioinitialbroadcast02.vcd" then self ConceptBlock500 foo:0 6 //If there is anyone out there. This is John and Amanda Slater. We are a small fishing vessel anchored off Riverside.
+}
+Rule ConceptBlock501 {
+	criteria ConceptBlock501 BoatPhase1
+	Response ConceptBlock501
+}
+
+//NamVet hits radio button first time
+	criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
+Response ConceptBlock514 {
+	scene "scenes/npcs/boatman_blank.vcd" then NamVet ConceptBlock515 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock514 {
+	criteria ConceptBlock514 BoatPhase2 PanicEventNamVet
+	ApplyContext "BoatPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock514
+}
+
+	criterion "ConceptBlock515" "Concept" "ConceptBlock515" required
+Response ConceptBlock515 {
+	scene "scenes/NamVet/ReviveFriendA07.vcd" then orator_boat_radio ConceptBlock522 foo:0 -1.136 //How ya doin'?
+	scene "scenes/NamVet/WorldFarmHouseNPC02.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.720 //Hello?
+}
+Rule ConceptBlock515 {
+	criteria ConceptBlock515 BoatPhase2 IsNamVet
+	Response ConceptBlock515
+}
+
+//Biker hits radio button first time
+//USES criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
+Response ConceptBlock516 {
+	scene "scenes/npcs/boatman_blank.vcd" then Biker ConceptBlock517 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock516 {
+	criteria ConceptBlock514 BoatPhase2 PanicEventBiker
+	ApplyContext "BoatPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock516
+}
+
+	criterion "ConceptBlock517" "Concept" "ConceptBlock517" required
+Response ConceptBlock517 {
+	scene "scenes/Biker/ReviveFriendA07.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.863 //How ya doin'?
+	scene "scenes/Biker/WorldFarmHouseNPC01.vcd" then orator_boat_radio ConceptBlock522 foo:0 -1.493 //Uh, hello?
+}
+Rule ConceptBlock517 {
+	criteria ConceptBlock517 BoatPhase2 IsBiker
+	Response ConceptBlock517
+}
+
+//TeenGirl hits radio button first time
+//USES criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
+Response ConceptBlock518 {
+	scene "scenes/npcs/boatman_blank.vcd" then TeenGirl ConceptBlock519 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock518 {
+	criteria ConceptBlock514 BoatPhase2 PanicEventTeenGirl
+	ApplyContext "BoatPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock518
+}
+
+	criterion "ConceptBlock519" "Concept" "ConceptBlock519" required
+Response ConceptBlock519 {
+	scene "scenes/TeenGirl/scenariojoin12.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.636 //Hello!
+}
+Rule ConceptBlock519 {
+	criteria ConceptBlock519 BoatPhase2 IsTeenGirl
+	Response ConceptBlock519
+}
+
+//Manager hits radio button first time
+//USES criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
+Response ConceptBlock520 {
+	scene "scenes/npcs/boatman_blank.vcd" then Manager ConceptBlock521 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock520 {
+	criteria ConceptBlock514 BoatPhase2 PanicEventManager
+	ApplyContext "BoatPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock520
+}
+
+	criterion "ConceptBlock521" "Concept" "ConceptBlock521" required
+Response ConceptBlock521 {
+	scene "scenes/Manager/WorldFarmHouseNPC01.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.992 //Hello?
+	scene "scenes/Manager/WorldFarmHouseNPC16.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.948 //Hello?
+}
+Rule ConceptBlock521 {
+	criteria ConceptBlock521 BoatPhase2 IsManager
+	Response ConceptBlock521
+}
+
+	criterion "ConceptBlock522" "Concept" "ConceptBlock522" required
+Response ConceptBlock522 {
+	scene "scenes/npcs/boatman_radiobutton111.vcd" then Self ConceptBlock523 foo:0 .1 //Hello? Hello!
+}
+Rule ConceptBlock522 {
+	criteria ConceptBlock522 BoatPhase2
+	Response ConceptBlock522
+}
+
+	criterion "ConceptBlock523" "Concept" "ConceptBlock523" required
+Response ConceptBlock523 {
+	scene "scenes/npcs/boatman_radiobutton110.vcd" then Self ConceptBlock525 foo:0 6 //We're heading to the military outpost upriver. We can come get you in ten minutes. Arm yourselves for the trip and tell me when to head out.
+}
+Rule ConceptBlock523 {
+	criteria ConceptBlock523 BoatPhase2
+	Response ConceptBlock523
+}
+
+//Boat 2nd button push nags
+	criterion "ConceptBlock525" "Concept" "ConceptBlock525" required
+Response ConceptBlock525 {
+	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock525 foo:0 6 //[BLANK]
+	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock525 foo:0 6 //[BLANK]
+	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock525 foo:0 6 //[BLANK]
+	scene "scenes/npcs/boatman_radiobutton108.vcd" then self ConceptBlock525 foo:0 6 //They're gonna swarm when we come in. Stock up and radio back when you're ready.
+	scene "scenes/npcs/boatman_radionag01.vcd" then self ConceptBlock525 foo:0 6 //Tell us when you are ready to be picked up!
+	scene "scenes/npcs/boatman_radionag02.vcd" then self ConceptBlock525 foo:0 6 //Let us know when you're ready to be picked up!
+	scene "scenes/npcs/boatman_radionag03.vcd" then self ConceptBlock525 foo:0 6 //Tell us when you are ready to be picked up!
+	scene "scenes/npcs/boatman_radionag04.vcd" then self ConceptBlock525 foo:0 6 //Let us know when you're ready to be picked up!
+	scene "scenes/npcs/boatman_radionag05.vcd" then self ConceptBlock525 foo:0 6 //Use the radio to let us know when you're ready for pickup!
+}
+Rule ConceptBlock525 {
+	criteria ConceptBlock525 BoatPhase2
+	Response ConceptBlock525
+}
+
+//Biker hits radio button first time [COP GAMBIT]
+//USES criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
+Response ConceptBlock526 {
+	scene "scenes/npcs/boatman_blank.vcd" then Biker ConceptBlock527 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock526 {
+	criteria ConceptBlock514 BoatPhase2 PanicEventBiker ChanceToFire50Percent
+	ApplyContext "BoatPhase1:1:5000,FrancisTriedCopGambit:1:500,Talk:1:20"
+	ApplyContextToWorld
+	Response ConceptBlock526
+}
+
+	criterion "ConceptBlock527" "Concept" "ConceptBlock527" required
+Response ConceptBlock527 {
+	scene "scenes/Biker/worldsmalltownnpcboatman14.vcd" then orator_boat_radio ConceptBlock528 foo:0 -6.401 //Attention boat owner: We are the cops. I command you to pick us up.
+}
+Rule ConceptBlock527 {
+	criteria ConceptBlock527 BoatPhase2 IsBiker
+	Response ConceptBlock527
+}
+
+	criterion "ConceptBlock528" "Concept" "ConceptBlock528" required
+Response ConceptBlock528 {
+	scene "scenes/npcs/boatman_radiobutton123.vcd" then Self ConceptBlock530 foo:0 .05 //Hello? Honey, it's the police!
+}
+Rule ConceptBlock528 {
+	criteria ConceptBlock528 BoatPhase2
+	Response ConceptBlock528
+}
+
+	criterion "ConceptBlock530" "Concept" "ConceptBlock530" required
+Response ConceptBlock530 {
+	scene "scenes/npcs/boatman_radiobutton124.vcd" then Self ConceptBlock531 foo:0 7 //POLICE, RADIO US BACK WHEN YOU ARE READY FOR PICKUP!
+}
+Rule ConceptBlock530 {
+	criteria ConceptBlock530 BoatPhase2
+	Response ConceptBlock530
+}
+
+//Boat 2nd button push nags [COP GAMBIT]
+	criterion "ConceptBlock531" "Concept" "ConceptBlock531" required
+Response ConceptBlock531 {
+	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock531 foo:0 10 //[BLANK]
+	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock531 foo:0 10 //[BLANK]
+	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock531 foo:0 10 //[BLANK]
+	scene "scenes/npcs/boatman_radiobutton108.vcd" then self ConceptBlock531 foo:0 10 //They're gonna swarm when we come in. Stock up and radio back when you're ready.
+	scene "scenes/npcs/boatman_radionag03.vcd" then self ConceptBlock531 foo:0 10 //Tell us when you are ready to be picked up!
+	scene "scenes/npcs/boatman_radionag04.vcd" then self ConceptBlock531 foo:0 10 //Let us know when you're ready to be picked up!
+	scene "scenes/npcs/boatman_radionag05.vcd" then self ConceptBlock531 foo:0 10 //Use the radio to let us know when you're ready for pickup!
+	scene "scenes/npcs/boatman_radionag07.vcd" then self ConceptBlock531 foo:0 10 //Police: Let us know when you're ready to be picked up.
+}
+Rule ConceptBlock531 {
+	criteria ConceptBlock531 BoatPhase2
+	Response ConceptBlock531
+}
+
+//NamVet hits radio button second time
+	criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
+Response ConceptBlock532 {
+	scene "scenes/npcs/boatman_blank.vcd" then NamVet ConceptBlock536 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock532 {
+	criteria ConceptBlock532 PanicEventNamVet
+	ApplyContext "BoatPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock532
+}
+
+//Biker hits radio button second time
+//USES criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
+Response ConceptBlock533 {
+	scene "scenes/npcs/boatman_blank.vcd" then Biker ConceptBlock537 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock533 {
+	criteria ConceptBlock532 PanicEventBiker
+	ApplyContext "BoatPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock533
+}
+
+//TeenGirl hits radio button second time
+//USES criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
+Response ConceptBlock534 {
+	scene "scenes/npcs/boatman_blank.vcd" then TeenGirl ConceptBlock538 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock534 {
+	criteria ConceptBlock532 PanicEventTeenGirl
+	ApplyContext "BoatPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock534
+}
+
+//Manager hits radio button second time
+//USES criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
+Response ConceptBlock535 {
+	scene "scenes/npcs/boatman_blank.vcd" then Manager ConceptBlock539 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock535 {
+	criteria ConceptBlock532 PanicEventManager
+	ApplyContext "BoatPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock535
+}
+
+	criterion "ConceptBlock536" "Concept" "ConceptBlock536" required
+Response ConceptBlock536 {
+	scene "scenes/NamVet/worldsmalltownnpcboatman04.vcd" then orator_boat_radio ConceptBlock540 foo:0 -2.304 //Go on and head out. We're ready.
+	scene "scenes/NamVet/worldsmalltownnpcboatman05.vcd" then orator_boat_radio ConceptBlock540 foo:0 -2.368 //Come and get us. We're good to go.
+}
+Rule ConceptBlock536 {
+	criteria ConceptBlock536 IsNamVet
+	Response ConceptBlock536
+}
+
+	criterion "ConceptBlock537" "Concept" "ConceptBlock537" required
+Response ConceptBlock537 {
+	scene "scenes/Biker/WorldFarmHouseNPC04.vcd" then orator_boat_radio ConceptBlock540 foo:0 -0.903 //We're ready!
+	scene "scenes/Biker/WorldFarmHouseNPC05.vcd" then orator_boat_radio ConceptBlock540 foo:0 -0.950 //We're all set!
+	scene "scenes/Biker/worldsmalltownnpcboatman03.vcd" then orator_boat_radio ConceptBlock540 foo:0 -1.183 //Come get us!
+}
+Rule ConceptBlock537 {
+	criteria ConceptBlock537 IsBiker
+	Response ConceptBlock537
+}
+
+	criterion "ConceptBlock538" "Concept" "ConceptBlock538" required
+Response ConceptBlock538 {
+	scene "scenes/TeenGirl/answerready04.vcd" then orator_boat_radio ConceptBlock540 foo:0 -0.875 //Let's go.
+}
+Rule ConceptBlock538 {
+	criteria ConceptBlock538 IsTeenGirl
+	Response ConceptBlock538
+}
+
+	criterion "ConceptBlock539" "Concept" "ConceptBlock539" required
+Response ConceptBlock539 {
+	scene "scenes/Manager/worldsmalltownnpcboatman10.vcd" then orator_boat_radio ConceptBlock540 foo:0 -1.666 //Go on and head out. We're ready.
+}
+Rule ConceptBlock539 {
+	criteria ConceptBlock539 IsManager
+	Response ConceptBlock539
+}
+
+//Boatcouple responds to 2nd button press
+	criterion "ConceptBlock540" "Concept" "ConceptBlock540" required
+Response ConceptBlock540 {
+	scene "scenes/npcs/boatman_radiobutton205.vcd" //We'll be there in ten minutes.
+	scene "scenes/npcs/boatman_radiobutton207.vcd" //Alright, we're on our way.
+	scene "scenes/npcs/boatman_radiobutton212.vcd" //Allright, we're on our way. Make sure you clear the area. I don't want our first act of kindness to be our last.
+}
+Rule ConceptBlock540 {
+	criteria ConceptBlock540
+	Response ConceptBlock540
+}
+
+//Anyone hits the radio button 2nd time
+//USES criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
+Response ConceptBlock541 {
+	scene "scenes/npcs/boatman_radiobutton201.vcd" then Self ConceptBlock542 foo:0 0.05 //Perfect.
+}
+Rule ConceptBlock541 {
+	criteria ConceptBlock532 ChanceToFire50Percent ExtraWeight10
+	ApplyContext "BoatPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock541
+}
+
+	criterion "ConceptBlock542" "Concept" "ConceptBlock542" required
+Response ConceptBlock542 {
+	scene "scenes/npcs/boatman_radiointransit01.vcd" //Should be there in ten minutes!
+}
+Rule ConceptBlock542 {
+	criteria ConceptBlock542
+	Response ConceptBlock542
+}
+
+//Boat In Transit nag 1
+	criterion "ConceptBlock547" "Concept" "boat_radio_intransit" required
+Response ConceptBlock547 {
+	scene "scenes/npcs/boatman_radiointransit03.vcd" //Be there in about five minutes!
+}
+Rule ConceptBlock547 {
+	criteria ConceptBlock547 BoatIntransit1
+	ApplyContext "BoatInTransit:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock547
+}
+
+//Boat In Transit nag 2
+//USES criterion "ConceptBlock547" "Concept" "boat_radio_intransit" required
+Response ConceptBlock548 {
+	scene "scenes/npcs/boatman_radiointransit07.vcd" //We'll be there in three minutes!
+}
+Rule ConceptBlock548 {
+	criteria ConceptBlock547 BoatIntransit2
+	ApplyContext "BoatInTransit:2:5000"
+	ApplyContextToWorld
+	Response ConceptBlock548
+}
+
+//Boat In Transit nag 3
+//USES criterion "ConceptBlock547" "Concept" "boat_radio_intransit" required
+Response ConceptBlock549 {
+	scene "scenes/npcs/boatman_radiointransit06.vcd" //We'll be there in two minutes!
+}
+Rule ConceptBlock549 {
+	criteria ConceptBlock547 BoatIntransit3
+	ApplyContext "BoatInTransit:3:5000"
+	ApplyContextToWorld
+	Response ConceptBlock549
+}
+
+//Boat In Transit nag 4
+//USES criterion "ConceptBlock547" "Concept" "boat_radio_intransit" required
+Response ConceptBlock550 {
+	scene "scenes/npcs/boatman_radiointransit08.vcd" //We can see the shore! We're coming.
+}
+Rule ConceptBlock550 {
+	criteria ConceptBlock547 BoatIntransit4
+	ApplyContext "BoatInTransit:4:5000"
+	ApplyContextToWorld
+	Response ConceptBlock550
+}
+
+//Boat pulls into dock
+	criterion "ConceptBlock561" "Concept" "boat_speaker_arrived" required
+Response ConceptBlock561 {
+	scene "scenes/npcs/boatman_radioarrived01.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //All aboard, folks!
+}
+Rule ConceptBlock561 {
+	criteria ConceptBlock561 BoatWaiting
+	Response ConceptBlock561
+}
+
+//Boat pulls into dock loop
+	criterion "ConceptBlock563" "Concept" "ConceptBlock563" required
+Response ConceptBlock563 {
+	scene "scenes/npcs/boatman_radioarrived01.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //All aboard, folks!
+	scene "scenes/npcs/boatman_radioarrived02.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //Get in! Get in!
+	scene "scenes/npcs/boatman_radioarrived03.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //We ain't got all day, let's do this already!
+	scene "scenes/npcs/boatman_radioarrived06.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //Come on, come on! We're not waiting around here all day!
+	scene "scenes/npcs/boatman_radioarrived07.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //Let's go, we're here, we're here! Come on!
+	scene "scenes/npcs/boatman_radioarrived08.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //The boat's here! Hello?!? Get in the boat!
+}
+Rule ConceptBlock563 {
+	criteria ConceptBlock563 BoatWaiting
+	Response ConceptBlock563
+}
+
+//CHURCH FINALE
+
+
+//Initial Churchguy babbling before he notices the survivors.
+	criterion "ConceptBlock001" "Concept" "churchguy_far" required
+Response ConceptBlock001 {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast01.vcd" then self churchguy_far foo:0 .05 //I trusted you. You said you were immune. You said you were immune.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast02.vcd" then self churchguy_far foo:0 .05 //I trusted you. You said you were immune. You said you were immune. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast03.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry. I can't believe he bit me. Never should have let him in. Can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast04.vcd" then self churchguy_far foo:0 .05 //Won't fool me twice. I can't believe he bit me, I can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast05.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry. No matter how human they look. Won't be fooled twice.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast06.vcd" then self churchguy_far foo:0 .05 //It's been an hour. Been an hour. Must be immune. That's right, must be immune. No. I have to be immune.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast07.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry. Better safe than sorry. Better safe than sorry. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast08.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast09.vcd" then self churchguy_far foo:0 .05 //I can't believe he bit me. I never should have let him in. I can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast10.vcd" then self churchguy_far foo:0 .05 //Won't fool me twice. I can't believe he bit me! Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast11.vcd" then self churchguy_far foo:0 .05 //Don't get fooled twice. Don't get fooled twice. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast12.vcd" then self churchguy_far foo:0 .05 //I can't believe he bit me, that's - Don't get fooled twice.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast24.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast26.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry. Better safe than sorry. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast27.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry. Better safe than sorry. Better safe than sorry. [cough]
+	scene "scenes/npcs/churchguy_radioinitialbroadcast28.vcd" then self churchguy_far foo:0 .05 //I can't believe he bit me. I never should have let him in. I can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast29.vcd" then self churchguy_far foo:0 .05 //Better safe than sorry.
+}
+Rule ConceptBlock001 {
+	criteria ConceptBlock001 ChurchguyPhase1
+	ApplyContext "SaidSafeSpotAhead:1:120"
+	ApplyContextToWorld
+	Response ConceptBlock001
+}
+
+//[SEQUENCE START] Churchguy babbling after he notices the survivors.
+	criterion "ConceptBlock002A" "Concept" "churchguy_close" required
+Response ConceptBlock002A {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast13.vcd" then self ConceptBlock002B foo:0 .5 //Who's there?
+}
+Rule ConceptBlock002A {
+	criteria ConceptBlock002A ChurchguyPhase2
+	ApplyContext "ChurchguyPhase:1:100,SaidSafeSpotAhead:1:120"
+	ApplyContextToWorld
+	Response ConceptBlock002A
+}
+	criterion "ConceptBlock002B" "Concept" "ConceptBlock002B" required
+Response ConceptBlock002B {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast14.vcd" then self ConceptBlock002C foo:0 .5 //Is someone there?
+}
+Rule ConceptBlock002B {
+	criteria ConceptBlock002B ChurchguyPhase2
+	Response ConceptBlock002B
+}
+	criterion "ConceptBlock002C" "Concept" "ConceptBlock002C" required
+Response ConceptBlock002C {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast16.vcd" then Self ConceptBlock053 foo:0 3 //I've got a bell in here!
+}
+Rule ConceptBlock002C {
+	criteria ConceptBlock002C ChurchguyPhase2
+	Response ConceptBlock002C
+}
+//[SEQUENCE END] Churchguy babbling after he notices the survivors.
+
+	criterion "ConceptBlock004" "Concept" "ConceptBlock004" required
+Response ConceptBlock004 {
+	scene "scenes/npcs/churchguy_radiobutton113.vcd" fire relay_churchbell Trigger 2.9 then self ConceptBlock005 foo:0 .05 //I can make you leave. Don't believe me? [bell]
+}
+Rule ConceptBlock004 {
+	criteria ConceptBlock004 IsTouchedDoor
+	Response ConceptBlock004
+}
+
+	criterion "ConceptBlock005" "Concept" "ConceptBlock005" required
+Response ConceptBlock005 {
+	scene "scenes/npcs/churchguy_radiobutton114.vcd" then self ConceptBlock006 foo:0 .05 //HOW ABOUT NOW?
+}
+Rule ConceptBlock005 {
+	criteria ConceptBlock005
+	Response ConceptBlock005
+}
+
+	criterion "ConceptBlock006" "Concept" "ConceptBlock006" required
+Response ConceptBlock006 {
+	scene "scenes/npcs/churchguy_radiobutton1extended40.vcd" then self ConceptBlock007 foo:0 .05 //Ding dong! Ding dong!
+}
+Rule ConceptBlock006 {
+	criteria ConceptBlock006
+	Response ConceptBlock006
+}
+
+	criterion "ConceptBlock007" "Concept" "ConceptBlock007" required
+Response ConceptBlock007 {
+	scene "scenes/npcs/churchguy_radiobutton1extended43.vcd" fire relay_panicevent Trigger 1.6 then any conceptnuttier foo:0 .1 //Dinner's served! Come and get it!
+}
+Rule ConceptBlock007 {
+	criteria ConceptBlock007
+	ApplyContext "Talk:0:0"
+	ApplyContextToWorld
+	Response ConceptBlock007
+}
+
+//Biker presses the churchguy button
+	criterion "ConceptBlock008" "Concept" "churchguy_button" required
+Response ConceptBlock008 {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast13.vcd" then Biker ConceptBlock009 foo:0 .05 //Who's there?
+	scene "scenes/npcs/churchguy_radiobutton110.vcd" then Biker ConceptBlock040 foo:0 .05 //Go away! No one gets in!
+}
+Rule ConceptBlock008 {
+	criteria ConceptBlock008 PanicEventBiker ChurchguyPhase3
+	ApplyContext "ChurchguyPhase3:1:100,ChurchguyPhase2:1:100,WarnMegaMob:1:100,SaidSafeSpotAhead:1:120,Talk:1:20,TouchedDoor:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock008
+}
+
+	criterion "ConceptBlock009" "Concept" "ConceptBlock009" required
+Response ConceptBlock009 {
+	scene "scenes/Biker/worldsmalltownnpcbellman02.vcd" then churchguy ConceptBlock011 foo:0 -1.965 //Just open the goddamn door.
+	scene "scenes/Biker/worldsmalltownnpcbellman04.vcd" then churchguy ConceptBlock011 foo:0 -6.542 //Well, let's see: I'm Francis, and that's Grandpa Bill, and - THERE'S ZOMBIES OUT HERE OPEN THE GODDAMN DOOR.
+}
+Rule ConceptBlock009 {
+	criteria ConceptBlock009 IsBiker
+	Response ConceptBlock009
+}
+
+//Churchguy responds to Francis telling him they're cops
+	criterion "ConceptBlock010" "Concept" "ConceptBlock010" required
+Response ConceptBlock010 {
+	scene "scenes/npcs/churchguy_radiobutton1extended25.vcd" fire relay_churchbell Trigger 1 then self ConceptBlock006 foo:0 .05 //You don't sound like cops!
+}
+Rule ConceptBlock010 {
+	criteria ConceptBlock010 IsTouchedDoor
+	Response ConceptBlock010
+}
+
+//Churchguy responds to Francis being a smartass
+	criterion "ConceptBlock011" "Concept" "ConceptBlock011" required
+Response ConceptBlock011 {
+	scene "scenes/npcs/churchguy_radiobutton110.vcd" fire relay_churchbell Trigger 1 then self ConceptBlock006 foo:0 .05 //Go away! No one gets in!
+}
+Rule ConceptBlock011 {
+	criteria ConceptBlock011 IsTouchedDoor
+	Response ConceptBlock011
+}
+
+//NamVet responds to Churchguy ringing the bell
+	criterion "ConceptBlock012" "Concept" "ConceptNuttier" required
+Response ConceptBlock012 {
+	scene "scenes/NamVet/worldsmalltownnpcbellman03.vcd" //This guy's nuttier than candy bar shit.
+	scene "scenes/NamVet/worldsmalltownnpcbellman04.vcd" //I don't believe this.
+}
+Rule ConceptBlock012 {
+	criteria ConceptBlock012 IsNamVet
+	Response ConceptBlock012
+}
+
+//Biker responds to Churchguy ringing the bell
+//USES criterion "ConceptBlock012" "Concept" "ConceptNuttier" required
+Response ConceptBlock013 {
+	scene "scenes/Biker/worldsmalltownnpcbellman05.vcd" //I am going to tear that bell down and shove it up your ass!
+	scene "scenes/Biker/worldsmalltown03npc03.vcd" //If we live through this, I'm gonna frickin' kill that guy.
+}
+Rule ConceptBlock013 {
+	criteria ConceptBlock012 IsBiker
+	Response ConceptBlock013
+}
+
+//Manager presses the churchguy button
+//USES criterion "ConceptBlock008" "Concept" "churchguy_button" required
+Response ConceptBlock014 {
+	scene "scenes/npcs/churchguy_radiobutton101.vcd" then Manager ConceptBlock015 foo:0 .05 //No one gets in here until I know you're immune!
+	scene "scenes/npcs/churchguy_radiobutton1extended34.vcd" then Manager ConceptBlock015 foo:0 .05 //I'm not letting you in until I'm sure you're immune.
+	scene "scenes/npcs/churchguy_radiobutton1extended12.vcd" then Manager ConceptBlock017 foo:0 .05 //I'm the one who decides who gets through this door.
+	scene "scenes/npcs/churchguy_radiobutton110.vcd" then Manager ConceptBlock019 foo:0 .05 //Go away! No one gets in!
+}
+Rule ConceptBlock014 {
+	criteria ConceptBlock008 PanicEventManager ChurchguyPhase3
+	ApplyContext "ChurchguyPhase3:1:100,ChurchguyPhase2:1:100,WarnMegaMob:1:100,SaidSafeSpotAhead:1:120,Talk:1:20,TouchedDoor:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock014
+}
+
+	criterion "ConceptBlock015" "Concept" "ConceptBlock015" required
+Response ConceptBlock015 {
+	scene "scenes/Manager/worldsmalltownnpcbellman01.vcd" then churchguy ConceptBlock016 foo:0 -3.936 //Sir, please! We are NOT infected.
+}
+Rule ConceptBlock015 {
+	criteria ConceptBlock015 IsManager
+	Response ConceptBlock015
+}
+
+	criterion "ConceptBlock016" "Concept" "ConceptBlock016" required
+Response ConceptBlock016 {
+	scene "scenes/npcs/churchguy_radiobutton1extended35.vcd" fire relay_churchbell Trigger 2.85 then Self ConceptBlock006 foo:0 .3 //Not infected? Not infected? Prove it! [bell]
+}
+Rule ConceptBlock016 {
+	criteria ConceptBlock016 IsTouchedDoor
+	Response ConceptBlock016
+}
+
+	criterion "ConceptBlock017" "Concept" "ConceptBlock017" required
+Response ConceptBlock017 {
+	scene "scenes/Manager/GenericResponses02.vcd" then churchguy ConceptBlock018 foo:0 -0.692 //[Disbelief] What?
+}
+Rule ConceptBlock017 {
+	criteria ConceptBlock017 IsManager
+	Response ConceptBlock017
+}
+
+	criterion "ConceptBlock018" "Concept" "ConceptBlock018" required
+Response ConceptBlock018 {
+	scene "scenes/npcs/churchguy_radiobutton107.vcd" fire relay_churchbell Trigger 8.5 then Self ConceptBlock006 foo:0 .05 //My safehouse! Come here! No! Stay out! Slide your guns under the door! No! Go away! Better safe than sorry! Better safe than sorry! Better safe than sorry!
+}
+Rule ConceptBlock018 {
+	criteria ConceptBlock018 IsTouchedDoor
+	Response ConceptBlock018
+}
+
+	criterion "ConceptBlock019" "Concept" "ConceptBlock019" required
+Response ConceptBlock019 {
+	scene "scenes/Manager/worldsmalltownnpcbellman08.vcd" then churchguy ConceptBlock020 foo:0 -7.143 //Mister, if one of us get killed out here, I am gonna shoot my way in there and beat you to death with my gun!
+}
+Rule ConceptBlock019 {
+	criteria ConceptBlock019 IsManager
+	Response ConceptBlock019
+}
+
+	criterion "ConceptBlock020" "Concept" "ConceptBlock020" required
+Response ConceptBlock020 {
+	scene "scenes/npcs/churchguy_radiobutton1extended31.vcd" fire relay_churchbell Trigger 1.6 then Self ConceptBlock006 foo:0 .05 //Trying to intimidate me? [bell] Didn't help.
+	scene "scenes/npcs/churchguy_radiobutton1extended07.vcd" fire relay_churchbell Trigger 1 then Self ConceptBlock005 foo:0 1 //Really?
+}
+Rule ConceptBlock020 {
+	criteria ConceptBlock020 IsTouchedDoor
+	Response ConceptBlock020
+}
+
+//Francis responds to Churchguy ringing the bell after trying Cop thing
+//USES criterion "ConceptBlock012" "Concept" "ConceptNuttier" required
+Response ConceptBlock021 {
+	scene "scenes/Biker/worldsmalltownnpcbellman13.vcd" //Man, I don't think the cop thing worked.
+}
+Rule ConceptBlock021 {
+	criteria ConceptBlock012 IsBiker FrancisTriedCopGambit
+	Response ConceptBlock021
+}
+
+//Biker presses the churchguy button (Special Cop Response)
+//USES criterion "ConceptBlock008" "Concept" "churchguy_button" required
+Response ConceptBlock022 {
+	scene "scenes/npcs/churchguy_radiobutton110.vcd" then Biker ConceptBlock023 foo:0 .05 //Go away! No one gets in!
+}
+Rule ConceptBlock022 {
+	criteria ConceptBlock008 PanicEventBiker ChurchguyPhase3 ChanceToFire50Percent
+	ApplyContext "ChurchguyPhase3:1:100,ChurchguyPhase2:1:100,WarnMegaMob:1:100,SaidSafeSpotAhead:1:120,FrancisTriedCopGambit:1:45,Talk:1:20,TouchedDoor:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock022
+}
+
+	criterion "ConceptBlock023" "Concept" "ConceptBlock023" required
+Response ConceptBlock023 {
+	scene "scenes/Biker/worldsmalltownnpcbellman03.vcd" then churchguy ConceptBlock010 foo:0 -1.753 //We're cops. Open up.
+}
+Rule ConceptBlock023 {
+	criteria ConceptBlock023 IsBiker
+	Response ConceptBlock023
+}
+
+//NamVet presses the churchguy button
+//USES criterion "ConceptBlock008" "Concept" "churchguy_button" required
+Response ConceptBlock024 {
+	scene "scenes/npcs/churchguy_radiobutton101.vcd" then NamVet ConceptBlock025 foo:0 .05 //No one gets in here until I know you're immune!
+	scene "scenes/npcs/churchguy_radiobutton1extended34.vcd" then NamVet ConceptBlock025 foo:0 .05 //I'm not letting you in until I'm sure you're immune.
+	scene "scenes/npcs/churchguy_radiobutton1extended18.vcd" then Self ConceptBlock027 foo:0 .05 //[loud] NO!
+}
+Rule ConceptBlock024 {
+	criteria ConceptBlock008 PanicEventNamVet ChurchguyPhase3
+	ApplyContext "ChurchguyPhase3:1:100,ChurchguyPhase2:1:100,WarnMegaMob:1:100,SaidSafeSpotAhead:1:120,Talk:1:20,TouchedDoor:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock024
+}
+
+	criterion "ConceptBlock025" "Concept" "ConceptBlock025" required
+Response ConceptBlock025 {
+	scene "scenes/NamVet/worldsmalltownnpcbellman02.vcd" then churchguy ConceptBlock026 foo:0 -3.072 //We're as human as they come, son. I promise you.
+	scene "scenes/NamVet/worldsmalltownnpcbellman01.vcd" then churchguy ConceptBlock026 foo:0 -6.624 //Son, we're immune, we're tired, and there's infected in the damn woods. Now cut the shit and let us in!
+}
+Rule ConceptBlock025 {
+	criteria ConceptBlock025 IsNamVet
+	Response ConceptBlock025
+}
+
+	criterion "ConceptBlock026" "Concept" "ConceptBlock026" required
+Response ConceptBlock026 {
+	scene "scenes/npcs/churchguy_radiobutton1extended35.vcd" fire relay_churchbell Trigger 2.8 then Self ConceptBlock006 foo:0 .05 //Not infected? Not infected? Prove it! [bell]
+	scene "scenes/npcs/churchguy_radiobutton1extended13.vcd" fire relay_churchbell Trigger 6.1 then Self ConceptBlock006 foo:0 .05 //I - I opened the door before, and I got bit for my trouble. [bell] Better safe than sorry. Better safe than sorry!
+	scene "scenes/npcs/churchguy_radiobutton1extended11.vcd" fire relay_churchbell Trigger 3.2 then Self ConceptBlock006 foo:0 .05 //Only when I know you're human. Get ready for the test. [bell]
+	scene "scenes/npcs/churchguy_radiobutton1extended03.vcd" fire relay_churchbell Trigger 5.3 then Self ConceptBlock006 foo:0 .05 //Nonono! You said that last time! You said that last time. I trusted you last time!
+}
+Rule ConceptBlock026 {
+	criteria ConceptBlock026 IsTouchedDoor
+	Response ConceptBlock026
+}
+
+	criterion "ConceptBlock027" "Concept" "ConceptBlock027" required
+Response ConceptBlock027 {
+	scene "scenes/npcs/churchguy_radiobutton1extended20.vcd" then Namvet ConceptBlock028 foo:0 .05 //Nobody rides for free! Ding dong!
+	scene "scenes/npcs/churchguy_radiobutton1extended19.vcd" then Namvet ConceptBlock028 foo:0 .05 //You think you're special with your leather jackets and your fancy blood?
+}
+Rule ConceptBlock027 {
+	criteria ConceptBlock027
+	Response ConceptBlock027
+}
+
+	criterion "ConceptBlock028" "Concept" "ConceptBlock028" required
+Response ConceptBlock028 {
+	scene "scenes/NamVet/worldsmalltownnpcbellman07.vcd" then churchguy ConceptBlock029 foo:0 -5.856 //I don't believe this shit. We're arguin' for our lives here with a damn mental moron!
+	scene "scenes/NamVet/GenericResponses02.vcd" then churchguy ConceptBlock030 foo:0 -0.728 //[Disbelief] What?
+	scene "scenes/NamVet/reactiondisgusted04.vcd" then churchguy ConceptBlock030 foo:0 -1.820 //Oh shit.
+}
+Rule ConceptBlock028 {
+	criteria ConceptBlock028 IsNamVet
+	Response ConceptBlock028
+}
+
+	criterion "ConceptBlock029" "Concept" "ConceptBlock029" required
+Response ConceptBlock029 {
+	scene "scenes/npcs/churchguy_radiobutton1extended21.vcd" fire relay_churchbell Trigger 1.6 then churchguy ConceptBlock006 foo:0 .05 //I am not a mental moron!
+}
+Rule ConceptBlock029 {
+	criteria ConceptBlock029 IsTouchedDoor
+	Response ConceptBlock029
+}
+
+	criterion "ConceptBlock030" "Concept" "ConceptBlock030" required
+Response ConceptBlock030 {
+	scene "scenes/npcs/churchguy_radiobutton105.vcd" fire relay_churchbell Trigger 5.15 then churchguy ConceptBlock006 foo:0 .1 //I'm gonna ring this bell. I'm going to ring this bell! And they'll come! And they'll finish the job.
+}
+Rule ConceptBlock030 {
+	criteria ConceptBlock030 IsTouchedDoor
+	Response ConceptBlock030
+}
+
+//TeenGirl presses the churchguy button
+//USES criterion "ConceptBlock008" "Concept" "churchguy_button" required
+Response ConceptBlock031 {
+	scene "scenes/npcs/churchguy_radiobutton109.vcd" then TeenGirl ConceptBlock032 foo:0 .05 //No one gets in! [bell]
+	scene "scenes/npcs/churchguy_radiobutton110.vcd" then TeenGirl ConceptBlock032 foo:0 .05 //Go away! No one gets in!
+	scene "scenes/npcs/churchguy_radiobutton1extended18.vcd" then Self ConceptBlock036 foo:0 .05 //[loud] NO!
+	scene "scenes/npcs/churchguy_radiobutton106.vcd" then TeenGirl ConceptBlock037 foo:0 .05 //No! My safehouse! I've got the bell! You stay the hell out!
+}
+Rule ConceptBlock031 {
+	criteria ConceptBlock008 PanicEventTeenGirl ChurchguyPhase3
+	ApplyContext "ChurchguyPhase3:1:100,ChurchguyPhase2:1:100,WarnMegaMob:1:100,SaidSafeSpotAhead:1:120,Talk:1:20,TouchedDoor:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock031
+}
+
+	criterion "ConceptBlock032" "Concept" "ConceptBlock032" required
+Response ConceptBlock032 {
+	scene "scenes/TeenGirl/worldairport05npc02.vcd" then churchguy ConceptBlock033 foo:0 -3.563 //You know, we can *make* you open that goddamn door.
+	scene "scenes/TeenGirl/worldsmalltown03npc03.vcd" then churchguy ConceptBlock034 foo:0 -3.648 //Hey! Jerkass. Why don't you just open the goddamn door?
+	scene "scenes/TeenGirl/worldsmalltown03npc05.vcd" then churchguy ConceptBlock030 foo:0 -2.816 //You're not gonna just open the door? Really?
+}
+Rule ConceptBlock032 {
+	criteria ConceptBlock032 IsTeenGirl
+	Response ConceptBlock032
+}
+
+	criterion "ConceptBlock033" "Concept" "ConceptBlock033" required
+Response ConceptBlock033 {
+	scene "scenes/npcs/churchguy_radiobutton1extended07.vcd" fire relay_churchbell Trigger 0.68 then Self ConceptBlock005 foo:0 .5 //Really?
+	scene "scenes/npcs/churchguy_radiobutton1extended23.vcd" fire relay_churchbell Trigger 0.89 then Self ConceptBlock005 foo:0 .5 //Can you really? [bell]
+	scene "scenes/npcs/churchguy_radiobutton1extended32.vcd" fire relay_churchbell Trigger 2.5 then Self ConceptBlock006 foo:0 .4 //Well, you'll have to be alive to do that. [bell]
+}
+Rule ConceptBlock033 {
+	criteria ConceptBlock033 IsTouchedDoor
+	Response ConceptBlock033
+}
+
+	criterion "ConceptBlock034" "Concept" "ConceptBlock034" required
+Response ConceptBlock034 {
+	scene "scenes/npcs/churchguy_radiobutton1extended10.vcd" fire relay_churchbell Trigger 4.3 then Self ConceptBlock006 foo:0 .5 //Only when you can prove you're immune. And I know just how to do it. [bell]
+	scene "scenes/npcs/churchguy_radiobutton1extended11.vcd" fire relay_churchbell Trigger 3.2 then Self ConceptBlock006 foo:0 .5 //Only when I know you're human. Get ready for the test. [bell]
+}
+Rule ConceptBlock034 {
+	criteria ConceptBlock034 IsTouchedDoor
+	Response ConceptBlock034
+}
+
+	criterion "ConceptBlock035" "Concept" "ConceptBlock035" required
+Response ConceptBlock035 {
+	scene "scenes/TeenGirl/GenericResponses02.vcd" then churchguy ConceptBlock030 foo:0 -0.426 //[Disbelief] What?
+}
+Rule ConceptBlock035 {
+	criteria ConceptBlock035 IsTeenGirl
+	Response ConceptBlock035
+}
+
+	criterion "ConceptBlock036" "Concept" "ConceptBlock036" required
+Response ConceptBlock036 {
+	scene "scenes/npcs/churchguy_radiobutton1extended20.vcd" then TeenGirl ConceptBlock035 foo:0 .05 //Nobody rides for free! Ding dong!
+	scene "scenes/npcs/churchguy_radiobutton1extended19.vcd" then TeenGirl ConceptBlock035 foo:0 .05 //You think you're special with your leather jackets and your fancy blood?
+}
+Rule ConceptBlock036 {
+	criteria ConceptBlock036
+	Response ConceptBlock036
+}
+
+	criterion "ConceptBlock037" "Concept" "ConceptBlock037" required
+Response ConceptBlock037 {
+	scene "scenes/TeenGirl/worldairport05npc07.vcd" then churchguy ConceptBlock038 foo:0 -1.056 //What a dick.
+}
+Rule ConceptBlock037 {
+	criteria ConceptBlock037 IsTeenGirl
+	Response ConceptBlock037
+}
+
+	criterion "ConceptBlock038" "Concept" "ConceptBlock038" required
+Response ConceptBlock038 {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast22.vcd" then Self ConceptBlock039 foo:0 .1 //I heard that!
+}
+Rule ConceptBlock038 {
+	criteria ConceptBlock038
+	Response ConceptBlock038
+}
+
+	criterion "ConceptBlock039" "Concept" "ConceptBlock039" required
+Response ConceptBlock039 {
+	scene "scenes/npcs/churchguy_radiobutton1extended28.vcd" fire relay_churchbell Trigger 1.8 then Self ConceptBlock006 foo:0 .2 //Your word means shit to me! [bell]
+}
+Rule ConceptBlock039 {
+	criteria ConceptBlock039 IsTouchedDoor
+	Response ConceptBlock039
+}
+
+	criterion "ConceptBlock040" "Concept" "ConceptBlock040" required
+Response ConceptBlock040 {
+	scene "scenes/Biker/worldairport05npc02.vcd" then churchguy ConceptBlock033 foo:0 -4.736 //Listen candy-pants, we can *make* you open that goddamn door.
+	scene "scenes/Biker/swear14.vcd" then Biker ConceptBlock044 foo:0 -1.040 //Ah hell.
+}
+Rule ConceptBlock040 {
+	criteria ConceptBlock040 IsBiker
+	Response ConceptBlock040
+}
+
+	criterion "ConceptBlock041" "Concept" "ConceptBlock041" required
+Response ConceptBlock041 {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast22.vcd" then Self ConceptBlock042 foo:0 .2 //I heard that!
+}
+Rule ConceptBlock041 {
+	criteria ConceptBlock041
+	Response ConceptBlock041
+}
+
+	criterion "ConceptBlock042" "Concept" "ConceptBlock042" required
+Response ConceptBlock042 {
+	scene "scenes/npcs/churchguy_radiobutton1extended12.vcd" then Self ConceptBlock043 foo:0 .05 //I'm the one who decides who gets through this door.
+}
+Rule ConceptBlock042 {
+	criteria ConceptBlock042
+	Response ConceptBlock042
+}
+
+	criterion "ConceptBlock043" "Concept" "ConceptBlock043" required
+Response ConceptBlock043 {
+	scene "scenes/npcs/churchguy_radiobutton1extended20.vcd" fire relay_churchbell Trigger 1.1 then Self ConceptBlock007 foo:0 .05 //Nobody rides for free! Ding dong!
+}
+Rule ConceptBlock043 {
+	criteria ConceptBlock043 IsTouchedDoor
+	Response ConceptBlock043
+}
+
+	criterion "ConceptBlock044" "Concept" "ConceptBlock044" required
+Response ConceptBlock044 {
+	scene "scenes/Biker/worldairport05npc01.vcd" then churchguy ConceptBlock041 foo:0 -3.280 //Everyone but us is either a zombie or an asshole.
+}
+Rule ConceptBlock044 {
+	criteria ConceptBlock044 IsBiker
+	Response ConceptBlock044
+}
+
+	criterion "ConceptBlock049" "Concept" "ConceptBlock049" required
+Response ConceptBlock049 {
+	scene "scenes/Biker/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.800 //[Disbelief] What?
+}
+Rule ConceptBlock049 {
+	criteria ConceptBlock049 IsBiker
+	Response ConceptBlock049
+}
+
+	criterion "ConceptBlock050" "Concept" "ConceptBlock050" required
+Response ConceptBlock050 {
+	scene "scenes/Manager/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.692 //[Disbelief] What?
+}
+Rule ConceptBlock050 {
+	criteria ConceptBlock050 IsManager
+	Response ConceptBlock050
+}
+
+	criterion "ConceptBlock051" "Concept" "ConceptBlock051" required
+Response ConceptBlock051 {
+	scene "scenes/NamVet/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.728 //[Disbelief] What?
+}
+Rule ConceptBlock051 {
+	criteria ConceptBlock051 IsNamVet
+	Response ConceptBlock051
+}
+
+	criterion "ConceptBlock052" "Concept" "ConceptBlock052" required
+Response ConceptBlock052 {
+	scene "scenes/TeenGirl/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.426 //[Disbelief] What?
+}
+Rule ConceptBlock052 {
+	criteria ConceptBlock052 IsTeenGirl
+	Response ConceptBlock052
+}
+
+//Churchguy random babbling after he hears survivors
+	criterion "ConceptBlock053" "Concept" "ConceptBlock053" required
+Response ConceptBlock053 {
+	scene "scenes/npcs/churchguy_radioinitialbroadcast01.vcd" then Self ConceptBlock053 foo:0 .05 //I trusted you. You said you were immune. You said you were immune.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast03.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. I can't believe he bit me. Never should have let him in. Can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast04.vcd" then Self ConceptBlock053 foo:0 .05 //Won't fool me twice. I can't believe he bit me, I can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast05.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. No matter how human they look. Won't be fooled twice.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast06.vcd" then Self ConceptBlock053 foo:0 .05 //It's been an hour. Been an hour. Must be immune. That's right, must be immune. No. I have to be immune.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast07.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. Better safe than sorry. Better safe than sorry. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast02.vcd" then Self ConceptBlock053 foo:0 .05 //I trusted you. You said you were immune. You said you were immune. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast24.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast08.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast09.vcd" then Self ConceptBlock053 foo:0 .05 //I can't believe he bit me. I never should have let him in. I can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast10.vcd" then Self ConceptBlock053 foo:0 .05 //Won't fool me twice. I can't believe he bit me! Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast11.vcd" then Self ConceptBlock053 foo:0 .05 //Don't get fooled twice. Don't get fooled twice. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast12.vcd" then Self ConceptBlock053 foo:0 .05 //I can't believe he bit me, that's - Don't get fooled twice.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast26.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. Better safe than sorry. Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast27.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. Better safe than sorry. Better safe than sorry. [cough]
+	scene "scenes/npcs/churchguy_radioinitialbroadcast28.vcd" then Self ConceptBlock053 foo:0 .05 //I can't believe he bit me. I never should have let him in. I can't believe he bit me.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast29.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast13.vcd" then Self ConceptBlock053 foo:0 3 //Who's there?
+	scene "scenes/npcs/churchguy_radioinitialbroadcast14.vcd" then Self ConceptBlock053 foo:0 3 //Is someone there?
+	scene "scenes/npcs/churchguy_radioinitialbroadcast18.vcd" then Self ConceptBlock053 foo:0 3 //What's going on out there!
+	scene "scenes/npcs/churchguy_radioinitialbroadcast17.vcd" then Self ConceptBlock053 foo:0 3 //I'm gonna start ringin' this church bell if you don't say something.
+	scene "scenes/npcs/churchguy_radioinitialbroadcast15.vcd" then Self ConceptBlock053 foo:0 3 //Don't make me use this bell!
+	scene "scenes/npcs/churchguy_radioinitialbroadcast20.vcd" then Self ConceptBlock053 foo:0 3 //I can hear you out there!
+}
+Rule ConceptBlock053 {
+	criteria ConceptBlock053 ChurchguyPhase2
+	ApplyContext "SaidSafeSpotAhead:1:120"
+	ApplyContextToWorld
+	Response ConceptBlock053
+}
+
+//Biker presses the churchguy button [SPECIAL NAMVET RESPONSE]
+//USES criterion "ConceptBlock008" "Concept" "churchguy_button" required
+Response ConceptBlock555 {
+	scene "scenes/npcs/churchguy_radiobutton110.vcd" then Biker ConceptBlock558 foo:0 0.05 //Go away! No one gets in!
+}
+Rule ConceptBlock555 {
+	criteria ConceptBlock008 PanicEventBiker ChurchguyPhase3 ChanceToFire50Percent IsNamVetAlive
+	ApplyContext "ChurchguyPhase3:1:100,ChurchguyPhase2:1:100,WarnMegaMob:1:100,SaidSafeSpotAhead:1:120,Talk:1:20,TouchedDoor:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock555
+}
+
+	criterion "ConceptBlock556" "Concept" "ConceptBlock556" required
+Response ConceptBlock556 {
+	scene "scenes/NamVet/Generic41.vcd" then churchguy ConceptBlock557 foo:0 -0.6 //[indignant] Hey!
+}
+Rule ConceptBlock556 {
+	criteria ConceptBlock556 IsNamVet
+	Response ConceptBlock556
+}
+
+	criterion "ConceptBlock557" "Concept" "ConceptBlock557" required
+Response ConceptBlock557 {
+	scene "scenes/npcs/churchguy_radiobutton1extended16.vcd" then Self ConceptBlock559 foo:0 0.05 //Do you think I care how old you are?
+}
+Rule ConceptBlock557 {
+	criteria ConceptBlock557
+	Response ConceptBlock557
+}
+
+	criterion "ConceptBlock558" "Concept" "ConceptBlock558" required
+Response ConceptBlock558 {
+	scene "scenes/Biker/worldairport05npc04.vcd" then NamVet ConceptBlock556 foo:0 -3.0 //Have a heart, we gotta a helpless old man with us!
+}
+Rule ConceptBlock558 {
+	criteria ConceptBlock558 IsBiker
+	Response ConceptBlock558
+}
+
+	criterion "ConceptBlock559" "Concept" "ConceptBlock559" required
+Response ConceptBlock559 {
+	scene "scenes/npcs/churchguy_radiobutton1extended19.vcd" then Self ConceptBlock560 foo:0 0.05 //You think you're special with your leather jackets and your fancy blood?
+}
+Rule ConceptBlock559 {
+	criteria ConceptBlock559
+	Response ConceptBlock559
+}
+
+	criterion "ConceptBlock560" "Concept" "ConceptBlock560" required
+Response ConceptBlock560 {
+	scene "scenes/npcs/churchguy_radiobutton1extended18.vcd" then Self ConceptBlock043 foo:0 0.05 //[loud] NO!
+}
+Rule ConceptBlock560 {
+	criteria ConceptBlock560
+	Response ConceptBlock560
+}
+
+//Chruchguy turning into a zombie loop
+	criterion "ConceptBlock573" "Concept" "churchguy_door_unlocked" required
+Response ConceptBlock573 {
+	scene "scenes/npcs/churchguy_radiocombatcolor01.vcd" then self churchguy_door_unlocked foo:0 .05 //I can't believe he bit me. Better safe than - [groan] Better safe than [graon] [choke]
+	scene "scenes/npcs/churchguy_radiocombatcolor02.vcd" then self churchguy_door_unlocked foo:0 .05 //Better safe than - [growl] Better safe than [growl]
+	scene "scenes/npcs/churchguy_radiocombatcolor03.vcd" then self churchguy_door_unlocked foo:0 .05 //Better safe than - [growl]
+	scene "scenes/npcs/churchguy_radiocombatcolor04.vcd" then self churchguy_door_unlocked foo:0 .05 //[choking growl]
+	scene "scenes/npcs/churchguy_radiocombatcolor05.vcd" then self churchguy_door_unlocked foo:0 .05 //Must be immune - [groan] Must be immune [scream]
+	speak "npc.churchguy_RadioCombatColor09" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
+	speak "npc.churchguy_RadioCombatColor11" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
+	speak "npc.churchguy_RadioCombatColor12" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
+	speak "npc.churchguy_RadioCombatColor13" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
+	speak "npc.churchguy_RadioCombatColor15" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
+	speak "npc.churchguy_RadioCombatColor16" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
+}
+Rule ConceptBlock573 {
+	criteria ConceptBlock573 ChurchguyTurnLoop
+	Response ConceptBlock573
+}
+
+//Survivor opens churchguy door
+	criterion "ConceptBlock574" "Concept" "churchguy_door_opened" required
+Response ConceptBlock574 {
+	scene "scenes/npcs/churchguy_zombieyell.vcd"
+}
+Rule ConceptBlock574 {
+	criteria ConceptBlock574
+	ApplyContext "ChurchguyTurnLoop:1:7"
+	ApplyContextToWorld
+	Response ConceptBlock574
+}
+
+
+//Elevator Door Closes in Hospital
+	criterion "ConceptBlock600" "Concept" "elevator_closed" required
+Response ConceptBlock600 {
+	scene "scenes/npcs/orator_blank.vcd" then any elevator_conversation foo:0 5 //[BLANK]
+}
+Rule ConceptBlock600 {
+	criteria ConceptBlock600
+	ApplyContext "Talk:1:16"
+	ApplyContextToWorld
+	Response ConceptBlock600
+}
+
+//NamVet
+	criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock606 {
+	scene "scenes/NamVet/Generic33.vcd" then Biker ConceptBlock607 foo:0 -5.151 //We been immune so far, but - well, if I start to turn, promise you'll shoot me.
+}
+Rule ConceptBlock606 {
+	criteria ConceptBlock606 IsNamVet IsNamVetAlive IsBikerAlive
+	Response ConceptBlock606
+}
+
+	criterion "ConceptBlock607" "Concept" "ConceptBlock607" required
+Response ConceptBlock607 {
+	scene "scenes/Biker/Generic13.vcd" then NamVet ConceptBlock608 foo:0 -3.808 //What if just your beard starts to turn? Can I shoot that?
+}
+Rule ConceptBlock607 {
+	criteria ConceptBlock607 IsBiker
+	Response ConceptBlock607
+}
+
+	criterion "ConceptBlock608" "Concept" "ConceptBlock608" required
+Response ConceptBlock608 {
+	scene "scenes/NamVet/C6DLC3INTRO02.vcd" //Shut up, Francis.
+	scene "scenes/NamVet/C6DLC3INTRO16.vcd" //Shut up, Francis.
+	scene "scenes/NamVet/C6DLC3INTRO31.vcd" //You ever get tired of being an idiot, Francis?
+	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM12.vcd" //Cut the horseshit, Francis.
+	scene "scenes/NamVet/Generic14.vcd" //Don't be an ass, Francis.
+	scene "scenes/NamVet/Generic22.vcd" //Close your mouth and open your eyes, Francis. You'll aim better.
+	scene "scenes/NamVet/Generic23.vcd" //A few years in the service mighta slimmed you down and shut you up, Francis.
+	scene "scenes/NamVet/Generic24.vcd" //You know who's gonna survive this mess, Francis? It ain't the fella makin' jokes.
+	scene "scenes/NamVet/Generic27.vcd" //Speak up, Francis. Your voice got all muffled from yer head being so far up yer ass.
+	scene "scenes/NamVet/GenericResponses12.vcd" //[laughing] You are an idiot.
+}
+Rule ConceptBlock608 {
+	criteria ConceptBlock608 IsNamVet
+	Response ConceptBlock608
+}
+
+//Manager
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock609 {
+	scene "scenes/Manager/ZombieGenericShort11.vcd" then Self ConceptBlock610 foo:0 -1.557 //Ahhh, this ain't so bad.
+}
+Rule ConceptBlock609 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsNamVetAlive
+	Response ConceptBlock609
+}
+
+	criterion "ConceptBlock610" "Concept" "ConceptBlock610" required
+Response ConceptBlock610 {
+	scene "scenes/Manager/ZombieGenericShort18.vcd" then NamVet ConceptBlock611 foo:0 -2.646 //Humanity's gonna bounce right back, you watch.
+}
+Rule ConceptBlock610 {
+	criteria ConceptBlock610 IsManager
+	Response ConceptBlock610
+}
+
+	criterion "ConceptBlock611" "Concept" "ConceptBlock611" required
+Response ConceptBlock611 {
+	scene "scenes/NamVet/Generic44.vcd" //We're fightin' a war of attrition with a horde of brainless killing machines. I ain't exactly optimistic about our chances.
+}
+Rule ConceptBlock611 {
+	criteria ConceptBlock611 IsNamVet
+	Response ConceptBlock611
+}
+
+//Biker Short Laugh
+	criterion "ConceptBlock612" "Concept" "elevatorShortLaugh" required
+Response ConceptBlock612 {
+	scene "scenes/Biker/Laughter05.vcd" //<Short laugh>
+	scene "scenes/Biker/Laughter07.vcd" //<Short laugh>
+	scene "scenes/Biker/Laughter09.vcd" //<Short laugh>
+	scene "scenes/Biker/ReactionPositive01.vcd" //[laugh]
+}
+Rule ConceptBlock612 {
+	criteria ConceptBlock612 IsBiker
+	Response ConceptBlock612
+}
+
+//Manager Short Laugh
+//USES criterion "ConceptBlock612" "Concept" "elevatorShortLaugh" required
+Response ConceptBlock613 {
+	scene "scenes/Manager/Laughter01.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter03.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter06.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter08.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter09.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter19.vcd" //<Short laugh>
+}
+Rule ConceptBlock613 {
+	criteria ConceptBlock612 IsManager
+	Response ConceptBlock613
+}
+
+//NamVet Short Laugh
+//USES criterion "ConceptBlock612" "Concept" "elevatorShortLaugh" required
+Response ConceptBlock614 {
+	scene "scenes/NamVet/Laughter01.vcd" //<Short laugh>
+	scene "scenes/NamVet/Laughter06.vcd" //<Short laugh>
+	scene "scenes/NamVet/Laughter10.vcd" //<Short laugh>
+	scene "scenes/NamVet/Laughter13.vcd" //<Short laugh>
+	scene "scenes/NamVet/Laughter14.vcd" //<Short laugh>
+}
+Rule ConceptBlock614 {
+	criteria ConceptBlock612 IsNamVet
+	Response ConceptBlock614
+}
+
+//TeenGirl Short Laugh
+//USES criterion "ConceptBlock612" "Concept" "elevatorShortLaugh" required
+Response ConceptBlock615 {
+	scene "scenes/TeenGirl/PositiveNoise02.vcd" //[laugh]
+	scene "scenes/TeenGirl/Laughter04.vcd" //<Short laugh>
+	scene "scenes/TeenGirl/Laughter08.vcd" //<Short laugh>
+	scene "scenes/TeenGirl/Laughter19.vcd" //<Short laugh>
+	scene "scenes/TeenGirl/Laughter20.vcd" //<Short laugh>
+	scene "scenes/TeenGirl/Laughter21.vcd" //<Short laugh>
+}
+Rule ConceptBlock615 {
+	criteria ConceptBlock612 IsTeenGirl
+	Response ConceptBlock615
+}
+
+//MANAGER BURP
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock616 {
+	scene "scenes/Manager/Generic14.vcd" then all elevatorShortLaugh foo:0 -1.5 //BELCHE - excuse me -0.719
+}
+Rule ConceptBlock616 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsNotAlone
+	ApplyContext "TalkManager:1:4"
+	Response ConceptBlock616
+}
+
+//Teengirl Zombie bullshit
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock617 {
+	scene "scenes/TeenGirl/Generic26.vcd" //I can't get over how fast they all are. It's not even fair! I'm calling zombie bullshit on that, you know? [laughing at self] They're not allowed to be so fast.
+}
+Rule ConceptBlock617 {
+	criteria ConceptBlock606 IsTeenGirl IsTeenGirlAlive IsEveryoneAlive
+	Response ConceptBlock617
+}
+
+//TeenGirl - Humanity's gonna bounce right back
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock618 {
+	scene "scenes/TeenGirl/Generic04.vcd" then Manager ConceptBlock619 foo:0 -3.568 //You think one day its all just gonna go back to normal?
+}
+Rule ConceptBlock618 {
+	criteria ConceptBlock606 IsTeenGirl IsTeenGirlAlive IsManagerAlive
+	Response ConceptBlock618
+}
+
+	criterion "ConceptBlock619" "Concept" "ConceptBlock619" required
+Response ConceptBlock619 {
+	scene "scenes/Manager/ZombieGenericShort18.vcd" then TeenGirl ConceptBlock620 foo:0 -2.646 //Humanity's gonna bounce right back, you watch.
+}
+Rule ConceptBlock619 {
+	criteria ConceptBlock619 IsManager
+	Response ConceptBlock619
+}
+
+	criterion "ConceptBlock620" "Concept" "ConceptBlock620" required
+Response ConceptBlock620 {
+	scene "scenes/TeenGirl/Generic15.vcd" //You're an optimist. I'll give you that, Louis.
+}
+Rule ConceptBlock620 {
+	criteria ConceptBlock620 IsTeenGirl
+	Response ConceptBlock620
+}
+
+//NamVet Great Zombie attack of 57
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock621 {
+	scene "scenes/NamVet/Generic49.vcd" then any ConceptBlock622 foo:0 -6.6 //You call this a zombie apocalypse? It don't hold a candle to the great zombie attack of 1957. [beat] Nah, I'm horseshittin' ya.
+}
+Rule ConceptBlock621 {
+	criteria ConceptBlock606 IsNamVet IsNamVetAlive IsNotAlone
+	Response ConceptBlock621
+}
+
+	criterion "ConceptBlock622" "Concept" "ConceptBlock622" required
+Response ConceptBlock622 {
+	scene "scenes/TeenGirl/GenericResponses02.vcd" //[Disbelief] What?
+}
+Rule ConceptBlock622 {
+	criteria ConceptBlock622 IsTeenGirl
+	Response ConceptBlock622
+}
+
+Response ConceptBlock622_B {
+	scene "scenes/Biker/C6DLC3TANKINTRAINYARD09.vcd" //What?
+	scene "scenes/Biker/C6DLC3TANKINTRAINYARD10.vcd" //What?
+	scene "scenes/Biker/Generic65.vcd" //What?
+	scene "scenes/Biker/GenericResponses02.vcd" //[Disbelief] What?
+}
+Rule ConceptBlock622_B {
+	criteria ConceptBlock622 IsBiker
+	Response ConceptBlock622_B
+}
+
+Response ConceptBlock622_M {
+	scene "scenes/Manager/GenericResponses02.vcd" //[Disbelief] What?
+}
+Rule ConceptBlock622_M {
+	criteria ConceptBlock622 IsManager
+	Response ConceptBlock622_M
+}
+
+	criterion "ConceptBlock622_N" "Concept" "ConceptBlock622_N" required
+Response ConceptBlock622_N {
+	scene "scenes/NamVet/GenericResponses02.vcd" //[Disbelief] What?
+}
+Rule ConceptBlock622_N {
+	criteria ConceptBlock622_N IsNamVet ChanceToFire50Percent
+	Response ConceptBlock622_N
+}
+
+//MANAGER rifle range
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock623 {
+	scene "scenes/Manager/Generic20.vcd" then Biker ConceptBlock624 foo:0 -5.7 //Guys at the office used to laugh when I'd hit the rifle range on my lunch break. Ain't so damn funny now, is it?
+}
+Rule ConceptBlock623 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsBikerAlive
+	Response ConceptBlock623
+}
+
+	criterion "ConceptBlock624" "Concept" "ConceptBlock624" required
+Response ConceptBlock624 {
+	scene "scenes/Biker/Laughter03.vcd" //<Snort>
+	scene "scenes/Biker/Laughter10.vcd" //<Snort>
+}
+Rule ConceptBlock624 {
+	criteria ConceptBlock624 IsBiker
+	Response ConceptBlock624
+}
+
+//BIKER VAMPIRES
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock625 {
+	scene "scenes/Biker/Vampires01.vcd" then Manager ConceptBlock626 foo:0 -3.371 //Where the hell did all these vampires come from?
+}
+Rule ConceptBlock625 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsManagerAlive
+	Response ConceptBlock625
+}
+
+	criterion "ConceptBlock626" "Concept" "ConceptBlock626" required
+Response ConceptBlock626 {
+	scene "scenes/Manager/GenericResponses25.vcd" then Biker ConceptBlock627 foo:0 -2.219 //Tell me you ain't serious.
+}
+Rule ConceptBlock626 {
+	criteria ConceptBlock626 IsManager
+	Response ConceptBlock626
+}
+
+	criterion "ConceptBlock627" "Concept" "ConceptBlock627" required
+Response ConceptBlock627 {
+	scene "scenes/Biker/Generic65.vcd" then Manager ConceptBlock628 foo:0 -0.614 //What?
+	scene "scenes/Biker/GenericResponses02.vcd" then NamVet ConceptBlock628_N foo:0 -0.8 //[Disbelief] What?
+}
+Rule ConceptBlock627 {
+	criteria ConceptBlock627 IsBiker
+	Response ConceptBlock627
+}
+
+	criterion "ConceptBlock628" "Concept" "ConceptBlock628" required
+Response ConceptBlock628 {
+	scene "scenes/Manager/Generic23.vcd" then Biker ConceptBlock629 foo:0 -2.239 //They're ZOMBIES, Francis.
+}
+Rule ConceptBlock628 {
+	criteria ConceptBlock628 IsManager IsBikerNear500
+	Response ConceptBlock628
+}
+
+	criterion "ConceptBlock628_N" "Concept" "ConceptBlock628_N" required
+Response ConceptBlock628_N {
+	scene "scenes/NamVet/Generic39.vcd" then Biker ConceptBlock697 foo:0 -2.016 //They're zombies, Francis.
+}
+Rule ConceptBlock628_N {
+	criteria ConceptBlock628_N IsNamVet
+	Response ConceptBlock628_N
+}
+
+	criterion "ConceptBlock629" "Concept" "ConceptBlock629" required
+Response ConceptBlock629 {
+	scene "scenes/Biker/Vampires06.vcd" then TeenGirl LaughFrancis foo:0 .0 //Yeah whatever you say, Professor Monster.
+}
+Rule ConceptBlock629 {
+	criteria ConceptBlock629 IsBiker
+	Response ConceptBlock629
+}
+
+//BIKER COPS
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock630 {
+	scene "scenes/Biker/Generic70.vcd" then Manager ConceptBlock631 foo:0 -2.564 //If we meet anyone. Tell 'em we're cops.
+}
+Rule ConceptBlock630 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsManagerAlive
+	Response ConceptBlock630
+}
+
+	criterion "ConceptBlock631" "Concept" "ConceptBlock631" required
+Response ConceptBlock631 {
+	scene "scenes/Manager/GenericResponses02.vcd" then Biker ConceptBlock632 foo:0 -0.692 //[Disbelief] What?
+}
+Rule ConceptBlock631 {
+	criteria ConceptBlock631 IsManager
+	Response ConceptBlock631
+}
+
+	criterion "ConceptBlock632" "Concept" "ConceptBlock632" required
+Response ConceptBlock632 {
+	scene "scenes/Biker/Generic68.vcd" then Self ConceptBlock633 foo:0 -3.275 //Most people'll do anything if a cop tells 'em to.
+}
+Rule ConceptBlock632 {
+	criteria ConceptBlock632 IsBiker
+	Response ConceptBlock632
+}
+
+	criterion "ConceptBlock633" "Concept" "ConceptBlock633" required
+Response ConceptBlock633 {
+	scene "scenes/Biker/Generic71.vcd" //Trust me.
+}
+Rule ConceptBlock633 {
+	criteria ConceptBlock633 IsBiker
+	Response ConceptBlock633
+}
+
+//NamVet Biker handsome
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock634 {
+	scene "scenes/NamVet/ReactionApprehensive01.vcd" then Biker ConceptBlock635 foo:0 -2.742 //I have a bad feeling about this
+}
+Rule ConceptBlock634 {
+	criteria ConceptBlock606 IsNamVet IsNamVetAlive IsBikerAlive
+	Response ConceptBlock634
+}
+
+	criterion "ConceptBlock635" "Concept" "ConceptBlock635" required
+Response ConceptBlock635 {
+	scene "scenes/Biker/PlayerRevive03.vcd" then Any elevatorShortLaugh foo:0 -4.5 //Hey, look on the bright side: even if you don't make it, I'll still be really handsome.-4.863
+}
+Rule ConceptBlock635 {
+	criteria ConceptBlock635 IsBiker
+	Response ConceptBlock635
+}
+
+//Manager pretty mouth
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock636 {
+	scene "scenes/Manager/Generic22.vcd" then Biker ConceptBlock637 foo:0 -1.809 //How long were you in prison, Francis?
+}
+Rule ConceptBlock636 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsBikerAlive
+	Response ConceptBlock636
+}
+
+	criterion "ConceptBlock637" "Concept" "ConceptBlock637" required
+Response ConceptBlock637 {
+	scene "scenes/Biker/Generic09.vcd" then Any elevatorShortLaugh foo:0 -2.795 //Long enough to know you got a pretty mouth.
+}
+Rule ConceptBlock637 {
+	criteria ConceptBlock637 IsBiker
+	Response ConceptBlock637
+}
+
+//TeenGirl vet peace on earth
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock638 {
+	scene "scenes/TeenGirl/Generic04.vcd" then NamVet ConceptBlock639 foo:0 -3.568 //You think one day its all just gonna go back to normal?
+}
+Rule ConceptBlock638 {
+	criteria ConceptBlock606 IsTeenGirl IsTeenGirlAlive IsNamVetAlive
+	Response ConceptBlock638
+}
+
+	criterion "ConceptBlock639" "Concept" "ConceptBlock639" required
+Response ConceptBlock639 {
+	scene "scenes/NamVet/Generic29.vcd" then Manager ConceptBlock640 foo:0 -6.3 //I'll see peace back on earth if I gotta murder every one of these bastards with my bare goddamn hands.-6.89
+	scene "scenes/NamVet/GameSpeech01.vcd" then Manager ConceptBlock640 foo:0 -5.7 //I'll see peace back on earth if I gotta murder everyone of these animals with my own bare hands. Ownbare_09.wav-6.216
+	scene "scenes/NamVet/GettingRevived04.vcd" //Hell if I know.-1.451
+}
+Rule ConceptBlock639 {
+	criteria ConceptBlock639 IsNamVet
+	Response ConceptBlock639
+}
+
+	criterion "ConceptBlock640" "Concept" "ConceptBlock640" required
+Response ConceptBlock640 {
+	scene "scenes/Manager/ReactionPositive10.vcd" then NamVet ConceptBlock641 foo:0 -1 //That's what I'm talkin' about-1.171
+
+}
+Rule ConceptBlock640 {
+	criteria ConceptBlock640 IsManager IsNamVetNear500
+	Response ConceptBlock640
+}
+
+	criterion "ConceptBlock641" "Concept" "ConceptBlock641" required
+Response ConceptBlock641 {
+	scene "scenes/NamVet/Generic32.vcd" //Damn straight.
+}
+Rule ConceptBlock641 {
+	criteria ConceptBlock641 IsNamVet IssuerClose5
+	Response ConceptBlock641
+}
+
+//TeenGirl farts
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock642 {
+	scene "scenes/Biker/WorldHospital0403.vcd" then any ConceptBlock643 foo:0 -3.587 //Which one of you jackasses just beefed?
+}
+Rule ConceptBlock642 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsTeenGirlAlive
+	Response ConceptBlock642
+}
+
+	criterion "ConceptBlock643" "Concept" "ConceptBlock643" required
+Response ConceptBlock643_Z {
+	scene "scenes/TeenGirl/Sorry13.vcd" //Oops, sorry
+	scene "scenes/TeenGirl/NameFrancis03.vcd" then Biker FartSorry foo:0 -1.049 //Francis! (loud)
+	scene "scenes/TeenGirl/NameFrancis14.vcd" then Any elevatorshortlaugh foo:0 -2.654 //Francis (quiet)
+	scene "scenes/TeenGirl/WorldSmallTown0205.vcd" then Biker hospital03_path08a2 //Fresh air!-1.128
+	scene "scenes/TeenGirl/DLC2GasTanks02.vcd" then Biker CrashYerKidding foo:0 0.05 //Hahaha farting
+	scene "scenes/TeenGirl/DLC2GasTanks02.vcd" then Biker hospital03_path08a2 //Hahaha farting
+}
+Rule ConceptBlock643_Z {
+	criteria ConceptBlock643 IsTeenGirl
+	Response ConceptBlock643_Z
+}
+
+Response ConceptBlock643_M {
+	scene "scenes/Manager/WorldHospital0308.vcd" then Biker hospital03_path08a2 foo:0 -2.3 //Phew.. Francis..-2.794
+}
+Rule ConceptBlock643_M {
+	criteria ConceptBlock643 IsManager ChanceToFire30Percent
+	Response ConceptBlock643_M
+}
+
+Response FartSorry {
+	scene "scenes/Biker/Sorry07.vcd" //Yeah, guess that was my fault.
+	scene "scenes/Biker/Sorry09.vcd" //Sorry.
+	scene "scenes/Biker/Sorry13.vcd" then TeenGirl LaughFrancis foo:0 .0 //Whoopsie.
+	scene "scenes/Biker/Sorry16.vcd" then TeenGirl LaughFrancis foo:0 .0 //oopsy daisy
+	scene "scenes/Biker/Sorry18.vcd" //My bad.
+}
+Rule FartSorry {
+	criteria ConceptFartSorry IsBiker
+	Response FartSorry
+}
+
+//Death gonna pry me off the earth
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock644 {
+	scene "scenes/Biker/Generic30.vcd" then Manager ConceptBlock645 foo:0 -2.304 //Hey Louis, you look like shit.
+}
+Rule ConceptBlock644 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsManagerAlive
+	Response ConceptBlock644
+}
+
+	criterion "ConceptBlock645" "Concept" "ConceptBlock645" required
+Response ConceptBlock645 {
+	scene "scenes/Manager/ZombieGenericLong02.vcd" then NamVet ConceptBlock641 foo:0 -3.533 //I ain't dyin', man. Death gonna have to pry me off the Earth.
+	scene "scenes/Manager/ZombieGenericLong03.vcd" then Any elevatorshortlaugh foo:0 -5.787 //If I go down, go on without me. Actually, wait, no Save my ass.
+	scene "scenes/Manager/ZombieGenericLong14.vcd" then Any elevatorshortlaugh foo:0 -4.456 //I ain't got time to bleed. Oh hell, I *AM* bleedin'!
+	scene "scenes/Manager/GoingToDieLight16.vcd" then Any elevatorshortlaugh foo:0 -6.690 //I don't wanna die. I know nobody wants to die, but I'm like, fifty times that.
+}
+Rule ConceptBlock645 {
+	criteria ConceptBlock645 IsManager
+	Response ConceptBlock645
+}
+
+//teengirl Game over man!
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock646 {
+	scene "scenes/NamVet/Generic34.vcd" then TeenGirl ConceptBlock647 foo:0 -8.25 //Even bein' in a war doesn't prepare you for this. They never stop. They come at you and come at you and they *never* goddamn *stop*.
+}
+Rule ConceptBlock646 {
+	criteria ConceptBlock606 IsNamVet IsNamVetAlive IsTeenGirlAlive
+	Response ConceptBlock646
+}
+
+	criterion "ConceptBlock647" "Concept" "ConceptBlock647" required
+Response ConceptBlock647 {
+	scene "scenes/TeenGirl/GenericResponses37.vcd" then NamVet ConceptBlock648 foo:0 -2.34 //Game over man! Game over!
+}
+Rule ConceptBlock647 {
+	criteria ConceptBlock647 IsTeenGirl
+	Response ConceptBlock647
+}
+
+	criterion "ConceptBlock648" "Concept" "ConceptBlock648" required
+Response ConceptBlock648 {
+	scene "scenes/NamVet/Uncertain01.vcd" then TeenGirl ConceptBlock649 foo:0 -0.7 //What the hell was that?
+}
+Rule ConceptBlock648 {
+	criteria ConceptBlock648 IsNamVet
+	Response ConceptBlock648
+}
+
+	criterion "ConceptBlock649" "Concept" "ConceptBlock649" required
+Response ConceptBlock649 {
+	scene "scenes/TeenGirl/PositiveNoise02.vcd" then Manager ConceptBlock650 foo:0 -0.15 //[laugh]
+	scene "scenes/TeenGirl/Laughter04.vcd" then Manager ConceptBlock650 foo:0 -0.15 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter08.vcd" then Manager ConceptBlock650 foo:0 -0.15 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter19.vcd" then Manager ConceptBlock650 foo:0 -0.15 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter20.vcd" then Manager ConceptBlock650 foo:0 -0.15 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter21.vcd" then Manager ConceptBlock650 foo:0 -0.15 //<Short laugh>
+}
+Rule ConceptBlock649 {
+	criteria ConceptBlock649 IsTeenGirl
+	Response ConceptBlock649
+}
+
+	criterion "ConceptBlock650" "Concept" "ConceptBlock650" required
+Response ConceptBlock650 {
+	scene "scenes/Manager/Laughter01.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter03.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter06.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter08.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter09.vcd" //<Short laugh>
+	scene "scenes/Manager/Laughter19.vcd" //<Short laugh>
+}
+Rule ConceptBlock650 {
+	criteria ConceptBlock650 IsManager
+	Response ConceptBlock650
+}
+
+//Humming
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock651 {
+	scene "scenes/Biker/NervousHumming01.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming02.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming03.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming04.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming05.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming06.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming07.vcd" then NamVet ConceptBlock653 foo:0 -5.4 //[Not-So-Nervous Humming]
+}
+Rule ConceptBlock651 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsNamVetAlive
+	Response ConceptBlock651
+}
+
+	criterion "ConceptBlock652" "Concept" "ConceptBlock652" required
+Response ConceptBlock652 {
+	scene "scenes/Manager/NervousHumming01.vcd" then TeenGirl ConceptBlock654 foo:0 0.6 //[Nervous Humming]
+	scene "scenes/Manager/NervousWhislte01.vcd" then TeenGirl ConceptBlock654 foo:0 0.6 //[Nervous Whistle]
+}
+Rule ConceptBlock652 {
+	criteria ConceptBlock652 IsManager
+	Response ConceptBlock652
+}
+
+	criterion "ConceptBlock653" "Concept" "ConceptBlock653" required
+Response ConceptBlock653 {
+	scene "scenes/NamVet/NervousHumming01.vcd" then Manager ConceptBlock652 foo:0 -3.2 //[Nervous Humming]
+	scene "scenes/NamVet/NervousWhislte01.vcd" then Manager ConceptBlock652 foo:0 -3.2 //[Nervous Whistle]
+}
+Rule ConceptBlock653 {
+	criteria ConceptBlock653 IsNamVet
+	Response ConceptBlock653
+}
+
+	criterion "ConceptBlock654" "Concept" "ConceptBlock654" required
+Response ConceptBlock654 {
+	scene "scenes/TeenGirl/NervousHumming01.vcd" //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming02.vcd" //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousWhislte01.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte02.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte03.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte04.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte05.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/WorldHospital0401.vcd" //So um.. yeah.
+}
+Rule ConceptBlock654 {
+	criteria ConceptBlock654 IsTeenGirl
+	Response ConceptBlock654
+}
+
+//WE ARE UNSTOPPABLE
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock655 {
+	scene "scenes/TeenGirl/Generic03.vcd" then Manager ConceptBlock656 foo:0 -2.983 //Things like this never end well
+}
+Rule ConceptBlock655 {
+	criteria ConceptBlock606 IsTeenGirl IsTeenGirlAlive IsManagerAlive
+	Response ConceptBlock655
+}
+
+	criterion "ConceptBlock656" "Concept" "ConceptBlock656" required
+Response ConceptBlock656 {
+	scene "scenes/Manager/ZombieGenericShort10.vcd" then TeenGirl ConceptBlock657 foo:0 -2.571 //Come on, cheer up! We're almost through!
+}
+Rule ConceptBlock656 {
+	criteria ConceptBlock656 IsManager
+	Response ConceptBlock656
+}
+
+	criterion "ConceptBlock657" "Concept" "ConceptBlock657" required
+Response ConceptBlock657 {
+	scene "scenes/TeenGirl/NameLouis08.vcd" then Manager ConceptBlock658 foo:0 -0.917 //Louis! (quiet)
+	scene "scenes/TeenGirl/NameLouis10.vcd" then Manager ConceptBlock658 foo:0 -1.218 //Louis (quiet)
+}
+Rule ConceptBlock657 {
+	criteria ConceptBlock657 IsTeenGirl
+	Response ConceptBlock657
+}
+
+	criterion "ConceptBlock658" "Concept" "ConceptBlock658" required
+Response ConceptBlock658 {
+	scene "scenes/Manager/Hurrah11.vcd" then Manager ConceptBlock659 foo:0 -1.708 //We are unstoppable.
+}
+Rule ConceptBlock658 {
+	criteria ConceptBlock658 IsManager
+	Response ConceptBlock658
+}
+
+	criterion "ConceptBlock659" "Concept" "ConceptBlock659" required
+Response ConceptBlock659 {
+	scene "scenes/Manager/Hurrah12.vcd" then TeenGirl ConceptBlock662 foo:0 -2.989 //That's right, we should call ourselves the unstoppables
+}
+Rule ConceptBlock659 {
+	criteria ConceptBlock659 IsManager
+	Response ConceptBlock659
+}
+
+	criterion "ConceptBlock660" "Concept" "ConceptBlock660" required
+Response ConceptBlock660 {
+	scene "scenes/Manager/Hurrah10.vcd" then TeenGirl ConceptBlock661 foo:0 -3.9 //Nothing can stop us, do you hear me? Nothing can stop us!
+}
+Rule ConceptBlock660 {
+	criteria ConceptBlock660 IsManager
+	Response ConceptBlock660
+}
+
+	criterion "ConceptBlock661" "Concept" "ConceptBlock661" required
+Response ConceptBlock661 {
+	scene "scenes/TeenGirl/Laughter04.vcd" then NamVet ConceptBlock663 foo:0 -0.4 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter08.vcd" then NamVet ConceptBlock663 foo:0 -0.4 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter11.vcd" then NamVet ConceptBlock663 foo:0 -0.4 //<Hearty Laugh>
+}
+Rule ConceptBlock661 {
+	criteria ConceptBlock661 IsTeenGirl
+	Response ConceptBlock661
+}
+
+	criterion "ConceptBlock662" "Concept" "ConceptBlock662" required
+Response ConceptBlock662 {
+	scene "scenes/TeenGirl/PositiveNoise02.vcd" then Manager ConceptBlock660 foo:0 -0.01 //[laugh]
+	scene "scenes/TeenGirl/Laughter19.vcd" then Manager ConceptBlock660 foo:0 -0.01 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter20.vcd" then Manager ConceptBlock660 foo:0 -0.01 //<Short laugh>
+	scene "scenes/TeenGirl/Laughter21.vcd" then Manager ConceptBlock660 foo:0 -0.01 //<Short laugh>
+}
+Rule ConceptBlock662 {
+	criteria ConceptBlock662 IsTeenGirl
+	Response ConceptBlock662
+}
+
+	criterion "ConceptBlock663" "Concept" "ConceptBlock663" required
+Response ConceptBlock663 {
+	scene "scenes/NamVet/ViolenceAwe06.vcd" //<laugh>Whoa-ho-ho.
+	scene "scenes/NamVet/Taunt07.vcd" //[Loud, evil laugh]
+	scene "scenes/NamVet/Taunt08.vcd" //[Loud, evil laugh]
+	scene "scenes/NamVet/Taunt09.vcd" //[Loud, evil laugh]
+}
+Rule ConceptBlock663 {
+	criteria ConceptBlock663 IsNamVet
+	Response ConceptBlock663
+}
+
+//CUB SCOUTS
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock664 {
+	scene "scenes/Manager/ZombieGenericLong11.vcd" then any elevatorShortLaugh foo:0 -5.43 //Any of you guys in the Cub Scouts? Surprisingly ineffective at preparin' you for some shit like this.
+}
+Rule ConceptBlock664 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsWithThree
+	Response ConceptBlock664
+}
+//ELEV FINALE continue to: ConceptBlock695
+//Bridge is ready to cross in smalltown02 mini-finale
+	criterion "ConceptBlock665" "Concept" "BridgeReadyToCross" required
+Response ConceptBlock665 {
+	scene "scenes/npcs/orator_blank.vcd" then any BridgeCrossAlert foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock665 {
+	criteria ConceptBlock665
+	Response ConceptBlock665
+}
+
+//Actual response to Bridge is ready to cross in smalltown02 mini-finale
+	criterion "ConceptBlock666" "Concept" "BridgeCrossAlert" required
+Response ConceptBlock666 {
+	scene "scenes/TeenGirl/PathClear02.vcd" then Any bridgegogogo foo:0 0.5 //We're good to go! Come on!
+}
+Rule ConceptBlock666 {
+	criteria ConceptBlock666 IsTeenGirl
+	Response ConceptBlock666
+}
+
+//Actual response to Bridge is ready to cross in smalltown02 mini-finale
+//USES criterion "ConceptBlock666" "Concept" "BridgeCrossAlert" required
+Response ConceptBlock667 {
+	scene "scenes/Biker/PathClear02.vcd" then Any bridgegogogo foo:0 0.5 //We're good to go! Come on!
+}
+Rule ConceptBlock667 {
+	criteria ConceptBlock666 IsBiker
+	Response ConceptBlock667
+}
+
+//Actual response to Bridge is ready to cross in smalltown02 mini-finale
+//USES criterion "ConceptBlock666" "Concept" "BridgeCrossAlert" required
+Response ConceptBlock668 {
+	scene "scenes/NamVet/WorldFarmHouse0414.vcd" then Any bridgegogogo foo:0 0.5 //Cross the bridge! Go go go!
+}
+Rule ConceptBlock668 {
+	criteria ConceptBlock666 IsNamVet
+	Response ConceptBlock668
+}
+
+	criterion "ConceptBlock669" "Concept" "Bridgegogogo" required
+Response ConceptBlock669 {
+	scene "scenes/Manager/EmphaticGo04.vcd" //GO!
+}
+Rule ConceptBlock669 {
+	criteria ConceptBlock669 IsManager
+	Response ConceptBlock669
+}
+
+//USES criterion "ConceptBlock669" "Concept" "Bridgegogogo" required
+Response ConceptBlock670 {
+	scene "scenes/Biker/EmphaticGo03.vcd" //Go go go!
+}
+Rule ConceptBlock670 {
+	criteria ConceptBlock669 IsBiker
+	Response ConceptBlock670
+}
+
+//USES criterion "ConceptBlock669" "Concept" "Bridgegogogo" required
+Response ConceptBlock671 {
+	scene "scenes/NamVet/EmphaticGo01.vcd" //go go go
+	scene "scenes/NamVet/EmphaticRun04.vcd" //HAUL ASS!
+}
+Rule ConceptBlock671 {
+	criteria ConceptBlock669 IsNamVet
+	Response ConceptBlock671
+}
+
+Response ConceptBlock671_Z {
+	scene "scenes/TeenGirl/EmphaticGo01.vcd" //Go go go!
+	scene "scenes/TeenGirl/EmphaticRun12.vcd" //Keep moving! Come on, keep moving!
+}
+Rule ConceptBlock671_Z {
+	criteria ConceptBlock669 IsTeenGirl
+	Response ConceptBlock671_Z
+}
+
+//Bridge is ready to cross in Farm03 mini-finale
+//USES criterion "ConceptBlock665" "Concept" "BridgeReadyToCross" required
+Response ConceptBlock672 {
+	scene "scenes/npcs/orator_blank.vcd" then any BridgeCrossAlertFarm03 foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock672 {
+	criteria ConceptBlock665 IsFarm03
+	ApplyContext "Farm03BridgeDown:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock672
+}
+
+//Actual response to Bridge is ready to cross in smalltown02 mini-finale
+	criterion "ConceptBlock673" "Concept" "BridgeCrossAlertFarm03" required
+Response ConceptBlock673 {
+	scene "scenes/TeenGirl/PathClear02.vcd" then Any bridgegogogo foo:0 0.5 //We're good to go! Come on!
+}
+Rule ConceptBlock673 {
+	criteria ConceptBlock673 IsTeenGirl
+	Response ConceptBlock673
+}
+
+//Actual response to Bridge is ready to cross in smalltown02 mini-finale
+//USES criterion "ConceptBlock673" "Concept" "BridgeCrossAlertFarm03" required
+Response ConceptBlock674 {
+	scene "scenes/Biker/PathClear02.vcd" then Any bridgegogogo foo:0 0.5 //We're good to go! Come on!
+	scene "scenes/Biker/WorldFarmHouse0313.vcd" then Any bridgegogogo foo:0 0.5 //We can get up there now!
+}
+Rule ConceptBlock674 {
+	criteria ConceptBlock673 IsBiker
+	Response ConceptBlock674
+}
+
+//TrainCarUnhooked Biker
+	criterion "ConceptBlock675" "Concept" "TrainUnhooked" required
+Response ConceptBlock675 {
+	scene "scenes/npcs/orator_blank.vcd" then biker TrainUnhookedBiker foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock675 {
+	criteria ConceptBlock675 IsFarm03 PanicEventBiker
+	ApplyContext "Farm03Unhooked:1:0,SaidFarm03_path06:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock675
+}
+
+//TrainCarUnhooked Biker
+	criterion "ConceptBlock676" "Concept" "TrainUnhookedBiker" required
+Response ConceptBlock676 {
+	scene "scenes/Biker/WorldFarmHouse0312.vcd" //Watch out for the train!
+}
+Rule ConceptBlock676 {
+	criteria ConceptBlock676 IsBiker
+	Response ConceptBlock676
+}
+
+//TrainCarUnhooked NamVet
+//USES criterion "ConceptBlock675" "Concept" "TrainUnhooked" required
+Response ConceptBlock677 {
+	scene "scenes/npcs/orator_blank.vcd" then NamVet TrainUnhookedNamVet foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock677 {
+	criteria ConceptBlock675 IsFarm03 PanicEventNamVet
+	ApplyContext "Farm03Unhooked:1:0,SaidFarm03_path06:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock677
+}
+
+//TrainCarUnhooked NamVet
+	criterion "ConceptBlock678" "Concept" "TrainUnhookedNamVet" required
+Response ConceptBlock678 {
+	scene "scenes/NamVet/WorldFarmHouse0311.vcd" //All Aboard!
+}
+Rule ConceptBlock678 {
+	criteria ConceptBlock678 IsNamVet
+	Response ConceptBlock678
+}
+
+//TrainCarUnhooked TeenGirl
+//USES criterion "ConceptBlock675" "Concept" "TrainUnhooked" required
+Response ConceptBlock679 {
+	scene "scenes/npcs/orator_blank.vcd" then TeenGirl TrainUnhookedTeenGirl foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock679 {
+	criteria ConceptBlock675 IsFarm03 PanicEventTeenGirl
+	ApplyContext "Farm03Unhooked:1:0,SaidFarm03_path06:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock679
+}
+
+//TrainCarUnhooked TeenGirl
+	criterion "ConceptBlock680" "Concept" "TrainUnhookedTeenGirl" required
+Response ConceptBlock680 {
+	scene "scenes/TeenGirl/NiceJob51.vcd" //Okay.
+}
+Rule ConceptBlock680 {
+	criteria ConceptBlock680 IsTeenGirl
+	Response ConceptBlock680
+}
+
+//TrainCarUnhooked Manager
+//USES criterion "ConceptBlock675" "Concept" "TrainUnhooked" required
+Response ConceptBlock681 {
+	scene "scenes/npcs/orator_blank.vcd" then Manager TrainUnhookedManager foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock681 {
+	criteria ConceptBlock675 IsFarm03 PanicEventManager
+	ApplyContext "Farm03Unhooked:1:0,SaidFarm03_path06:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock681
+}
+
+//TrainCarUnhooked Manager
+	criterion "ConceptBlock682" "Concept" "TrainUnhookedManager" required
+Response ConceptBlock682 {
+	scene "scenes/Manager/LookOut05.vcd" //Heads up!
+}
+Rule ConceptBlock682 {
+	criteria ConceptBlock682 IsManager
+	Response ConceptBlock682
+}
+
+//Plane Crash in Airport05_Runway
+	criterion "ConceptBlock685" "Concept" "PlaneCrash" required
+Response ConceptBlock685 {
+	scene "scenes/npcs/orator_blank.vcd" then all PlaneCrashResponse foo:0 0.05 //[BLANK]
+}
+Rule ConceptBlock685 {
+	criteria ConceptBlock685
+	Response ConceptBlock685
+}
+
+//Plane Crash in Airport05_Runway Biker response
+	criterion "ConceptBlock686" "Concept" "PlaneCrashResponse" required
+Response ConceptBlock686 {
+	scene "scenes/Biker/ViolenceAwe02.vcd" predelay ".5,2" //Jee-zus..
+	scene "scenes/Biker/ViolenceAwe03.vcd" predelay ".5,2" //Holy crap.
+	scene "scenes/Biker/ViolenceAwe04.vcd" predelay ".5,2" //Whoa.
+	scene "scenes/Biker/ViolenceAwe05.vcd" predelay ".5,2" //Holy shit..
+	scene "scenes/Biker/ViolenceAwe06.vcd" predelay ".5,2" //Did you see that?
+}
+Rule ConceptBlock686 {
+	criteria ConceptBlock686 IsBiker
+	Response ConceptBlock686
+}
+
+//Plane Crash in Airport05_Runway NamVet response
+//USES criterion "ConceptBlock686" "Concept" "PlaneCrashResponse" required
+Response ConceptBlock687 {
+	scene "scenes/NamVet/ViolenceAwe01.vcd" predelay ".5,2" //Jee-zus..
+	scene "scenes/NamVet/ViolenceAwe04.vcd" predelay ".5,2" //Holy shit..
+	scene "scenes/NamVet/ViolenceAwe07.vcd" predelay ".5,2" //Holy Mother of God..
+	scene "scenes/NamVet/ViolenceAwe08.vcd" predelay ".5,2" //Christ almighty..
+}
+Rule ConceptBlock687 {
+	criteria ConceptBlock686 IsNamVet
+	Response ConceptBlock687
+}
+
+//Plane Crash in Airport05_Runway Manager response
+//USES criterion "ConceptBlock686" "Concept" "PlaneCrashResponse" required
+Response ConceptBlock688 {
+	scene "scenes/Manager/ViolenceAwe01.vcd" predelay ".5,2" //Whoa!
+	scene "scenes/Manager/ViolenceAwe02.vcd" predelay ".5,2" //Jee-zus..
+	scene "scenes/Manager/ViolenceAwe05.vcd" predelay ".5,2" //Holy shit..
+	scene "scenes/Manager/ViolenceAwe08.vcd" predelay ".5,2" //Jee-zus..
+	scene "scenes/Manager/ViolenceAwe10.vcd" predelay ".5,2" //Holy shit..
+}
+Rule ConceptBlock688 {
+	criteria ConceptBlock686 IsManager
+	Response ConceptBlock688
+}
+
+//Plane Crash in Airport05_Runway TeenGirl response
+//USES criterion "ConceptBlock686" "Concept" "PlaneCrashResponse" required
+Response ConceptBlock689 {
+	scene "scenes/TeenGirl/ViolenceAwe01.vcd" predelay ".5,2" //Wha-hoa!
+	scene "scenes/TeenGirl/ViolenceAwe02.vcd" predelay ".5,2" //Jee-zus..
+	scene "scenes/TeenGirl/ViolenceAwe03.vcd" predelay ".5,2" //Holy crap.
+	scene "scenes/TeenGirl/ViolenceAwe05.vcd" predelay ".5,2" //Holy shit..
+	scene "scenes/TeenGirl/ViolenceAwe06.vcd" predelay ".5,2" //Did you see that?
+	scene "scenes/TeenGirl/ViolenceAwe11.vcd" predelay ".5,2" //Whoa.
+	scene "scenes/TeenGirl/ViolenceAwe12.vcd" predelay ".5,2" //Jee-zus..
+	scene "scenes/TeenGirl/ViolenceAwe13.vcd" predelay ".5,2" //Holy crap.
+	scene "scenes/TeenGirl/ViolenceAwe15.vcd" predelay ".5,2" //Holy shit..
+	scene "scenes/TeenGirl/ViolenceAwe16.vcd" predelay ".5,2" //Did you see that?
+}
+Rule ConceptBlock689 {
+	criteria ConceptBlock686 IsTeenGirl
+	Response ConceptBlock689
+}
+
+//BIKER Not giving in to vampires
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock695 {
+	scene "scenes/Biker/GoingToDieLight11.vcd" then Manager ConceptBlock696_M foo:0 -3.7 //I ain't gonna let these goddamn vampires beat me.
+	scene "scenes/Biker/GoingToDieLight11.vcd" then NamVet ConceptBlock696 foo:0 -3.7 //I ain't gonna let these goddamn vampires beat me.
+}
+Rule ConceptBlock695 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsNamVetAlive
+	Response ConceptBlock695
+}
+
+	criterion "ConceptBlock696" "Concept" "ConceptBlock696" required
+Response ConceptBlock696 {
+	scene "scenes/NamVet/Generic39.vcd" then Biker ConceptBlock697 foo:0 -1.3 //They're zombies, Francis.
+}
+Rule ConceptBlock696 {
+	criteria ConceptBlock696 IsNamVet IsBikerNear500
+	Response ConceptBlock696
+}
+
+	criterion "ConceptBlock696_M" "Concept" "ConceptBlock696_M" required
+Response ConceptBlock696_M {
+	scene "scenes/Manager/Generic26.vcd" then Any VampiresBeatb foo:0 -3 //They ain't vampires, man, they're zombies. -3.222
+}
+Rule ConceptBlock696_M {
+	criteria ConceptBlock696_M IsManager
+	Response ConceptBlock696_M
+}
+
+	criterion "ConceptBlock697" "Concept" "ConceptBlock697" required
+Response ConceptBlock697 {
+	scene "scenes/Biker/Vampires10.vcd" //*What*ever.
+}
+Rule ConceptBlock697 {
+	criteria ConceptBlock697 IsBiker
+	Response ConceptBlock697
+}
+
+//BIKER Not giving in to vampires
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock698 {
+	scene "scenes/Biker/DoubleDeathResponse01.vcd" then Any ResponseWeCanStill foo:0 -3.984 //Two left. Allright. We can still do this.
+	scene "scenes/Biker/DoubleDeathResponse02.vcd" then Any ResponseTwoLeftShit foo:0 -2.182 //Just two of us left. Shit.
+	scene "scenes/Biker/DoubleDeathResponse03.vcd" then Any ResponseTougherFriends foo:0 -2.551 //You and me gotta find some tougher friends.
+}
+Rule ConceptBlock698 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsWithOne
+	Response ConceptBlock698
+}
+
+	criterion "ConceptBlock699" "Concept" "ResponseTougherFriends" required
+Response ConceptBlock699 {
+	scene "scenes/Manager/GenericResponses16.vcd" //Hell yes.
+	scene "scenes/Manager/GenericResponses32.vcd" //You're damn right.
+	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes02.vcd" //Yeah.
+}
+Rule ConceptBlock699 {
+	criteria ConceptBlock699 IsManager IsManagerAlive
+	Response ConceptBlock699
+}
+
+//USES criterion "ConceptBlock699" "Concept" "ResponseTougherFriends" required
+Response ConceptBlock700 {
+	scene "scenes/NamVet/GenericResponses06.vcd" //I'll say.
+	scene "scenes/NamVet/Yes03.vcd" //Yeah.
+}
+Rule ConceptBlock700 {
+	criteria ConceptBlock699 IsNamVet IsNamVetAlive
+	Response ConceptBlock700
+}
+
+//USES criterion "ConceptBlock699" "Concept" "ResponseTougherFriends" required
+Response ConceptBlock701 {
+	scene "scenes/TeenGirl/Yes17.vcd" //Yep
+}
+Rule ConceptBlock701 {
+	criteria ConceptBlock699 IsTeenGirl IsTeenGirlAlive
+	Response ConceptBlock701
+}
+
+	criterion "ConceptBlock702" "Concept" "ResponseTwoLeftShit" required
+Response ConceptBlock702 {
+	scene "scenes/Manager/GriefBiker03.vcd" //Oh shit. Shit. Shit shit shit.
+	scene "scenes/Manager/GriefBiker06.vcd" //Oh shit. Shit. Shit shit shit.
+	scene "scenes/Manager/Swears05.vcd" //Shit.
+	scene "scenes/Manager/Swears06.vcd" //Ah shit.
+	scene "scenes/Manager/Swears07.vcd" //Shit shit shit.
+	scene "scenes/Manager/Swears12.vcd" //Shit.
+	scene "scenes/Manager/Swears13.vcd" //Ah shit.
+}
+Rule ConceptBlock702 {
+	criteria ConceptBlock702 IsManager IsManagerAlive
+	Response ConceptBlock702
+}
+
+//USES criterion "ConceptBlock702" "Concept" "ResponseTwoLeftShit" required
+Response ConceptBlock703 {
+	scene "scenes/NamVet/ReactionDisgusted04.vcd" //Oh shit.
+	scene "scenes/NamVet/Swears12.vcd" //Ah shit.
+	scene "scenes/NamVet/Swears16.vcd" //Ah shit.
+	scene "scenes/NamVet/Swears19.vcd" //What a crock a' shit..
+}
+Rule ConceptBlock703 {
+	criteria ConceptBlock702 IsNamVet IsNamVetAlive
+	Response ConceptBlock703
+}
+
+//USES criterion "ConceptBlock702" "Concept" "ResponseTwoLeftShit" required
+Response ConceptBlock704 {
+	scene "scenes/TeenGirl/GettingRevived03.vcd" //Oh shit.
+	scene "scenes/TeenGirl/ReactionNegative17.vcd" //Shit. (matter of factly)
+	scene "scenes/TeenGirl/ReactionNegative31.vcd" //Shit. (matter of factly)
+	scene "scenes/TeenGirl/Swear02.vcd" //Shit.
+	scene "scenes/TeenGirl/Swear12.vcd" //Shit.
+	scene "scenes/TeenGirl/Swear14.vcd" //Shit.
+}
+Rule ConceptBlock704 {
+	criteria ConceptBlock702 IsTeenGirl IsTeenGirlAlive
+	Response ConceptBlock704
+}
+
+	criterion "ConceptBlock705" "Concept" "ResponseWeCanStill" required
+Response ConceptBlock705 {
+	scene "scenes/Manager/GenericResponses40.vcd" //Hell yeah.
+	scene "scenes/Manager/GenericResponses16.vcd" //Hell yes.
+	scene "scenes/Manager/GenericResponses32.vcd" //You're damn right.
+}
+Rule ConceptBlock705 {
+	criteria ConceptBlock705 IsManager IsManagerAlive
+	Response ConceptBlock705
+}
+
+//USES criterion "ConceptBlock705" "Concept" "ResponseWeCanStill" required
+Response ConceptBlock706 {
+	scene "scenes/TeenGirl/Taunt21.vcd" //YESSS!
+	scene "scenes/TeenGirl/ReactionNegativeSpecial11.vcd" //Great.
+	scene "scenes/TeenGirl/Yes17.vcd" //Yep
+}
+Rule ConceptBlock706 {
+	criteria ConceptBlock705 IsTeenGirl IsTeenGirlAlive
+	Response ConceptBlock706
+}
+
+//USES criterion "ConceptBlock705" "Concept" "ResponseWeCanStill" required
+Response ConceptBlock707 {
+	scene "scenes/NamVet/Generic32.vcd" //Damn straight.
+	scene "scenes/NamVet/YouAreWelcome10.vcd" //Yeah, yeah, yeah.
+	scene "scenes/NamVet/YouAreWelcome14.vcd" //Yeah, okay, it don't mean we're married now
+}
+Rule ConceptBlock707 {
+	criteria ConceptBlock705 IsNamVet IsNamVetAlive
+	Response ConceptBlock707
+}
+
+//BIKER I don't hate vests
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock708 {
+	scene "scenes/Biker/WorldHospital0201.vcd" then Self ConceptBlock709 foo:0 2.0 //I hate subways.
+	scene "scenes/Biker/WorldHospital0408.vcd" then Self ConceptBlock709 foo:0 2.0 //I hate hospitals.
+	scene "scenes/Biker/WorldHospital0409.vcd" then Self ConceptBlock709 foo:0 2.0 //I hate elevators.(official)
+}
+Rule ConceptBlock708 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsNamVetAlive
+	Response ConceptBlock708
+}
+
+	criterion "ConceptBlock709" "Concept" "ConceptBlock709" required
+Response ConceptBlock709 {
+	scene "scenes/Biker/WorldHospital0308.vcd" then Self ConceptBlock710 foo:0 2.0 //I hate sewers.
+	scene "scenes/Biker/WorldHospital0410.vcd" then Self ConceptBlock710 foo:0 2.0 //I hate stairs.
+	scene "scenes/Biker/WorldHospital0501.vcd" then Self ConceptBlock710 foo:0 2.0 //I hate helicopters.(official)
+}
+Rule ConceptBlock709 {
+	criteria ConceptBlock709 IsBiker
+	Response ConceptBlock709
+}
+
+	criterion "ConceptBlock710" "Concept" "ConceptBlock710" required
+Response ConceptBlock710 {
+	scene "scenes/Biker/WorldHospital0404.vcd" then NamVet ConceptBlock711 foo:0 -4.64 //I hate hospitals. And doctors and lawyers and cops..
+}
+Rule ConceptBlock710 {
+	criteria ConceptBlock710 IsBiker
+	Response ConceptBlock710
+}
+
+	criterion "ConceptBlock711" "Concept" "ConceptBlock711" required
+Response ConceptBlock711 {
+	scene "scenes/NamVet/Generic03.vcd" then Biker ConceptBlock712 foo:0 -2.721 //Francis, is there anything you don't hate?
+}
+Rule ConceptBlock711 {
+	criteria ConceptBlock711 IsNamVet
+	Response ConceptBlock711
+}
+
+	criterion "ConceptBlock712" "Concept" "ConceptBlock712" required
+Response ConceptBlock712 {
+	scene "scenes/Biker/DLC2Intro20.vcd" then NamVet ConceptBlock622_N foo:0 -4.822 //[sincere] Wow! I love helicopters! I love 'em so much. -4.822
+	scene "scenes/Biker/WorldSmallTown0513.vcd" //You know what I don't hate? I don't hate vests. -3.574
+	scene "scenes/Biker/WorldFarmHouse0528.vcd" then NamVet ConceptBlock622_N foo:0 -3.2 //I LOVE the goddamn army! -3.2
+}
+Rule ConceptBlock712 {
+	criteria ConceptBlock712 IsBiker
+	Response ConceptBlock712
+}
+
+//BIKER Singing
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock713 {
+	scene "scenes/Biker/NervousHumming01.vcd" //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming02.vcd" //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming03.vcd" //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming04.vcd" //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming05.vcd" //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming06.vcd" //[Not-So-Nervous Humming]
+	scene "scenes/Biker/NervousHumming07.vcd" //[Not-So-Nervous Humming with lame zombie lyrics]
+}
+Rule ConceptBlock713 {
+	criteria ConceptBlock606 IsBiker IsBikerAlive IsAlone
+	Response ConceptBlock713
+}
+
+//NAMVET humming
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock714 {
+	scene "scenes/NamVet/NervousHumming01.vcd" then Self ConceptBlock715 foo:0 -10 //[Nervous Humming]-10.484
+	scene "scenes/NamVet/NervousWhislte01.vcd" then Self ConceptBlock715 foo:0 -24 //[Nervous Whislte]-24.2
+}
+Rule ConceptBlock714 {
+	criteria ConceptBlock606 IsNamVet IsNamVetAlive IsAlone
+	Response ConceptBlock714
+}
+
+	criterion "ConceptBlock715" "Concept" "ConceptBlock715" required
+Response ConceptBlock715 {
+	scene "scenes/NamVet/ReactionPositive05.vcd" //[chuckles and giggles]
+}
+Rule ConceptBlock715 {
+	criteria ConceptBlock715 IsNamVet
+	Response ConceptBlock715
+}
+
+//MANAGER humming
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock716 {
+	scene "scenes/Manager/NervousHumming01.vcd" then Self ConceptBlock717 foo:0 -11 //[Nervous Whistle]-11.987
+	scene "scenes/Manager/NervousHumming02.vcd" then Self ConceptBlock717 foo:0 -12 //[Nervous Humming]-12.376
+	scene "scenes/Manager/NervousWhislte01.vcd" then Self ConceptBlock717 foo:0 -6 //[Nervous Whistle]-6.223
+}
+Rule ConceptBlock716 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsAlone
+	Response ConceptBlock716
+}
+
+	criterion "ConceptBlock717" "Concept" "ConceptBlock717" required
+Response ConceptBlock717 {
+	scene "scenes/Manager/Hurrah16.vcd" //I am bad, yes I am bad, YES I AM! WOO!
+}
+Rule ConceptBlock717 {
+	criteria ConceptBlock717 IsManager
+	Response ConceptBlock717
+}
+
+	criterion "ConceptBlock718" "Concept" "ConceptBlock718" required
+Response ConceptBlock718 {
+	scene "scenes/Manager/GenericResponses03.vcd" //You're joking, right?
+}
+Rule ConceptBlock718 {
+	criteria ConceptBlock718 IsManager
+	Response ConceptBlock718
+}
+
+//TEENGIRL humming
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock719 {
+	scene "scenes/TeenGirl/NervousHumming01.vcd" //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming02.vcd" //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming03.vcd" //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousHumming04.vcd" //[Nervous Humming]
+	scene "scenes/TeenGirl/NervousWhislte01.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte02.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte03.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte04.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/NervousWhislte05.vcd" //[Nervous Whistle]
+	scene "scenes/TeenGirl/Generic10.vcd" //Great, that makes me the last woman on earth.
+}
+Rule ConceptBlock719 {
+	criteria ConceptBlock606 IsTeenGirl IsTeenGirlAlive IsAlone
+	Response ConceptBlock719
+}
+
+//MANAGER Francis to read
+//USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+Response ConceptBlock720 {
+	scene "scenes/Manager/ZombieGenericLong15.vcd" then Biker ConceptBlock721 foo:0 -8.2 //When things go back to normal, Zoe, Bill-I'm giving you both jobs. Francis, I'm gonna teach your ass how to read.
+}
+Rule ConceptBlock720 {
+	criteria ConceptBlock606 IsManager IsManagerAlive IsEveryoneAlive
+	Response ConceptBlock720
+}
+
+	criterion "ConceptBlock721" "Concept" "ConceptBlock721" required
+Response ConceptBlock721 {
+	scene "scenes/Biker/GenericResponses12.vcd" //[laughing] Go to hell.
+}
+Rule ConceptBlock721 {
+	criteria ConceptBlock721 IsBiker
+	Response ConceptBlock721
+}
+
+//FARM FINALE
+
+
+//Farm radio attract loop
+	criterion "ConceptBlock575" "Concept" "farm_radio_broadcast" required
+Response ConceptBlock575 {
+	scene "scenes/npcs/soldier_radioinitialbroadcast01.vcd" then self farm_radio_broadcast foo:0 7 //This is an emergency broadcast from the American Safety Zone. Please respond.
+	scene "scenes/npcs/soldier_radioinitialbroadcast06.vcd" then self farm_radio_broadcast foo:0 7 //This is an emergency broadcast from the US Military. Please respond.
+}
+Rule ConceptBlock575 {
+	criteria ConceptBlock575 FarmPhase1
+	Response ConceptBlock575
+}
+
+//Inital broadcast from boat couple as survivors approach boathouse (FIRST FIRE ONLY)
+Response ConceptBlock722 {
+	speak "npc.soldier_RadioInitialBroadCast05" noscene //You are listening to an emergency broadcast from the US Military. If you can hear this, please use the microphone while pressing the SEND button immediately.
+}
+Rule ConceptBlock722 {
+	criteria ConceptBlock722 FarmPhase1
+	Response ConceptBlock722
+}
+
+//Biker Presses farm radio button
+	criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
+Response ConceptBlock576 {
+	scene "scenes/npcs/soldier_blank.vcd" then biker ConceptBlock577 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock576 {
+	criteria ConceptBlock576 FarmPhase2 PanicEventBiker
+	ApplyContext "FarmPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock576
+}
+
+	criterion "ConceptBlock577" "Concept" "ConceptBlock577" required
+Response ConceptBlock577 {
+	scene "scenes/Biker/WorldFarmHouseNPC01.vcd" then orator_farm_radio ConceptBlock582 foo:0 -1.493 //Uh, hello?
+}
+Rule ConceptBlock577 {
+	criteria ConceptBlock577 IsBiker
+	Response ConceptBlock577
+}
+
+//NamVet Presses farm radio button
+//USES criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
+Response ConceptBlock578 {
+	scene "scenes/npcs/soldier_blank.vcd" then NamVet ConceptBlock579 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock578 {
+	criteria ConceptBlock576 FarmPhase2 PanicEventNamVet
+	ApplyContext "FarmPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock578
+}
+
+	criterion "ConceptBlock579" "Concept" "ConceptBlock579" required
+Response ConceptBlock579 {
+	scene "scenes/NamVet/WorldFarmHouseNPC02.vcd" then orator_farm_radio ConceptBlock582 foo:0 -0.720 //Hello?
+}
+Rule ConceptBlock579 {
+	criteria ConceptBlock579 IsNamVet
+	Response ConceptBlock579
+}
+
+//Manager Presses farm radio button
+//USES criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
+Response ConceptBlock580 {
+	scene "scenes/npcs/soldier_blank.vcd" then Manager ConceptBlock581 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock580 {
+	criteria ConceptBlock576 FarmPhase2 PanicEventManager
+	ApplyContext "FarmPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock580
+}
+
+	criterion "ConceptBlock581" "Concept" "ConceptBlock581" required
+Response ConceptBlock581 {
+	scene "scenes/Manager/WorldFarmHouseNPC01.vcd" then orator_farm_radio ConceptBlock582 foo:0 -0.992 //Hello?
+}
+Rule ConceptBlock581 {
+	criteria ConceptBlock581 IsManager
+	Response ConceptBlock581
+}
+
+	criterion "ConceptBlock582" "Concept" "ConceptBlock582" required
+Response ConceptBlock582 {
+	scene "scenes/npcs/soldier_radiobutton101.vcd" then Self ConceptBlock583 foo:0 .5 //Holy shit. Captain, someone actually responded!
+	scene "scenes/npcs/soldier_radiobutton108.vcd" then Self ConceptBlock583 foo:0 .5 //I do not believe it. Captain, somebody's survived out there!
+	scene "scenes/npcs/soldier_radiobutton109.vcd" then Self ConceptBlock583 foo:0 .5 //Jesus Christ. Captain, we got somebody alive out there!
+}
+Rule ConceptBlock582 {
+	criteria ConceptBlock582
+	Response ConceptBlock582
+}
+
+	criterion "ConceptBlock583" "Concept" "ConceptBlock583" required
+Response ConceptBlock583 {
+	scene "scenes/npcs/soldier_radiobutton113.vcd" then self ConceptBlock586 foo:0 15 //We read you loud and clear, survivors! We are prepping an extraction team. Prepare yourselves and radio back when you're ready.
+}
+Rule ConceptBlock583 {
+	criteria ConceptBlock583
+	Response ConceptBlock583
+}
+
+//TeenGirl Presses farm radio button
+//USES criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
+Response ConceptBlock584 {
+	scene "scenes/npcs/soldier_blank.vcd" then TeenGirl ConceptBlock585 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock584 {
+	criteria ConceptBlock576 FarmPhase2 PanicEventTeenGirl
+	ApplyContext "FarmPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock584
+}
+
+	criterion "ConceptBlock585" "Concept" "ConceptBlock585" required
+Response ConceptBlock585 {
+	scene "scenes/TeenGirl/scenariojoin12.vcd" then orator_farm_radio ConceptBlock582 foo:0 -0.636 //Hello!
+}
+Rule ConceptBlock585 {
+	criteria ConceptBlock585 IsTeenGirl
+	Response ConceptBlock585
+}
+
+//Post-Button1 buttno 2 nag loop
+	criterion "ConceptBlock586" "Concept" "ConceptBlock586" required
+Response ConceptBlock586 {
+	scene "scenes/npcs/soldier_radionag01.vcd" then self ConceptBlock586 foo:0 10 //Please advise when ready!
+	scene "scenes/npcs/soldier_radionag02.vcd" then self ConceptBlock586 foo:0 10 //Please advise when ready.
+	scene "scenes/npcs/soldier_radiobutton202.vcd" then self ConceptBlock586 foo:0 10 //We are prepped and good to go. Advise when ready!
+}
+Rule ConceptBlock586 {
+	criteria ConceptBlock586 FarmPhase2
+	Response ConceptBlock586
+}
+
+//Biker Presses farm radio button second time
+	criterion "ConceptBlock587" "Concept" "farm_radio_button2" required
+Response ConceptBlock587 {
+	scene "scenes/npcs/soldier_blank.vcd" then biker ConceptBlock588 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock587 {
+	criteria ConceptBlock587 PanicEventBiker
+	ApplyContext "FarmPhase2:1:5000,SaidRadioTriggered:1:500"
+	ApplyContextToWorld
+	Response ConceptBlock587
+}
+
+	criterion "ConceptBlock588" "Concept" "ConceptBlock588" required
+Response ConceptBlock588 {
+	scene "scenes/Biker/WorldFarmHouseNPC03.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.408 //Rodger dodger.
+	scene "scenes/Biker/WorldFarmHouseNPC04.vcd" then orator_farm_radio ConceptBlock589 foo:0 -0.903 //We're ready!
+	scene "scenes/Biker/WorldFarmHouseNPC05.vcd" then orator_farm_radio ConceptBlock589 foo:0 -0.950 //We're all set!
+	scene "scenes/Biker/WorldFarmHouseNPC06.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.013 //Come get us!
+}
+Rule ConceptBlock588 {
+	criteria ConceptBlock588 IsBiker
+	ApplyContext "FarmPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock588
+}
+
+	criterion "ConceptBlock589" "Concept" "ConceptBlock589" required
+Response ConceptBlock589 {
+	scene "scenes/npcs/soldier_radiobutton201.vcd" then self SoldierTransit foo:0 -60.408 //Read you loud and clear! Get ready, we're on our way!
+	scene "scenes/npcs/soldier_radiobutton205.vcd" then self SoldierTransit foo:0 -60.408 //We read you just fine. We're on our way.
+	scene "scenes/npcs/soldier_radiobutton206.vcd" then self SoldierTransit foo:0 -60.408 //Roger that, survivors. We are on our way.
+	scene "scenes/npcs/soldier_radiobutton207.vcd" then self SoldierTransit foo:0 -60.408 //Roger, survivors, we are go. ETA in ten minutes.
+	scene "scenes/npcs/soldier_radiobutton208.vcd" then self SoldierTransit foo:0 -60.408 //That is a go, survivors. Be advised it will take us ten minutes to reach you.
+	scene "scenes/npcs/soldier_radiobutton209.vcd" then self SoldierTransit foo:0 -60.408 //Copy that, survivors. It'll take us a good ten minutes to reach you. Dig in and hold on, you got me?
+	scene "scenes/npcs/soldier_radiobutton210.vcd" then self SoldierTransit foo:0 -60.408 //Copy that, survivors. We're coming for you! Hang on!
+}
+Rule ConceptBlock589 {
+	criteria ConceptBlock589
+	Response ConceptBlock589
+}
+
+//Anyone presses farm radio button second time
+//USES criterion "ConceptBlock587" "Concept" "farm_radio_button2" required
+Response ConceptBlock590 {
+	scene "scenes/npcs/soldier_radiobutton201.vcd" then self SoldierTransit foo:0 -60.408 //Read you loud and clear! Get ready, we're on our way!
+	scene "scenes/npcs/soldier_radiobutton205.vcd" then self SoldierTransit foo:0 -60.408 //We read you just fine. We're on our way.
+	scene "scenes/npcs/soldier_radiobutton206.vcd" then self SoldierTransit foo:0 -60.408 //Roger that, survivors. We are on our way.
+	scene "scenes/npcs/soldier_radiobutton207.vcd" then self SoldierTransit foo:0 -60.408 //Roger, survivors, we are go. ETA in ten minutes.
+	scene "scenes/npcs/soldier_radiobutton208.vcd" then self SoldierTransit foo:0 -60.408 //That is a go, survivors. Be advised it will take us ten minutes to reach you.
+	scene "scenes/npcs/soldier_radiobutton209.vcd" then self SoldierTransit foo:0 -60.408 //Copy that, survivors. It'll take us a good ten minutes to reach you. Dig in and hold on, you got me?
+	scene "scenes/npcs/soldier_radiobutton210.vcd" then self SoldierTransit foo:0 -60.408 //Copy that, survivors. We're coming for you! Hang on!
+}
+Rule ConceptBlock590 {
+	criteria ConceptBlock587
+	ApplyContext "FarmPhase2:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock590
+}
+
+criterion "SoldierTransit" "Concept" "SoldierTransit" required
+Response SoldierTransit {
+	speak "npc.soldier_RadioInTransit01" noscene //Be advised, we are approximately eight minutes to target.
+	speak "npc.soldier_RadioInTransit02" noscene //Hey there, survivors, we're still a good eight minutes out. Sit tight. We are coming.
+}
+Rule SoldierTransit {
+	criteria SoldierTransit
+	Response SoldierTransit
+}
+
+//NamVet Presses farm radio button second time
+//USES criterion "ConceptBlock587" "Concept" "farm_radio_button2" required
+Response ConceptBlock591 {
+	scene "scenes/npcs/soldier_blank.vcd" then NamVet ConceptBlock592 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock591 {
+	criteria ConceptBlock587 PanicEventNamVet
+	ApplyContext "FarmPhase2:1:5000,SaidRadioTriggered:1:500"
+	ApplyContextToWorld
+	Response ConceptBlock591
+}
+
+	criterion "ConceptBlock592" "Concept" "ConceptBlock592" required
+Response ConceptBlock592 {
+	scene "scenes/NamVet/WorldFarmHouseNPC05.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.440 //We're ready, soldier.
+	scene "scenes/NamVet/WorldFarmHouseNPC07.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.680 //We're good to go, son.
+}
+Rule ConceptBlock592 {
+	criteria ConceptBlock592 IsNamVet
+	Response ConceptBlock592
+}
+
+//Manager Presses farm radio button second time
+//USES criterion "ConceptBlock587" "Concept" "farm_radio_button2" required
+Response ConceptBlock593 {
+	scene "scenes/npcs/soldier_blank.vcd" then Manager ConceptBlock594 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock593 {
+	criteria ConceptBlock587 PanicEventManager
+	ApplyContext "FarmPhase2:1:5000,SaidRadioTriggered:1:500"
+	ApplyContextToWorld
+	Response ConceptBlock593
+}
+
+	criterion "ConceptBlock594" "Concept" "ConceptBlock594" required
+Response ConceptBlock594 {
+	scene "scenes/Manager/WorldFarmHouseNPC05.vcd" then orator_farm_radio ConceptBlock589 foo:0 -2.997 //We're set to go, sir! Any time you're ready.
+	scene "scenes/Manager/WorldFarmHouseNPC07.vcd" then orator_farm_radio ConceptBlock589 foo:0 -2.178 //Man, we're good to go whenever you are.
+}
+Rule ConceptBlock594 {
+	criteria ConceptBlock594 IsManager
+	Response ConceptBlock594
+}
+
+//Biker Presses farm radio button [COP GAMBIT]
+//USES criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
+Response ConceptBlock595 {
+	scene "scenes/npcs/soldier_blank.vcd" then biker ConceptBlock596 foo:0 .05 //[BLANK]
+}
+Rule ConceptBlock595 {
+	criteria ConceptBlock576 FarmPhase2 PanicEventBiker ChanceToFire50Percent
+	ApplyContext "FarmPhase1:1:5000"
+	ApplyContextToWorld
+	Response ConceptBlock595
+}
+
+	criterion "ConceptBlock596" "Concept" "ConceptBlock596" required
+Response ConceptBlock596 {
+	scene "scenes/Biker/WorldFarmHouseNPC02.vcd" then orator_farm_radio ConceptBlock597 foo:0 -5.902 //Attention Army: This is the cops.
+}
+Rule ConceptBlock596 {
+	criteria ConceptBlock596 IsBiker
+	Response ConceptBlock596
+}
+
+	criterion "ConceptBlock597" "Concept" "ConceptBlock597" required
+Response ConceptBlock597 {
+	scene "scenes/npcs/soldier_radiobutton110.vcd" then self ConceptBlock598 foo:0 .8 //Jesus Christ. Captain, we got survivors. They say they're cops!
+}
+Rule ConceptBlock597 {
+	criteria ConceptBlock597
+	Response ConceptBlock597
+}
+
+	criterion "ConceptBlock598" "Concept" "ConceptBlock598" required
+Response ConceptBlock598 {
+	scene "scenes/npcs/soldier_radiobutton105.vcd" then self ConceptBlock586 foo:0 15 //We'll come get you! Convoy's gonna stir up the infected, though. Prepare yourselves and advise when ready, over.
+}
+Rule ConceptBlock598 {
+	criteria ConceptBlock598
+	Response ConceptBlock598
+}
+
+//PLANE FINALE
+
+
+//Plane initiate attract loop
+	criterion "ConceptBlock564" "Concept" "plane_radio_broadcast" required
+Response ConceptBlock564 {
+	scene "scenes/npcs/planepilot_radioinitialbroadcast06.vcd" then self ConceptBlock565 foo:0 12 //Hey! You there! Y'all wanna get me fueled up?
+}
+Rule ConceptBlock564 {
+	criteria ConceptBlock564 PlaneLoop1
+	Response ConceptBlock564
+}
+
+//Plane attract loop
+	criterion "ConceptBlock565" "Concept" "ConceptBlock565" required
+Response ConceptBlock565 {
+	scene "scenes/npcs/planepilot_radioinitialbroadcast06.vcd" then self ConceptBlock565 foo:0 12 //Hey! You there! Y'all wanna get me fueled up?
+	scene "scenes/npcs/planepilot_radioinitialbroadcast07.vcd" then self ConceptBlock565 foo:0 12 //Hey there! Don't suppose y'all wanna gas me up?
+	scene "scenes/npcs/planepilot_radioinitialbroadcast09.vcd" then self ConceptBlock565 foo:0 12 //Hey! You there! Gas me up, I'll getcha outta here!
+	scene "scenes/npcs/planepilot_radioinitialbroadcast10.vcd" then self ConceptBlock565 foo:0 12 //I get fuelled up, I can git goin here! Come on, you folks with me?
+	scene "scenes/npcs/planepilot_radioinitialbroadcast18.vcd" then self ConceptBlock565 foo:0 12 //You! Yes you! Come talk to me on the radio!
+}
+Rule ConceptBlock565 {
+	criteria ConceptBlock565 PlaneLoop1
+	Response ConceptBlock565
+}
+
+//Survivor presses radio button
+	criterion "ConceptBlock566" "Concept" "plane_radio_button1" required
+Response ConceptBlock566 {
+	scene "scenes/npcs/planepilot_radiobutton105.vcd" then Self ConceptBlock567 foo:0 .2 //Alright! Gas me up, and we can fly out of here!
+}
+Rule ConceptBlock566 {
+	criteria ConceptBlock566 PlaneLoop2
+	ApplyContext "PlaneLoop1:1:1000"
+	ApplyContextToWorld
+	Response ConceptBlock566
+}
+
+	criterion "ConceptBlock567" "Concept" "ConceptBlock567" required
+Response ConceptBlock567 {
+	scene "scenes/npcs/planepilot_radiobutton104.vcd" then Self ConceptBlock568 foo:0 15 //The pump's gonna make a real racket. So you make sure you're ready for a fight before you start 'er up.
+}
+Rule ConceptBlock567 {
+	criteria ConceptBlock567 PlaneLoop2
+	Response ConceptBlock567
+}
+
+//Button press 2 nag
+	criterion "ConceptBlock568" "Concept" "ConceptBlock568" required
+Response ConceptBlock568 {
+	scene "scenes/npcs/planepilot_radionag04.vcd" then self ConceptBlock568 foo:0 20 //Hit the fuel button and let's get outta here!
+}
+Rule ConceptBlock568 {
+	criteria ConceptBlock568 PlaneLoop2
+	Response ConceptBlock568
+}
+
+//Survivor starts gas pump
+	criterion "ConceptBlock569" "Concept" "plane_radio_button2" required
+Response ConceptBlock569 {
+	scene "scenes/npcs/planepilot_radiobutton203.vcd" then Self ConceptBlock570 foo:0 .05 //That did it! I can hear the truck pumpin'!
+}
+Rule ConceptBlock569 {
+	criteria ConceptBlock569
+	ApplyContext "PlaneLoop2:1:1000"
+	ApplyContextToWorld
+	Response ConceptBlock569
+}
+
+	criterion "ConceptBlock570" "Concept" "ConceptBlock570" required
+Response ConceptBlock570 {
+	scene "scenes/npcs/planepilot_radiobutton205.vcd" //Hold 'em off for me while I fuel up!
+}
+Rule ConceptBlock570 {
+	criteria ConceptBlock570
+	Response ConceptBlock570
+}
+
+//Plane's fueled and ready to fly!
+	criterion "ConceptBlock571" "Concept" "plane_radio_ready" required
+Response ConceptBlock571 {
+	scene "scenes/npcs/planepilot_radioarrived01.vcd" //Alright, we're fueled up! Get in!
+}
+Rule ConceptBlock571 {
+	criteria ConceptBlock571
+	Response ConceptBlock571
+}
+
+//Plane's fueled and ready to fly!
+	criterion "ConceptBlock572" "Concept" "ConceptBlock572" required
+Response ConceptBlock572 {
+	scene "scenes/npcs/planepilot_radioarrived10.vcd" then Self ConceptBlock572 foo:0 4 //What're you waitin' for, your row to be called? Get in!
+}
+Rule ConceptBlock572 {
+	criteria ConceptBlock572 PlaneLoop3
+	Response ConceptBlock572
+}
+
+//Plane In Transit nag 1
+	criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
+Response ConceptBlock690 {
+	scene "scenes/npcs/planepilot_radiointransit01.vcd" //Gas tank's a quarter full! Sorry, guys, still a ways yet!
+}
+Rule ConceptBlock690 {
+	criteria ConceptBlock690 PlaneIntransit1
+	ApplyContext "PlaneInTransit:1:0"
+	ApplyContextToWorld
+	Response ConceptBlock690
+}
+
+//Plane In Transit nag 2
+//USES criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
+Response ConceptBlock691 {
+	scene "scenes/npcs/planepilot_radiointransit02.vcd" //Fuel gauge at halfway, folks! Hang in there!
+}
+Rule ConceptBlock691 {
+	criteria ConceptBlock690 PlaneIntransit2
+	ApplyContext "PlaneInTransit:2:0"
+	ApplyContextToWorld
+	Response ConceptBlock691
+}
+
+//Plane In Transit nag 3
+//USES criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
+Response ConceptBlock692 {
+	scene "scenes/npcs/planepilot_radiointransit03.vcd" //Fuel gauge at three-quarters, people! Almost there!
+}
+Rule ConceptBlock692 {
+	criteria ConceptBlock690 PlaneIntransit3
+	ApplyContext "PlaneInTransit:3:0"
+	ApplyContextToWorld
+	Response ConceptBlock692
+}
+
+//Plane In Transit nag 4
+//USES criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
+Response ConceptBlock693 {
+	scene "scenes/npcs/planepilot_radiocombatcolor28.vcd" //More comin'. Look alive.
+	scene "scenes/npcs/planepilot_radiocombatcolor29.vcd" //Look out! More on the way!
+	scene "scenes/npcs/planepilot_radiocombatcolor08.vcd" //You're doing great!
+}
+Rule ConceptBlock693 {
+	criteria ConceptBlock690 PlaneIntransit4
+	ApplyContext "PlaneInTransit:4:0"
+	ApplyContextToWorld
+	Response ConceptBlock693
+}
+
+//Plane In Transit nag 5
+//USES criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
+Response ConceptBlock694 {
+	scene "scenes/npcs/planepilot_radiointransit04.vcd" //Fuel gauge near the top! We are just about good to go!
+	scene "scenes/npcs/planepilot_radiointransit05.vcd" //Gas tank's almost full! We are just about good to go!
+}
+Rule ConceptBlock694 {
+	criteria ConceptBlock690 PlaneIntransit5
+	ApplyContext "PlaneInTransit:5:0"
+	ApplyContextToWorld
+	Response ConceptBlock694
+}
+
+//ZREV FINALE
+
+
+//Biker*ConceptPlayerReviveFriend
+//USES criterion "ConceptPlayerReviveFriend" "Concept" "*ConceptPlayerReviveFriend" required
+Response ConceptBlock950 {
+	scene "scenes/Biker/ReviveFriendA01.vcd" then subject GettingRevived foo:0 -0.977 //You okay?
+	scene "scenes/Biker/ReviveFriendA02.vcd" then subject GettingRevived foo:0 -0.864 //How d'ya feel?
+	scene "scenes/Biker/ReviveFriendA03.vcd" then subject GettingRevived foo:0 -0.849 //Can you make it?
+	scene "scenes/Biker/ReviveFriendA04.vcd" then subject GettingRevived foo:0 -1.056 //You gonna make it?
+	scene "scenes/Biker/ReviveFriendA05.vcd" then subject GettingRevived foo:0 -0.992 //How bad are you?
+	scene "scenes/Biker/ReviveFriendA07.vcd" then subject GettingRevived foo:0 -0.863 //How ya doin'?
+}
+Rule ConceptBlock950 {
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker ChanceToFire80Percent
+	ApplyContext "ReviveTalk:1:5,TalkBiker:1:4"
+	Response ConceptBlock950
+}
+
+//Manager*ConceptPlayerReviveFriend
+//USES criterion "ConceptPlayerReviveFriend" "Concept" "*ConceptPlayerReviveFriend" required
+Response ConceptBlock951 {
+	scene "scenes/Manager/ReviveFriendA01.vcd" then subject GettingRevived foo:0 -0.863 //You okay?
+	scene "scenes/Manager/ReviveFriendA02.vcd" then subject GettingRevived foo:0 -0.848 //How d'ya feel?
+	scene "scenes/Manager/ReviveFriendA03.vcd" then subject GettingRevived foo:0 -0.957 //Can you make it?
+	scene "scenes/Manager/ReviveFriendA04.vcd" then subject GettingRevived foo:0 -0.896 //You gonna make it?
+	scene "scenes/Manager/ReviveFriendA05.vcd" then subject GettingRevived foo:0 -1.184 //How bad are you?
+	scene "scenes/Manager/ReviveFriendA07.vcd" then subject GettingRevived foo:0 -0.832 //How ya doin'?
+}
+Rule ConceptBlock951 {
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsManager IsTalk IsTalkManager ChanceToFire80Percent
+	ApplyContext "ReviveTalk:1:5,TalkManager:1:4"
+	Response ConceptBlock951
+}
+
+//Namvet*ConceptPlayerReviveFriend
+//USES criterion "ConceptPlayerReviveFriend" "Concept" "*ConceptPlayerReviveFriend" required
+Response ConceptBlock952 {
+	scene "scenes/NamVet/ReviveFriendA01.vcd" then subject GettingRevived foo:0 -1.216 //You okay?
+	scene "scenes/NamVet/ReviveFriendA02.vcd" then subject GettingRevived foo:0 -0.976 //How ya feelin'?
+	scene "scenes/NamVet/ReviveFriendA03.vcd" then subject GettingRevived foo:0 -0.944 //Can you make it?
+	scene "scenes/NamVet/ReviveFriendA04.vcd" then subject GettingRevived foo:0 -0.993 //You gonna make it?
+	scene "scenes/NamVet/ReviveFriendA05.vcd" then subject GettingRevived foo:0 -1.167 //How bad are you?
+	scene "scenes/NamVet/ReviveFriendA07.vcd" then subject GettingRevived foo:0 -1.136 //How ya doin'?
+	scene "scenes/NamVet/ReviveFriendA08.vcd" then subject GettingRevived foo:0 -1.232 //Can you walk?
+}
+Rule ConceptBlock952 {
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsNamVet IsTalk IsTalkNamVet ChanceToFire80Percent
+	ApplyContext "ReviveTalk:1:5,TalkNamVet:1:4"
+	Response ConceptBlock952
+}
+
+//Teengirl*ConceptPlayerReviveFriend
+//USES criterion "ConceptPlayerReviveFriend" "Concept" "*ConceptPlayerReviveFriend" required
+Response ConceptBlock953 {
+	scene "scenes/TeenGirl/ReviveFriendA01.vcd" then subject GettingRevived foo:0 -0.981 //You okay?
+	scene "scenes/TeenGirl/ReviveFriendA02.vcd" then subject GettingRevived foo:0 -0.960 //You okay?
+	scene "scenes/TeenGirl/ReviveFriendA03.vcd" then subject GettingRevived foo:0 -1.035 //How do you feel?
+	scene "scenes/TeenGirl/ReviveFriendA04.vcd" then subject GettingRevived foo:0 -1.128 //Can you make it?
+	scene "scenes/TeenGirl/ReviveFriendA05.vcd" then subject GettingRevived foo:0 -1.035 //You gonna make it?
+	scene "scenes/TeenGirl/ReviveFriendA06.vcd" then subject GettingRevived foo:0 -1.239 //How bad are you?
+	scene "scenes/TeenGirl/ReviveFriendA08.vcd" then subject GettingRevived foo:0 -0.879 //How ya doin'?
+}
+Rule ConceptBlock953 {
+	criteria ConceptPlayerReviveFriend IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl ChanceToFire80Percent
+	ApplyContext "ReviveTalk:1:5,TalkTeenGirl:1:4"
+	Response ConceptBlock953
+}
+
+//BikerGettingRevived
+	criterion "ConceptBlock954" "Concept" "GettingRevived" required
+Response ConceptBlock954 {
+	scene "scenes/Biker/GettingRevived01.vcd" then subject ReviveBgo foo:0 -1.964 //I'm okay.
+	scene "scenes/Biker/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.887 //No, no, I'm allright.
+	scene "scenes/Biker/GettingRevived03.vcd" then subject ReviveBfine foo:0 -1.066 //[groan]
+	scene "scenes/Biker/GettingRevived04.vcd" then subject ReviveBfine foo:0 -2.269 //Hell if I know.
+	scene "scenes/Biker/GettingRevived05.vcd" then subject ReviveBgo foo:0 -3.925 //Ah, hey, is this my blood?
+	scene "scenes/Biker/GettingRevived06.vcd" then subject ReviveBfine foo:0 -1.386 //[groan2]
+	scene "scenes/Biker/GettingRevived07.vcd" then subject ReviveBgo foo:0 -0.909 //I'll make it.
+	scene "scenes/Biker/GettingRevived08.vcd" then subject ReviveBgo foo:0 -1.634 //I'll live, I'll live.
+	scene "scenes/Biker/GettingRevived09.vcd" then subject ReviveBfine foo:0 -3.072 //Uh, how's my face?
+	scene "scenes/Biker/GettingRevived10.vcd" then subject ReviveBfine foo:0 -2.372 //I've been better.
+	scene "scenes/Biker/GettingRevived13.vcd" then subject ReviveBfine foo:0 -3.136 //Shit. I hope I don't NEED all that blood.
+	scene "scenes/Biker/GettingRevived14.vcd" then subject ReviveBgo foo:0 -2.912 //Good thing I'm indestructible.
+	scene "scenes/Biker/GettingRevived15.vcd" then subject ReviveBfine foo:0 -3.391 //You.. should see the other hundred guys.
+	scene "scenes/Biker/GettingRevived16.vcd" then subject ReviveBgo foo:0 -2.912 //You think they'll call us heroes someday?
+}
+Rule ConceptBlock954 {
+	criteria ConceptBlock954 IsNotCoughing IsNotReviveInterrupt IsBiker IsTalk IsTalkBiker
+	ApplyContext "IsComplain:1:20,ReviveTalk:1:5,TalkBiker:1:4"
+	Response ConceptBlock954
+}
+
+//ManagerGettingRevived
+//USES criterion "ConceptBlock954" "Concept" "GettingRevived" required
+Response ConceptBlock955 {
+	scene "scenes/Manager/GettingRevived01.vcd" then subject ReviveBgo foo:0 -1.022 //I'm okay.
+	scene "scenes/Manager/GettingRevived02.vcd" then subject ReviveBfine foo:0 -1.280 //I'm allright.
+	scene "scenes/Manager/GettingRevived03.vcd" then subject ReviveBgo foo:0 -2.048 //[groan]
+	scene "scenes/Manager/GettingRevived04.vcd" then subject ReviveBgo foo:0 -1.287 //I don't even know.
+	scene "scenes/Manager/GettingRevived05.vcd" then subject ReviveBfine foo:0 -2.278 //Aw hell, I'm bleedin'.
+	scene "scenes/Manager/GettingRevived06.vcd" then subject ReviveBfine foo:0 -1.154 //[groan2]
+	scene "scenes/Manager/GettingRevived07.vcd" then subject ReviveBgo foo:0 -1.046 //I'll make it.
+	scene "scenes/Manager/GettingRevived08.vcd" then subject ReviveBfine foo:0 -1.581 //I'll live.
+	scene "scenes/Manager/GettingRevived09.vcd" then subject ReviveBgo foo:0 -1.846 //I can shake it off.
+	scene "scenes/Manager/GettingRevived10.vcd" then subject ReviveBfine foo:0 -1.086 //Just help me up.
+	scene "scenes/Manager/GettingRevived11.vcd" then subject ReviveBgo foo:0 -1.376 //I ain't done yet.
+}
+Rule ConceptBlock955 {
+	criteria ConceptBlock954 IsNotCoughing IsNotReviveInterrupt IsManager IsTalk IsTalkManager
+	ApplyContext "IsComplain:1:20,ReviveTalk:1:5,TalkManager:1:4"
+	Response ConceptBlock955
+}
+
+//NamvetGettingRevived
+//USES criterion "ConceptBlock954" "Concept" "GettingRevived" required
+Response ConceptBlock956 {
+	scene "scenes/NamVet/FallShort03.vcd" then subject ReviveBfine foo:0 -1 //[Yelp!]
+	scene "scenes/NamVet/GettingRevived01.vcd" then subject ReviveBfine foo:0 -1.600 //I'm okay.
+	scene "scenes/NamVet/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.685 //I'm allright.
+	scene "scenes/NamVet/GettingRevived03.vcd" then subject ReviveBfine foo:0 -3.285 //[groan]
+	scene "scenes/NamVet/GettingRevived04.vcd" then subject ReviveBfine foo:0 -1.451 //Hell if I know.
+	scene "scenes/NamVet/GettingRevived05.vcd" then subject ReviveBgo foo:0 -2.417 //Most of this blood ain't mine.
+	scene "scenes/NamVet/GettingRevived06.vcd" then subject ReviveBfine foo:0 -1.685 //[groan2]
+	scene "scenes/NamVet/GettingRevived07.vcd" then subject ReviveBgo foo:0 -1.856 //I'll make it.
+	scene "scenes/NamVet/GettingRevived08.vcd" then subject ReviveBgo foo:0 -1.216 //I'll live.
+	scene "scenes/NamVet/GettingRevived09.vcd" then subject ReviveBgo foo:0 -1.663 //Hell, I'll live.
+	scene "scenes/NamVet/GettingRevived10.vcd" then subject ReviveBgo foo:0 -1.408 //I've had worse.
+	scene "scenes/NamVet/GettingRevived13.vcd" then subject ReviveBfine foo:0 -2.204 //Well, I ain't *good*.
+}
+Rule ConceptBlock956 {
+	criteria ConceptBlock954 IsNotCoughing IsNotReviveInterrupt IsNamVet IsTalk IsTalkNamVet
+	ApplyContext "IsComplain:1:20,ReviveTalk:1:5,TalkNamVet:1:4"
+	Response ConceptBlock956
+}
+
+//TeengirlGettingRevived
+//USES criterion "ConceptBlock954" "Concept" "GettingRevived" required
+Response ConceptBlock957 {
+	scene "scenes/TeenGirl/GettingRevived01.vcd" then subject ReviveBgo foo:0 -0.672 //I'm okay.
+	scene "scenes/TeenGirl/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.230 //I'm fine.
+	scene "scenes/TeenGirl/GettingRevived03.vcd" then subject ReviveBfine foo:0 -1.465 //Oh shit.
+	scene "scenes/TeenGirl/GettingRevived04.vcd" then subject ReviveBfine foo:0 -1.400 //I don't know.
+	scene "scenes/TeenGirl/GettingRevived05.vcd" then subject ReviveBgo foo:0 -1.376 //I'm bleeding.
+	scene "scenes/TeenGirl/GettingRevived06.vcd" then subject ReviveBgo foo:0 -1.760 //Ughhh.
+	scene "scenes/TeenGirl/GettingRevived07.vcd" then subject ReviveBgo foo:0 -1.761 //I'll make it.
+	scene "scenes/TeenGirl/GettingRevived08.vcd" then subject ReviveBfine foo:0 -2.362 //How do I look?
+	scene "scenes/TeenGirl/GettingRevived09.vcd" then subject ReviveBfine foo:0 -1.435 //Is it bad?
+	scene "scenes/TeenGirl/GettingRevived10.vcd" then subject ReviveBfine foo:0 -1.008 //How bad is it?
+	scene "scenes/TeenGirl/GettingRevived11.vcd" then subject ReviveBgo foo:0 -1.383 //Did they get my face?
+}
+Rule ConceptBlock957 {
+	criteria ConceptBlock954 IsNotCoughing IsNotReviveInterrupt IsTeenGirl IsTalk IsTalkTeenGirl
+	ApplyContext "IsComplain:1:20,ReviveTalk:1:5,TalkTeenGirl:1:4"
+	Response ConceptBlock957
+}
+
+//NamvetGettingRevived - SPECIAL: NamVetWhoAreYou
+//USES criterion "ConceptBlock954" "Concept" "GettingRevived" required
+Response ConceptBlock958 {
+	scene "scenes/NamVet/GettingRevived11.vcd" then subject NamVetWhoAreYou foo:0 -1.643 //[confused from hit on head] Who are you?
+	scene "scenes/NamVet/GettingRevived12.vcd" then subject NamVetWhoAreYou foo:0 -1.365 //[confused from hit on head] Mother?
+}
+Rule ConceptBlock958 {
+	criteria ConceptBlock954 IsNotCoughing IsNotReviveInterrupt IsNamVet IsTalk IsTalkNamVet ChanceToFire30Percent
+	ApplyContext "ReviveTalk:1:5,TalkNamVet:1:4"
+	Response ConceptBlock958
+}
+
+//NamvetNamVetWhoAreYou - SPECIAL: NamVetWhoAreYou Response
+	criterion "ConceptBlock959" "Concept" "NamVetWhoAreYou" required
+Response ConceptBlock959 {
+	scene "scenes/Biker/GenericResponses18.vcd" //[Bill doesn't recognize him] It's Francis!
+	scene "scenes/Biker/GenericResponses19.vcd" //[Bill doesn't recognize him] Come on, man, it's Francis!
+}
+Rule ConceptBlock959 {
+	criteria ConceptBlock959 IsNotCoughing IsBiker IsTalk
+	Response ConceptBlock959
+}
+
+//NamvetNamVetWhoAreYou - SPECIAL: NamVetWhoAreYou Response
+//USES criterion "ConceptBlock959" "Concept" "NamVetWhoAreYou" required
+Response ConceptBlock960 {
+	scene "scenes/Manager/GenericResponses18.vcd" //[Bill doesn't recognize him] Come on, Bill, it's Louis!
+}
+Rule ConceptBlock960 {
+	criteria ConceptBlock959 IsNotCoughing IsManager IsTalk
+	Response ConceptBlock960
+}
+
+//NamvetNamVetWhoAreYou - SPECIAL: NamVetWhoAreYou Response
+//USES criterion "ConceptBlock959" "Concept" "NamVetWhoAreYou" required
+Response ConceptBlock961 {
+	scene "scenes/TeenGirl/GenericResponses21.vcd" //[Bill doesn't recognize her] Bill, it's Zoey!
+}
+Rule ConceptBlock961 {
+	criteria ConceptBlock959 IsNotCoughing IsTeenGirl IsTalk
+	Response ConceptBlock961
+}
+
+//BikerReviveBgo
+	criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock962 {
+	scene "scenes/Biker/ReviveFriendB01.vcd" //Up and at 'em.
+	scene "scenes/Biker/ReviveFriendB02.vcd" //Come on up!
+	scene "scenes/Biker/ReviveFriendB03.vcd" //Up ya go.
+	scene "scenes/Biker/ReviveFriendB04.vcd" //You'll be okay.
+	scene "scenes/Biker/ReviveFriendB05.vcd" //I got ya.
+	scene "scenes/Biker/ReviveFriendB06.vcd" //Up we go.
+	scene "scenes/Biker/ReviveFriendB09.vcd" //Come on up.
+	scene "scenes/Biker/ReviveFriendB10.vcd" //Let's move!
+}
+Rule ConceptBlock962 {
+	criteria ConceptBlock962 IsNotReviveInterrupt IsBiker
+	ApplyContext "ReviveTalk:1:5,TalkBiker:1:3"
+	Response ConceptBlock962
+}
+
+//BikerReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock963 {
+	scene "scenes/Biker/ReviveFriendB12.vcd" //Let's get to it, Louis.
+}
+Rule ConceptBlock963 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsManager ChanceToFire30Percent IsBiker
+	Response ConceptBlock963
+}
+
+//BikerReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock964 {
+	scene "scenes/Biker/ReviveFriendB13.vcd" //Back to the fight, Billy.
+}
+Rule ConceptBlock964 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsNamVet ChanceToFire30Percent IsBiker
+	Response ConceptBlock964
+}
+
+//BikerReviveBfine
+	criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock965 {
+	scene "scenes/Biker/ReviveFriendB07.vcd" //Hell, you're fine.
+	scene "scenes/Biker/ReviveFriendB08.vcd" //It don't look bad.
+	scene "scenes/Biker/ReviveFriendB11.vcd" //You're fine.
+}
+Rule ConceptBlock965 {
+	criteria ConceptBlock965 IsNotReviveInterrupt IsBiker
+	ApplyContext "ReviveTalk:1:5,TalkBiker:1:3"
+	Response ConceptBlock965
+}
+
+//BikerReviveBfine SPECIAL CASE
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock966 {
+	scene "scenes/Biker/ReviveFriendB14.vcd" //You're fine, Zoey.
+}
+Rule ConceptBlock966 {
+	criteria ConceptBlock965 IsNotReviveInterrupt FromIsTeenGirl ChanceToFire30Percent IsBiker
+	Response ConceptBlock966
+}
+
+//ManagerReviveBgo
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock967 {
+	scene "scenes/Manager/ReviveFriendB01.vcd" //Up and at 'em.
+	scene "scenes/Manager/ReviveFriendB02.vcd" //Come on up!
+	scene "scenes/Manager/ReviveFriendB03.vcd" //Up ya go.
+	scene "scenes/Manager/ReviveFriendB05.vcd" //I got ya.
+	scene "scenes/Manager/ReviveFriendB06.vcd" //Up we go.
+	scene "scenes/Manager/ReviveFriendB09.vcd" //Come on up.
+	scene "scenes/Manager/ReviveFriendB10.vcd" //Let's move!
+}
+Rule ConceptBlock967 {
+	criteria ConceptBlock962 IsNotReviveInterrupt IsManager
+	ApplyContext "ReviveTalk:1:5,TalkManager:1:3"
+	Response ConceptBlock967
+}
+
+//ManagerReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock968 {
+	scene "scenes/Manager/ReviveFriendB12.vcd" //Come on, Francis.
+}
+Rule ConceptBlock968 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsBiker ChanceToFire30Percent IsManager
+	Response ConceptBlock968
+}
+
+//ManagerReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock969 {
+	scene "scenes/Manager/ReviveFriendB13.vcd" //Come on, Bill.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM05.vcd" //You are literally the oldest man in the world, aren't you?
+}
+Rule ConceptBlock969 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsNamVet ChanceToFire30Percent IsManager
+	Response ConceptBlock969
+}
+
+//ManagerReviveBfine
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock970 {
+	scene "scenes/Manager/ReviveFriendB04.vcd" //You'll be okay.
+	scene "scenes/Manager/ReviveFriendB07.vcd" //You're fine.
+	scene "scenes/Manager/ReviveFriendB08.vcd" //It doesn't look bad.
+	scene "scenes/Manager/ReviveFriendB11.vcd" //You'll be fine.
+}
+Rule ConceptBlock970 {
+	criteria ConceptBlock965 IsNotReviveInterrupt IsManager
+	ApplyContext "ReviveTalk:1:5,TalkManager:1:3"
+	Response ConceptBlock970
+}
+
+//ManagerReviveBfine SPECIAL CASE
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock971 {
+	scene "scenes/Manager/ReviveFriendB14.vcd" //You'll be fine, girl.
+}
+Rule ConceptBlock971 {
+	criteria ConceptBlock965 IsNotReviveInterrupt FromIsTeenGirl ChanceToFire30Percent IsManager
+	Response ConceptBlock971
+}
+
+//NamvetReviveBgo
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock972 {
+	scene "scenes/NamVet/ReviveFriendB01.vcd" //Up and at 'em.
+	scene "scenes/NamVet/ReviveFriendB02.vcd" //Come on up!
+	scene "scenes/NamVet/ReviveFriendB05.vcd" //I got ya.
+	scene "scenes/NamVet/ReviveFriendB06.vcd" //Up we go.
+	scene "scenes/NamVet/ReviveFriendB09.vcd" //Come on up.
+	scene "scenes/NamVet/ReviveFriendB10.vcd" //Let's move!
+}
+Rule ConceptBlock972 {
+	criteria ConceptBlock962 IsNotReviveInterrupt IsNamVet
+	ApplyContext "ReviveTalk:1:5,TalkNamVet:1:3"
+	Response ConceptBlock972
+}
+
+//NamvetReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock973 {
+	scene "scenes/NamVet/ReviveFriendB03.vcd" //Up ya go, son.
+}
+Rule ConceptBlock973 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsManager ChanceToFire30Percent IsNamVet
+	Response ConceptBlock973
+}
+
+//NamvetReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock974 {
+	scene "scenes/NamVet/ReviveFriendB12.vcd" //Back on yer feet, Louis.
+}
+Rule ConceptBlock974 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsManager ChanceToFire30Percent IsNamVet
+	Response ConceptBlock974
+}
+
+//NamvetReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock975 {
+	scene "scenes/NamVet/ReviveFriendB13.vcd" //Looks like yer big mouth still works.
+}
+Rule ConceptBlock975 {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsBiker ChanceToFire30Percent IsNamVet
+	Response ConceptBlock975
+}
+
+//NamvetReviveBfine
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock976 {
+	scene "scenes/NamVet/ReviveFriendB04.vcd" //You'll be okay.
+	scene "scenes/NamVet/ReviveFriendB07.vcd" //Hell, you're fine.
+	scene "scenes/NamVet/ReviveFriendB08.vcd" //It don't look bad.
+	scene "scenes/NamVet/ReviveFriendB11.vcd" //You're fine.
+	scene "scenes/NamVet/ReviveFriendB15.vcd" //You'll be fine.
+}
+Rule ConceptBlock976 {
+	criteria ConceptBlock965 IsNotReviveInterrupt IsNamVet
+	ApplyContext "ReviveTalk:1:5,TalkNamVet:1:3"
+	Response ConceptBlock976
+}
+
+//NamvetReviveBfine SPECIAL CASE
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock977 {
+	scene "scenes/NamVet/ReviveFriendB14.vcd" //You're okay, Zoey.
+}
+Rule ConceptBlock977 {
+	criteria ConceptBlock965 IsNotReviveInterrupt FromIsTeenGirl ChanceToFire30Percent IsNamVet
+	Response ConceptBlock977
+}
+
+//TeengirlReviveBgo
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ConceptBlock978 {
+	scene "scenes/TeenGirl/ReviveFriendB01.vcd" //Up and at 'em.
+	scene "scenes/TeenGirl/ReviveFriendB02.vcd" //Up and at 'em.
+	scene "scenes/TeenGirl/ReviveFriendB03.vcd" //Come on get up.
+	scene "scenes/TeenGirl/ReviveFriendB04.vcd" //Up ya go.
+	scene "scenes/TeenGirl/ReviveFriendB06.vcd" //I got ya.
+	scene "scenes/TeenGirl/ReviveFriendB07.vcd" //Up we go.
+	scene "scenes/TeenGirl/ReviveFriendB11.vcd" //Come on up!
+	scene "scenes/TeenGirl/ReviveFriendB12.vcd" //Let's move!
+	scene "scenes/TeenGirl/ReviveFriendB16.vcd" //Come on, I'm the girl here.
+	scene "scenes/TeenGirl/ReviveFriendB17.vcd" //Stop whining. Let's go.
+}
+Rule ConceptBlock978 {
+	criteria ConceptBlock962 IsNotReviveInterrupt IsTeenGirl
+	ApplyContext "ReviveTalk:1:5,TalkTeenGirl:1:3"
+	Response ConceptBlock978
+}
+
+//TeengirlReviveBgo SPECIAL CASE
+//USES criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+Response ReviveFriendBgoFrancis {
+	scene "scenes/TeenGirl/WorldAirport0409.vcd" //Whatever you do, Francis, please don't take off your shoes.
+}
+Rule ReviveFriendBgoFrancis {
+	criteria ConceptBlock962 IsNotReviveInterrupt FromIsBiker ChanceToFire30Percent IsTeenGirl
+	Response ReviveFriendBgoFrancis
+}
+
+//TeengirlReviveBfine
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock979 {
+	scene "scenes/TeenGirl/ReviveFriendB05.vcd" //You'll be okay.
+	scene "scenes/TeenGirl/ReviveFriendB08.vcd" //You're fine.
+	scene "scenes/TeenGirl/ReviveFriendB09.vcd" //It doesn't look bad.
+	scene "scenes/TeenGirl/ReviveFriendB10.vcd" //It doesn't look bad.
+}
+Rule ConceptBlock979 {
+	criteria ConceptBlock965 IsNotReviveInterrupt IsTeenGirl
+	ApplyContext "ReviveTalk:1:5,TalkTeenGirl:1:3"
+	Response ConceptBlock979
+}
+
+//TeengirlReviveBfine SPECIAL CASE
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock980 {
+	scene "scenes/TeenGirl/ReviveFriendB14.vcd" //You're okay, Louis.
+}
+Rule ConceptBlock980 {
+	criteria ConceptBlock965 IsNotReviveInterrupt FromIsManager ChanceToFire30Percent IsTeenGirl
+	Response ConceptBlock980
+}
+
+//TeengirlReviveBfine SPECIAL CASE
+//USES criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+Response ConceptBlock981 {
+	scene "scenes/TeenGirl/ReviveFriendB15.vcd" //It's okay, Bill.
+}
+Rule ConceptBlock981 {
+	criteria ConceptBlock965 IsNotReviveInterrupt FromIsNamVet ChanceToFire30Percent IsTeenGirl
+	Response ConceptBlock981
+}

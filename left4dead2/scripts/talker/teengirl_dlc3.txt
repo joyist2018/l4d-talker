@@ -1,0 +1,830 @@
+//TeenGirl Response Rule File
+//For L4D2 by New Day & Morning Nine Nine
+
+
+//Auto-generated blank response for padding out InfoRemarkables
+Response _PlayerInfoRemarkableBlankTeenGirl {
+	speak "TeenGirl_Blank" noscene //Blank
+}
+
+
+//C7M1
+Response C7M1_saferoom02TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO01.vcd" //Yeah, or Bill'll leave you behind.
+	scene "scenes/TeenGirl/C6DLC3INTRO02.vcd"
+	scene "scenes/TeenGirl/C6DLC3INTRO03.vcd"
+}
+Rule C7M1_saferoom02TeenGirl {
+	criteria ConceptC7M1_saferoom02 IsTeenGirl
+	Response C7M1_saferoom02TeenGirl
+}
+
+Response C7M1_saferoom09bTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO06.vcd" //Whatever.
+	scene "scenes/TeenGirl/C6DLC3INTRO07.vcd" //Let's just go.
+}
+Rule C7M1_saferoom09bTeenGirl {
+	criteria ConceptC7M1_saferoom09b IsTeenGirl
+	Response C7M1_saferoom09bTeenGirl
+}
+
+Response C7M1_saferoom10aTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO08.vcd" then NamVet C7M1_saferoom10b foo:0 .1 //Whatever, I don't care.
+	scene "scenes/TeenGirl/C6DLC3INTRO09.vcd" then NamVet C7M1_saferoom10b foo:0 .1
+	scene "scenes/TeenGirl/C6DLC3INTRO10.vcd" then NamVet C7M1_saferoom10b foo:0 .1 //Sure. Whatever.
+	scene "scenes/TeenGirl/C6DLC3INTRO11.vcd" then NamVet C7M1_saferoom10b foo:0 .1
+}
+Rule C7M1_saferoom10aTeenGirl {
+	criteria ConceptC7M1_saferoom10a IsTeenGirl
+	Response C7M1_saferoom10aTeenGirl
+}
+
+Response C7M1_saferoom11TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO12.vcd" then NamVet C7M1_saferoom11a foo:0 .1 //Those people still dead?
+}
+Rule C7M1_saferoom11TeenGirl {
+	criteria ConceptC7M1_saferoom11 IsTeenGirl
+	Response C7M1_saferoom11TeenGirl
+}
+
+Response C7M1_saferoom15aTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO14.vcd" then Biker C7M1_saferoom15b foo:0 .1 //Sure. It's the rest of the world we can just let die.
+}
+Rule C7M1_saferoom15aTeenGirl {
+	criteria ConceptC7M1_saferoom15a IsTeenGirl
+	Response C7M1_saferoom15aTeenGirl
+}
+
+Response C7M1_saferoom18TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO15.vcd" then Any C7M1_saferoom18a foo:0 .1 //I'd like to put it to a vote that maybe we shouldn't go rot on an island in the middle of nowhere, and actually, you know, help everybody else fight the zombies?
+}
+Rule C7M1_saferoom18TeenGirl {
+	criteria ConceptC7M1_saferoom18 IsTeenGirl
+	Response C7M1_saferoom18TeenGirl
+}
+
+Response C7M1_saferoom19aTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO17.vcd" then Manager C7M1_saferoom19b foo:0 .1 //Louis, you of all people should understand.
+}
+Rule C7M1_saferoom19aTeenGirl {
+	criteria ConceptC7M1_saferoom19a IsTeenGirl
+	Response C7M1_saferoom19aTeenGirl
+}
+
+Response C7M1_saferoom20aTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO18.vcd" then NamVet C7M1_saferoom20b foo:0 .1 //How can you be sure?
+	scene "scenes/TeenGirl/C6DLC3INTRO19.vcd" then NamVet C7M1_saferoom20b foo:0 .1
+}
+Rule C7M1_saferoom20aTeenGirl {
+	criteria ConceptC7M1_saferoom20a IsTeenGirl
+	Response C7M1_saferoom20aTeenGirl
+}
+
+Response C7M1_saferoom23TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO23.vcd" then NamVet C7M1_saferoom23a foo:0 .1 //Great maybe we can meet some new people and leave them behind.
+}
+Rule C7M1_saferoom23TeenGirl {
+	criteria ConceptC7M1_saferoom23 IsTeenGirl
+	Response C7M1_saferoom23TeenGirl
+}
+
+Response C7M1OpenTankDoorTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR01.vcd" //Get ready to fight this tank.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR02.vcd" //Door's opening, get ready..
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR03.vcd" //comeon people tank coming
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR04.vcd" //I am so dead.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR05.vcd" //I cannot believe I am doing this.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR06.vcd" //Unbelievable. You guys are the biggest chickenshits.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR07.vcd" //Unbelievable..
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+	scene "scenes/TeenGirl/DLC2BulletinBoard01.vcd" //'Funny, sexy brunette zombie killer wanted to lead three helpless men to safety.' Huh.
+}
+Rule C7M1OpenTankDoorTeenGirl {
+	criteria Conceptc7m1opentankdoorspeakTeenGirl IsTeenGirl _auto_NotsaidC7M1OpenTankDoor IsEveryoneAlive
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorTeenGirl
+}
+
+Response C7M1OpenTankDoorXTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR01.vcd" //Get ready to fight this tank.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR02.vcd" //Door's opening, get ready..
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR03.vcd" //comeon people tank coming
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR04.vcd" //I am so dead.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR05.vcd" //I cannot believe I am doing this.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR06.vcd" //Unbelievable. You guys are the biggest chickenshits.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR07.vcd" //Unbelievable..
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+}
+Rule C7M1OpenTankDoorXTeenGirl {
+	criteria Conceptc7m1opentankdoorspeakTeenGirl IsTeenGirl _auto_NotsaidC7M1OpenTankDoor IsWithThree
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorXTeenGirl
+}
+
+Response C7M1OpenTankDoorX2TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR01.vcd" //Get ready to fight this tank.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR02.vcd" //Door's opening, get ready..
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR04.vcd" //I am so dead.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR05.vcd" //I cannot believe I am doing this.
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR07.vcd" //Unbelievable..
+}
+Rule C7M1OpenTankDoorX2TeenGirl {
+	criteria Conceptc7m1opentankdoorspeakTeenGirl IsTeenGirl _auto_NotsaidC7M1OpenTankDoor IsNotAlone
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorX2TeenGirl
+}
+
+Response C7M1SafeRoomIdleTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTRO04.vcd" then Biker C7M1_saferoom05 foo:0 .1 //Francis: Tell Bill I'm ready to go.
+	scene "scenes/TeenGirl/C6DLC3INTRO05.vcd" then NamVet C7M1_saferoom09 foo:0 .1 //This was your plan, Bill? A train to the Keys? This isn't the keys, Bill. We're nowhere.
+	scene "scenes/TeenGirl/C6DLC3INTRO13.vcd" then NamVet C7M1_saferoom15 foo:0 .1 //Well--better get moving. Remember, if you fall behind, Bill thinks it's okay to let you die.
+	scene "scenes/TeenGirl/C6DLC3INTRO16.vcd" then Manager C7M1_saferoom19 foo:0 .1 //Are you kidding me? This is the middle of nowhere. We left all those people behind for THIS?
+	scene "scenes/TeenGirl/C6DLC3INTRO20.vcd" then NamVet C7M1_saferoom20 foo:0 .1 //Good thing we left all those people behind so WE could escape, Bill.
+	scene "scenes/TeenGirl/C6DLC3INTRO21.vcd" then NamVet C7M1_saferoom20 foo:0 .1
+	scene "scenes/TeenGirl/C6DLC3INTRO22.vcd" then NamVet C7M1_saferoom20 foo:0 .1
+	scene "scenes/TeenGirl/dlc1_communityl4d101.vcd" then NamVet Community05 foo:0 0.01 //Think anyone is still alive?
+	scene "scenes/TeenGirl/dlc1_communityl4d102.vcd" then NamVet Community07 foo:0 0.01 //If no one minds, we can steal a boat.
+	scene "scenes/TeenGirl/dlc1_communityl4d103.vcd" then NamVet Community09 foo:0 0.01 //This windbreaker isn't cutting it.
+}
+Rule C7M1SafeRoomIdleTeenGirl {
+	criteria ConceptC7M1SafeRoom2 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M1SafeRoomConvo IsNotSpeakingWeight0
+	ApplyContext "Talk:1:20,_auto_C7M1SafeRoomConvo:1:0"
+	applycontexttoworld
+	Response C7M1SafeRoomIdleTeenGirl
+}
+
+Response C7M1SafeRoomStartTeenGirl {
+	scene "scenes/TeenGirl/Blank.vcd" then any C7M1SafeRoom2 foo:0 10
+}
+Rule C7M1SafeRoomStartTeenGirl {
+	criteria ConceptTalkIdle IsTeenGirl IsMapc7m1_docks IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart IsNotSpeakingWeight0
+	ApplyContext "_auto_SafeRoomStart:1:300,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response C7M1SafeRoomStartTeenGirl
+}
+
+
+//C7M2
+Response C7M2_saferoom01TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM01.vcd" then NamVet C7M2_saferoom01a foo:0 .1 //I really don't want to hear it.
+}
+Rule C7M2_saferoom01TeenGirl {
+	criteria ConceptC7M2_saferoom01 IsTeenGirl
+	Response C7M2_saferoom01TeenGirl
+}
+
+Response C7M2_saferoom01bTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM02.vcd" //Bill, I'm not ready to give up on everything yet.
+}
+Rule C7M2_saferoom01bTeenGirl {
+	criteria ConceptC7M2_saferoom01b IsTeenGirl
+	Response C7M2_saferoom01bTeenGirl
+}
+
+Response C7M2_saferoom05bTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM03.vcd" then Manager C7M2_saferoom05c foo:0 .1 //Because, Francis.. hey, yeah, what the hell, Bill?
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM04.vcd" then Manager C7M2_saferoom05c foo:0 .1
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM05.vcd" then Manager C7M2_saferoom05c foo:0 .1
+}
+Rule C7M2_saferoom05bTeenGirl {
+	criteria ConceptC7M2_saferoom05b IsTeenGirl
+	Response C7M2_saferoom05bTeenGirl
+}
+
+Response C7M2SafeRoomIdleTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM06.vcd" then NamVet C7M2_saferoom06 foo:0 .1 //So this is really it? We're gonna run away to some island? "So long world good luck with all the zombies"?
+	scene "scenes/TeenGirl/C6DLC3FIRSTSAFEROOM07.vcd" then NamVet C7M2_saferoom06 foo:0 .1 //So this is really it? We're gonna run away to some island? "So long world good luck with all the zombies"?
+}
+Rule C7M2SafeRoomIdleTeenGirl {
+	criteria ConceptC7M2SafeRoom2 IsTeenGirl AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M2SafeRoomConvo IsNotSpeakingWeight0
+	ApplyContext "Talk:1:20,_auto_C7M2SafeRoomConvo:1:0"
+	applycontexttoworld
+	Response C7M2SafeRoomIdleTeenGirl
+}
+
+Response C7M2SafeRoomStartTeenGirl {
+	scene "scenes/TeenGirl/Blank.vcd" then any C7M2SafeRoom2 foo:0 5
+}
+Rule C7M2SafeRoomStartTeenGirl {
+	criteria ConceptTalkIdle IsTeenGirl IsMapc7m2_barge IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart IsNotSpeakingWeight0
+	ApplyContext "_auto_SafeRoomStart:1:300,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response C7M2SafeRoomStartTeenGirl
+}
+
+Response Player.WarnMegaMobc7m201TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL07.vcd" //Into the chute.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL08.vcd" //We need to get into the chute.
+	scene "scenes/TeenGirl/C6DLC3GENERIC03.vcd" //Down the loader.
+}
+Rule Player.WarnMegaMobc7m201TeenGirl {
+	criteria ConceptPlayer.WarnMegaMobc7m201 IsTeenGirl IsNotAlone
+	Response Player.WarnMegaMobc7m201TeenGirl
+}
+
+
+//C7M3
+Response C7M3_saferoom004bTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM01.vcd" //Ohhhh. Boo.
+}
+Rule C7M3_saferoom004bTeenGirl {
+	criteria ConceptC7M3_saferoom004b IsTeenGirl
+	Response C7M3_saferoom004bTeenGirl
+}
+
+Response C7M3_saferoom005TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM02.vcd" //You asked me that last year? It would have been ten zombie movies. Now? Probably a documentary on how to make toilet paper.
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM03.vcd" //A month ago? I would have picked ten zombie movies. Now? Like, ten documentaries on how to build shelter, catch food and make toilet paper.
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM04.vcd" //A month ago? I would have picked ten zombie movies. Now? Like, ten documentaries on how to build shelter, catch food and make toilet paper.
+}
+Rule C7M3_saferoom005TeenGirl {
+	criteria ConceptC7M3_saferoom005 IsTeenGirl
+	Response C7M3_saferoom005TeenGirl
+}
+
+Response C7M3_saferoom006cTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM05.vcd" //No more human race..
+}
+Rule C7M3_saferoom006cTeenGirl {
+	criteria ConceptC7M3_saferoom006c IsTeenGirl
+	Response C7M3_saferoom006cTeenGirl
+}
+
+Response C7M3_saferoom007TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM06.vcd" then Manager C7M3_saferoom007a foo:0 .1 //In most movies they sink.
+}
+Rule C7M3_saferoom007TeenGirl {
+	criteria ConceptC7M3_saferoom007 IsTeenGirl
+	Response C7M3_saferoom007TeenGirl
+}
+
+Response C7M3_saferoom007bTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM07.vcd" then Manager C7M3_saferoom007c foo:0 .1 //I think that means we're safe.
+}
+Rule C7M3_saferoom007bTeenGirl {
+	criteria ConceptC7M3_saferoom007b IsTeenGirl
+	Response C7M3_saferoom007bTeenGirl
+}
+
+Response C7M3_saferoom016TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM08.vcd" then Biker C7M3_saferoom016a foo:0 .1 //That's the spirit, Louis!
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM09.vcd" then Biker C7M3_saferoom016a foo:0 .1 //That's the spirit, Louis!
+}
+Rule C7M3_saferoom016TeenGirl {
+	criteria ConceptC7M3_saferoom016 IsTeenGirl
+	Response C7M3_saferoom016TeenGirl
+}
+
+Response C7M3_saferoom016cTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM10.vcd" //I hate putting the lotion in the basket.
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM11.vcd" //I hate putting the lotion in the basket.
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM12.vcd" //I hate putting the lotion in the basket.
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM13.vcd" //I hate putting the lotion in the basket.
+	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM14.vcd" //I hate putting the lotion in the basket.
+}
+Rule C7M3_saferoom016cTeenGirl {
+	criteria ConceptC7M3_saferoom016c IsTeenGirl IsManagerNear500
+	Response C7M3_saferoom016cTeenGirl
+}
+
+Response C7M3BridgeBreaksTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS01.vcd" //Crap! That generator stalled!
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS02.vcd" //Damnit to hell, that generator's out.
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS03.vcd" //You're kidding me, that generator's out.
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS04.vcd" //You're kidding me, that generator's out.
+	scene "scenes/TeenGirl/DLC2M2FinaleBreak102.vcd" //We gotta restart the generator!
+	scene "scenes/TeenGirl/DLC2M2FinaleBreak202.vcd" //Somebody needs to restart the generator!
+}
+Rule C7M3BridgeBreaksTeenGirl {
+	criteria conceptC7M3BridgeBreaks IsTeenGirl _auto_NotSaidC7M3BridgeBreaks IsWithThree
+	ApplyContext "_auto_SaidC7M3BridgeBreaks:1:0"
+	applycontexttoworld
+	Response C7M3BridgeBreaksTeenGirl
+}
+
+Response C7M3BridgeBreaksXTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS01.vcd" //Crap! That generator stalled!
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS02.vcd" //Damnit to hell, that generator's out.
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS03.vcd" //You're kidding me, that generator's out.
+	scene "scenes/TeenGirl/C6DLC3BRIDGESTOPS04.vcd" //You're kidding me, that generator's out.
+	scene "scenes/TeenGirl/DLC2M2FinaleBreak102.vcd" //We gotta restart the generator!
+}
+Rule C7M3BridgeBreaksXTeenGirl {
+	criteria conceptC7M3BridgeBreaks IsTeenGirl _auto_NotSaidC7M3BridgeBreaks IsNotAlone
+	ApplyContext "_auto_SaidC7M3BridgeBreaks:1:0"
+	applycontexttoworld
+	Response C7M3BridgeBreaksXTeenGirl
+}
+
+Response C7M3FinalPressBikerTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES01.vcd" //FRANCIS!
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES02.vcd" //FRANCIS!
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES03.vcd" //Francis! You did it!
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES04.vcd" //Francis! We're safe!
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES05.vcd" //Francis! We're safe!
+}
+Rule C7M3FinalPressBikerTeenGirl {
+	criteria ConceptC7M3FinalSpeakBiker IsTeenGirl IsLastGenerator IsNotBiker _auto_NotC7M3FinalPress IsWithThree
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressBikerTeenGirl
+}
+
+Response C7M3FinalPressBikerXTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES01.vcd" //FRANCIS!
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES02.vcd" //FRANCIS!
+	scene "scenes/TeenGirl/C6DLC3FRANCISDIES03.vcd" //Francis! You did it!
+}
+Rule C7M3FinalPressBikerXTeenGirl {
+	criteria ConceptC7M3FinalSpeakBiker IsTeenGirl IsLastGenerator IsNotBiker _auto_NotC7M3FinalPress IsNotAlone
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressBikerXTeenGirl
+}
+
+Response C7M3FinalPressManagerTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3LOUISDIES01.vcd" //Thanks Louis!
+	scene "scenes/TeenGirl/C6DLC3LOUISDIES02.vcd" //Louis! You did it! You did it!
+	scene "scenes/TeenGirl/C6DLC3LOUISDIES03.vcd" //Louis! You did it! You did it, Louis!
+	scene "scenes/TeenGirl/C6DLC3LOUISDIES04.vcd" //LOOOOOOUUUUIIIIIISSSSS!
+	scene "scenes/TeenGirl/C6DLC3LOUISDIES05.vcd" //Oh damnit Louis!
+}
+Rule C7M3FinalPressManagerTeenGirl {
+	criteria ConceptC7M3FinalSpeakManager IsTeenGirl IsLastGenerator IsNotManager _auto_NotC7M3FinalPress
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressManagerTeenGirl
+}
+
+Response C7M3FinalPressNamVetTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3BILLDIES01.vcd" //Bill! No!!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES02.vcd" //BIIILLLLL!!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES03.vcd" //BIIILLLLL!!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES04.vcd" //Ah shit Bill, you didn't have to do that.
+	scene "scenes/TeenGirl/C6DLC3BILLDIES05.vcd" //Bill, you did it! We're safe!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES06.vcd" //Bill, you did it! We're safe!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES07.vcd" //Bill you saved us!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES08.vcd" //We won't forget you Bill!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES09.vcd" //I'm sorry Bill. I love you!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES10.vcd" //I'm sorry Bill. I love you!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES11.vcd" //Ahh Bill, I love you old man.
+	scene "scenes/TeenGirl/C6DLC3BILLDIES12.vcd" //Bill, bill, bill, bill.
+	scene "scenes/TeenGirl/C6DLC3BILLDIES13.vcd" //Bill, you did it! You did it!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES14.vcd" //Bill, you did it! We're safe!
+}
+Rule C7M3FinalPressNamVetTeenGirl {
+	criteria ConceptC7M3FinalSpeakNamVet IsTeenGirl IsLastGenerator IsNotNamVet _auto_NotC7M3FinalPress IsWithThree
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressNamVetTeenGirl
+}
+
+Response C7M3FinalPressNamVetXTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3BILLDIES01.vcd" //Bill! No!!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES02.vcd" //BIIILLLLL!!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES03.vcd" //BIIILLLLL!!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES04.vcd" //Ah shit Bill, you didn't have to do that.
+	scene "scenes/TeenGirl/C6DLC3BILLDIES09.vcd" //I'm sorry Bill. I love you!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES10.vcd" //I'm sorry Bill. I love you!
+	scene "scenes/TeenGirl/C6DLC3BILLDIES11.vcd" //Ahh Bill, I love you old man.
+	scene "scenes/TeenGirl/C6DLC3BILLDIES12.vcd" //Bill, bill, bill, bill.
+	scene "scenes/TeenGirl/C6DLC3BILLDIES13.vcd" //Bill, you did it! You did it!
+}
+Rule C7M3FinalPressNamVetXTeenGirl {
+	criteria ConceptC7M3FinalSpeakNamVet IsTeenGirl IsLastGenerator IsNotNamVet _auto_NotC7M3FinalPress IsNotAlone
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressNamVetXTeenGirl
+}
+
+Response C7M3GeneratorPress01TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3PRESTART1STGEN01.vcd" //These generators must be setup to power the bridge.
+	scene "scenes/TeenGirl/C6DLC3PRESTART1STGEN02.vcd" //We need to power these three generators to raise the bridge!
+	scene "scenes/TeenGirl/C6DLC3PRESTART1STGEN03.vcd" //Starting these generators is going to alert the horde.
+	scene "scenes/TeenGirl/C6DLC3PRESTART1STGEN04.vcd" //Starting these generators is going to alert the horde.
+	scene "scenes/TeenGirl/C6DLC3PRESTART1STGEN05.vcd" //I just know starting these generators isn't going to be quiet.
+}
+Rule C7M3GeneratorPress01TeenGirl {
+	criteria ConceptC7M3GeneratorSpeakTeenGirl IsTeenGirl IsFirstGenerator _auto_NotC7M3PressingTeenGirl
+	ApplyContext "_auto_C7M3PressingTeenGirl:1:6,_auto_SaidCreshendoStartNear:1:0"
+	applycontexttoworld
+	Response C7M3GeneratorPress01TeenGirl
+}
+
+Response C7M3GeneratorPress02TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3PRESTART2NDGEN01.vcd" //Let's get ready before we hit it.
+}
+Rule C7M3GeneratorPress02TeenGirl {
+	criteria ConceptC7M3GeneratorSpeakTeenGirl IsTeenGirl IsSecondGenerator _auto_NotC7M3PressingTeenGirl
+	ApplyContext "_auto_C7M3PressingTeenGirl:1:6,_auto_SaidCreshendoStartNear:1:0"
+	applycontexttoworld
+	Response C7M3GeneratorPress02TeenGirl
+}
+
+Response C7M3GeneratorPress03TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3PRESTARTLASTGEN01.vcd" //Last generator.
+	scene "scenes/TeenGirl/C6DLC3PRESTARTLASTGEN02.vcd" //This is it, get ready.
+}
+Rule C7M3GeneratorPress03TeenGirl {
+	criteria ConceptC7M3GeneratorSpeakTeenGirl IsTeenGirl IsThirdGenerator _auto_NotC7M3PressingTeenGirl
+	ApplyContext "_auto_C7M3PressingTeenGirl:1:6,_auto_SaidCreshendoStartNear:1:0"
+	applycontexttoworld
+	Response C7M3GeneratorPress03TeenGirl
+}
+
+Response C7M3PlayerGetToRescueVehicleTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3BRIDGEAVAILABLE01.vcd" then self HitThatButton foo:0 10.0 //The bridge is ready, let's go!
+	scene "scenes/TeenGirl/C6DLC3BRIDGEAVAILABLE02.vcd" then self HitThatButton foo:0 10.0 //Get to the bridge!
+	scene "scenes/TeenGirl/C6DLC3BRIDGEAVAILABLE03.vcd" then self HitThatButton foo:0 10.0 //We did it! Get to the bridge!
+	scene "scenes/TeenGirl/Blank.vcd" then self Way2StartGenL foo:0 5
+}
+Rule C7M3PlayerGetToRescueVehicleTeenGirl {
+	criteria ConceptGetToVehicle IsTeenGirl ismapc7m3_port IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl _auto_NotC7M3ToBridgeTeenGirl
+	ApplyContext "_auto_C7M3ToBridgeTeenGirl:1:0"
+	applycontexttoworld
+	Response C7M3PlayerGetToRescueVehicleTeenGirl
+}
+
+criterion "Way2StartGenL" "Concept" "Way2StartGenL" required
+Response Way2StartGenLTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3BRIDGEAVAILABLE04.vcd" then self HitThatButton foo:0 10.0 //Way to start that generator Louis?
+	scene "scenes/TeenGirl/C6DLC3BRIDGEAVAILABLE05.vcd" then self HitThatButton foo:0 10.0 //How did starting that generator feel Louis?
+}
+Rule Way2StartGenLTeenGirl {
+	criteria Way2StartGenL IsTeenGirl IsManagerNear500
+	Response Way2StartGenLTeenGirl
+}
+
+criterion "HitThatButton" "Concept" "HitThatButton" required
+Response HitThatButtonTeenGirl {
+norepeat
+	scene "scenes/TeenGirl/c6dlc3hittingbridgebutton01.vcd" then self HitThatButton foo:0 10.0 //Let's raise the bridge!
+	scene "scenes/TeenGirl/c6dlc3hittingbridgebutton02.vcd" then self HitThatButton foo:0 10.0 //We gotta hit at button and raise the bridge.
+	scene "scenes/TeenGirl/c6dlc3hittingbridgebutton03.vcd" then self HitThatButton foo:0 10.0 //Once this bridge is up, we're safe!
+}
+Rule HitThatButtonTeenGirl {
+	criteria HitThatButton IsNotSpeaking IsTeenGirl ChanceToFire50Percent
+	Response HitThatButtonTeenGirl
+}
+
+Response C7M3SafeRoomStartTeenGirl {
+	scene "scenes/TeenGirl/Blank.vcd" then any C7M3SafeRoom2 foo:0 5
+}
+Rule C7M3SafeRoomStartTeenGirl {
+	criteria ConceptTalkIdle IsTeenGirl IsMapc7m3_port IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart IsNotSpeakingWeight0
+	ApplyContext "_auto_SafeRoomStart:1:300,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response C7M3SafeRoomStartTeenGirl
+}
+
+Response C7M3WaveOverGen1TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3FIRSTEVENTOVER01.vcd" predelay "2,3" //Done! To the next generator.
+	scene "scenes/TeenGirl/C6DLC3FIRSTEVENTOVER02.vcd" predelay "2,3" //Let's go, we have more generators.
+}
+Rule C7M3WaveOverGen1TeenGirl {
+	criteria conceptC7M3WaveOverGen1 IsTeenGirl IsSecondGenerator _auto_NotSaidC7M3WaveOverGen1
+	ApplyContext "_auto_SaidC7M3WaveOverGen1:1:0"
+	applycontexttoworld
+	Response C7M3WaveOverGen1TeenGirl
+}
+
+Response C7M3WaveOverGen2TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SECONDEVENTOVER01.vcd" predelay "2,3" //This one is done, let's go!
+	scene "scenes/TeenGirl/C6DLC3SECONDEVENTOVER02.vcd" predelay "2,3" //One more!
+	scene "scenes/TeenGirl/C6DLC3SECONDEVENTOVER03.vcd" predelay "2,3" //We're almost out here! One more generator!
+}
+Rule C7M3WaveOverGen2TeenGirl {
+	criteria conceptC7M3WaveOverGen2 IsTeenGirl IsThirdGenerator _auto_NotSaidC7M3WaveOverGen2
+	ApplyContext "_auto_SaidC7M3WaveOverGen2:1:0"
+	applycontexttoworld
+	Response C7M3WaveOverGen2TeenGirl
+}
+
+
+//Item Spotted
+
+//Not Rosetta - Responses
+
+//RemarkableVocalize
+Response PlayerRemarkc7m1_bricktopTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GENERIC05.vcd" //On top of the bricks.
+}
+Rule PlayerRemarkc7m1_bricktopTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m1_bricktop IsNotSaidc7m1_bricktop IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear100 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_bricktop:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_bricktopTeenGirl
+}
+
+Response PlayerRemarkc7m1_harborblockedTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GENERIC07.vcd" //Under the bridge.
+}
+Rule PlayerRemarkc7m1_harborblockedTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m1_harborblocked IsNotSaidc7m1_harborblocked IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear800 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_harborblocked:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_harborblockedTeenGirl
+}
+
+Response PlayerRemarkc7m1_pastbricksTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GENERIC06.vcd" //Past the bricks.
+}
+Rule PlayerRemarkc7m1_pastbricksTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m1_pastbricks IsNotSaidc7m1_pastbricks IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear700 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_pastbricks:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_pastbricksTeenGirl
+}
+
+Response PlayerRemarkc7m1_pretankTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD01.vcd" //The one thing that survives this train wreck is a tank?
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD02.vcd" //So.. who's gonna open the door?
+	scene "scenes/TeenGirl/Blank.vcd" then self PreTankLouisZ foo:0 0
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD05.vcd" //So. This whole.. door situation? You guys work it out.
+	scene "scenes/TeenGirl/Blank.vcd" then self PreTankFrancisZ foo:0 0
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD09.vcd" //Somebody want to get the door? I'll open the next train car with a tank in it. Promise.
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD10.vcd" then Biker InfoRemc7m1_pretank01 foo:0 0.000 //So, I'm a girl, right? You guys wouldn't make a lady open up a deathtrap, right?
+}
+Rule PlayerRemarkc7m1_pretankTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m1_pretank IsNotSaidc7m1_pretank IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear200 IsNotSpeakingWeight0 _auto_NotsaidC7M1OpenTankDoorLong IsWithThree
+	ApplyContext "Saidc7m1_pretank:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_pretankTeenGirl
+}
+
+Response PlayerRemarkc7m1_pretankXTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD01.vcd" //The one thing that survives this train wreck is a tank?
+	scene "scenes/TeenGirl/Blank.vcd" then self PreTankLouisZ foo:0 0
+	scene "scenes/TeenGirl/Blank.vcd" then self PreTankFrancisZ foo:0 0
+}
+Rule PlayerRemarkc7m1_pretankXTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m1_pretank IsNotSaidc7m1_pretank IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear200 IsNotSpeakingWeight0 _auto_NotsaidC7M1OpenTankDoorLong IsNotAlone
+	ApplyContext "Saidc7m1_pretank:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_pretankXTeenGirl
+}
+
+criterion "PreTankLouisZ" "Concept" "PreTankLouisZ" required
+Response PreTankLouisZTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD03.vcd" then Manager InfoRemc7m1_pretank02 foo:0 0.000//Hey, Louis. You got a good feeling about opening that door.
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD04.vcd" then Manager InfoRemc7m1_pretank02 foo:0 0.000
+}
+Rule PreTankLouisZTeenGirl {
+	criteria PreTankLouisZ IsTeenGirl IsManagerNear500
+	Response PreTankLouisZTeenGirl
+}
+
+criterion "PreTankFrancisZ" "Concept" "PreTankFrancisZ" required
+Response PreTankFrancisZTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD06.vcd" then Biker InfoRemc7m1_pretank03 foo:0 0.000 //Hey Francis. Guywhoopensthetraindoorsayswhat?
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD07.vcd" then Biker InfoRemc7m1_pretank04 foo:0 0.000 //Hey, Francis. Be a pal and open that door.
+	scene "scenes/TeenGirl/C6DLC3TANKINTRAINYARD08.vcd" then Biker InfoRemc7m1_pretank04 foo:0 0.000 //Hey, Francis. Be a pal and open that door.
+}
+Rule PreTankFrancisZTeenGirl {
+	criteria PreTankFrancisZ IsTeenGirl IsBikerNear500
+	Response PreTankFrancisZTeenGirl
+}
+
+Response PlayerRemarkc7m1_tankcarTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3INTANKTRAINCAR01.vcd" //God, this must have been horrible..
+	scene "scenes/TeenGirl/C6DLC3INTANKTRAINCAR02.vcd" //Man. I thought it was bad fighting this thing outside.
+}
+Rule PlayerRemarkc7m1_tankcarTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear400 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_tankcar:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_tankcarTeenGirl
+}
+
+Response PlayerRemarkc7m2_climbupcrapTeenGirl {
+	scene "scenes/TeenGirl/DLC2M1Directional08.vcd" //We can get back up over here!
+	scene "scenes/TeenGirl/DLC2M2Directional04.vcd" //Up that fence!
+}
+Rule PlayerRemarkc7m2_climbupcrapTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m2_climbupcrap IsNotSaidc7m2_climbupcrap IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear400 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_climbupcrap:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_climbupcrapTeenGirl
+}
+
+Response PlayerRemarkc7m2_gravelhillTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL06.vcd" //Climb up this pile of crap!
+	scene "scenes/TeenGirl/C6DLC3GENERIC04.vcd" //Up the hill!
+}
+Rule PlayerRemarkc7m2_gravelhillTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m2_gravelhill IsNotSaidc7m2_gravelhill IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_gravelhill:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_gravelhillTeenGirl
+}
+
+Response PlayerRemarkc7m2_onbargeTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3ONBIGSHIP01.vcd" //Supplies in the hold.
+	scene "scenes/TeenGirl/C6DLC3GENERIC01.vcd" //Over the ship!
+	scene "scenes/TeenGirl/C6DLC3GENERIC02.vcd" //Across the ship!
+}
+Rule PlayerRemarkc7m2_onbargeTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m2_onbarge IsNotSaidc7m2_onbarge IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_onbarge:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_onbargeTeenGirl
+}
+
+Response PlayerRemarkc7m2_overboatTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GENERIC01.vcd" //Over the ship!
+	scene "scenes/TeenGirl/C6DLC3GENERIC02.vcd" //Across the ship!
+}
+Rule PlayerRemarkc7m2_overboatTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m2_overboat IsNotSaidc7m2_overboat IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_overboat:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_overboatTeenGirl
+}
+
+Response PlayerRemarkc7m2_throughhereTeenGirl {
+	scene "scenes/TeenGirl/GenericDirections05.vcd" //Through here!
+	scene "scenes/TeenGirl/WorldAirport0305.vcd" //Through here!
+	scene "scenes/TeenGirl/WorldSmallTown0204.vcd" //Through here!
+}
+Rule PlayerRemarkc7m2_throughhereTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m2_throughhere IsNotSaidc7m2_throughhere IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_throughhere:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_throughhereTeenGirl
+}
+
+Response PlayerRemarkc7m3_seesailboatTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT01.vcd" //We'll need to raise that bridge if we want to get that boat out of here.
+	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT02.vcd" //We can use that sailboat by the bridge!
+	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT03.vcd" //We need to raise the.
+}
+Rule PlayerRemarkc7m3_seesailboatTeenGirl {
+	criteria ConceptRemark IsTeenGirl Isc7m3_seesailboat IsNotSaidc7m3_seesailboat IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsFirstGenerator IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m3_seesailboat:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m3_seesailboatTeenGirl
+}
+
+
+//Rosetta - Manners
+
+//Scavenge
+Response GrabbingGasSCTeenGirl {
+	scene "scenes/TeenGirl/KillConfirmation01.vcd" //Got it!
+	scene "scenes/TeenGirl/KillConfirmation05.vcd" //Got it!
+}
+Rule GrabbingGasSCTeenGirl {
+	criteria ConceptPlayerEquippedScavengeItem IsTeenGirl
+	Response GrabbingGasSCTeenGirl
+}
+
+Response PlayerShotGasCanTeenGirl {
+	scene "scenes/TeenGirl/ReactionNegative01.vcd" predelay "1,1.5" //Uh oh
+	scene "scenes/TeenGirl/ReactionNegative11.vcd" predelay "1,1.5" //Are you kidding me?
+	scene "scenes/TeenGirl/ReactionNegative25.vcd" predelay "1,1.5" //Crap
+	scene "scenes/TeenGirl/ReactionNegative26.vcd" predelay "1,1.5" //No No No No NO
+	scene "scenes/TeenGirl/Swear06.vcd" predelay "1,1.5" //Mother.
+	scene "scenes/TeenGirl/Swear09.vcd" predelay "1,1.5" //Ah bullshit.
+	scene "scenes/TeenGirl/Swear12.vcd" predelay "1,1.5" //Shit.
+	scene "scenes/TeenGirl/Swear13.vcd" predelay "1,1.5" //Goddammit.
+}
+Rule PlayerShotGasCanTeenGirl {
+	criteria ConceptPlayerShotGasCan IsTeenGirl IsNotSaidPlayerShotGasCan IsScavenge
+	ApplyContext "SaidPlayerShotGasCan1:10"
+	applycontexttoworld
+	Response PlayerShotGasCanTeenGirl
+}
+
+Response ScavengeStartTeenGirl {
+	scene "scenes/TeenGirl/MoveOn02.vcd" //Let's go
+	scene "scenes/TeenGirl/MoveOn08.vcd" //Come on, lets go!
+	scene "scenes/TeenGirl/MoveOn10.vcd" //We need to get going guys
+}
+Rule ScavengeStartTeenGirl {
+	criteria ConceptSurvivorLeavingCheckpoint IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsScavenge IsNotSaidStartScavenge
+	ApplyContext "SaidStartScavenge:1:4"
+	applycontexttoworld
+	Response ScavengeStartTeenGirl
+}
+
+
+//Vocalize
+
+//Vocalizer
+Response FinaleAheadc7m3TeenGirl {
+	scene "scenes/TeenGirl/ImWithYou11.vcd" //Let's go.
+	scene "scenes/TeenGirl/MoveOn04.vcd" //Let's get moving
+	scene "scenes/TeenGirl/MoveOn08.vcd" //Come on, lets go!
+}
+Rule FinaleAheadc7m3TeenGirl {
+	criteria ConceptPlayerNearFinale IsNotCoughing IsTeenGirl IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkTeenGirl IsNotIncapacitated IsWorldTalkTeenGirl Ismapc7m3_port IsNotAlone
+	ApplyContext "SaidFinaleAhead:1:30"
+	applycontexttoworld
+	Response FinaleAheadc7m3TeenGirl
+}
+
+Response Player.C7M2CrowsFlyTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL01.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Great, crows.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL02.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Great, crows.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL03.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Ah! Dammit! Stupid birds.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL04.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Shut. Up. You. Stupid. Crows.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL05.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Shut. Up. You. Stupid. Crows.
+}
+Rule Player.C7M2CrowsFlyTeenGirl {
+	criteria ConceptC7M2CrowsFlySpeakTeenGirl ismapc7m2_barge IsTeenGirl _auto_NotC7M2CrowsFlySpeak IsNotAlone
+	ApplyContext "_auto_C7M2CrowsFlySpeak:1:0"
+	applycontexttoworld
+	Response Player.C7M2CrowsFlyTeenGirl
+}
+
+Response Player.C7M2CrowsFlyXTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL03.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Ah! Dammit! Stupid birds.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL04.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Shut. Up. You. Stupid. Crows.
+	scene "scenes/TeenGirl/C6DLC3GRAVELHILL05.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Shut. Up. You. Stupid. Crows.
+}
+Rule Player.C7M2CrowsFlyXTeenGirl {
+	criteria ConceptC7M2CrowsFlySpeakTeenGirl ismapc7m2_barge IsTeenGirl _auto_NotC7M2CrowsFlySpeak
+	ApplyContext "_auto_C7M2CrowsFlySpeak:1:0"
+	applycontexttoworld
+	Response Player.C7M2CrowsFlyXTeenGirl
+}
+
+Response Player.C7M3BridgeLeapTeenGirl {
+	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE02.vcd" //Stay put! I'll be right back! I hope.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE03.vcd" //Stay up there! I got this!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE04.vcd" //What am I doing what am I doing what am I doing..
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE05.vcd" //Stay put! I'll be right back!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE06.vcd" //What am I doing what am I doing what am I doing..
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE07.vcd" //This is the last time you're gonna see these! Guns!
+	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE09.vcd" //Oh god, I am so screwed.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE10.vcd" //Oh god, I am so screwed.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE11.vcd" //I've got this! Not a big deal. Oh.. shit.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE12.vcd" //I've got this! Not a big deal. Oh.. shit.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE13.vcd" //I've got a plan! Stay there!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE14.vcd" //Don't get off the bridge!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE15.vcd" //I'll miss you guys! Stay there!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE16.vcd" //I'll miss you guys! Stay there!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE17.vcd" //I'll be back! Oh god, no I won't..
+}
+Rule Player.C7M3BridgeLeapTeenGirl {
+	criteria ConceptC7M3BridgeLeapSpeakTeenGirl IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSpeaking ismapc7m3_port IsWorldTalkTeenGirl IsNotScavenge _auto_NotSaidC7M3BridgeLeap IsWithThree
+	ApplyContext "WarnMegaMob:1:300,SaidSpecialWarn:1:30,_auto_SaidC7M3BridgeLeap:1:0"
+	applycontexttoworld
+	Response Player.C7M3BridgeLeapTeenGirl
+}
+
+Response Player.C7M3BridgeLeapXTeenGirl {
+	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE02.vcd" //Stay put! I'll be right back! I hope.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE03.vcd" //Stay up there! I got this!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE04.vcd" //What am I doing what am I doing what am I doing..
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE05.vcd" //Stay put! I'll be right back!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE06.vcd" //What am I doing what am I doing what am I doing..
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE07.vcd" //This is the last time you're gonna see these! Guns!
+	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE09.vcd" //Oh god, I am so screwed.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE10.vcd" //Oh god, I am so screwed.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE11.vcd" //I've got this! Not a big deal. Oh.. shit.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE12.vcd" //I've got this! Not a big deal. Oh.. shit.
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE13.vcd" //I've got a plan! Stay there!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE14.vcd" //Don't get off the bridge!
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE17.vcd" //I'll be back! Oh god, no I won't..
+}
+Rule Player.C7M3BridgeLeapXTeenGirl {
+	criteria ConceptC7M3BridgeLeapSpeakTeenGirl IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSpeaking ismapc7m3_port IsWorldTalkTeenGirl IsNotScavenge _auto_NotSaidC7M3BridgeLeap IsNotAlone
+	ApplyContext "WarnMegaMob:1:300,SaidSpecialWarn:1:30,_auto_SaidC7M3BridgeLeap:1:0"
+	applycontexttoworld
+	Response Player.C7M3BridgeLeapXTeenGirl
+}
+
+criterion "LeapLouis" "Concept" "LeapLouis" required
+Response LeapLouisTeenGirl {
+	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE08.vcd" //Louis! I will always be your friend!
+}
+Rule LeapLouisTeenGirl {
+	criteria LeapLouis IsTeenGirl IsManagerNear500
+	Response LeapLouisTeenGirl
+}
+
+
+//Vocalizer - Pickups
+
+//Vocalizer Convo (AUTO)
+Response InfoReminfo_powerboat4TeenGirl {
+	scene "scenes/TeenGirl/C6DLC3OTHERBOATS01.vcd" then Biker InfoReminfo_powerboat4a foo:0 -2.953 //Francis, you do know what a sailboat looks like right?
+	scene "scenes/TeenGirl/C6DLC3OTHERBOATS02.vcd" then Biker InfoReminfo_powerboat4a foo:0 -3.503 //Francis, do you even know what a sail boat looks like?
+	scene "scenes/TeenGirl/C6DLC3OTHERBOATS03.vcd" then Biker InfoReminfo_powerboat4a foo:0 -3.475 //Francis, do you even know what a sailboat looks like?
+}
+Rule InfoReminfo_powerboat4TeenGirl {
+	criteria ConceptInfoReminfo_powerboat4 IsTeenGirl IsTeenGirlNear800
+	Response InfoReminfo_powerboat4TeenGirl
+}
+
+
+//Weapon Spotted
+

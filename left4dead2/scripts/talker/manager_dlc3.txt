@@ -1,0 +1,998 @@
+//Manager Response Rule File
+//For L4D2 by New Day & Morning Nine Nine
+
+
+//Auto-generated blank response for padding out InfoRemarkables
+Response _PlayerInfoRemarkableBlankManager {
+	speak "Manager_Blank" noscene //Blank
+}
+
+
+//C7M1
+Response C7M1_saferoom03aManager {
+	scene "scenes/Manager/C6DLC3INTRO03.vcd" then NamVet C7M1_saferoom03b foo:0 .1 //Why's that?
+	scene "scenes/Manager/C6DLC3INTRO04.vcd" then NamVet C7M1_saferoom03b foo:0 .1 //Why's that?
+}
+Rule C7M1_saferoom03aManager {
+	criteria ConceptC7M1_saferoom03a IsManager
+	Response C7M1_saferoom03aManager
+}
+
+Response C7M1_saferoom05aManager {
+	scene "scenes/Manager/C6DLC3INTRO05.vcd" //I think she's mad at Bill.
+	scene "scenes/Manager/C6DLC3INTRO06.vcd" //I think she's mad at Bill.
+}
+Rule C7M1_saferoom05aManager {
+	criteria ConceptC7M1_saferoom05a IsManager
+	Response C7M1_saferoom05aManager
+}
+
+Response C7M1_saferoom06bManager {
+	scene "scenes/Manager/C6DLC3INTRO07.vcd" then TeenGirl LaughFrancis foo:0 .0 //And its on fire
+	scene "scenes/Manager/C6DLC3INTRO08.vcd" then TeenGirl LaughFrancis foo:0 .0 //And its on fire
+	scene "scenes/Manager/C6DLC3INTRO09.vcd" then TeenGirl LaughFrancis foo:0 .0 //And its on fire
+}
+Rule C7M1_saferoom06bManager {
+	criteria ConceptC7M1_saferoom06b IsManager
+	Response C7M1_saferoom06bManager
+}
+
+Response C7M1_saferoom08aManager {
+	scene "scenes/Manager/C6DLC3INTRO10.vcd" then NamVet C7M1_saferoom08b foo:0 .1 //Actually, I'd like to see that too!
+	scene "scenes/Manager/C6DLC3INTRO11.vcd" then NamVet C7M1_saferoom08b foo:0 .1 //Actually, I'd like to see that too!
+	scene "scenes/Manager/C6DLC3INTRO12.vcd" then NamVet C7M1_saferoom08b foo:0 .1 //Actually, I would have liked to see that too!
+}
+Rule C7M1_saferoom08aManager {
+	criteria ConceptC7M1_saferoom08a IsManager
+	Response C7M1_saferoom08aManager
+}
+
+Response C7M1_saferoom12Manager {
+	scene "scenes/Manager/C6DLC3INTRO13.vcd" then Biker C7M1_saferoom12a foo:0 .1 //I pissed too
+	scene "scenes/Manager/C6DLC3INTRO14.vcd" then Biker C7M1_saferoom12a foo:0 .1 //Yeah I pissed too
+	scene "scenes/Manager/C6DLC3INTRO15.vcd" then Biker C7M1_saferoom12a foo:0 .1 //I'm pissed too!
+	scene "scenes/Manager/C6DLC3INTRO16.vcd" then Biker C7M1_saferoom12a foo:0 .1 //Yeah, I really pissed
+	scene "scenes/Manager/C6DLC3INTRO17.vcd" then Biker C7M1_saferoom12a foo:0 .1 //Yeah, I really pissed
+	scene "scenes/Manager/C6DLC3INTRO19.vcd" then Biker C7M1_saferoom12a foo:0 .1 //I'm pissed too
+}
+Rule C7M1_saferoom12Manager {
+	criteria ConceptC7M1_saferoom12 IsManager
+	Response C7M1_saferoom12Manager
+}
+
+Response C7M1_saferoom15cManager {
+	scene "scenes/Manager/C6DLC3INTRO21.vcd" //Well, thanks, man!
+	scene "scenes/Manager/C6DLC3INTRO22.vcd" //Thanks, man!
+}
+Rule C7M1_saferoom15cManager {
+	criteria ConceptC7M1_saferoom15c IsManager
+	Response C7M1_saferoom15cManager
+}
+
+Response C7M1_saferoom18aManager {
+	scene "scenes/Manager/C6DLC3INTRO23.vcd" //I got a good feeling about this island.
+	scene "scenes/Manager/C6DLC3INTRO24.vcd" //I got a good feeling about this island.
+}
+Rule C7M1_saferoom18aManager {
+	criteria ConceptC7M1_saferoom18a IsManager
+	Response C7M1_saferoom18aManager
+}
+
+Response C7M1_saferoom19Manager {
+	scene "scenes/Manager/C6DLC3INTRO25.vcd" then TeenGirl C7M1_saferoom19a foo:0 .1 //Zoey, come on. We have to work together.
+}
+Rule C7M1_saferoom19Manager {
+	criteria ConceptC7M1_saferoom19 IsManager
+	Response C7M1_saferoom19Manager
+}
+
+Response C7M1_saferoom19bManager {
+	scene "scenes/Manager/C6DLC3INTRO26.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO27.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO28.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO29.vcd" //I do, but we have to keep moving.
+}
+Rule C7M1_saferoom19bManager {
+	criteria ConceptC7M1_saferoom19b IsManager
+	Response C7M1_saferoom19bManager
+}
+
+Response C7M1_saferoom21Manager {
+	scene "scenes/Manager/C6DLC3INTRO30.vcd" then Biker C7M1_saferoom21a foo:0 .1 //Francis am I alone in hating boats?
+	scene "scenes/Manager/C6DLC3INTRO31.vcd" then Biker C7M1_saferoom21a foo:0 .1 //Francis am I alone in hating boats?
+}
+Rule C7M1_saferoom21Manager {
+	criteria ConceptC7M1_saferoom21 IsManager
+	Response C7M1_saferoom21Manager
+}
+
+Response C7M1_saferoom22aManager {
+	scene "scenes/Manager/C6DLC3INTRO33.vcd" //I'm trying to keep my head up Bill.
+	scene "scenes/Manager/C6DLC3INTRO34.vcd" //I'm trying to keep my head up Bill.
+	scene "scenes/Manager/C6DLC3INTRO35.vcd" //Look, I'm trying, Bill. I'm trying.
+}
+Rule C7M1_saferoom22aManager {
+	criteria ConceptC7M1_saferoom22a IsManager
+	Response C7M1_saferoom22aManager
+}
+
+Response C7M1_saferoom24Manager {
+	scene "scenes/Manager/C6DLC3INTRO36.vcd" then NamVet C7M1_saferoom24a foo:0 .1 //Way to go Francis, some cardio is just what we need!
+}
+Rule C7M1_saferoom24Manager {
+	criteria ConceptC7M1_saferoom24 IsManager
+	Response C7M1_saferoom24Manager
+}
+
+Response C7M1_saferoom25Manager {
+	scene "scenes/Manager/C6DLC3INTRO37.vcd" then NamVet C7M1_saferoom25a foo:0 .1 //What do we do if we meet someone?
+	scene "scenes/Manager/C6DLC3INTRO38.vcd" then NamVet C7M1_saferoom25a foo:0 .1 //What do we do if we meet someone?
+}
+Rule C7M1_saferoom25Manager {
+	criteria ConceptC7M1_saferoom25 IsManager
+	Response C7M1_saferoom25Manager
+}
+
+Response C7M1_saferoom25bManager {
+	scene "scenes/Manager/C6DLC3INTRO39.vcd" //How can we be sure they're immune?
+}
+Rule C7M1_saferoom25bManager {
+	criteria ConceptC7M1_saferoom25b IsManager
+	Response C7M1_saferoom25bManager
+}
+
+Response C7M1OpenTankDoorManager {
+	scene "scenes/Manager/C6DLC3OPENINGDOOR01.vcd" //You all sure no one else doesn't want to open this door?
+	scene "scenes/Manager/C6DLC3OPENINGDOOR02.vcd" //Get ready, I'm opening the door.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR03.vcd" //I'll open this, but I'm not going to be happy.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR04.vcd" //Get ready, I don't have a good feeling about this.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR05.vcd" //Stay positive guys, we can handle this.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR06.vcd" //Man, why am I always opening these things?
+}
+Rule C7M1OpenTankDoorManager {
+	criteria Conceptc7m1opentankdoorspeakManager IsManager _auto_NotsaidC7M1OpenTankDoor IsWithThree
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorManager
+}
+
+Response C7M1OpenTankDoorXManager {
+	scene "scenes/Manager/C6DLC3OPENINGDOOR02.vcd" //Get ready, I'm opening the door.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR03.vcd" //I'll open this, but I'm not going to be happy.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR04.vcd" //Get ready, I don't have a good feeling about this.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR06.vcd" //Man, why am I always opening these things?
+}
+Rule C7M1OpenTankDoorXManager {
+	criteria Conceptc7m1opentankdoorspeakManager IsManager _auto_NotsaidC7M1OpenTankDoor IsNotAlone
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorXManager
+}
+
+Response C7M1OpenTankDoorTManager {
+	scene "scenes/Manager/C6DLC3OPENINGDOOR01.vcd" //You all sure no one else doesn't want to open this door?
+	scene "scenes/Manager/C6DLC3OPENINGDOOR02.vcd" //Get ready, I'm opening the door.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR03.vcd" //I'll open this, but I'm not going to be happy.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR04.vcd" //Get ready, I don't have a good feeling about this.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR05.vcd" //Stay positive guys, we can handle this.
+}
+Rule C7M1OpenTankDoorTManager {
+	criteria Conceptc7m1opentankdoorspeakManager IsManager _auto_NotsaidC7M1OpenTankDoor IsWithThree IsTeenGirlAlive
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorTManager
+}
+
+Response C7M1OpenTankDoorXTManager {
+	scene "scenes/Manager/C6DLC3OPENINGDOOR02.vcd" //Get ready, I'm opening the door.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR03.vcd" //I'll open this, but I'm not going to be happy.
+	scene "scenes/Manager/C6DLC3OPENINGDOOR04.vcd" //Get ready, I don't have a good feeling about this.
+}
+Rule C7M1OpenTankDoorXTManager {
+	criteria Conceptc7m1opentankdoorspeakManager IsManager _auto_NotsaidC7M1OpenTankDoor IsNotAlone IsTeenGirlAlive
+	ApplyContext "_auto_saidC7M1OpenTankDoor:1:10,_auto_saidC7M1OpenTankDoorLong:1:0"
+	applycontexttoworld
+	Response C7M1OpenTankDoorXTManager
+}
+
+Response C7M1SafeRoomIdleManager {
+	scene "scenes/Manager/C6DLC3INTRO01.vcd" then NamVet C7M1_saferoom03 foo:0 .1 //Hey, Bill! Look, there's a boat! Hell, there's boats everywhere.
+	scene "scenes/Manager/C6DLC3INTRO02.vcd" then NamVet C7M1_saferoom03 foo:0 .1 //Hey, Bill! Look, there's a boat! Hell, there's boats everywhere.
+	scene "scenes/Manager/C6DLC3INTRO20.vcd" then Biker C7M1_saferoom13 foo:0 .1 //We GOTTA be getting close to the Gulf. I can almost smell the salt water.
+	scene "scenes/Manager/C6DLC3INTRO32.vcd" then NamVet C7M1_saferoom22 foo:0 .1 //Military jail, a train ride, and now.. back to walking?
+	scene "scenes/Manager/DLC1_CommunityL4D101.vcd" then NamVet CryBabies foo:0 0.01 //It sure is cold!"
+	scene "scenes/Manager/DLC1_CommunityL4D106.vcd" then Biker ZombieWrack foo:0 0.01 //Zombies are driving trucks?"
+	scene "scenes/Manager/DLC1_CommunityL4D107.vcd" then TeenGirl C7M1_saferoom23 foo:0 .1 //I'm sure someone's alive, let's go look!"
+}
+Rule C7M1SafeRoomIdleManager {
+	criteria ConceptC7M1SafeRoom2 IsManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M1SafeRoomConvo IsNotSpeakingWeight0
+	ApplyContext "Talk:1:16,_auto_C7M1SafeRoomConvo:1:0"
+	applycontexttoworld
+	Response C7M1SafeRoomIdleManager
+}
+
+criterion "ZombieWrack" "Concept" "ZombieWrack" required
+Response ZombieWrackBiker {
+	scene "scenes/Biker/C6DLC3INTRO08.vcd" then NamVet C7M1_saferoom08 foo:0 .1 //Holy shit! Did that truck have a head-on collision with a boat? Man, I wish I could have seen that.
+}
+Rule ZombieWrackBiker {
+	criteria ZombieWrack IsBiker
+	Response ZombieWrackBiker
+}
+
+Response C7M1SafeRoomStartManager {
+	scene "scenes/Manager/Blank.vcd" then any C7M1SafeRoom2 foo:0 10
+}
+Rule C7M1SafeRoomStartManager {
+	criteria ConceptTalkIdle IsManager IsMapc7m1_docks IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart IsNotSpeakingWeight0
+	ApplyContext "_auto_SafeRoomStart:1:300,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response C7M1SafeRoomStartManager
+}
+
+Response InfoRemc7m1_pretank02Manager {
+	scene "scenes/Manager/C6DLC3TANKINTRAINYARD03.vcd" then TeenGirl PlayerLaughLouis foo:0 .0 //Me?
+	scene "scenes/Manager/C6DLC3TANKINTRAINYARD05.vcd" then TeenGirl PlayerLaughLouis foo:0 .0 //Who? Me?
+}
+Rule InfoRemc7m1_pretank02Manager {
+	criteria ConceptInfoRemc7m1_pretank02 IsManager
+	Response InfoRemc7m1_pretank02Manager
+}
+
+Response InfoRemc7m1_tankcar01aManager {
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR03.vcd" then TeenGirl PlayerLaughLouis foo:0 .0 //You're welcome.
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR04.vcd" then TeenGirl PlayerLaughLouis foo:0 .0 //You're welcome.
+}
+Rule InfoRemc7m1_tankcar01aManager {
+	criteria ConceptInfoRemc7m1_tankcar01a IsManager
+	Response InfoRemc7m1_tankcar01aManager
+}
+
+
+//C7M2
+Response C7M2_saferoom02Manager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM01.vcd" then Biker C7M2_saferoom02a foo:0 .1 //Let me see. Uh. "Taki. I love you. Goodbye."
+}
+Rule C7M2_saferoom02Manager {
+	criteria ConceptC7M2_saferoom02 IsManager
+	Response C7M2_saferoom02Manager
+}
+
+Response C7M2_saferoom02bManager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM02.vcd" then Biker C7M2_saferoom02c foo:0 .1 //I interned in Tokyo.
+}
+Rule C7M2_saferoom02bManager {
+	criteria ConceptC7M2_saferoom02b IsManager
+	Response C7M2_saferoom02bManager
+}
+
+Response C7M2_saferoom02dManager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM03.vcd" then Biker C7M2_saferoom02e foo:0 .1 //"Bill's an idiot."
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM04.vcd" then Biker C7M2_saferoom02e foo:0 .1 //"Bill's an idiot."
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM05.vcd" then Biker C7M2_saferoom02e foo:0 .1 //"Francis is an idiot too."
+}
+Rule C7M2_saferoom02dManager {
+	criteria ConceptC7M2_saferoom02d IsManager
+	Response C7M2_saferoom02dManager
+}
+
+Response C7M2_saferoom03aManager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM07.vcd" then Biker C7M2_saferoom03b foo:0 .1 //Thinking positive got me where I am, Francis.
+}
+Rule C7M2_saferoom03aManager {
+	criteria ConceptC7M2_saferoom03a IsManager
+	Response C7M2_saferoom03aManager
+}
+
+Response C7M2_saferoom04Manager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM08.vcd" //Even if it does go back to normal, they're not lettin' us back in. I think this island's the only chance we got.
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM09.vcd" //Even if it does go back to normal, we won't. I think this island's the only chance we got.
+}
+Rule C7M2_saferoom04Manager {
+	criteria ConceptC7M2_saferoom04 IsManager
+	Response C7M2_saferoom04Manager
+}
+
+Response C7M2_saferoom05cManager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM10.vcd" //Let's make a note of that for next time, alright?
+}
+Rule C7M2_saferoom05cManager {
+	criteria ConceptC7M2_saferoom05c IsManager
+	Response C7M2_saferoom05cManager
+}
+
+Response C7M2SafeRoomIdleManager {
+	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM06.vcd" then Biker C7M2_saferoom03 foo:0 .1 //We're gonna find that sail boat right around the corner. You just watch.
+}
+Rule C7M2SafeRoomIdleManager {
+	criteria ConceptC7M2SafeRoom2 IsManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M2SafeRoomConvo IsNotSpeakingWeight0
+	ApplyContext "Talk:1:20,_auto_C7M2SafeRoomConvo:1:0"
+	applycontexttoworld
+	Response C7M2SafeRoomIdleManager
+}
+
+Response C7M2SafeRoomStartManager {
+	scene "scenes/Manager/Blank.vcd" then any C7M2SafeRoom2 foo:0 5
+}
+Rule C7M2SafeRoomStartManager {
+	criteria ConceptTalkIdle IsManager IsMapc7m2_barge IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart IsNotSpeakingWeight0
+	ApplyContext "_auto_SafeRoomStart:1:300,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response C7M2SafeRoomStartManager
+}
+
+Response Player.WarnMegaMobc7m201Manager {
+	scene "scenes/Manager/C6DLC3GRAVELHILL08.vcd" //Get into the chute!
+	scene "scenes/Manager/C6DLC3GRAVELHILL09.vcd" //Everyone, into the chute!
+	scene "scenes/Manager/C6DLC3GENERIC03.vcd" //Down the loader.
+}
+Rule Player.WarnMegaMobc7m201Manager {
+	criteria ConceptPlayer.WarnMegaMobc7m201 IsManager IsWithThree
+	Response Player.WarnMegaMobc7m201Manager
+}
+
+Response Player.WarnMegaMobc7m201XManager {
+	scene "scenes/Manager/C6DLC3GRAVELHILL08.vcd" //Get into the chute!
+	scene "scenes/Manager/C6DLC3GENERIC03.vcd" //Down the loader.
+}
+Rule Player.WarnMegaMobc7m201XManager {
+	criteria ConceptPlayer.WarnMegaMobc7m201 IsManager IsNotAlone
+	Response Player.WarnMegaMobc7m201XManager
+}
+
+
+//C7M3
+Response C7M3_saferoom003aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM05.vcd" //You are literally the oldest man in the world, aren't you?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM06.vcd" //How old are you again Bill?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM07.vcd" then NamVet C7M3_saferoom003b foo:0 .1 //Bill, did they have TV when you were young?
+}
+Rule C7M3_saferoom003aManager {
+	criteria ConceptC7M3_saferoom003a IsManager
+	Response C7M3_saferoom003aManager
+}
+
+Response C7M3_saferoom004Manager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM09.vcd" then Manager C7M3_saferoom004a foo:0 0.5 //But you know, as long as I have a Molotov I can make a firewall!
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM10.vcd" then Manager C7M3_saferoom004a foo:0 0.5 //But you know, as long as I have a Molotov I can make a firewall!
+}
+Rule C7M3_saferoom004Manager {
+	criteria ConceptC7M3_saferoom004 IsManager
+	Response C7M3_saferoom004Manager
+}
+
+Response C7M3_saferoom004aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM11.vcd" then Any C7M3_saferoom004b foo:0 .1 //Get it Francis? A firewall?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM12.vcd" then Any C7M3_saferoom004b foo:0 .1 //Get it Francis? A firewall?
+}
+Rule C7M3_saferoom004aManager {
+	criteria ConceptC7M3_saferoom004a IsManager IsBikerNear500 IsBikerAlive
+	Response C7M3_saferoom004aManager
+}
+
+Response C7M3_saferoom006bManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM15.vcd" then TeenGirl C7M3_saferoom006c foo:0 .1 //No more internet, no more xbox, no more nothing..
+}
+Rule C7M3_saferoom006bManager {
+	criteria ConceptC7M3_saferoom006b IsManager
+	Response C7M3_saferoom006bManager
+}
+
+Response C7M3_saferoom007aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM17.vcd" then TeenGirl C7M3_saferoom007b foo:0 .1 //Yeah, I read that in books too.
+}
+Rule C7M3_saferoom007aManager {
+	criteria ConceptC7M3_saferoom007a IsManager
+	Response C7M3_saferoom007aManager
+}
+
+Response C7M3_saferoom007cManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM18.vcd" //I don't remember what that feels like.
+}
+Rule C7M3_saferoom007cManager {
+	criteria ConceptC7M3_saferoom007c IsManager
+	Response C7M3_saferoom007cManager
+}
+
+Response C7M3_saferoom009aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM20.vcd" //I like the sound of that.
+}
+Rule C7M3_saferoom009aManager {
+	criteria ConceptC7M3_saferoom009a IsManager
+	Response C7M3_saferoom009aManager
+}
+
+Response C7M3_saferoom010aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM22.vcd" then NamVet C7M3_saferoom010b foo:0 .1 //I always wanted to learn how to fish.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM23.vcd" then NamVet C7M3_saferoom010b foo:0 .1 //I always wanted to learn how.
+}
+Rule C7M3_saferoom010aManager {
+	criteria ConceptC7M3_saferoom010a IsManager
+	Response C7M3_saferoom010aManager
+}
+
+Response C7M3_saferoom011Manager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM24.vcd" //Sounds good to me.
+}
+Rule C7M3_saferoom011Manager {
+	criteria ConceptC7M3_saferoom011 IsManager
+	ApplyContext "_auto_saidSailBoatIntro:1:0"
+	applycontexttoworld
+	Response C7M3_saferoom011Manager
+}
+
+Response C7M3_saferoom013aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM26.vcd" then Biker C7M3_saferoom013b foo:0 .1 //You don't hate it already?
+}
+Rule C7M3_saferoom013aManager {
+	criteria ConceptC7M3_saferoom013a IsManager
+	Response C7M3_saferoom013aManager
+}
+
+Response C7M3_saferoom013cManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM27.vcd" then Biker C7M3_saferoom013d foo:0 .1 //Man, this is gonna be a long rest of our lives.
+}
+Rule C7M3_saferoom013cManager {
+	criteria ConceptC7M3_saferoom013c IsManager
+	Response C7M3_saferoom013cManager
+}
+
+Response C7M3_saferoom014aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM29.vcd" then Biker C7M3_saferoom014b foo:0 .1 //Well, hater, I guess you don't have to eat any then.
+}
+Rule C7M3_saferoom014aManager {
+	criteria ConceptC7M3_saferoom014a IsManager
+	Response C7M3_saferoom014aManager
+}
+
+Response C7M3_saferoom015aManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM31.vcd" //Just a good feeling, I guess.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM32.vcd" //Just a good feeling, I guess.
+}
+Rule C7M3_saferoom015aManager {
+	criteria ConceptC7M3_saferoom015a IsManager
+	Response C7M3_saferoom015aManager
+}
+
+Response C7M3_saferoom016bManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM34.vcd" then Biker C7M3_saferoom016c foo:0 .1 //I'm in too good a mood to get mad at you, Francis.
+}
+Rule C7M3_saferoom016bManager {
+	criteria ConceptC7M3_saferoom016b IsManager
+	Response C7M3_saferoom016bManager
+}
+
+Response C7M3_saferoom016dManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM35.vcd" then TeenGirl C7M3_saferoom016c foo:0 .1 //Hey Francis, I got a good feeling about wearing your skin as a pretty dress.
+}
+Rule C7M3_saferoom016dManager {
+	criteria ConceptC7M3_saferoom016d IsManager
+	Response C7M3_saferoom016dManager
+}
+
+Response C7M3_saferoom017Manager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM36.vcd" then Biker C7M3_saferoom017a foo:0 .1 //Come on, Francis. Give it a rest.
+}
+Rule C7M3_saferoom017Manager {
+	criteria ConceptC7M3_saferoom017 IsManager
+	Response C7M3_saferoom017Manager
+}
+
+Response C7M3_saferoom017bManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM37.vcd" then Biker C7M3_saferoom017c foo:0 .1 //Are you joking?
+}
+Rule C7M3_saferoom017bManager {
+	criteria ConceptC7M3_saferoom017b IsManager
+	Response C7M3_saferoom017bManager
+}
+
+Response C7M3_saferoom017dManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM38.vcd" then Biker C7M3_saferoom017e foo:0 .1 //Well, when we get there, I got your back. I'm gonna keep an eye on that island for ya.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM39.vcd" then Biker C7M3_saferoom017e foo:0 .1 //Shit, Francis. Well, when we get there, I got your back. I'm gonna keep an eye on that island for ya.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM40.vcd" then Biker C7M3_saferoom017e foo:0 .1 //Shit, Francis. Well, when we get there, I got your back. I'm gonna keep an eye on that island for ya.
+}
+Rule C7M3_saferoom017dManager {
+	criteria ConceptC7M3_saferoom017d IsManager
+	Response C7M3_saferoom017dManager
+}
+
+Response C7M3_saferoom017fManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM41.vcd" then Biker C7M3_saferoom017g foo:0 .1 //Punk island..
+}
+Rule C7M3_saferoom017fManager {
+	criteria ConceptC7M3_saferoom017f IsManager
+	Response C7M3_saferoom017fManager
+}
+
+Response C7M3_saferoom017gManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM42.vcd" then NamVet C7M3_saferoom012f foo:0 .0 //Punk ass island bitch..
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM43.vcd" then NamVet C7M3_saferoom012f foo:0 .0 //Punk ass bitch island..
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM44.vcd" then NamVet C7M3_saferoom012f foo:0 .0 //Punk ass island bitch ya better watch yourself..
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM45.vcd" then Biker C7M3_saferoom017h foo:0 .1 //Punk ass island bitch better watch yourself once Louis and Francis on the case.
+}
+Rule C7M3_saferoom017gManager {
+	criteria ConceptC7M3_saferoom017g IsManager
+	Response C7M3_saferoom017gManager
+}
+
+Response C7M3BridgeBreaksManager {
+	scene "scenes/Manager/c6dlc3hittingbridgebutton03.vcd" //The bridge stopped!
+	scene "scenes/Manager/c6dlc3hittingbridgebutton04.vcd" //The bridge stopped!
+	scene "scenes/Manager/c6dlc3hittingbridgebutton05.vcd" //Oh shit! The bridge stopped!
+	scene "scenes/Manager/DLC2M2FinaleBreak101.vcd" //The generator's off!
+	scene "scenes/Manager/DLC2M2FinaleBreak102.vcd" //We need to restart the generator!
+	scene "scenes/Manager/DLC2M2FinaleBreak201.vcd" //The damn generator broke again!
+	scene "scenes/Manager/DLC2M2FinaleBreak202.vcd" //Someone needs to restart the generator!
+}
+Rule C7M3BridgeBreaksManager {
+	criteria conceptC7M3BridgeBreaks IsManager _auto_NotSaidC7M3BridgeBreaks IsWithThree
+	ApplyContext "_auto_SaidC7M3BridgeBreaks:1:0"
+	applycontexttoworld
+	Response C7M3BridgeBreaksManager
+}
+
+Response C7M3BridgeBreaksXManager {
+	scene "scenes/Manager/c6dlc3hittingbridgebutton03.vcd" //The bridge stopped!
+	scene "scenes/Manager/c6dlc3hittingbridgebutton04.vcd" //The bridge stopped!
+	scene "scenes/Manager/c6dlc3hittingbridgebutton05.vcd" //Oh shit! The bridge stopped!
+	scene "scenes/Manager/DLC2M2FinaleBreak101.vcd" //The generator's off!
+	scene "scenes/Manager/DLC2M2FinaleBreak102.vcd" //We need to restart the generator!
+	scene "scenes/Manager/DLC2M2FinaleBreak201.vcd" //The damn generator broke again!
+}
+Rule C7M3BridgeBreaksXManager {
+	criteria conceptC7M3BridgeBreaks IsManager _auto_NotSaidC7M3BridgeBreaks
+	ApplyContext "_auto_SaidC7M3BridgeBreaks:1:0"
+	applycontexttoworld
+	Response C7M3BridgeBreaksXManager
+}
+
+Response C7M3FinalPressBikerManager {
+	scene "scenes/Manager/C6DLC3FRANCISDIES01.vcd" //Thanks Francis!
+	scene "scenes/Manager/C6DLC3FRANCISDIES02.vcd" //Fraaaancis!
+	scene "scenes/Manager/C6DLC3FRANCISDIES03.vcd" //I'm gonna miss that guy.
+	scene "scenes/Manager/C6DLC3FRANCISDIES04.vcd" //I'm gonna.. I'm gonna miss that guy.
+	scene "scenes/Manager/C6DLC3FRANCISDIES05.vcd" //FRANCIS!
+}
+Rule C7M3FinalPressBikerManager {
+	criteria ConceptC7M3FinalSpeakBiker IsManager IsLastGenerator IsNotBiker _auto_NotC7M3FinalPress IsWithThree
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressBikerManager
+}
+
+Response C7M3FinalPressBikerXManager {
+	scene "scenes/Manager/C6DLC3FRANCISDIES01.vcd" //Thanks Francis!
+	scene "scenes/Manager/C6DLC3FRANCISDIES02.vcd" //Fraaaancis!
+	scene "scenes/Manager/C6DLC3FRANCISDIES05.vcd" //FRANCIS!
+}
+Rule C7M3FinalPressBikerXManager {
+	criteria ConceptC7M3FinalSpeakBiker IsManager IsLastGenerator IsNotBiker _auto_NotC7M3FinalPress
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressBikerXManager
+}
+
+Response C7M3FinalPressNamVetManager {
+	scene "scenes/Manager/C6DLC3BILLDIES01.vcd" //Bill ! Bill! You saved us!
+	scene "scenes/Manager/C6DLC3BILLDIES02.vcd" //No! We're gonna leave him behind!
+	scene "scenes/Manager/C6DLC3BILLDIES03.vcd" //BILLLLLLLL!
+	scene "scenes/Manager/C6DLC3BILLDIES04.vcd" //Bill! Goddamnit, I'm going to miss you!
+	scene "scenes/Manager/C6DLC3BILLDIES05.vcd" //Bill! Bill! You can't be dead! You can't be.
+}
+Rule C7M3FinalPressNamVetManager {
+	criteria ConceptC7M3FinalSpeakNamVet IsManager IsLastGenerator IsNotNamVet _auto_NotC7M3FinalPress IsWithThree
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressNamVetManager
+}
+
+Response C7M3FinalPressNamVetXManager {
+	scene "scenes/Manager/C6DLC3BILLDIES01.vcd" //Bill ! Bill! You saved us!
+	scene "scenes/Manager/C6DLC3BILLDIES03.vcd" //BILLLLLLLL!
+	scene "scenes/Manager/C6DLC3BILLDIES04.vcd" //Bill! Goddamnit, I'm going to miss you!
+	scene "scenes/Manager/C6DLC3BILLDIES05.vcd" //Bill! Bill! You can't be dead! You can't be.
+}
+Rule C7M3FinalPressNamVetXManager {
+	criteria ConceptC7M3FinalSpeakNamVet IsManager IsLastGenerator IsNotNamVet _auto_NotC7M3FinalPress
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressNamVetXManager
+}
+
+Response C7M3FinalPressTeenGirlManager {
+	scene "scenes/Manager/C6DLC3ZOEYDIES01.vcd" //Oh my god! Zoey!
+	scene "scenes/Manager/C6DLC3ZOEYDIES02.vcd" //Oh my god! Zoey!
+	scene "scenes/Manager/C6DLC3ZOEYDIES03.vcd" //Zoey! You saved us!
+	scene "scenes/Manager/C6DLC3ZOEYDIES04.vcd" //Ah Damnit, Zoey's dead!
+	scene "scenes/Manager/C6DLC3ZOEYDIES05.vcd" //Not Zoey!
+}
+Rule C7M3FinalPressTeenGirlManager {
+	criteria ConceptC7M3FinalSpeakTeenGirl IsManager IsLastGenerator IsNotTeenGirl _auto_NotC7M3FinalPress IsWithThree
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressTeenGirlManager
+}
+
+Response C7M3FinalPressTeenGirlXManager {
+	scene "scenes/Manager/C6DLC3ZOEYDIES01.vcd" //Oh my god! Zoey!
+	scene "scenes/Manager/C6DLC3ZOEYDIES02.vcd" //Oh my god! Zoey!
+}
+Rule C7M3FinalPressTeenGirlXManager {
+	criteria ConceptC7M3FinalSpeakTeenGirl IsManager IsLastGenerator IsNotTeenGirl _auto_NotC7M3FinalPress
+	ApplyContext "_auto_C7M3FinalPress:1:0"
+	applycontexttoworld
+	Response C7M3FinalPressTeenGirlXManager
+}
+
+Response C7M3GeneratorPress01Manager {
+	scene "scenes/Manager/C6DLC3PRESTART1STGEN01.vcd" //These generator are going to be noisy, get ready.
+	scene "scenes/Manager/C6DLC3PRESTART1STGEN02.vcd" //Let's start this generator.
+	scene "scenes/Manager/C6DLC3PRESTART1STGEN03.vcd" //We need to power these three generators to raise the bridge!
+	scene "scenes/Manager/C6DLC3PRESTART1STGEN04.vcd" //These generators must be setup to power the bridge.
+}
+Rule C7M3GeneratorPress01Manager {
+	criteria ConceptC7M3GeneratorSpeakManager IsManager IsFirstGenerator _auto_NotC7M3PressingManager
+	ApplyContext "_auto_C7M3PressingManager:1:6,_auto_SaidCreshendoStartNear:1:0"
+	applycontexttoworld
+	Response C7M3GeneratorPress01Manager
+}
+
+Response C7M3GeneratorPress02Manager {
+	scene "scenes/Manager/C6DLC3PRESTART1STGEN02.vcd" //Let's start this generator.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Allright, allright. Come onnnn. Come on, catch.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Allright, allright. Come on baby, start for me.
+}
+Rule C7M3GeneratorPress02Manager {
+	criteria ConceptC7M3GeneratorSpeakManager IsManager IsSecondGenerator _auto_NotC7M3PressingManager
+	ApplyContext "_auto_C7M3PressingManager:1:6,_auto_SaidCreshendoStartNear:1:0"
+	applycontexttoworld
+	Response C7M3GeneratorPress02Manager
+}
+
+Response C7M3GeneratorPress03Manager {
+	scene "scenes/Manager/C6DLC3PRESTARTLASTGEN01.vcd" //Last generator.
+}
+Rule C7M3GeneratorPress03Manager {
+	criteria ConceptC7M3GeneratorSpeakManager IsManager IsThirdGenerator _auto_NotC7M3PressingManager
+	ApplyContext "_auto_C7M3PressingManager:1:6,_auto_SaidCreshendoStartNear:1:0"
+	applycontexttoworld
+	Response C7M3GeneratorPress03Manager
+}
+
+Response C7M3PlayerGetToRescueVehicleManager {
+	scene "scenes/Manager/C6DLC3BRIDGEAVAILABLE01.vcd" then self HitThatButton foo:0 10.0 //We did it!
+	scene "scenes/Manager/C6DLC3BRIDGEAVAILABLE02.vcd" then self HitThatButton foo:0 10.0 //We did it! To the bridge!
+	scene "scenes/Manager/C6DLC3BRIDGEAVAILABLE03.vcd" then self HitThatButton foo:0 10.0 //To the bridge!
+	scene "scenes/Manager/C6DLC3BRIDGEAVAILABLE04.vcd" then self HitThatButton foo:0 10.0 //Get to the bridge!
+}
+Rule C7M3PlayerGetToRescueVehicleManager {
+	criteria ConceptGetToVehicle IsManager ismapc7m3_port IsTalk IsTalkManager IsWorldTalkManager _auto_NotC7M3ToBridgeManager
+	ApplyContext "_auto_C7M3ToBridgeManager:1:0"
+	applycontexttoworld
+	Response C7M3PlayerGetToRescueVehicleManager
+}
+
+criterion "HitThatButton" "Concept" "HitThatButton" required
+Response HitThatButtonManager {
+norepeat
+	scene "scenes/Manager/c6dlc3hittingbridgebutton01.vcd" then self HitThatButton foo:0 10.0 //We need to hit the button to raise the bridge.
+	scene "scenes/Manager/c6dlc3hittingbridgebutton02.vcd" then self HitThatButton foo:0 10.0 //We gotta to raise the bridge.
+}
+Rule HitThatButtonManager {
+	criteria HitThatButton IsNotSpeaking IsManager ChanceToFire50Percent
+	Response HitThatButtonManager
+}
+
+Response C7M3SafeRoomIdleManager {
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM01.vcd" then Biker C7M3_saferoom001 foo:0 .1 //Never thought I'd be happy to be heading to a deserted island.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM02.vcd" then Biker C7M3_saferoom002 foo:0 .1 //You know, I didn't like the idea of a deserted island at first. But I'm startin' to get a good feeling about this.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM03.vcd" then Biker C7M3_saferoom002 foo:0 .1 //You know, I didn't like the idea of a deserted island at first. But I'm startin' to get a good feeling about this.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM04.vcd" then NamVet C7M3_saferoom003 foo:0 .1 //You know what I miss? Checking email. Seeing what's new.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM08.vcd" then Manager C7M3_saferoom004 foo:0 0.5 //One thing I'm not gonna miss about civilization? I.T. I will never have to tell another human being to reboot their damn computer.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM13.vcd" then TeenGirl C7M3_saferoom005 foo:0 .1 //Hey, Zoey. We're actually headed to an island. Top ten desert island movies. Go.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM14.vcd" then NamVet C7M3_saferoom006 foo:0 .1 //So, Bill. Once we find a sailboat, how far is it to the Florida Keys?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM16.vcd" then TeenGirl C7M3_saferoom007 foo:0 .1 //So.. once we're on a boat.. can zombies swim?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM19.vcd" then NamVet C7M3_saferoom009 foo:0 .1 //Bill, when we get to the keys, you got an island in mind?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM21.vcd" then NamVet C7M3_saferoom010 foo:0 .1 //Bill, when we get to the keys, you know how to fish?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM25.vcd" then Biker C7M3_saferoom013 foo:0 .1 //Francis, what's the first thing you're gonna do when we get to the island?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM28.vcd" then Biker C7M3_saferoom014 foo:0 .1 //Francis, you ready to get to the keys and have ourselves a seafood feast?
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM30.vcd" then Biker C7M3_saferoom015 foo:0 .1 //Once we get to the keys, I'm gonna teach you how to swim Francis.
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM33.vcd" then TeenGirl C7M3_saferoom016 foo:0 .1 //Everybody ready to go live on an island in paradise? Man, I cannot wait!
+}
+Rule C7M3SafeRoomIdleManager {
+	criteria ConceptC7M3SafeRoom2 IsManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M3SafeRoomConvo IsNotSpeakingWeight0
+	ApplyContext "Talk:1:30,_auto_C7M3SafeRoomConvo:1:0"
+	applycontexttoworld
+	Response C7M3SafeRoomIdleManager
+}
+
+Response C7M3SafeRoomStartManager {
+	scene "scenes/Manager/Blank.vcd" then any C7M3SafeRoom2 foo:0 5
+}
+Rule C7M3SafeRoomStartManager {
+	criteria ConceptTalkIdle IsManager IsMapc7m3_port IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSafeRoomStart IsNotSpeakingWeight0
+	ApplyContext "_auto_SafeRoomStart:1:300,_auto_SafeRoomQuiet:1:5"
+	applycontexttoworld
+	Response C7M3SafeRoomStartManager
+}
+
+
+//Item Spotted
+
+//Not Rosetta - Responses
+
+//RemarkableVocalize
+Response PlayerRemarkc7m1_bricktopManager {
+	scene "scenes/Manager/C6DLC3GENERIC07.vcd" //On top the bricks.
+}
+Rule PlayerRemarkc7m1_bricktopManager {
+	criteria ConceptRemark IsManager Isc7m1_bricktop IsNotSaidc7m1_bricktop IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear100 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_bricktop:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_bricktopManager
+}
+
+Response PlayerRemarkc7m1_harborblockedManager {
+	scene "scenes/Manager/C6DLC3HARBORBLOCKED01.vcd" //This is why the harbor's closed.
+	scene "scenes/Manager/C6DLC3HARBORBLOCKED02.vcd" then NamVet InfoRemc7m1_harborblocked01 foo:0 -1.360 //You sure this is the right way?
+	scene "scenes/Manager/C6DLC3GENERIC06.vcd" //Under the bridge.
+}
+Rule PlayerRemarkc7m1_harborblockedManager {
+	criteria ConceptRemark IsManager Isc7m1_harborblocked IsNotSaidc7m1_harborblocked IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear800 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_harborblocked:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_harborblockedManager
+}
+
+Response PlayerRemarkc7m1_pastbricksManager {
+	scene "scenes/Manager/C6DLC3GENERIC05.vcd" //Past the bricks.
+}
+Rule PlayerRemarkc7m1_pastbricksManager {
+	criteria ConceptRemark IsManager Isc7m1_pastbricks IsNotSaidc7m1_pastbricks IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear700 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m1_pastbricks:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_pastbricksManager
+}
+
+Response PlayerRemarkc7m1_pretankManager {
+	scene "scenes/Manager/C6DLC3TANKINTRAINYARD01.vcd" //Only way is through this car.
+	scene "scenes/Manager/C6DLC3TANKINTRAINYARD02.vcd" //Man, a tank in a train.
+}
+Rule PlayerRemarkc7m1_pretankManager {
+	criteria ConceptRemark IsManager Isc7m1_pretank IsNotSaidc7m1_pretank IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear200 IsNotSpeakingWeight0 _auto_NotsaidC7M1OpenTankDoorLong IsNotAlone
+	ApplyContext "Saidc7m1_pretank:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_pretankManager
+}
+
+Response PlayerRemarkc7m1_tankcarManager {
+	scene "scenes/Manager/Blank.vcd" then self tankcarFrancis foo:0 0
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR05.vcd" //Tanks on a train.
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR06.vcd" //This is some gross ass shit.
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR07.vcd" //Ewww! This is some gross ass shit.
+}
+Rule PlayerRemarkc7m1_tankcarManager {
+	criteria ConceptRemark IsManager Isc7m1_tankcar IsNotSaidc7m1_tankcar IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear400 IsNotSpeakingWeight0
+	ApplyContext "Saidc7m1_tankcar:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m1_tankcarManager
+}
+
+criterion "tankcarFrancis" "Concept" "tankcarFrancis" required
+Response tankcarFrancisManager {
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR01.vcd" then Biker InfoRemc7m1_tankcar01 foo:0 -3.082 //Hey Francis what do they make at the tank factory?
+	scene "scenes/Manager/C6DLC3INTANKTRAINCAR02.vcd" then Biker InfoRemc7m1_tankcar01 foo:0 -3.082 //Hey Francis what do they make at the tank factory?
+}
+Rule tankcarFrancisManager {
+	criteria tankcarFrancis IsManager IsBikerNear500
+	Response tankcarFrancisManager
+}
+
+Response PlayerRemarkc7m2_climbupcrapManager {
+	scene "scenes/Manager/DLC2M1Directional08.vcd" //We can get back up over here!
+	scene "scenes/Manager/DLC2M2Directional03.vcd" //Up that fence!
+}
+Rule PlayerRemarkc7m2_climbupcrapManager {
+	criteria ConceptRemark IsManager Isc7m2_climbupcrap IsNotSaidc7m2_climbupcrap IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear400 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_climbupcrap:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_climbupcrapManager
+}
+
+Response PlayerRemarkc7m2_gravelhillManager {
+	scene "scenes/Manager/C6DLC3GRAVELHILL01.vcd" //I can barely make it up here!
+	scene "scenes/Manager/C6DLC3GRAVELHILL06.vcd" //This is like running in place.
+	scene "scenes/Manager/C6DLC3GRAVELHILL07.vcd" //Gravel here!
+	scene "scenes/Manager/C6DLC3GENERIC04.vcd" //Up the hill!
+}
+Rule PlayerRemarkc7m2_gravelhillManager {
+	criteria ConceptRemark IsManager Isc7m2_gravelhill IsNotSaidc7m2_gravelhill IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_gravelhill:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_gravelhillManager
+}
+
+Response PlayerRemarkc7m2_onbargeManager {
+	scene "scenes/Manager/C6DLC3GENERIC02.vcd" //Across the ship!
+}
+Rule PlayerRemarkc7m2_onbargeManager {
+	criteria ConceptRemark IsManager Isc7m2_onbarge IsNotSaidc7m2_onbarge IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_onbarge:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_onbargeManager
+}
+
+Response PlayerRemarkc7m2_overboatManager {
+	scene "scenes/Manager/C6DLC3GENERIC01.vcd" //Over the ship!
+	scene "scenes/Manager/C6DLC3GENERIC02.vcd" //Across the ship!
+}
+Rule PlayerRemarkc7m2_overboatManager {
+	criteria ConceptRemark IsManager Isc7m2_overboat IsNotSaidc7m2_overboat IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_overboat:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_overboatManager
+}
+
+Response PlayerRemarkc7m2_throughhereManager {
+	scene "scenes/Manager/GenericDirections05.vcd" //Through here!
+}
+Rule PlayerRemarkc7m2_throughhereManager {
+	criteria ConceptRemark IsManager Isc7m2_throughhere IsNotSaidc7m2_throughhere IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsSubjectNear200 IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m2_throughhere:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m2_throughhereManager
+}
+
+Response PlayerRemarkc7m3_seesailboatManager {
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT01.vcd" //Look, there's the boat we need. Let's get that bridge up and sail out of here.
+	scene "scenes/Manager/Blank.vcd" then self seesailboatFrancis foo:0 0
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT03.vcd" //We need to raise the bridge to get that sail boat!
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT04.vcd" //This looks like the last bridge before open water.
+}
+Rule PlayerRemarkc7m3_seesailboatManager {
+	criteria ConceptRemark IsManager Isc7m3_seesailboat IsNotSaidc7m3_seesailboat IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsFirstGenerator IsNotSpeakingWeight0 IsNotAlone
+	ApplyContext "Saidc7m3_seesailboat:1:0"
+	applycontexttoworld
+	Response PlayerRemarkc7m3_seesailboatManager
+}
+
+criterion "seesailboatFrancis" "Concept" "seesailboatFrancis" required
+Response seesailboatFrancisManager {
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT02.vcd" //Hey Francis, see that? That's what a sail boat looks like!
+}
+Rule seesailboatFrancisManager {
+	criteria seesailboatFrancis IsManager IsBikerNear500
+	Response seesailboatFrancisManager
+}
+
+//Rosetta - Manners
+
+//Scavenge
+Response GrabbingGasSCManager {
+	scene "scenes/Manager/KillConfirmation04.vcd" //Got it!
+}
+Rule GrabbingGasSCManager {
+	criteria ConceptPlayerEquippedScavengeItem IsManager
+	Response GrabbingGasSCManager
+}
+
+Response PlayerShotGasCanManager {
+	scene "scenes/Manager/Swears05.vcd" predelay "1,1.5" //Shit.
+	scene "scenes/Manager/Swears06.vcd" predelay "1,1.5" //Ah shit.
+	scene "scenes/Manager/Swears07.vcd" predelay "1,1.5" //Shit shit shit.
+	scene "scenes/Manager/Swears12.vcd" predelay "1,1.5" //Shit.
+	scene "scenes/Manager/Swears13.vcd" predelay "1,1.5" //Ah shit.
+	scene "scenes/Manager/Swears16.vcd" predelay "1,1.5" //That's some country-ass bullshit.
+}
+Rule PlayerShotGasCanManager {
+	criteria ConceptPlayerShotGasCan IsManager IsNotSaidPlayerShotGasCan IsScavenge
+	ApplyContext "SaidPlayerShotGasCan1:10"
+	applycontexttoworld
+	Response PlayerShotGasCanManager
+}
+
+Response ScavengeStartManager {
+	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/Manager/MoveOn03.vcd" //Let's go.
+	scene "scenes/Manager/MoveOn04.vcd" //Let's Move, Let's Move!
+}
+Rule ScavengeStartManager {
+	criteria ConceptSurvivorLeavingCheckpoint IsManager IsTalk IsTalkManager IsWorldTalkManager IsScavenge IsNotSaidStartScavenge
+	ApplyContext "SaidStartScavenge:1:4"
+	applycontexttoworld
+	Response ScavengeStartManager
+}
+
+
+//Vocalize
+
+//Vocalizer
+Response FinaleAheadc7m3Manager {
+	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/Manager/ReviveFriendB10.vcd" //Let's move!
+}
+Rule FinaleAheadc7m3Manager {
+	criteria ConceptPlayerNearFinale IsNotCoughing IsManager IsNotSaidFinaleAhead NotInCombat IsTalk IsTalkManager IsNotIncapacitated IsWorldTalkManager Ismapc7m3_port IsNotAlone
+	ApplyContext "SaidFinaleAhead:1:30"
+	applycontexttoworld
+	Response FinaleAheadc7m3Manager
+}
+
+Response Player.C7M2CrowsFlyManager {
+	scene "scenes/Manager/C6DLC3GRAVELHILL03.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 1.5 1 //Lookout! Crows!
+	scene "scenes/Manager/C6DLC3GRAVELHILL04.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 2 1 //Ahhh.. look, the crows alerted the zombies!
+	scene "scenes/Manager/C6DLC3GRAVELHILL05.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Ahhh.. dammit.. the crows are bringin' the zombies!
+}
+Rule Player.C7M2CrowsFlyManager {
+	criteria ConceptC7M2CrowsFlySpeakManager ismapc7m2_barge IsManager _auto_NotC7M2CrowsFlySpeak IsNotAlone
+	ApplyContext "_auto_C7M2CrowsFlySpeak:1:0"
+	applycontexttoworld
+	Response Player.C7M2CrowsFlyManager
+}
+
+Response Player.C7M3BridgeLeapManager {
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE01.vcd" //Stay there, don't worry about me none!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE02.vcd" //I'll handle this! Cover me!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE03.vcd" //I'll handle this. Cover me
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE04.vcd" //I got this! You stay there!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE05.vcd" //Good luck you guys! I got this.
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE06.vcd" //I'm gonna miss you guys!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE07.vcd" //Don't get off the bridge!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE08.vcd" //Don't get off the bridge!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE09.vcd" //Don't worry, I'll be fine! Stay there!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE10.vcd" //Don't get off the bridge!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE11.vcd" //I swear to god I'm coming back!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE12.vcd" //Stay there! I'll be back in two minutes!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE13.vcd" //Do not follow me!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE14.vcd" //I love you guys!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE15.vcd" //I love you guys!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE16.vcd" //If I go down, don't come after me!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE17.vcd" //If I go down, don't come after me!
+}
+Rule Player.C7M3BridgeLeapManager {
+	criteria ConceptC7M3BridgeLeapSpeakManager IsNotCoughing IsManager IsTalk IsTalkManager IsNotSpeaking ismapc7m3_port IsWorldTalkManager IsNotScavenge _auto_NotSaidC7M3BridgeLeap IsWithThree
+	ApplyContext "WarnMegaMob:1:300,SaidSpecialWarn:1:30,_auto_SaidC7M3BridgeLeap:1:0"
+	applycontexttoworld
+	Response Player.C7M3BridgeLeapManager
+}
+
+Response Player.C7M3BridgeLeapXManager {
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE02.vcd" //I'll handle this! Cover me!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE03.vcd" //I'll handle this. Cover me
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE04.vcd" //I got this! You stay there!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE07.vcd" //Don't get off the bridge!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE08.vcd" //Don't get off the bridge!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE09.vcd" //Don't worry, I'll be fine! Stay there!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE10.vcd" //Don't get off the bridge!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE11.vcd" //I swear to god I'm coming back!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE12.vcd" //Stay there! I'll be back in two minutes!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE13.vcd" //Do not follow me!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE16.vcd" //If I go down, don't come after me!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE17.vcd" //If I go down, don't come after me!
+}
+Rule Player.C7M3BridgeLeapXManager {
+	criteria ConceptC7M3BridgeLeapSpeakManager IsNotCoughing IsManager IsTalk IsTalkManager IsNotSpeaking ismapc7m3_port IsWorldTalkManager IsNotScavenge _auto_NotSaidC7M3BridgeLeap
+	ApplyContext "WarnMegaMob:1:300,SaidSpecialWarn:1:30,_auto_SaidC7M3BridgeLeap:1:0"
+	applycontexttoworld
+	Response Player.C7M3BridgeLeapXManager
+}
+
+criterion "SaidC7M3BridgeLeap" "world_auto_SaidC7M3BridgeLeap" "1" required weight 1
+criterion "IsNotSaidC7M3ManagerDownFinal" "C7M3ManagerDownFinal" "!=1" required weight 1
+
+
+Response PlayerIncapC7m3Manager {
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE18.vcd" //Hey guys? Remember when I said don't come after me? Oh god!
+	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE19.vcd" //Hey guys? Remember when I said don't come after me? I was kidding, can someone come get me? HELP!!
+}
+Rule PlayerIncapC7m3Manager {
+	criteria ConceptPlayerIncapacitated IsNotCoughing IsManager IsTalk IsTalkManager ismapc7m3_port SaidC7M3BridgeLeap IsNotSaidC7M3ManagerDownFinal IsWithThree
+	ApplyContext "TalkManager:1:2,C7M3ManagerDownFinal:1:0"
+	Response PlayerIncapC7m3Manager
+}
+
+
+//Vocalizer - Pickups
+
+//Weapon Spotted
+
