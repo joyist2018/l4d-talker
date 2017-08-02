@@ -6,8 +6,8 @@ criterion "IsMechanicFriendlyFire" "worldMechanicFriendlyFire" "1" required weig
 criterion "IsNotMechanicFriendlyFire" "worldMechanicFriendlyFire" "!=1" required weight 0
 criterion "IsNotAskedForCoverMechanic" "worldMechanicAskForCover" "!=1" required weight 0
 criterion "IsNotSaidMechanicWitchChasing" "SaidMechanicWitchChasing" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopMechanic" "SaidAlertGiveItemStopMechanic" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopFirstAidMechanic" "SaidAlertGiveItemStopFirstAidMechanic" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopMechanic" "SaidAlertGiveItemStopMechanic" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopFirstAidMechanic" "SaidAlertGiveItemStopFirstAidMechanic" "!=1" required weight 0
 criterion "IsNotSaidBeenJockeyedMechanic" "SaidBeenJockeyedMechanic" "!=1" required weight 0
 criterion "IsSaidMechanicWitchAttacking" "SaidMechanicWitchAttacking" "1" required weight 0
 
@@ -9274,7 +9274,7 @@ Rule PlayerUsingDefibrillatorMechanic {
 	Response PlayerUsingDefibrillatorMechanic
 }
 
-Response PlayerWarnHeardBoomerMechanic //Modified for [L4D2] Special Infected Warnings Vocalize Fix Lite plugin {
+Response PlayerWarnHeardBoomerMechanic {
 	scene "scenes/Mechanic/HeardBoomer01.vcd" //I hear a boomer.
 	scene "scenes/Mechanic/HeardBoomer02.vcd" //Hey, think I heard a boomer.
 	scene "scenes/Mechanic/HeardBoomer03.vcd" //Careful, boomer 'round.
@@ -9283,7 +9283,7 @@ Response PlayerWarnHeardBoomerMechanic //Modified for [L4D2] Special Infected Wa
 	scene "scenes/Mechanic/HeardBoomer06.vcd" //I hear a boomer.
 }
 Rule PlayerWarnHeardBoomerMechanic {
-	criteria ConceptWarnBoomer IsNotCoughing IsMechanic IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkMechanic IsWorldTalkMechanic
+	criteria ConceptWarnBoomer IsNotCoughing IsMechanic IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkMechanic IsWorldTalkMechanic //for SI Warnings Fix plugin
 	ApplyContext "WarnHeardBoomer:1:300,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response PlayerWarnHeardBoomerMechanic

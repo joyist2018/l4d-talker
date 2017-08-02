@@ -6,8 +6,8 @@ criterion "IsGamblerFriendlyFire" "worldGamblerFriendlyFire" "1" required weight
 criterion "IsNotGamblerFriendlyFire" "worldGamblerFriendlyFire" "!=1" required weight 0
 criterion "IsNotAskedForCoverGambler" "worldGamblerAskForCover" "!=1" required weight 0
 criterion "IsNotSaidGamblerWitchChasing" "SaidGamblerWitchChasing" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopGambler" "SaidAlertGiveItemStopGambler" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopFirstAidGambler" "SaidAlertGiveItemStopFirstAidGambler" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopGambler" "SaidAlertGiveItemStopGambler" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopFirstAidGambler" "SaidAlertGiveItemStopFirstAidGambler" "!=1" required weight 0
 criterion "IsNotSaidBeenJockeyedGambler" "SaidBeenJockeyedGambler" "!=1" required weight 0
 criterion "IsSaidGamblerWitchAttacking" "SaidGamblerWitchAttacking" "1" required weight 0
 
@@ -8822,7 +8822,7 @@ Rule PlayerUsingDefibrillatorGambler {
 	Response PlayerUsingDefibrillatorGambler
 }
 
-Response PlayerWarnHeardBoomerGambler //Modified for [L4D2] Special Infected Warnings Vocalize Fix Lite plugin {
+Response PlayerWarnHeardBoomerGambler {
 	scene "scenes/Gambler/HeardBoomer01.vcd" //Keep a lookout. I hear a boomer.
 	scene "scenes/Gambler/HeardBoomer02.vcd" //I hear a boomer.
 	scene "scenes/Gambler/HeardBoomer03.vcd" //You hear that boomer?
@@ -8831,7 +8831,7 @@ Response PlayerWarnHeardBoomerGambler //Modified for [L4D2] Special Infected War
 	scene "scenes/Gambler/HeardBoomer06.vcd" odds 25 //Boomer around. Don't shoot him if he's near me! OKAY?
 }
 Rule PlayerWarnHeardBoomerGambler {
-	criteria ConceptWarnBoomer IsNotCoughing IsGambler IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkGambler IsWorldTalkGambler
+	criteria ConceptWarnBoomer IsNotCoughing IsGambler IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkGambler IsWorldTalkGambler //for SI Warnings Fix plugin
 	ApplyContext "WarnHeardBoomer:1:300,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response PlayerWarnHeardBoomerGambler

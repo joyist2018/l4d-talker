@@ -1,6 +1,5 @@
-//CRITERIA
-
-Response NoResponse //Blank Response: Any rule with this as the response will fire, but won't have any effect on speech that may be occuring {
+//Blank Response: any rule with this as the response will fire, but won't have any effect on speech that may be occuring
+Response NoResponse {
 	print " "
 }
 
@@ -1118,8 +1117,8 @@ criterion "ConceptWorldSignC5AlarmWillSound3d" "Concept" "WorldSignC5AlarmWillSo
 criterion "ConceptWorldSignC5AlarmWillSound3e" "Concept" "WorldSignC5AlarmWillSound3e" required
 
 
-//Criterion for rule/context adding that spans characters (done to remove error spam)
-//Criterion for rule/context adding that spans characters (done to remove error spam)
+//criterion for rule/context adding that spans characters (done to remove error spam)
+//criterion for rule/context adding that spans characters (done to remove error spam)
 criterion "IsNotSaidGooedBySpitter" "SaidGooedBySpitter" "!=1" required weight 0
 criterion "IsNotSaidWarnSpitterIncoming" "SaidWarnSpitterIncoming" "!=1" required weight 0
 criterion "IsNotSaidChargerPound" "SaidChargerPound" "!=1" required weight 0
@@ -2259,7 +2258,7 @@ criterion "isNotmap_c4m2_sugarmill_a" "map" "!=c4m2_sugarmill_a" required weight
 criterion "IsNotmap_c4m2" "map" "!=c4m2_sugarmill_a" required
 criterion "IsNotc6m1_riverbank" "map" "!=c6m1_riverbank" required
 criterion "isNotMapc4m2_c6m1" { IsNotmap_c4m2 IsNotc6m1_riverbank } required
-//Criterion "IsNotMapc1m1_c6m1" { isNotmap_c1m1_hotel IsNotc6m1_riverbank } required //testing modified talker
+//criterion "IsNotMapc1m1_c6m1" { isNotmap_c1m1_hotel IsNotc6m1_riverbank } required //testing modified talker
 
 criterion "Conceptc4m2_enter_canefield" "Concept" "c4m2_enter_canefield" required
 criterion "Conceptc4m2_exit_canefield" "Concept" "c4m2_exit_canefield" required
@@ -2459,7 +2458,6 @@ criterion "IsNotSrcGrp_ELLISSTORY" "worldSrcGrp_ELLISSTORY" "<1" required
 
 //Edited by Morning Nine Nine
 //Final check with launch options: -dev -condebug and find "PrecacheScriptSound"
-//Character-Specific Includes
 #include "talker/terror_player_dlc2_use.txt"
 #include "talker/terror_player_dlc1.txt"
 #include "talker/terror_player_dlc3.txt"

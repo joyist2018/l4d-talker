@@ -265,7 +265,7 @@ Rule DLC1_C6M2_SafeRoomConvo02aMechanic {
 	Response DLC1_C6M2_SafeRoomConvo02aMechanic
 }
 
-Response DLC1_C6M2_SafeRoomConvo03Mechanic //IsFrancisIntroActor FrancisGroup1 {
+Response DLC1_C6M2_SafeRoomConvo03Mechanic {
 	scene "scenes/Mechanic/DLC1_C6M2_SafeRoomConvo02.vcd" then Producer DLC1_C6M2_SafeRoomConvo03a foo:0 -3.330 //We gotta find a way to get that bridge up, no way I'm leaving that car behind.
 	scene "scenes/Mechanic/DLC1_C6M2_SafeRoomConvo04.vcd" then Producer DLC1_C6M2_SafeRoomConvo04a foo:0 -3.113 //Screw this I just can't leave that car behind. I'm going back for her.
 }

@@ -6,8 +6,8 @@ criterion "IsProducerFriendlyFire" "worldProducerFriendlyFire" "1" required weig
 criterion "IsNotProducerFriendlyFire" "worldProducerFriendlyFire" "!=1" required weight 0
 criterion "IsNotAskedForCoverProducer" "worldProducerAskForCover" "!=1" required weight 0
 criterion "IsNotSaidProducerWitchChasing" "SaidProducerWitchChasing" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopProducer" "SaidAlertGiveItemStopProducer" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopFirstAidProducer" "SaidAlertGiveItemStopFirstAidProducer" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopProducer" "SaidAlertGiveItemStopProducer" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopFirstAidProducer" "SaidAlertGiveItemStopFirstAidProducer" "!=1" required weight 0
 criterion "IsNotSaidBeenJockeyedProducer" "SaidBeenJockeyedProducer" "!=1" required weight 0
 criterion "IsSaidProducerWitchAttacking" "SaidProducerWitchAttacking" "1" required weight 0
 
@@ -7532,13 +7532,14 @@ Rule PlayerUsingDefibrillatorProducer {
 	Response PlayerUsingDefibrillatorProducer
 }
 
-Response PlayerWarnHeardBoomerProducer //Modified for [L4D2] Special Infected Warnings Vocalize Fix Lite plugin {
+
+Response PlayerWarnHeardBoomerProducer {
 	scene "scenes/Producer/HeardBoomer01.vcd" //Careful I can hear a boomer.
 	scene "scenes/Producer/HeardBoomer02.vcd" //Boomer's around.
 	scene "scenes/Producer/HeardBoomer03.vcd" //Careful I hear a boomer.
 }
 Rule PlayerWarnHeardBoomerProducer {
-	criteria ConceptWarnBoomer IsNotCoughing IsProducer IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkProducer IsWorldTalkProducer
+	criteria ConceptWarnBoomer IsNotCoughing IsProducer IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkProducer IsWorldTalkProducer //for SI Warnings Fix plugin
 	ApplyContext "WarnHeardBoomer:1:300,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response PlayerWarnHeardBoomerProducer

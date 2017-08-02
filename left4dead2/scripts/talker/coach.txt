@@ -6,8 +6,8 @@ criterion "IsCoachFriendlyFire" "worldCoachFriendlyFire" "1" required weight 0
 criterion "IsNotCoachFriendlyFire" "worldCoachFriendlyFire" "!=1" required weight 0
 criterion "IsNotAskedForCoverCoach" "worldCoachAskForCover" "!=1" required weight 0
 criterion "IsNotSaidCoachWitchChasing" "SaidCoachWitchChasing" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopCoach" "SaidAlertGiveItemStopCoach" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopFirstAidCoach" "SaidAlertGiveItemStopFirstAidCoach" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopCoach" "SaidAlertGiveItemStopCoach" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopFirstAidCoach" "SaidAlertGiveItemStopFirstAidCoach" "!=1" required weight 0
 criterion "IsNotSaidBeenJockeyedCoach" "SaidBeenJockeyedCoach" "!=1" required weight 0
 criterion "IsSaidCoachWitchAttacking" "SaidCoachWitchAttacking" "1" required weight 0
 
@@ -8509,14 +8509,14 @@ Rule PlayerUsingDefibrillatorCoach {
 	Response PlayerUsingDefibrillatorCoach
 }
 
-Response PlayerWarnHeardBoomerCoach //Modified for [L4D2] Special Infected Warnings Vocalize Fix Lite plugin {
+Response PlayerWarnHeardBoomerCoach {
 	scene "scenes/Coach/HeardBoomer01.vcd" //I hear a Boomer.
 	scene "scenes/Coach/HeardBoomer02.vcd" //Boomer's sneakin 'round.
 	scene "scenes/Coach/HeardBoomer03.vcd" //Careful now, boomer.
 	scene "scenes/Coach/HeardBoomer04.vcd" //Step slow ya' all, boomer round.
 }
 Rule PlayerWarnHeardBoomerCoach {
-	criteria ConceptWarnBoomer IsNotCoughing IsCoach IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkCoach IsWorldTalkCoach
+	criteria ConceptWarnBoomer IsNotCoughing IsCoach IsNotWarnHeardBoomer NotInCombat IsNotSaidSpecialWarn IsTalk IsTalkCoach IsWorldTalkCoach //for SI Warnings Fix plugin
 	ApplyContext "WarnHeardBoomer:1:300,SaidSpecialWarn:1:30"
 	applycontexttoworld
 	Response PlayerWarnHeardBoomerCoach

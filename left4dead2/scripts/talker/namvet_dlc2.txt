@@ -9,8 +9,8 @@ criterion "IsNotAskedForCoverNamVet" "worldNamVetAskForCover" "!=1" required wei
 criterion "IsNotSaidBattleStationsNamVet" "worldSaidBattleStationsNamVet" "!=1" required weight 0
 
 criterion "NamVetNotSaidGrabbingCan" "worldSaidGrabbingCan" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopNamVet" "SaidAlertGiveItemStopNamVet" "!=1" required weight 0
-//Criterion "IsNotSaidAlertGiveItemStopFirstAidNamVet" "SaidAlertGiveItemStopFirstAidNamVet" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopNamVet" "SaidAlertGiveItemStopNamVet" "!=1" required weight 0
+//criterion "IsNotSaidAlertGiveItemStopFirstAidNamVet" "SaidAlertGiveItemStopFirstAidNamVet" "!=1" required weight 0
 criterion "IsNotSaidBeenJockeyedNamVet" "SaidBeenJockeyedNamVet" "!=1" required weight 0
 criterion "IsNotSaidNamVetWitchChasing" "SaidNamVetWitchChasing" "!=1" required weight 0
 criterion "IsSaidNamVetWitchAttacking" "SaidNamVetWitchAttacking" "1" required weight 0
