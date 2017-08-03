@@ -1,6 +1,3 @@
-//NamVet Response Rule File
-//For L4D2 by New Day & Morning Nine Nine
-
 criterion "NamVetNotPickedUpItem" "NamVetPickedUpItem" "!=1" required weight 0
 criterion "IsNamVetFriendlyFire" "worldNamVetFriendlyFire" "1" required weight 0
 criterion "IsNotNamVetFriendlyFire" "worldNamVetFriendlyFire" "!=1" required weight 0
@@ -23,7 +20,7 @@ criterion "ConceptThatIsForBill" "Concept" "ThatIsForBill" required
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankNamVet {
-	speak "NamVet_Blank" noscene //Blank
+	speak "NamVet_Blank" noscene
 }
 
 Response PlayerNiceShotNamVet {
@@ -483,7 +480,7 @@ Response BotYesReadyNamVet {
 	scene "scenes/NamVet/AnswerReady04.vcd" predelay "1,3.5" //I said I'm ready!
 	scene "scenes/NamVet/C6DLC3MOVIELINE09.vcd" predelay "1,3.5" //I'm ready.
 	scene "scenes/NamVet/C6DLC3PRESTARTLASTGEN01.vcd" predelay "1,3.5" //Get ready, let's do this.
-	scene "scenes/NamVet/GenericResponses09.vcd" predelay "1,3.5" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" predelay "1,3.5" //Alright, then, let's do it.
 	scene "scenes/NamVet/Yes03.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/NamVet/Yes04.vcd" predelay "1,3.5" //Okay.
 	scene "scenes/NamVet/Yes05.vcd" predelay "1,3.5" //Yes.
@@ -508,7 +505,7 @@ Response PlayerToTheRescueNamVet {
 	scene "scenes/NamVet/ToTheRescue03.vcd" predelay "0.75,1.5" //Don't get your panties in a bunch, I'm comin'!
 }
 Rule PlayerToTheRescueNamVet {
-	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsNamVet IsTalk IsTalkNamVet NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600 IsWorldTalkNamVet
+	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsNotSpeaking IsNamVet IsTalk IsTalkNamVet NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600 IsWorldTalkNamVet
 	ApplyContext "SaidRescueComing:1:20"
 	applycontexttoworld
 	Response PlayerToTheRescueNamVet
@@ -803,7 +800,7 @@ Rule IntroFarm3NamVet {
 }
 
 Response IntroFarm4NamVet {
-	scene "scenes/NamVet/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" //Alright, then, let's do it.
 }
 Rule IntroFarm4NamVet {
 	criteria ConceptIntroFarm4 IsNamVet
@@ -837,7 +834,7 @@ Rule SurvivorFinaleTriggeredBoatNamVet {
 }
 
 Response SurvivorFinaleTriggeredFarmNamVet {
-	scene "scenes/NamVet/RadioUsedGeneric01.vcd" predelay ".5,1" //Allright, people, help is on the way. Let's dig in.
+	scene "scenes/NamVet/RadioUsedGeneric01.vcd" predelay ".5,1" //Alright, people, help is on the way. Let's dig in.
 	scene "scenes/NamVet/RadioUsedGeneric02.vcd" predelay ".5,1" //Okay, people, listen up: Help is on its way. We're almost out of this.
 	scene "scenes/NamVet/RadioUsedTruck01.vcd" predelay ".5,1" //Listen up, there's a truck coming for us, so let's make sure we're alive to meet it.
 }
@@ -952,7 +949,7 @@ Rule SurvivorFinalVehicleRunwayXNamVet {
 
 Response SurvivorFinalVehicleSpottedBoatNamVet {
 	scene "scenes/NamVet/ArriveBoatInitial01.vcd" then any EmphaticArriveRun foo:0 0 //That's the boat! Time to bug out!
-	scene "scenes/NamVet/ArriveBoatInitial02.vcd" then any EmphaticArriveRun foo:0 0 //Allright, the boat's here! Let's go!
+	scene "scenes/NamVet/ArriveBoatInitial02.vcd" then any EmphaticArriveRun foo:0 0 //Alright, the boat's here! Let's go!
 }
 Rule SurvivorFinalVehicleSpottedBoatNamVet {
 	criteria ConceptFinalVehicleSpotted IsNamVet ismap_l4d_smalltown05_houseboat IsNotSaidFinalVehicleSpotted IsNotAlone
@@ -1136,8 +1133,8 @@ Rule SurvivorSpottedFrancisFarNamVet {
 }
 
 Response SurvivorSpottedGrenadeNamVet {
-	scene "scenes/NamVet/SpotGrenades04.vcd" //Pipebomb over here!
-	scene "scenes/NamVet/SpotGrenades05.vcd" //Pipebomb!
+	scene "scenes/NamVet/SpotGrenades04.vcd" //Pipe bomb over here!
+	scene "scenes/NamVet/SpotGrenades05.vcd" //Pipe bomb!
 }
 Rule SurvivorSpottedGrenadeNamVet {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSmartLookAuto IsPipeBomb IsWorldTalkNamVet
@@ -1165,8 +1162,8 @@ Rule SurvivorSpottedGrenadeAutoNamVet2 {
 }
 
 Response SurvivorSpottedHealthNamVet {
-	scene "scenes/NamVet/SpotFirstAid01.vcd" //First Aid Kit here!
-	scene "scenes/NamVet/SpotFirstAid02.vcd" //First Aid here!
+	scene "scenes/NamVet/SpotFirstAid01.vcd" //First aid kit here!
+	scene "scenes/NamVet/SpotFirstAid02.vcd" //First aid here!
 	scene "scenes/NamVet/SpotFirstAid03.vcd" //First aid kit!
 	scene "scenes/NamVet/SpotFirstAid04.vcd" //First aid kit over here!
 	scene "scenes/NamVet/SpotFirstAid05.vcd" //Health pack here!
@@ -1226,7 +1223,7 @@ Rule SurvivorSpottedMolotovNamVet {
 }
 
 Rule SurvivorSpottedMolotovAutoNamVet {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpotNamVet IsMolotov IsWorldTalkNamVet YesHasMolotov _auto_NotNoSpotting IsNotSpeakingWeight0
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsSmartLookAuto IsNotInSafeSpot YesHasThrow IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpotNamVet IsMolotov IsWorldTalkNamVet YesHasMolotov _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotMolotov:1:5,SaidSpotNamVet:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedMolotovNamVet
@@ -1668,7 +1665,7 @@ Rule PlayerAlertGiveItemStopNamVet {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidNamVet {
-	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidNamVet
+	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidNamVet
 }
 Rule PlayerAlertGiveItemStopAnFirstAidNamVet {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsNamVet IsTalk IsTalkNamVet NoHasFirstAidKit IsWorldTalkNamVet
@@ -1676,7 +1673,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidNamVet {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidNamVet {
-	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidNamVet
+	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidNamVet
 }
 Rule PlayerAlertGiveItemStopQnFirstAidNamVet {
 	criteria ConceptBashWithItem IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsItemFirstAidKit IsWorldTalkNamVet IsNotSpeakingWeight0
@@ -1684,7 +1681,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidNamVet {
 }
 
 Response PlayerAlertGiveItemStopMedicalNamVet {
-	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalNamVet {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsNamVet IsTalk IsTalkNamVet NoHasPainPills NoHasAdrenaline IsWorldTalkNamVet
@@ -1692,7 +1689,7 @@ Rule PlayerAlertGiveItemStopMedicalNamVet {
 }
 
 Response PlayerAlertGiveItemMedicalNamVet {
-	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/NamVet/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalNamVet {
 	criteria ConceptBashWithItem IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsItemMedical IsWorldTalkNamVet IsNotSpeakingWeight0
@@ -2143,7 +2140,6 @@ Rule HelpResponseZoeyNamVet {
 	criteria ConceptFriendNeedsHelp IsNamVet IsTalk IsTalkNamVet IsNotIncapacitated IsInSafeSpot FromIsTeenGirl IsNotInStartArea NotAloneInSafeSpot IsWorldTalkNamVet IsNotSpeakingWeight0
 	Response HelpResponseZoeyNamVet
 }
-
 
 //RemarkableVocalize
 Response hospital02_path03b1 {
@@ -3492,7 +3488,7 @@ Rule PlayerRemarkUpThatLadderNamVet {
 }
 
 Response PlayerZoeySuggestsCraneNamVet {
-	scene "scenes/NamVet/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/NamVet/GenericResponses10.vcd" //Good thinking.
 	scene "scenes/NamVet/GenericResponses20.vcd" //Sounds good to me. Let's do it.
 }
@@ -3515,7 +3511,7 @@ Rule RiversideIsDeadANamVet {
 }
 
 Response RiversideIsDeadPlanNamVet {
-	scene "scenes/NamVet/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/NamVet/GenericResponses20.vcd" //Sounds good to me. Let's do it.
 }
 Rule RiversideIsDeadPlanNamVet {
@@ -3745,7 +3741,7 @@ Response PlayerMoveOnNamVet {
 	scene "scenes/NamVet/C6DLC3INTRO27.vcd" //Come on, let's move.
 	scene "scenes/NamVet/C6DLC3SECONDEVENTOVER02.vcd" //Let's move out!
 	scene "scenes/NamVet/C6DLC3STARTINGGENERATORS03.vcd" //Let's go.
-	scene "scenes/NamVet/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/NamVet/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/NamVet/MoveOn02.vcd" //Let's move people.
 	scene "scenes/NamVet/MoveOn03.vcd" //Move it out!
 	scene "scenes/NamVet/MoveOn04.vcd" //Let's go.
@@ -3778,7 +3774,7 @@ Response PlayerMoveOnXNamVet {
 	scene "scenes/NamVet/C6DLC3INTRO27.vcd" //Come on, let's move.
 	scene "scenes/NamVet/C6DLC3SECONDEVENTOVER02.vcd" //Let's move out!
 	scene "scenes/NamVet/C6DLC3STARTINGGENERATORS03.vcd" //Let's go.
-	scene "scenes/NamVet/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/NamVet/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/NamVet/MoveOn03.vcd" //Move it out!
 	scene "scenes/NamVet/MoveOn04.vcd" //Let's go.
 	scene "scenes/NamVet/MoveOn06.vcd" //Time to move out!
@@ -3866,7 +3862,7 @@ Response PlayerAskReadyNamVet {
 	scene "scenes/NamVet/AnswerReady04.vcd" //I said I'm ready!
 	scene "scenes/NamVet/C6DLC3MOVIELINE09.vcd" //I'm ready.
 	scene "scenes/NamVet/C6DLC3PRESTARTLASTGEN01.vcd" //Get ready, let's do this.
-	scene "scenes/NamVet/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/NamVet/C6DLC3FIRSTEVENTOVER01.vcd" //Alright, I think that's it!
 	scene "scenes/NamVet/C6DLC3PRESTART2NDGEN03.vcd" //Let's get prepared before we start it.
 }
@@ -3886,7 +3882,7 @@ Response PlayerAskReadyXNamVet {
 	scene "scenes/NamVet/AnswerReady04.vcd" //I said I'm ready!
 	scene "scenes/NamVet/C6DLC3MOVIELINE09.vcd" //I'm ready.
 	scene "scenes/NamVet/C6DLC3PRESTARTLASTGEN01.vcd" //Get ready, let's do this.
-	scene "scenes/NamVet/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/NamVet/C6DLC3FIRSTEVENTOVER01.vcd" //Alright, I think that's it!
 }
 Rule PlayerAskReadyXNamVet {
@@ -3931,9 +3927,6 @@ Response PlayerLaughNamVet {
 	scene "scenes/NamVet/ViolenceAwe06.vcd" //<laugh>Whoa-ho-ho.
 	scene "scenes/NamVet/Taunt01.vcd" //[loud, evil laugh]
 	scene "scenes/NamVet/Taunt02.vcd" //[loud, evil laugh]
-	scene "scenes/NamVet/Taunt07.vcd" //[loud, evil laugh]
-	scene "scenes/NamVet/Taunt08.vcd" //[loud, evil laugh]
-	scene "scenes/NamVet/Taunt09.vcd" //[loud, evil laugh]
 }
 Rule PlayerLaughNamVet {
 	criteria ConceptPlayerLaugh IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
@@ -4120,7 +4113,7 @@ Response PlayerThanksNamVet {
 	scene "scenes/NamVet/ScenarioJoin02.vcd" predelay ".2,.5" //Hello!
 }
 Rule PlayerThanksNamVet {
-	criteria ConceptPlayerThanks IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsHealthy5
+	criteria ConceptPlayerThanks IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsNotHealthyHalf
 	Response PlayerThanksNamVet
 }
 
@@ -4360,7 +4353,7 @@ Rule PlayerWarnCarefulXNamVet {
 
 //Smalltown Intro
 Response IntroSmalltown3NamVet {
-	scene "scenes/NamVet/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/NamVet/GenericResponses09.vcd" //Alright, then, let's do it.
 }
 Rule IntroSmalltown3NamVet {
 	criteria ConceptIntroSmalltown3 IsNamVet
@@ -4372,7 +4365,9 @@ Rule IntroSmalltown3NamVet {
 
 //Spawn - Join
 Response SurvivorSpawnNamVet {
+	scene "scenes/NamVet/ScenarioJoin01.vcd" //I'm here.
 	scene "scenes/NamVet/ScenarioJoin02.vcd" //Hello!
+	scene "scenes/NamVet/ScenarioJoin03.vcd" //Hey, I'm here.
 }
 Rule SurvivorSpawnNamVet {
 	criteria ConceptPlayerScenarioJoin IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotAlone
@@ -4380,12 +4375,10 @@ Rule SurvivorSpawnNamVet {
 }
 
 Response SurvivorSpawnLastMainstreetNamVet {
-	scene "scenes/NamVet/ScenarioJoin01.vcd" //I'm here.
-	scene "scenes/NamVet/ScenarioJoin02.vcd" //Hello!
-	scene "scenes/NamVet/ScenarioJoin03.vcd" //Hey, I'm here.
+	scene "scenes/NamVet/ScenarioJoinLast01.vcd" //We're all here
 }
 Rule SurvivorSpawnLastMainstreetNamVet {
-	criteria ConceptPlayerScenarioJoinLast IsNamVet IsSmalltown04 IsNotAlone
+	criteria ConceptPlayerScenarioJoinLast IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsEveryoneAlive
 	ApplyContext "RemarkableReadyToGo:1:500,RemarkableBlocker:1:5"
 	applycontexttoworld
 	Response SurvivorSpawnLastMainstreetNamVet
@@ -4468,20 +4461,20 @@ Rule PlayerGetInsideCheckPointNamVet {
 	Response PlayerGetInsideCheckPointNamVet
 }
 
-Response PlayerGrabbedByJockeyNamVet {
-	scene "scenes/NamVet/HurtCritical03.vcd" //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical04.vcd" //[pain noise - loud major pain]
-	scene "scenes/NamVet/HurtCritical08.vcd" //[pain noise - loud major pain]
-	scene "scenes/NamVet/ScreamWhilePounced01.vcd" //GET IT OFF!
-	scene "scenes/NamVet/ScreamWhilePounced02.vcd" //GET IT OFF! GET IT OFF!
-	scene "scenes/NamVet/ScreamWhilePounced03.vcd" //GET IT OFF!
-}
-Rule PlayerGrabbedByJockeyNamVet {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSaidBeenJockeyedNamVet IsWorldTalkNamVet
-	ApplyContext "SaidBeenJockeyedNamVet:1:6,_auto_NoSpotting:1:4"
-	applycontexttoworld
-	Response PlayerGrabbedByJockeyNamVet
-}
+//Response PlayerGrabbedByJockeyNamVet {
+//scene "scenes/NamVet/HurtCritical03.vcd" //[pain noise - loud major pain]
+//scene "scenes/NamVet/HurtCritical04.vcd" //[pain noise - loud major pain]
+//scene "scenes/NamVet/HurtCritical08.vcd" //[pain noise - loud major pain]
+//scene "scenes/NamVet/ScreamWhilePounced01.vcd" //GET IT OFF!
+//scene "scenes/NamVet/ScreamWhilePounced02.vcd" //GET IT OFF! GET IT OFF!
+//scene "scenes/NamVet/ScreamWhilePounced03.vcd" //GET IT OFF!
+//}
+//Rule PlayerGrabbedByJockeyNamVet {
+//criteria ConceptSurvivorJockeyed IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsNotSaidBeenJockeyedNamVet IsWorldTalkNamVet
+//ApplyContext "SaidBeenJockeyedNamVet:1:6,_auto_NoSpotting:1:4"
+//applycontexttoworld
+//Response PlayerGrabbedByJockeyNamVet
+//}
 
 Response PlayerGrenadeNamVet {
 	scene "scenes/NamVet/Grenade01.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -0.678 //GRENADE!!
@@ -4492,7 +4485,7 @@ Response PlayerGrenadeNamVet {
 	scene "scenes/NamVet/downinfront03.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Duck!
 }
 Rule PlayerGrenadeNamVet {
-	criteria ConceptThrewGrenade IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet YesHasGrenade IsNotAlone
+	criteria ConceptThrewGrenade IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet IsNotAlone
 	Response PlayerGrenadeNamVet
 }
 
@@ -4587,9 +4580,9 @@ Response PlayerKillTankConfirmationNamVet {
 	scene "scenes/NamVet/C6DLC3MOVIELINE10.vcd" //I'll see peace back on Earth if I gotta murder every one of you bastards. with my bare goddamn hands.
 	scene "scenes/NamVet/C6DLC3MOVIELINE18.vcd" //That felt like no time at all.
 	scene "scenes/NamVet/C6DLC3MOVIELINE19.vcd" //That all you brought?
-	scene "scenes/NamVet/C6DLC3MOVIELINE12.vcd" //You want me, come and get it. I'm just scars and tar anyway. But you didn't get them--did you, you sons of bitches?
+	scene "scenes/NamVet/C6DLC3MOVIELINE12.vcd" //You want me, come and get it. I'm just scars and tar anyway. But you didn't get them–did you, you sons of bitches?
 	scene "scenes/NamVet/C6DLC3MOVIELINE13.vcd" //Guess you can't unmake how things end up. None of it. This is all just how it is. But you never got them, did you? They're safe. So that's just fine.
-	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out–guess I woulda saved the shoe leather and fought you there.
 	scene "scenes/NamVet/GameSpeech01.vcd" //I'll see peace back on earth if I gotta murder everyone of these animals with my own bare hands. Ownbare_09.wav
 	scene "scenes/NamVet/Generic29.vcd" then Manager ConceptBlock640 foo:0 -6.3 //I'll see peace back on earth if I gotta murder every one of these bastards with my bare goddamn hands.
 	scene "scenes/NamVet/PlayerTransitionClose01.vcd" //Jesus H Christ that was close.
@@ -4610,8 +4603,8 @@ Rule PlayerKillTankConfirmationNamVet {
 Response PlayerKillTankConfirmationX3NamVet {
 	scene "scenes/NamVet/C6DLC3MOVIELINE07.vcd" //You sons of bitches took everything. But you ain't takin' them.
 	scene "scenes/NamVet/C6DLC3MOVIELINE10.vcd" //I'll see peace back on Earth if I gotta murder every one of you bastards. with my bare goddamn hands.
-	scene "scenes/NamVet/C6DLC3MOVIELINE12.vcd" //You want me, come and get it. I'm just scars and tar anyway. But you didn't get them--did you, you sons of bitches?
-	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+	scene "scenes/NamVet/C6DLC3MOVIELINE12.vcd" //You want me, come and get it. I'm just scars and tar anyway. But you didn't get them–did you, you sons of bitches?
+	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out–guess I woulda saved the shoe leather and fought you there.
 	scene "scenes/NamVet/GameSpeech01.vcd" //I'll see peace back on earth if I gotta murder everyone of these animals with my own bare hands. Ownbare_09.wav
 	scene "scenes/NamVet/Generic29.vcd" then Manager ConceptBlock640 foo:0 -6.3 //I'll see peace back on earth if I gotta murder every one of these bastards with my bare goddamn hands.
 	scene "scenes/NamVet/PlayerTransitionClose01.vcd" //Jesus H Christ that was close.
@@ -4631,7 +4624,7 @@ Rule PlayerKillTankConfirmationX3NamVet {
 
 Response PlayerKillTankConfirmationXNamVet {
 	scene "scenes/NamVet/C6DLC3MOVIELINE10.vcd" //I'll see peace back on Earth if I gotta murder every one of you bastards. with my bare goddamn hands.
-	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out–guess I woulda saved the shoe leather and fought you there.
 	scene "scenes/NamVet/GameSpeech01.vcd" //I'll see peace back on earth if I gotta murder everyone of these animals with my own bare hands. Ownbare_09.wav
 	scene "scenes/NamVet/Generic29.vcd" then Manager ConceptBlock640 foo:0 -6.3 //I'll see peace back on earth if I gotta murder every one of these bastards with my bare goddamn hands.
 	scene "scenes/NamVet/PlayerTransitionClose01.vcd" //Jesus H Christ that was close.
@@ -5651,7 +5644,7 @@ Rule SurvivorPickupShotgun_spasNamVet {
 
 Response SurvivorPickupFirstAidKitNamVet {
 	scene "scenes/NamVet/TakeFirstAid01.vcd" //First to aid, last to die
-	scene "scenes/NamVet/TakeFirstAid02.vcd" //Grabbing First Aid
+	scene "scenes/NamVet/TakeFirstAid02.vcd" //Grabbing first aid
 	scene "scenes/NamVet/TakeFirstAid03.vcd" //I'm gonna need these
 }
 Rule SurvivorPickupFirstAidKitNamVet {
@@ -5703,7 +5696,7 @@ Response SurvivorPickupPipeBombNamVet {
 	scene "scenes/NamVet/TakePipeBomb01.vcd" //A black powder bomb.
 	scene "scenes/NamVet/TakePipeBomb02.vcd" //Grabbing a pipe bomb
 	scene "scenes/NamVet/TakePipeBomb03.vcd" //Grabbing a pipe bomb
-//scene "scenes/NamVet/TakePipeBomb04.vcd" //I'd rather have a grenade, but this'll do.
+	scene "scenes/NamVet/TakePipeBomb04.vcd" //I'd rather have a grenade, but this'll do.
 }
 Rule SurvivorPickupPipeBombNamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpPipeBomb IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
@@ -5721,7 +5714,6 @@ Rule SurvivorPickupPumpShotgunNamVet {
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
 	Response SurvivorPickupPumpShotgunNamVet
 }
-
 Rule SurvivorPickupShotgun_chromeNamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpShotgun_chrome IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
@@ -5729,26 +5721,24 @@ Rule SurvivorPickupShotgun_chromeNamVet {
 }
 
 Response SurvivorPickupRifleNamVet {
-//scene "scenes/NamVet/GnericWeaponPickup01.vcd" //Ahhh. A gun's a gun.
-//scene "scenes/NamVet/GnericWeaponPickup02.vcd" //If it shoots bullets, I'll take it.
 	scene "scenes/NamVet/TakeAssaultRifle01.vcd" //An assault rifle. This shit's gettin more like 'nam every second.
 	scene "scenes/NamVet/TakeAssaultRifle02.vcd" //An assault rifle. Come to papa.
 	scene "scenes/NamVet/TakeAssaultRifle03.vcd" //I'm grabbing this rifle
 	scene "scenes/NamVet/TakeAssaultRifle04.vcd" //An assault rifle! Man, this takes me back.
 	scene "scenes/NamVet/TakeAssaultRifle05.vcd" //I'm grabbin' an assault rifle.
+	scene "scenes/NamVet/GnericWeaponPickup01.vcd" //Ahhh. A gun's a gun.
+	scene "scenes/NamVet/GnericWeaponPickup02.vcd" //If it shoots bullets, I'll take it.
 }
 Rule SurvivorPickupRifleNamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpRifle IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
 	Response SurvivorPickupRifleNamVet
 }
-
 Rule SurvivorPickupRifle_AK47NamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpRifle_AK47 IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
 	Response SurvivorPickupRifleNamVet
 }
-
 Rule SurvivorPickupRifle_desertNamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpRifle_desert IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
@@ -5758,8 +5748,8 @@ Rule SurvivorPickupRifle_desertNamVet {
 Response SurvivorPickupSecondPistolNamVet {
 	scene "scenes/NamVet/TakePistol01.vcd" //I'm taking an extra pistol
 	scene "scenes/NamVet/TakePistol02.vcd" //I'm taking an extra pistol.
-	scene "scenes/NamVet/TakePistol03.vcd" //Extra Pistol!
-	scene "scenes/NamVet/TakePistol04.vcd" //Extra Sidearm!
+	scene "scenes/NamVet/TakePistol03.vcd" //Extra pistol!
+	scene "scenes/NamVet/TakePistol04.vcd" //Extra sidearm!
 }
 Rule SurvivorPickupSecondPistolNamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpSecondPistol IsNotSpeaking IsNotInSafeSpot NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
@@ -5777,7 +5767,6 @@ Rule SurvivorPickupSMGNamVet {
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
 	Response SurvivorPickupSMGNamVet
 }
-
 Rule SurvivorPickupSmg_silencedNamVet {
 	criteria ConceptPlayerPickup IsNotCoughing IsNamVet IsPickedUpSmg_silenced IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent NamVetNotPickedUpItem IsTalk IsTalkNamVet IsWorldTalkNamVet
 	ApplyContext "NamVetPickedUpItem:1:30,TalkNamVet:1:3"
@@ -5789,7 +5778,7 @@ Rule SurvivorPickupSmg_silencedNamVet {
 Response PlayerGettingRevivedNamVet {
 	scene "scenes/NamVet/FallShort03.vcd" then subject ReviveBfine foo:0 -1 //[Yelp!]
 	scene "scenes/NamVet/GettingRevived01.vcd" then subject ReviveBfine foo:0 -1.600 //I'm okay.
-	scene "scenes/NamVet/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.685 //I'm allright.
+	scene "scenes/NamVet/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.685 //I'm alright.
 	scene "scenes/NamVet/GettingRevived03.vcd" then subject ReviveBfine foo:0 -3.285 //[groan]
 	scene "scenes/NamVet/GettingRevived04.vcd" then subject ReviveBfine foo:0 -1.451 //Hell if I know.
 	scene "scenes/NamVet/GettingRevived05.vcd" then subject ReviveBgo foo:0 -2.417 //Most of this blood ain't mine.
@@ -5808,7 +5797,7 @@ Rule PlayerGettingRevivedNamVet {
 
 Response PlayerGettingRevivedNamVet {
 	scene "scenes/NamVet/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm okay.
-	scene "scenes/NamVet/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm allright.
+	scene "scenes/NamVet/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm alright.
 	scene "scenes/NamVet/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0 //[groan]
 	scene "scenes/NamVet/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0 //Hell if I know.
 	scene "scenes/NamVet/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0 //Most of this blood ain't mine.
@@ -5853,16 +5842,16 @@ Rule PlayerLedgeSaveNamVet {
 
 Response PlayerReviveFriendNamVet {
 	scene "scenes/NamVet/ReviveFriend01.vcd" //Hold still, hold still. I'm gonna get you back on your feet and then we gotta move.
-	scene "scenes/NamVet/ReviveFriend02.vcd" //Okay. Allright, now. Come on kid, shake it off and let's get moving.
+	scene "scenes/NamVet/ReviveFriend02.vcd" //Okay. Alright, now. Come on kid, shake it off and let's get moving.
 	scene "scenes/NamVet/ReviveFriend03.vcd" //Ah hell, it looks a lot worse than it is. C'mon - you gotta get up and walk it off.
 	scene "scenes/NamVet/ReviveFriend04.vcd" //Probably stings like hell, but it ain't gonna kill ya. Up and at'em, soldier! Time to move.
 	scene "scenes/NamVet/ReviveFriend05.vcd" //There's a lot of blood, but you're not missin' anything important. Come on, get up, let's get moving!
 	scene "scenes/NamVet/ReviveFriend06.vcd" //Hold still, hold still. I'm gonna get you back on your feet and then we gotta move.
-	scene "scenes/NamVet/ReviveFriend07.vcd" //Okay. Allright, now. Come on kid, shake it off, let's get moving.
+	scene "scenes/NamVet/ReviveFriend07.vcd" //Okay. Alright, now. Come on kid, shake it off, let's get moving.
 	scene "scenes/NamVet/ReviveFriend08.vcd" //Take it easy, kid. I'm gonna get you back on your feet and fighting.
 	scene "scenes/NamVet/ReviveFriend09.vcd" //Hell, kid, they just winged ya. Come on, back on your feet and let's get moving.
 	scene "scenes/NamVet/ReviveFriend10.vcd" //Here we go - back on your feet, soldier. You're not gettin' out of this fight that easy.
-	scene "scenes/NamVet/ReviveFriend11.vcd" //Lie still, lemme look. Ah hell, I've seen worse. You'll be allright in a second.
+	scene "scenes/NamVet/ReviveFriend11.vcd" //Lie still, lemme look. Ah hell, I've seen worse. You'll be alright in a second.
 	scene "scenes/NamVet/ReviveFriend12.vcd" //You're not through yet, kid. Get up and let's go. These shitheads ain't gonna kill themselves.
 	scene "scenes/NamVet/ReviveFriend14.vcd" //Ahh quit snivelling. I've seen worse.
 }
@@ -6182,7 +6171,7 @@ Rule PlayerShotGasCanNamVet {
 }
 
 Response ScavengeStartNamVet {
-	scene "scenes/NamVet/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/NamVet/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/NamVet/MoveOn02.vcd" //Let's move people.
 	scene "scenes/NamVet/MoveOn08.vcd" //Alright, let's go.
 	scene "scenes/NamVet/MoveOn10.vcd" //Come on, let's go.
@@ -6896,7 +6885,61 @@ Response What3NamVet {
 	scene "scenes/NamVet/GenericResponses02.vcd" then TeenGirl PlayerLaughBill foo:0 0 //[Disbelief] What?
 }
 Rule What3NamVet {
-	criteria What3 IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet
+	criteria What3 IsNotCoughing IsNamVet IsTalk IsTalkNamVet IsWorldTalkNamVet ChanceToFire50Percent
 	Response What3NamVet
 }
 
+
+criterion "FI" "Concept" "FI" required
+Response FINamVet {
+	scene "scenes/NamVet/GenericResponses12.vcd" //[laughing] You are an idiot.
+}
+Rule FINamVet {
+	criteria FI IsNamVet ChanceToFire50Percent
+	Response FINamVet
+}
+criterion "Community05" "Concept" "Community05" required
+Response Community05 {
+	scene "scenes/NamVet/C6DLC3INTRO19.vcd" //Zoey, we're together and on our own. That's what's important.
+}
+Rule Community05 {
+	criteria Community05 IsNamVet
+	Response Community05
+}
+
+criterion "Community07" "Concept" "Community07" required
+Response Community07 {
+	scene "scenes/NamVet/C6DLC3INTRO10.vcd" //Alright, everybody, remember: we're lookin' for a sail boat. I aim to get to the Keys, and I ain't stoppin' for gas."
+}
+Rule Community07 {
+	criteria Community07 IsNamVet
+	Response Community07
+}
+
+criterion "Community09" "Concept" "Community09" required
+Response Community09 {
+	scene "scenes/NamVet/c6dlc3communitylines04.vcd" then TeenGirl Community10 foo:0 0.01 //Back in my day, we walked 10 miles through a blizzard in bare feet to kill zombies."
+}
+Rule Community09 {
+	criteria Community09 IsNamVet
+	Response Community09
+}
+
+criterion "CryBabies" "Concept" "CryBabies" required
+Response CryBabies {
+	scene "scenes/NamVet/c6dlc3communitylines05.vcd" then NamVet Hat foo:0 0.01 //Ehh.. is it too cold for ya cry babies?
+}
+Rule CryBabies {
+	criteria CryBabies IsNamVet
+	Response CryBabies
+}
+
+criterion "BeardFrozen" "Concept" "BeardFrozen" required
+Response BeardFrozen {
+	scene "scenes/NamVet/C6DLC3INTRO02.vcd" //Shut up, Francis.
+	scene "scenes/NamVet/C6DLC3INTRO16.vcd" //Shut up, Francis.
+}
+Rule BeardFrozen {
+	criteria BeardFrozen IsNamVet
+	Response BeardFrozen
+}

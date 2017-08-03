@@ -3,7 +3,7 @@
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 
 
@@ -81,7 +81,7 @@ Rule C6M1Intro_05cProducer {
 }
 
 Response C6M1Intro_05eProducer {
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting04.vcd" then Any WorldC6M1_HistoricTour foo:0 -1.874 //Great. All right.
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting04.vcd" then Any WorldC6M1_HistoricTour foo:0 -1.874 //Great. Alright.
 	scene "scenes/Producer/DLC1_C6M1_InitialMeeting05.vcd" //Great. Can't help us with directions, probably can't shoot a gun.
 }
 Rule C6M1Intro_05eProducer {

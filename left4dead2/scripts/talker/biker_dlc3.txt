@@ -1,12 +1,6 @@
-//Biker Response Rule File
-//For L4D2 by New Day & Morning Nine Nine
-
-
-//Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankBiker {
-	speak "Biker_Blank" noscene //Blank
+	speak "Biker_Blank" noscene
 }
-
 
 //C7M1
 Response C7M1_saferoom01Biker {
@@ -132,6 +126,9 @@ Rule C7M1_saferoom21Biker {
 
 Response C7M1_saferoom21aBiker {
 	scene "scenes/Biker/C6DLC3INTRO26.vcd" //Nah, don't worry, I hate boats too.
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat11.vcd" //Oh my god. I HATE THOSE TOO! I HATE EM SO MUCH!
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat12.vcd" //Oh my god. You hate stuff too?
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat13.vcd" //Oh my god. You hate stuff too?
 }
 Rule C7M1_saferoom21aBiker {
 	criteria ConceptC7M1_saferoom21a IsBiker
@@ -458,7 +455,7 @@ Rule C7M3_saferoom015Biker {
 }
 
 Response C7M3_saferoom016aBiker {
-	scene "scenes/Biker/C6DLC3SECONDSAFEROOM23.vcd" then Manager C7M3_saferoom016b foo:0 .1 //That's the spirit allright - of insanity.
+	scene "scenes/Biker/C6DLC3SECONDSAFEROOM23.vcd" then Manager C7M3_saferoom016b foo:0 .1 //That's the spirit alright - of insanity.
 	scene "scenes/Biker/C6DLC3SECONDSAFEROOM26.vcd" then Manager C7M3_saferoom016d foo:0 .1 //I mean, I'd like to hear your reasons why Louis isn't some sort of lunatic. For all we know, he's a serial killer.
 }
 Rule C7M3_saferoom016aBiker {
@@ -750,10 +747,6 @@ Rule C7M3WaveOverGen2Biker {
 	Response C7M3WaveOverGen2Biker
 }
 
-
-//Item Spotted
-
-//Not Rosetta - Responses
 
 //RemarkableVocalize
 Response PlayerRemarkc7m1_bricktopBiker {
@@ -1181,6 +1174,8 @@ Rule ScavengeStartBiker {
 
 
 //Vocalize
+
+
 Response FinaleAheadc7m3Biker {
 	scene "scenes/Biker/AnswerReady05.vcd" //Let's go kill somethin'!
 	scene "scenes/Biker/HurryUp08.vcd" //Let's go, let's go!
@@ -1273,7 +1268,3 @@ Rule InfoReminfo_powerboat4aFFBiker {
 	criteria InfoReminfo_powerboat4aFF IsBiker ChanceToFire50Percent IsTeenGirlNear500
 	Response InfoReminfo_powerboat4aFFBiker
 }
-
-
-//Weapon Spotted
-

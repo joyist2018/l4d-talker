@@ -3,7 +3,7 @@
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankCoach {
-	speak "Coach_Blank" noscene //Blank
+	speak "Coach_Blank" noscene
 }
 
 
@@ -499,7 +499,7 @@ Rule C6M3_elevatorZoeyCoach {
 Response C6M3_GivenItemBikerCoach {
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items01.vcd" //Thanks for sharing!
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items02.vcd" //Thanks my man.
-	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items03.vcd" //Man, you guys are all right.
+	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items03.vcd" //Man, you guys are alright.
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items08.vcd" //Thanks my man.
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items11.vcd" //We owe you one.
 }
@@ -512,7 +512,7 @@ Response C6M3_GivenItemTeenGirlCoach {
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items04.vcd" //Hey, thanks for the supplies.
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items05.vcd" //We owe you one.
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items07.vcd" //Thanks for sharing!
-	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items09.vcd" //You guys are all right.
+	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items09.vcd" //You guys are alright.
 	scene "scenes/Coach/DLC1_C6M3_FinaleL4D1Items10.vcd" //Thanks for the supplies.
 }
 Rule C6M3_GivenItemTeenGirlCoach {
@@ -948,7 +948,7 @@ Rule PlayerRemarkWorldC6M2_InSewer1Coach {
 Response PlayerRemarkWorldC6M2_InSewerLadder1Coach {
 	scene "scenes/Coach/DLC1_C6M2_UpLadder101.vcd" //Let's get out of the water.
 	scene "scenes/Coach/DLC1_C6M2_UpLadder102.vcd" //Everybody up there!
-	scene "scenes/Coach/DLC1_C6M2_UpLadder103.vcd" //All right, out of the water.
+	scene "scenes/Coach/DLC1_C6M2_UpLadder103.vcd" //Alright, out of the water.
 	scene "scenes/Coach/DLC1_C6M2_UpLadder104.vcd" //Everyone up there!
 }
 Rule PlayerRemarkWorldC6M2_InSewerLadder1Coach {
@@ -982,7 +982,7 @@ Rule PlayerRemarkWorldC6M2_IntoPoolHallCoach {
 }
 
 Response PlayerRemarkWorldC6M2_JukeBoxCoach {
-	scene "scenes/Coach/DLC1_C6M2_StartingJukeBox01.vcd" //This jukebox is all right.
+	scene "scenes/Coach/DLC1_C6M2_StartingJukeBox01.vcd" //This jukebox is alright.
 	scene "scenes/Coach/DLC1_C6M2_StartingJukeBox02.vcd" //Oh shit, this thing is still on!
 }
 Rule PlayerRemarkWorldC6M2_JukeBoxCoach {

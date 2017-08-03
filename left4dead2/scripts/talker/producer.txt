@@ -23,7 +23,7 @@ criterion "IsSaidUsingDefibrillatorProducer" "SaidUsingDefibrillatorProducer" "1
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 
 Response C1M1InSmokeProducer {
@@ -69,7 +69,7 @@ Rule C1M3DoorAlarmProducer {
 }
 
 Response C1M3SafeRoomProducer {
-	scene "scenes/Producer/Blank.vcd" then any C1M3SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Producer/Blank.vcd" then any C1M3SafeRoom2 foo:0 3
 }
 Rule C1M3SafeRoomProducer {
 	criteria ConceptTalkIdle Joined2 IsProducer IsNotSaidC1M3SafeRoom2 ismap_c1m3_mall IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -79,7 +79,7 @@ Rule C1M3SafeRoomProducer {
 }
 
 Response C1M4SafeRoomProducer {
-	scene "scenes/Producer/Blank.vcd" then any C1M4SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Producer/Blank.vcd" then any C1M4SafeRoom2 foo:0 3
 }
 Rule C1M4SafeRoomProducer {
 	criteria ConceptTalkIdle Joined2 IsProducer IsNotSaidC1M4SafeRoom2 ismap_c1m4_atrium IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -169,7 +169,7 @@ Rule L4D1PlayerNiceShotFrancisProducer {
 Response L4D1PlayerNiceShotLouisProducer {
 	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing01.vcd" //Nice Louis!
 	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing02.vcd" //Nice shooting Louis!
-	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing03.vcd" //All right Louis!
+	scene "scenes/Producer/DLC1_C6M3_FinaleL4D1Killing03.vcd" //Alright Louis!
 }
 Rule L4D1PlayerNiceShotLouisProducer {
 	criteria ConceptPlayerNiceShot IsNotCoughing IsProducer IssuerClose IsNotSpeakingWeight0 IsTalk IsTalkProducer ChanceToFire50Percent SubjectIsManager IsWorldTalkProducer
@@ -310,7 +310,7 @@ Rule PlayerC1M2GrabbingCola2Producer {
 
 Response PlayerC1M2GunRoomDoorResponseProducer {
 	scene "scenes/Producer/WorldC1M2B56.vcd" then orator C1M2GunRoomDoorResponse5 foo:0 -5.962 //Alright, sir. We'll go get you your snacks. But you better not try to weasel out of this.
-	scene "scenes/Producer/WorldC1M2B57.vcd" then Orator C1M2GunRoomDoorResponse5 foo:0 -8.657 //All right, we'll go get you your snacks. But we're risking our lives for these colas of yours. You better not try to weasel out of this.
+	scene "scenes/Producer/WorldC1M2B57.vcd" then Orator C1M2GunRoomDoorResponse5 foo:0 -8.657 //Alright, we'll go get you your snacks. But we're risking our lives for these colas of yours. You better not try to weasel out of this.
 	scene "scenes/Producer/WorldC1M2B62.vcd" then orator C1M2GunRoomDoorResponse4 foo:0 -4.974 //Sir, if you let me keep this gun? I'll go get you anything you need.
 }
 Rule PlayerC1M2GunRoomDoorResponseProducer {
@@ -365,7 +365,7 @@ Rule PlayerC3M1FerryLanded2Producer {
 }
 
 Response PlayerC3M1FerryLaunched2aProducer {
-	scene "scenes/Producer/Blank.vcd" //Blank
+	scene "scenes/Producer/Blank.vcd"
 }
 Rule PlayerC3M1FerryLaunched2aProducer {
 	criteria ConceptC3M1FerryLaunched2 IsProducer IsTalk IsTalkProducer IsNotSaidC3M1FerryLaunched2 IsWorldTalkProducer AutoIsNotScavenge AutoIsNotSurvival
@@ -437,7 +437,7 @@ Rule PlayerintroC1M1Producer {
 }
 
 Response PlayerPlayerUsingColaBottlesProducer {
-	scene "scenes/Producer/Blank.vcd" then orator whitakerputcola foo:0 0 //Blank
+	scene "scenes/Producer/Blank.vcd" then orator whitakerputcola foo:0 0
 }
 Rule PlayerPlayerUsingColaBottlesProducer {
 	criteria ConceptPlayerUsingColaBottles IsProducer IsTalk IsTalkProducer IsNotSaidPlayerUsingColaBottles IsWorldTalkProducer
@@ -938,7 +938,7 @@ Rule C1M2LeavingSafeRoomProducer {
 }
 
 Response C1M2SafeRoomProducer {
-	scene "scenes/Producer/Blank.vcd" then any C1M2SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Producer/Blank.vcd" then any C1M2SafeRoom2 foo:0 3
 }
 Rule C1M2SafeRoomProducer {
 	criteria ConceptTalkIdle Joined2 IsProducer IsNotSaidC1M2SafeRoom2 ismap_c1m2_streets IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -1083,7 +1083,7 @@ Rule C2M2CarouselIdleProducer {
 
 //C2M3
 Response c2m3_DownHoleProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule c2m3_DownHoleProducer {
 	criteria Conceptc2m3downhole IsProducer AutoIsNotScavenge AutoIsNotSurvival
@@ -1123,7 +1123,7 @@ Rule c2m3SeeChopperProducer {
 }
 
 Response PlayerRemarkc2m3_saferoomaProducer {
-	scene "scenes/Producer/Blank.vcd" //Blank
+	scene "scenes/Producer/Blank.vcd"
 }
 Rule PlayerRemarkc2m3_saferoomaProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea Ismap_c2m3 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M3_007 IsNotSpeakingWeight0
@@ -1135,7 +1135,7 @@ Rule PlayerRemarkc2m3_saferoomaProducer {
 
 //C2M4
 Response c2m4_saferoominitProducer {
-	scene "scenes/Producer/blank.vcd" //Blank
+	scene "scenes/Producer/blank.vcd"
 }
 Rule c2m4_saferoominitProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea ismap_c2m4 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M4_700 IsNotSpeakingWeight0
@@ -1258,7 +1258,7 @@ Rule C2M5_PlanWorkedbProducer {
 }
 
 Response c2m5_saferoominitProducer {
-	scene "scenes/Producer/blank.vcd" //Blank
+	scene "scenes/Producer/blank.vcd"
 }
 Rule c2m5_saferoominitProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea Ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M5_001 _auto_NotSafeRoomStart IsNotSpeakingWeight0
@@ -1558,7 +1558,7 @@ Rule C4M5BoatNagsProducer {
 }
 
 Response PlayerRemarkc4m5_saferoomaProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule PlayerRemarkc4m5_saferoomaProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea Isc4m5 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M5_001 IsNotSpeakingWeight0
@@ -1699,7 +1699,7 @@ Rule C5M3Sniper01Producer {
 }
 
 Response PlayerRemarkc5m3insewerProducer {
-	scene "scenes/Producer/blank.vcd" //Blank
+	scene "scenes/Producer/blank.vcd"
 }
 Rule PlayerRemarkc5m3insewerProducer {
 	criteria ConceptRemark IsProducer Isc5m3insewer IsNotSaidc5m3insewer IsNotCoughing NotInCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear250 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -1945,7 +1945,7 @@ Rule EllisStoryLaughProducer {
 
 //C5M5
 Response C5M5_Button2Producer {
-	scene "scenes/Producer/Blank.vcd" //Blank
+	scene "scenes/Producer/Blank.vcd"
 }
 Rule C5M5_Button2Producer {
 	criteria ConceptC5M5_Button2 IsProducer AutoIsNotScavenge AutoIsNotSurvival
@@ -2024,7 +2024,7 @@ Rule C5M5HearSoldiersNagProducer {
 }
 
 Response C5M5LeaveSafeProducer {
-	scene "scenes/Producer/Blank.vcd" then orator C5M5_Soldier1 foo:0 0.01 //Blank
+	scene "scenes/Producer/Blank.vcd" then orator C5M5_Soldier1 foo:0 0.01
 }
 Rule C5M5LeaveSafeProducer {
 	criteria ConceptSurvivorLeavingInitialCheckpoint IsProducer IsMapc5m5_bridge IsNotSrcGrp_C5M5_001
@@ -2058,7 +2058,7 @@ Rule C5M5RunToHeliProducer {
 }
 
 Response C5M5SafeRoomStartProducer {
-	scene "scenes/Producer/Blank.vcd" //Blank
+	scene "scenes/Producer/Blank.vcd"
 }
 Rule C5M5SafeRoomStartProducer {
 	criteria ConceptTalkIdle IsProducer IsMapc5m5_bridge IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C5M5_003 _auto_NotSafeRoomStart _auto_NotSoldierChatter _auto_NotButton2 IsNotSpeakingWeight0
@@ -2092,7 +2092,7 @@ Rule PlayerCallForRescueProducer {
 
 //Counter
 Response ScenarioJoinLastProducer {
-	scene "scenes/Producer/blank.vcd" //Blank
+	scene "scenes/Producer/blank.vcd"
 }
 Rule ScenarioJoinLastProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea JoinedLess5 IsNotSpeakingWeight0 _auto_NotSafeRoomStart _auto_NotTurnOffJoinLast
@@ -2313,8 +2313,8 @@ Rule SurvivorSpottedGamblerFarC1Producer {
 }
 
 Response SurvivorSpottedGrenadeProducer {
-	scene "scenes/Producer/SpotGrenades01.vcd" //Pipebomb here.
-	scene "scenes/Producer/SpotGrenades02.vcd" //There's a pipebomb here.
+	scene "scenes/Producer/SpotGrenades01.vcd" //Pipe bomb here.
+	scene "scenes/Producer/SpotGrenades02.vcd" //There's a pipe bomb here.
 	scene "scenes/Producer/SpotGrenades03.vcd" //Pipe bomb.
 }
 Rule SurvivorSpottedGrenadeProducer {
@@ -2337,7 +2337,7 @@ Response SurvivorSpottedGrenadeAutoProducer2 {
 	scene "scenes/Producer/Blank.vcd" then Self IdiotIsHere foo:0 0 //Idiotic response.
 	scene "scenes/Producer/DLC1_C6M1_HistoricSign08.vcd" //Good enough.
 	scene "scenes/Producer/DLC1_C6M1_HistoricSign09.vcd" //Well, okay.. Good enough.
-	scene "scenes/Producer/DLC1_C6M1_InitialMeeting04.vcd" //Great. All right.
+	scene "scenes/Producer/DLC1_C6M1_InitialMeeting04.vcd" //Great. Alright.
 	scene "scenes/Producer/EllisInterrupt01.vcd" //Uh huh.
 	scene "scenes/Producer/EllisInterrupt02.vcd" //Uh huh.
 	scene "scenes/Producer/EllisInterrupt03.vcd" //Uh huh.
@@ -2399,10 +2399,10 @@ Response SurvivorSpottedHealthProducer {
 	scene "scenes/Producer/DLC1_C6M1_IntoPark03.vcd" //Make sure to grab a health kit.
 	scene "scenes/Producer/DLC1_C6M1_IntoPark04.vcd" //Make sure to grab a health kit.
 	scene "scenes/Producer/DLC1_C6M1_IntoPark05.vcd" //Everyone grab a health kit.
-	scene "scenes/Producer/SpotFirstAid01.vcd" //First Aid Kit here!
-	scene "scenes/Producer/SpotFirstAid02.vcd" //First Aid Kit!
-	scene "scenes/Producer/SpotFirstAid03.vcd" //First Aid here!
-	scene "scenes/Producer/SpotFirstAid04.vcd" //First Aid!
+	scene "scenes/Producer/SpotFirstAid01.vcd" //First aid kit here!
+	scene "scenes/Producer/SpotFirstAid02.vcd" //First aid kit!
+	scene "scenes/Producer/SpotFirstAid03.vcd" //First aid here!
+	scene "scenes/Producer/SpotFirstAid04.vcd" //First aid!
 	scene "scenes/Producer/SpotFirstAid05.vcd" //There's a first aid kit here.
 }
 Rule SurvivorSpottedHealthProducer {
@@ -2427,9 +2427,9 @@ Rule SurvivorSpottedHealthAutoProducer2 {
 }
 
 Response SurvivorSpottedHealthAutoHasHealthProducer {
-	scene "scenes/Producer/SpotFirstAids01.vcd" //First Aid Kits here!
-	scene "scenes/Producer/SpotFirstAids02.vcd" //First Aid Kits here!
-	scene "scenes/Producer/SpotFirstAids03.vcd" //We got First Aid Kits!
+	scene "scenes/Producer/SpotFirstAids01.vcd" //First aid kits here!
+	scene "scenes/Producer/SpotFirstAids02.vcd" //First aid kits here!
+	scene "scenes/Producer/SpotFirstAids03.vcd" //We got First aid kits!
 }
 Rule SurvivorSpottedHealthAutoHasHealthProducer {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsProducer IsTalk IsTalkProducer IsSmartLookAuto IsNotInSafeSpot YesHasPack IsNotAlone IsNotSaidSpotHealth IsNotSaidSpotProducer IsFirstAidKit ChanceToFire60Percent IsWorldTalkProducer _auto_NotNoSpotting IsNotSpeakingWeight0
@@ -3758,7 +3758,7 @@ Rule PlayerHelpIncappedProducer {
 
 //PlayerIncappedResponse
 Response HelpResponseProducerProducer {
-	scene "scenes/Producer/Blank.vcd" //Blank
+	scene "scenes/Producer/Blank.vcd"
 }
 Rule HelpResponseProducerProducer {
 	criteria ConceptFriendNeedsHelp IsProducer IsTalk IsTalkProducer IsNotIncapacitated IsInSafeSpot FromIsProducer IsNotInStartArea NotAloneInSafeSpot IsWorldTalkProducer
@@ -3826,7 +3826,7 @@ Rule C3M3BridgeButtonProducer {
 }
 
 Response EndOfWavWindow5Producer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule EndOfWavWindow5Producer {
 	criteria ConceptEndOfWavWindow5 IsProducer
@@ -4431,7 +4431,7 @@ Rule PlayerRemarkc2m2_miscfoodbProducer {
 }
 
 Response PlayerRemarkc2m2_saferoomaProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule PlayerRemarkc2m2_saferoomaProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea Ismap_c2m2 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M2_910 IsNotSpeakingWeight0
@@ -4713,7 +4713,7 @@ Rule PlayerRemarkC3M#BridgeDownProducer {
 }
 
 Response PlayerRemarkC3M1NoSwimmingProducer {
-	scene "scenes/Producer/WorldC3M1B06.vcd" //They actually have to put a sign up to stop people from swimming in the gator park? All right..
+	scene "scenes/Producer/WorldC3M1B06.vcd" //They actually have to put a sign up to stop people from swimming in the gator park? Alright..
 	scene "scenes/Producer/WorldC3M1B07.vcd" //No swimming in the gator park. Fair enough.
 }
 Rule PlayerRemarkC3M1NoSwimmingProducer {
@@ -5576,7 +5576,7 @@ Rule PlayerRemarkc4m3_safehousedowncProducer {
 }
 
 Response PlayerRemarkc4m3_startsaferoomaProducer {
-	scene "scenes/Producer/Blank.vcd" //Blank
+	scene "scenes/Producer/Blank.vcd"
 }
 Rule PlayerRemarkc4m3_startsaferoomaProducer {
 	criteria ConceptTalkIdle IsProducer IsInStartArea Isc4m3 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M3_001 IsNotSpeakingWeight0
@@ -5630,7 +5630,7 @@ Rule PlayerRemarkc4m4_garagesalebProducer {
 }
 
 Response PlayerRemarkc4m4_pastplaygroundaProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule PlayerRemarkc4m4_pastplaygroundaProducer {
 	criteria ConceptRemark IsProducer Isc4m4_pastplaygrounda IsNotSaidc4m4_pastplaygrounda IsNotCoughing NotInCombat IsTalk IsTalkProducer IsWorldTalkProducer IsSubjectNear600 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M4_003 IsNotSpeakingWeight0
@@ -6337,7 +6337,7 @@ Response PlayerNiceJobResponseProducer {
 	scene "scenes/Producer/NiceJob01.vcd" //Yeah!
 	scene "scenes/Producer/NiceJob02.vcd" //Kick ass!
 	scene "scenes/Producer/NiceJob03.vcd" //Helllo!
-	scene "scenes/Producer/NiceJob04.vcd" //You're all right!
+	scene "scenes/Producer/NiceJob04.vcd" //You're alright!
 	scene "scenes/Producer/NiceJob06.vcd" //Oh no you didn't.
 	scene "scenes/Producer/NiceJob07.vcd" //You're on fire.
 	scene "scenes/Producer/NiceJob08.vcd" //That was cool.
@@ -6603,8 +6603,8 @@ Response PlayerHurrahProducer {
 	scene "scenes/Producer/Hurrah04.vcd" then Any HurrahAlso foo:0 0 //We kick ass, yes we did. Woo!
 	scene "scenes/Producer/Hurrah05.vcd" then Any HurrahAlso foo:0 0 //Alright, this party is over.
 	scene "scenes/Producer/Hurrah06.vcd" then Any HurrahAlso foo:0 0 //Woo! We are going to make it!
-	scene "scenes/Producer/Hurrah07.vcd" then Any HurrahAlso foo:0 0 //Shit, we re all right!
-	scene "scenes/Producer/Hurrah08.vcd" then Any HurrahAlso foo:0 0 //Woo - we are doing all right.
+	scene "scenes/Producer/Hurrah07.vcd" then Any HurrahAlso foo:0 0 //Shit, we re alright!
+	scene "scenes/Producer/Hurrah08.vcd" then Any HurrahAlso foo:0 0 //Woo - we are doing alright.
 	scene "scenes/Producer/Hurrah09.vcd" then Any HurrahAlso foo:0 0 //Okay. We can do this, we can do this.
 	scene "scenes/Producer/Hurrah10.vcd" //Oh yeah, oh yeah, oh yeah.
 	scene "scenes/Producer/Hurrah11.vcd" //Ha! Oh yeah, oh yeah!
@@ -6641,7 +6641,7 @@ Rule PlayerWarnCarefulProducer {
 
 //Scavenge
 Response GasPour10MoreSCProducer {
-	print " " then self GasPour10More foo:0 0.01 //Blank
+	print " " then self GasPour10More foo:0 0.01
 }
 Rule GasPour10MoreSCProducer {
 	criteria ConceptPlayerPourFinished IsProducer IsTalk IsTalkProducer IsWorldTalkProducer Score10MoreSC
@@ -6651,7 +6651,7 @@ Rule GasPour10MoreSCProducer {
 }
 
 Response GasPour10MoreWaitProducer {
-	print " " then self GasPour10More foo:0 0.1 //Blank
+	print " " then self GasPour10More foo:0 0.1
 }
 Rule GasPour10MoreWaitProducer {
 	criteria ConceptGasPour10More IsProducer IsSpeaking _auto_IsGasCountOK
@@ -6659,7 +6659,7 @@ Rule GasPour10MoreWaitProducer {
 }
 
 Response GasPour1MoreSCProducer {
-	print " " then self GasPour1More foo:0 0.01 //Blank
+	print " " then self GasPour1More foo:0 0.01
 }
 Rule GasPour1MoreSCProducer {
 	criteria ConceptPlayerPourFinished IsProducer IsTalk IsTalkProducer IsWorldTalkProducer Score1MoreSC
@@ -6669,7 +6669,7 @@ Rule GasPour1MoreSCProducer {
 }
 
 Response GasPour1MoreWaitProducer {
-	print " " then self GasPour1More foo:0 0.1 //Blank
+	print " " then self GasPour1More foo:0 0.1
 }
 Rule GasPour1MoreWaitProducer {
 	criteria ConceptGasPour1More IsProducer IsSpeaking _auto_IsGasCountOK
@@ -6677,7 +6677,7 @@ Rule GasPour1MoreWaitProducer {
 }
 
 Response GasPour2MoreSCProducer {
-	print " " then self GasPour2More foo:0 0.01 //Blank
+	print " " then self GasPour2More foo:0 0.01
 }
 Rule GasPour2MoreSCProducer {
 	criteria ConceptPlayerPourFinished IsProducer IsTalk IsTalkProducer IsWorldTalkProducer Score2MoreSC
@@ -6687,7 +6687,7 @@ Rule GasPour2MoreSCProducer {
 }
 
 Response GasPour2MoreWaitProducer {
-	print " " then self GasPour2More foo:0 0.1 //Blank
+	print " " then self GasPour2More foo:0 0.1
 }
 Rule GasPour2MoreWaitProducer {
 	criteria ConceptGasPour2More IsProducer IsSpeaking _auto_IsGasCountOK
@@ -6695,7 +6695,7 @@ Rule GasPour2MoreWaitProducer {
 }
 
 Response GasPour3MoreSCProducer {
-	print " " then self GasPour3More foo:0 0.01 //Blank
+	print " " then self GasPour3More foo:0 0.01
 }
 Rule GasPour3MoreSCProducer {
 	criteria ConceptPlayerPourFinished IsProducer IsTalk IsTalkProducer IsWorldTalkProducer Score3MoreSC
@@ -6705,7 +6705,7 @@ Rule GasPour3MoreSCProducer {
 }
 
 Response GasPour3MoreWaitProducer {
-	print " " then self GasPour3More foo:0 0.1 //Blank
+	print " " then self GasPour3More foo:0 0.1
 }
 Rule GasPour3MoreWaitProducer {
 	criteria ConceptGasPour3More IsProducer IsSpeaking _auto_IsGasCountOK
@@ -6713,7 +6713,7 @@ Rule GasPour3MoreWaitProducer {
 }
 
 Response GasPour5MoreSCProducer {
-	print " " then self GasPour5More foo:0 0.01 //Blank
+	print " " then self GasPour5More foo:0 0.01
 }
 Rule GasPour5MoreSCProducer {
 	criteria ConceptPlayerPourFinished IsProducer IsTalk IsTalkProducer IsWorldTalkProducer Score5MoreSC
@@ -6723,7 +6723,7 @@ Rule GasPour5MoreSCProducer {
 }
 
 Response GasPour5MoreWaitProducer {
-	print " " then self GasPour5More foo:0 0.1 //Blank
+	print " " then self GasPour5More foo:0 0.1
 }
 Rule GasPour5MoreWaitProducer {
 	criteria ConceptGasPour5More IsProducer IsSpeaking _auto_IsGasCountOK
@@ -6958,7 +6958,7 @@ Rule PlayerAlertGiveItemStopC1Producer {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidProducer {
-	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidProducer
+	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidProducer
 }
 Rule PlayerAlertGiveItemStopAnFirstAidProducer {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsProducer IsTalk IsTalkProducer NoHasFirstAidKit IsWorldTalkProducer
@@ -6966,7 +6966,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidProducer {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidProducer {
-	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidProducer
+	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidProducer
 }
 Rule PlayerAlertGiveItemStopQnFirstAidProducer {
 	criteria ConceptBashWithItem IsNotCoughing IsProducer IsTalk IsTalkProducer IsItemFirstAidKit IsWorldTalkProducer IsNotSpeakingWeight0
@@ -6974,7 +6974,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidProducer {
 }
 
 Response PlayerAlertGiveItemStopMedicalProducer {
-	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalProducer {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsProducer IsTalk IsTalkProducer NoHasPainPills IsWorldTalkProducer
@@ -6982,7 +6982,7 @@ Rule PlayerAlertGiveItemStopMedicalProducer {
 }
 
 Response PlayerAlertGiveItemMedicalProducer {
-	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/Producer/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalProducer {
 	criteria ConceptBashWithItem IsNotCoughing IsProducer IsTalk IsTalkProducer IsItemMedical IsWorldTalkProducer IsNotSpeakingWeight0
@@ -7466,7 +7466,7 @@ Response PlayerTransitionProducer {
 	scene "scenes/Producer/Hurrah01.vcd" //Woo - haha, we are kickin' it!
 	scene "scenes/Producer/Hurrah04.vcd" //We kick ass, yes we did. Woo!
 	scene "scenes/Producer/Hurrah05.vcd" //Alright, this party is over.
-	scene "scenes/Producer/Hurrah07.vcd" //Shit, we re all right!
+	scene "scenes/Producer/Hurrah07.vcd" //Shit, we re alright!
 	scene "scenes/Producer/Hurrah10.vcd" //Oh yeah, oh yeah, oh yeah.
 	scene "scenes/Producer/Hurrah13.vcd" //What, we're shutting the door already?
 	scene "scenes/Producer/PositiveNoise09.vcd" //[Improv non-verbal pleasure & interest sounds]
@@ -7531,7 +7531,6 @@ Rule PlayerUsingDefibrillatorProducer {
 	ApplyContext "SaidUsingDefibrillatorProducer:1:5"
 	Response PlayerUsingDefibrillatorProducer
 }
-
 
 Response PlayerWarnHeardBoomerProducer {
 	scene "scenes/Producer/HeardBoomer01.vcd" //Careful I can hear a boomer.
@@ -7754,7 +7753,7 @@ Rule PlayerWarnWitchAngryProducer {
 }
 
 Response PlayerWorldIntroC31BlankProducer {
-	scene "scenes/Producer/Blank.vcd" then any WorldIntroC31 foo:0 5 //Blank
+	scene "scenes/Producer/Blank.vcd" then any WorldIntroC31 foo:0 5
 }
 Rule PlayerWorldIntroC31BlankProducer {
 	criteria ConceptintroC3M1 IsNotCoughing IsProducer IsTalk ismap_c3m1_plankcountry AutoIsNotScavenge AutoIsNotSurvival
@@ -7762,7 +7761,7 @@ Rule PlayerWorldIntroC31BlankProducer {
 }
 
 Response PlayerWorldIntroC51Producer {
-	scene "scenes/Producer/Blank.vcd" then orator C5M1_intro001 foo:0 0.01 //Blank
+	scene "scenes/Producer/Blank.vcd" then orator C5M1_intro001 foo:0 0.01
 }
 Rule PlayerWorldIntroC51Producer {
 	criteria ConceptWorldIntroC51 IsNotCoughing IsProducer IsNotSaidWorldIntroC51 IsTalk IsTalkProducer IsWorldTalkProducer
@@ -8368,7 +8367,7 @@ Rule SurvivorPickupFireAxeProducer {
 
 Response SurvivorPickupFirstAidKitProducer {
 	scene "scenes/Producer/TakeFirstAid01.vcd" //Grabbing first aid.
-	scene "scenes/Producer/TakeFirstAid02.vcd" //First Aid Kit.
+	scene "scenes/Producer/TakeFirstAid02.vcd" //First aid kit.
 	scene "scenes/Producer/TakeFirstAid03.vcd" //Nothing to see - no health kit here.
 	scene "scenes/Producer/TakeFirstAid03.vcd" odds 20 then any PlayerAnswerLostCall foo:0 0 //Nothing to see - no health kit here.
 }
@@ -8769,7 +8768,7 @@ Response PlayerGettingRevivedProducer {
 	scene "scenes/Producer/GettingRevived01.vcd" then subject ReviveBfine foo:0 -3.838 //Give it to me straight, doc, am I going to make it?!?
 	scene "scenes/Producer/GettingRevived02.vcd" then subject ReviveBfine foo:0 -1.860 //Uh, yeah, yeah, I'm okay.
 	scene "scenes/Producer/GettingRevived03.vcd" then subject ReviveBfine foo:0 -0.909 //I think I'm okay.
-	scene "scenes/Producer/GettingRevived04.vcd" then subject ReviveBfine foo:0 -1.412 //Guess I feel all right.
+	scene "scenes/Producer/GettingRevived04.vcd" then subject ReviveBfine foo:0 -1.412 //Guess I feel alright.
 	scene "scenes/Producer/GettingRevived05.vcd" then subject ReviveBfine foo:0 -1.820 //Don't worry about me.
 	scene "scenes/Producer/GettingRevived06.vcd" then subject ReviveBfine foo:0 -0.715 //I'm good.
 	scene "scenes/Producer/GettingRevived07.vcd" then subject ReviveBfine foo:0 -0.780 //Is it bad?
@@ -9009,7 +9008,7 @@ Response PlayerReviveFriendAProducer {
 	scene "scenes/Producer/ReviveFriendA13.vcd" then Subject GettingRevived foo:0 -0.936 //Can't you suck it up?
 	scene "scenes/Producer/ReviveFriendA14.vcd" then Subject GettingRevived foo:0 -1.458 //Does it hurt as bad as it looks?
 	scene "scenes/Producer/ReviveFriendA15.vcd" then Subject GettingRevived foo:0 -0.840 //What's up with you?
-	scene "scenes/Producer/ReviveFriendA17.vcd" then Subject GettingRevived foo:0 -0.901 //All right, you cool?
+	scene "scenes/Producer/ReviveFriendA17.vcd" then Subject GettingRevived foo:0 -0.901 //Alright, you cool?
 	scene "scenes/Producer/ReviveFriendA18.vcd" then Subject GettingRevived foo:0 -0.781 //You good?
 	scene "scenes/Producer/ReviveFriendA19.vcd" then Subject GettingRevived foo:0 -1.409 //Ah, you going to be okay.
 	scene "scenes/Producer/ReviveFriendA20.vcd" then Subject GettingRevived foo:0 -0.775 //You going to be okay?
@@ -9819,7 +9818,7 @@ Rule C2M4PenSmell001Producer {
 }
 
 Response C4EnterCoverProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule C4EnterCoverProducer {
 	criteria ConceptC4EnterCover IsProducer
@@ -9829,7 +9828,7 @@ Rule C4EnterCoverProducer {
 }
 
 Response C4ExitCoverProducer {
-	speak "Producer_Blank" noscene //Blank
+	speak "Producer_Blank" noscene
 }
 Rule C4ExitCoverProducer {
 	criteria ConceptC4ExitCover IsProducer
@@ -10215,7 +10214,7 @@ Rule SurvivorSpottedTonfaAutoProducer {
 Response SurvivorSpottedWeaponProducer {
 	scene "scenes/Producer/SpotWeapons01.vcd" //Weapons over here!
 	scene "scenes/Producer/SpotWeapons02.vcd" //Weapons over here!
-	scene "scenes/Producer/SpotWeapons03.vcd" //All right weapons!
+	scene "scenes/Producer/SpotWeapons03.vcd" //Alright weapons!
 	scene "scenes/Producer/WorldC1M1B27.vcd" odds 3 //We should take some weapons. I work in the news and the news says we should definitely take some weapons.
 	scene "scenes/Producer/WorldC1M1B29.vcd" odds 3 //We should take something to protect ourselves.
 }

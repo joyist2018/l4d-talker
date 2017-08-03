@@ -1,12 +1,6 @@
-//Manager Response Rule File
-//For L4D2 by New Day & Morning Nine Nine
-
-
-//Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankManager {
-	speak "Manager_Blank" noscene //Blank
+	speak "Manager_Blank" noscene
 }
-
 
 //C7M1
 Response C7M1_saferoom03aManager {
@@ -203,6 +197,8 @@ Response C7M1SafeRoomIdleManager {
 	scene "scenes/Manager/DLC1_CommunityL4D101.vcd" then NamVet CryBabies foo:0 0.01 //It sure is cold!"
 	scene "scenes/Manager/DLC1_CommunityL4D106.vcd" then Biker ZombieWrack foo:0 0.01 //Zombies are driving trucks?"
 	scene "scenes/Manager/DLC1_CommunityL4D107.vcd" then TeenGirl C7M1_saferoom23 foo:0 .1 //I'm sure someone's alive, let's go look!"
+	scene "scenes/Manager/DLC1_CommunityL4D108.vcd" //Let's go down to the dock!
+	scene "scenes/Manager/DLC1_CommunityL4D109.vcd" then NamVet C7M1_saferoom03 foo:0 .1 //Let's grab a boat.
 }
 Rule C7M1SafeRoomIdleManager {
 	criteria ConceptC7M1SafeRoom2 IsManager AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M1SafeRoomConvo IsNotSpeakingWeight0
@@ -639,8 +635,8 @@ Rule C7M3GeneratorPress01Manager {
 
 Response C7M3GeneratorPress02Manager {
 	scene "scenes/Manager/C6DLC3PRESTART1STGEN02.vcd" //Let's start this generator.
-	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Allright, allright. Come onnnn. Come on, catch.
-	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Allright, allright. Come on baby, start for me.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Alright, alright. Come onnnn. Come on, catch.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Alright, alright. Come on baby, start for me.
 }
 Rule C7M3GeneratorPress02Manager {
 	criteria ConceptC7M3GeneratorSpeakManager IsManager IsSecondGenerator _auto_NotC7M3PressingManager
@@ -715,11 +711,6 @@ Rule C7M3SafeRoomStartManager {
 	applycontexttoworld
 	Response C7M3SafeRoomStartManager
 }
-
-
-//Item Spotted
-
-//Not Rosetta - Responses
 
 //RemarkableVocalize
 Response PlayerRemarkc7m1_bricktopManager {
@@ -845,9 +836,9 @@ Rule PlayerRemarkc7m2_throughhereManager {
 
 Response PlayerRemarkc7m3_seesailboatManager {
 	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT01.vcd" //Look, there's the boat we need. Let's get that bridge up and sail out of here.
-	scene "scenes/Manager/Blank.vcd" then self seesailboatFrancis foo:0 0
 	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT03.vcd" //We need to raise the bridge to get that sail boat!
 	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT04.vcd" //This looks like the last bridge before open water.
+	scene "scenes/Manager/DLC1_CommunityL4D109.vcd" //Let's grab a boat.
 }
 Rule PlayerRemarkc7m3_seesailboatManager {
 	criteria ConceptRemark IsManager Isc7m3_seesailboat IsNotSaidc7m3_seesailboat IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsFirstGenerator IsNotSpeakingWeight0 IsNotAlone
@@ -856,59 +847,23 @@ Rule PlayerRemarkc7m3_seesailboatManager {
 	Response PlayerRemarkc7m3_seesailboatManager
 }
 
-criterion "seesailboatFrancis" "Concept" "seesailboatFrancis" required
-Response seesailboatFrancisManager {
-	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT02.vcd" //Hey Francis, see that? That's what a sail boat looks like!
+Response PlayerRemarkc7m3_seesailboatFManager {
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT01.vcd" //Look, there's the boat we need. Let's get that bridge up and sail out of here.
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT02.vcd" //Hey Francis, see that? That's what a sail boat looks like
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT03.vcd" //We need to raise the bridge to get that sail boat!
+	scene "scenes/Manager/C6DLC3SPOTTINGSAILBOAT04.vcd" //This looks like the last bridge before open water.
+	scene "scenes/Manager/DLC1_CommunityL4D109.vcd" //Let's grab a boat.
 }
-Rule seesailboatFrancisManager {
-	criteria seesailboatFrancis IsManager IsBikerNear500
-	Response seesailboatFrancisManager
-}
-
-//Rosetta - Manners
-
-//Scavenge
-Response GrabbingGasSCManager {
-	scene "scenes/Manager/KillConfirmation04.vcd" //Got it!
-}
-Rule GrabbingGasSCManager {
-	criteria ConceptPlayerEquippedScavengeItem IsManager
-	Response GrabbingGasSCManager
-}
-
-Response PlayerShotGasCanManager {
-	scene "scenes/Manager/Swears05.vcd" predelay "1,1.5" //Shit.
-	scene "scenes/Manager/Swears06.vcd" predelay "1,1.5" //Ah shit.
-	scene "scenes/Manager/Swears07.vcd" predelay "1,1.5" //Shit shit shit.
-	scene "scenes/Manager/Swears12.vcd" predelay "1,1.5" //Shit.
-	scene "scenes/Manager/Swears13.vcd" predelay "1,1.5" //Ah shit.
-	scene "scenes/Manager/Swears16.vcd" predelay "1,1.5" //That's some country-ass bullshit.
-}
-Rule PlayerShotGasCanManager {
-	criteria ConceptPlayerShotGasCan IsManager IsNotSaidPlayerShotGasCan IsScavenge
-	ApplyContext "SaidPlayerShotGasCan1:10"
+Rule PlayerRemarkc7m3_seesailboatFManager {
+	criteria ConceptRemark IsManager Isc7m3_seesailboat IsNotSaidc7m3_seesailboat IsNotCoughing NotInCombat IsTalk IsTalkManager IsWorldTalkManager IsFirstGenerator IsNotSpeakingWeight0 IsNotAlone IsBikerNear500
+	ApplyContext "Saidc7m3_seesailboat:1:0"
 	applycontexttoworld
-	Response PlayerShotGasCanManager
+	Response PlayerRemarkc7m3_seesailboatFManager
 }
-
-Response ScavengeStartManager {
-	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
-	scene "scenes/Manager/MoveOn03.vcd" //Let's go.
-	scene "scenes/Manager/MoveOn04.vcd" //Let's Move, Let's Move!
-}
-Rule ScavengeStartManager {
-	criteria ConceptSurvivorLeavingCheckpoint IsManager IsTalk IsTalkManager IsWorldTalkManager IsScavenge IsNotSaidStartScavenge
-	ApplyContext "SaidStartScavenge:1:4"
-	applycontexttoworld
-	Response ScavengeStartManager
-}
-
-
-//Vocalize
 
 //Vocalizer
 Response FinaleAheadc7m3Manager {
-	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/Manager/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/Manager/ReviveFriendB10.vcd" //Let's move!
 }
 Rule FinaleAheadc7m3Manager {
@@ -990,9 +945,3 @@ Rule PlayerIncapC7m3Manager {
 	ApplyContext "TalkManager:1:2,C7M3ManagerDownFinal:1:0"
 	Response PlayerIncapC7m3Manager
 }
-
-
-//Vocalizer - Pickups
-
-//Weapon Spotted
-

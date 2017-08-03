@@ -239,7 +239,6 @@ Rule c7m3finalspeaknamvet {
 	Response c7m3finalspeaknamvet
 }
 
-
 Response C7M3PressBOrator {
 	scene "scenes/npcs/orator_blank.vcd" then Any C7M3GeneratorSpeakBiker foo:0 0.05
 }
@@ -279,7 +278,6 @@ Rule C7M3GeneratorPressTOrator {
 	applycontexttoworld
 	Response C7M3GeneratorPressTOrator
 }
-
 
 Response C7M3GeneratorOn1 {
 	scene "scenes/npcs/orator_blank.vcd"

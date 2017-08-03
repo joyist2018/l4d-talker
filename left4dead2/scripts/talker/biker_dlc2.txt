@@ -23,14 +23,14 @@ criterion "ConceptIHate" "Concept" "IHate" required
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankBiker {
-	speak "Biker_Blank" noscene //Blank
+	speak "Biker_Blank" noscene
 }
 
 Response PlayerNiceShotBiker {
-	scene "scenes/Biker/NiceJob04.vcd" //Shit, that was all right
+	scene "scenes/Biker/NiceJob04.vcd" //Shit, that was alright
 	scene "scenes/Biker/NiceJob05.vcd" //Damn, not bad.
 	scene "scenes/Biker/NiceJob10.vcd" //Nice work.
-	scene "scenes/Biker/NiceJob11.vcd" //Well, shit, that was all right
+	scene "scenes/Biker/NiceJob11.vcd" //Well, shit, that was alright
 	scene "scenes/Biker/NiceJob12.vcd" //Nice damn job.
 	scene "scenes/Biker/NiceJob13.vcd" //Damn, not bad.
 	scene "scenes/Biker/NiceJob14.vcd" //Shiiiit.
@@ -121,10 +121,11 @@ Rule SurvivorMournLouisBiker {
 }
 
 Response SurvivorMournZoeyBiker {
-	scene "scenes/Biker/C6DLC3ZOEYDIES01.vcd" //Noooo! You monsters! Take Louis instead!
 	scene "scenes/Biker/GriefFemaleGeneric03.vcd" //Ah hell, she's dead.
 	scene "scenes/Biker/GriefTeengirl01.vcd" //Ahh Zoey. No.
 	scene "scenes/Biker/GriefTeengirl02.vcd" //Ahh damnit, not Zoey.
+	scene "scenes/Biker/C6DLC3ZOEYDIES01.vcd" //Noooo! You monsters! Take Louis instead!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic13.vcd" //I hate goodbyes.
 }
 Rule SurvivorMournZoeyBiker {
 	criteria ConceptPlayerSeeDeadPlayer IsNotCoughing IsBiker IsDeadTeenGirl IsNotSaidSomeoneDied IsTalk IsTalkBiker IsNotIncapacitated HasNotDefibrillator IsWorldTalkBiker
@@ -230,7 +231,6 @@ Rule ThanksZoeyGotItemBiker {
 	applycontexttoworld
 	Response ThanksZoeyGotItemBiker
 }
-
 
 Response SurvivorBotWasShovedBiker {
 	scene "scenes/Biker/Shoved01.vcd" //[Reaction to body hits]
@@ -350,6 +350,7 @@ Response BotHurrahAlsoBiker {
 	scene "scenes/Biker/Taunt06.vcd" //[Loud, evil laugh]
 	scene "scenes/Biker/Taunt08.vcd" //YEAH! YEAH!
 	scene "scenes/Biker/Taunt09.vcd" //Damn straight!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" //HELL YEAH!
 }
 Rule BotHurrahAlsoBiker {
 	criteria ConceptHurrahAlso IsNotCoughing IsNotSpeaking //Turned off//IsTalk IsTalkBiker IsNotSaidHurrahAlso IsBotIsAvailable IsWorldTalkBiker
@@ -372,6 +373,7 @@ Response PlayerHurrahAlsoBiker {
 	scene "scenes/Biker/Taunt06.vcd" //[Loud, evil laugh]
 	scene "scenes/Biker/Taunt08.vcd" //YEAH! YEAH!
 	scene "scenes/Biker/Taunt09.vcd" //Damn straight!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" //HELL YEAH!
 }
 Rule PlayerHurrahAlsoBiker {
 	criteria PlayerHurrahAlso IsNotCoughing IsNotSpeaking IsBiker IsTalk IsTalkBiker IsNotSaidHurrahAlso IsWorldTalkBiker ChanceToFire50Percent
@@ -385,7 +387,7 @@ Response BotNoteHumanAttentionBiker {
 	scene "scenes/Biker/AskReady05.vcd" //Ready for some fun?
 	scene "scenes/Biker/Generic65.vcd" //What?
 	scene "scenes/Biker/ImWithYou07.vcd" //I'm with ya!
-	scene "scenes/Biker/MoveOn01.vcd" //Allright, let's go
+	scene "scenes/Biker/MoveOn01.vcd" //Alright, let's go
 	scene "scenes/Biker/ScenarioJoin01.vcd" //I'm here!
 	scene "scenes/Biker/ScenarioJoin02.vcd" //Hey, I'm here!
 	scene "scenes/Biker/ScenarioJoin03.vcd" //Hey, I'm here!
@@ -404,6 +406,9 @@ Response BotReassureComingBiker {
 	scene "scenes/Biker/Yes05.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/Biker/Yes06.vcd" predelay "1,3.5" //Roger that good buddy.
 	scene "scenes/Biker/C6DLC3INTRO22.vcd" predelay "1,3.5" //I'm goin', I'm goin'.
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat35.vcd" predelay "1,3.5" //Yeah, okay
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting16.vcd" predelay "1,3.5" //Yeah.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic19.vcd" predelay "1,3.5" //Yeah.
 }
 Rule BotReassureComingBiker {
 	criteria ConceptSurvivorBotReassureComing IsNotCoughing IsNotSpeaking IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
@@ -438,7 +443,7 @@ Response BotYesReadyBiker {
 	scene "scenes/Biker/AnswerReady05.vcd" predelay "1,3.5" //Let's go kill somethin'!
 	scene "scenes/Biker/C6DLC3TANKINTRAINYARD04.vcd" predelay "1,3.5" //Fine with me.
 	scene "scenes/Biker/C6DLC3TANKINTRAINYARD07.vcd" predelay "1,3.5" //Fine with me.
-	scene "scenes/Biker/GenericResponses09.vcd" predelay "1,3.5" //Allright, then, let's do it.
+	scene "scenes/Biker/GenericResponses09.vcd" predelay "1,3.5" //Alright, then, let's do it.
 	scene "scenes/Biker/GenericResponses13.vcd" predelay "1,3.5" //I say we just do it.
 	scene "scenes/Biker/Yes01.vcd" predelay "1,3.5" //Yes.
 	scene "scenes/Biker/Yes02.vcd" predelay "1,3.5" //Okay.
@@ -446,6 +451,9 @@ Response BotYesReadyBiker {
 	scene "scenes/Biker/Yes04.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/Biker/Yes05.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/Biker/Yes06.vcd" predelay "1,3.5" //Roger that good buddy.
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat35.vcd" predelay "1,3.5" //Yeah, okay
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting16.vcd" predelay "1,3.5" //Yeah.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic19.vcd" predelay "1,3.5" //Yeah.
 }
 Rule BotYesReadyBiker {
 	criteria ConceptSurvivorBotYesReady IsNotCoughing IsNotSpeaking IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
@@ -460,7 +468,7 @@ Response BotYesReadyXBiker {
 	scene "scenes/Biker/AnswerReady05.vcd" predelay "1,3.5" //Let's go kill somethin'!
 	scene "scenes/Biker/C6DLC3TANKINTRAINYARD04.vcd" predelay "1,3.5" //Fine with me.
 	scene "scenes/Biker/C6DLC3TANKINTRAINYARD07.vcd" predelay "1,3.5" //Fine with me.
-	scene "scenes/Biker/GenericResponses09.vcd" predelay "1,3.5" //Allright, then, let's do it.
+	scene "scenes/Biker/GenericResponses09.vcd" predelay "1,3.5" //Alright, then, let's do it.
 	scene "scenes/Biker/GenericResponses13.vcd" predelay "1,3.5" //I say we just do it.
 	scene "scenes/Biker/Yes01.vcd" predelay "1,3.5" //Yes.
 	scene "scenes/Biker/Yes02.vcd" predelay "1,3.5" //Okay.
@@ -470,6 +478,9 @@ Response BotYesReadyXBiker {
 	scene "scenes/Biker/Yes06.vcd" predelay "1,3.5" //Roger that good buddy.
 	scene "scenes/Biker/WorldFarmhouseNPC04.vcd" predelay "1,3.5" //We're ready!
 	scene "scenes/Biker/WorldFarmhouseNPC05.vcd" predelay "1,3.5" //We're all set!
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat35.vcd" predelay "1,3.5" //Yeah, okay
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting16.vcd" predelay "1,3.5" //Yeah.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic19.vcd" predelay "1,3.5" //Yeah.
 }
 Rule BotYesReadyXBiker {
 	criteria ConceptSurvivorBotYesReady IsNotCoughing IsNotSpeaking IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsWithThree
@@ -490,7 +501,7 @@ Response PlayerToTheRescueBiker {
 	scene "scenes/Biker/C6DLC3OPENINGDOOR02.vcd" predelay "0.75,1.5" //Alright, alright, I'll be the brave one.
 }
 Rule PlayerToTheRescueBiker {
-	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600 IsWorldTalkBiker
+	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsNotSpeaking IsBiker IsTalk IsTalkBiker NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600 IsWorldTalkBiker
 	ApplyContext "SaidRescueComing:1:20"
 	applycontexttoworld
 	Response PlayerToTheRescueBiker
@@ -505,13 +516,13 @@ Response KeepBeardBiker {
 	scene "scenes/Biker/ToTheRescue06.vcd" predelay "0.75,1.5" //Hang in there, I'm comin!
 	scene "scenes/Biker/ToTheRescue07.vcd" predelay "0.75,1.5" //Hang on, hang on, I'm comin!
 	scene "scenes/Biker/ToTheRescue08.vcd" predelay "0.75,1.5" //I heard ya, I'm comin'!
+	scene "scenes/Biker/Generic07.vcd" predelay "0.75,1.5" //I'm comin' Bill. Keep yer beard on.
 	scene "scenes/Biker/C6DLC3JUMPINGOFFBRIDGE01.vcd" predelay "0.75,1.5" //Jesus, I'm brave.
 	scene "scenes/Biker/C6DLC3JUMPINGOFFBRIDGE02.vcd" predelay "0.75,1.5" //Guess I better save everybody.
 	scene "scenes/Biker/C6DLC3OPENINGDOOR02.vcd" predelay "0.75,1.5" //Alright, alright, I'll be the brave one.
-	scene "scenes/Biker/Generic07.vcd" predelay "0.75,1.5" //I'm comin' Bill. Keep yer beard on.
 }
 Rule KeepBeardBiker {
-	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker NotInCombat IsNotSaidRescueComing SubjectIsNamVet IsWorldTalkBiker
+	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsNotSpeaking IsBiker IsTalk IsTalkBiker NotInCombat IsNotSaidRescueComing SubjectIsNamVet IsWorldTalkBiker
 	ApplyContext "SaidRescueComing:1:20"
 	applycontexttoworld
 	Response KeepBeardBiker
@@ -563,6 +574,7 @@ Response PlayerCallForRescueBiker {
 	speak "Player.Biker_LostCall04" noscene //Is anyone there?
 	speak "Player.Biker_LostCall05" noscene //Marco!
 	speak "Player.Biker_LostCall08" noscene //Hello? Where dija go?
+	speak "Biker_DLC1_C6M3_FinaleL4D1ThrowItems01" noscene //Hey come over here.
 }
 Rule PlayerCallForRescueBiker {
 	criteria ConceptCallForRescue IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
@@ -1180,7 +1192,7 @@ Rule PlayerRemarkcrashcourse02_path07Biker {
 
 criterion "ConceptLoveLasagna" "Concept" "LoveLasagna" required
 Response LoveLasagnaBiker {
-	scene "scenes/Biker/DLC2BulletinBoard02.vcd" //Unless Its Lasagna Mondeys. I love Lasagna. RARE
+	scene "scenes/Biker/DLC2BulletinBoard02.vcd" //Unless Its Lasagna Mondeys. I love Lasagna.
 }
 Rule LoveLasagnaBiker {
 	criteria ConceptLoveLasagna IsBiker IsNotAlone
@@ -1277,7 +1289,7 @@ Rule IntroCrashR08Biker {
 Response IntroCrashR10Biker {
 	scene "scenes/Biker/DLC2Intro30.vcd" //Let's just hike the hell out of here.
 	scene "scenes/Biker/DLC2Intro31.vcd" //Looks like we're walking again.
-	scene "scenes/Biker/DLC2Intro32.vcd" //I hate helicopters RARE
+	scene "scenes/Biker/DLC2Intro32.vcd" //I hate helicopters
 	scene "scenes/Biker/DLC2M1Goal01.vcd" //I already hate this place. Let's get outta here.
 }
 Rule IntroCrashR10Biker {
@@ -1344,7 +1356,7 @@ Rule IntroCrashR23Biker {
 Response IntroCrashR26Biker {
 	scene "scenes/Biker/DLC2Intro27.vcd" //[grumbling under breath]..Don't see what's wrong with vests..
 	scene "scenes/Biker/DLC2Intro28.vcd" //[grumbling under breath].. Not even WEARIN' chaps..
-	scene "scenes/Biker/DLC2Intro29.vcd" //I hate parade RARE
+	scene "scenes/Biker/DLC2Intro29.vcd" //I hate parade
 }
 Rule IntroCrashR26Biker {
 	criteria ConceptIntroCrashR26 IsBiker
@@ -1352,7 +1364,7 @@ Rule IntroCrashR26Biker {
 }
 
 Response IntroCrashR27Biker {
-	scene "scenes/Biker/DLC2Intro12.vcd" then TeenGirl IntroCrashR28 foo:0 0.05 //Yeah, well--Next time someone offers us a ride, don't SHOOT him.
+	scene "scenes/Biker/DLC2Intro12.vcd" then TeenGirl IntroCrashR28 foo:0 0.05 //Yeah, well–Next time someone offers us a ride, don't SHOOT him.
 }
 Rule IntroCrashR27Biker {
 	criteria ConceptIntroCrashR27 IsBiker
@@ -1380,10 +1392,10 @@ Response PlayerCrashCourseIntroBiker {
 	scene "scenes/Biker/DLC2Intro05.vcd" then Manager IntroCrashR17 foo:0 0.05 //See? I TOLD ya. Helicopter crashed. We're not saved, we're all gonna die. Pay up.
 	scene "scenes/Biker/DLC2Intro07.vcd" then Manager IntroCrashR03 foo:0 0.05 //Hey. Sunshine Beams. We just CRASHED. You got somethin' positive to say about that?
 	scene "scenes/Biker/DLC2Intro07.vcd" then Manager IntroCrashR37 foo:0 0.05 //Hey. Sunshine Beams. We just CRASHED. You got somethin' positive to say about that?
-	scene "scenes/Biker/DLC2Intro09.vcd" then Manager IntroCrashR37 foo:0 0.05 //Hey. Sunshine Beams. We just CRASHED. You got somethin' positive to say about that? RARE
+	scene "scenes/Biker/DLC2Intro09.vcd" then Manager IntroCrashR37 foo:0 0.05 //Hey. Sunshine Beams. We just CRASHED. You got somethin' positive to say about that?
 	scene "scenes/Biker/DLC2Intro10.vcd" then Manager IntroCrashR15 foo:0 0.05 //Is that how helicopters are supposed to land?
 	scene "scenes/Biker/DLC2Intro13.vcd" then Manager IntroCrashR13 foo:0 0.05 //Hey Louis. That fancy college of yours teach ya how to fix a helicopter?
-	scene "scenes/Biker/DLC2Intro15.vcd" then TeenGirl IntroCrashR11 foo:0 0.05 //Goddamnit, where'd they buy this helicopter? At the .. uh.. um.. hold on..
+	scene "scenes/Biker/DLC2Intro15.vcd" then TeenGirl IntroCrashR11 foo:0 0.05 //Goddamnit, where'd they buy this helicopter? At the.. uh.. um.. hold on..
 	scene "scenes/Biker/DLC2Intro17.vcd" then TeenGirl IntroCrashR01 foo:0 0.05 //I ever tell you how I feel about helicopters?
 	scene "scenes/Biker/DLC2Intro19.vcd" then any IntroCrashR09 foo:0 0.05 //Guys. Everyone. I wanna say something: I. hate. helicopters.
 	scene "scenes/Biker/DLC2Intro20.vcd" then TeenGirl IntroCrashR07 foo:0 0.05 //[sincere] Wow! I love helicopters! I love 'em so much.
@@ -1825,71 +1837,6 @@ Rule SurvivorSpottedBillFarBiker {
 	Response SurvivorSpottedBillFarBiker
 }
 
-Response SurvivorSpottedGrenadeBiker {
-	scene "scenes/Biker/SpotGrenades03.vcd" //There's a pipebomb here.
-	scene "scenes/Biker/SpotGrenades05.vcd" //There's a pipe bomb here.
-	scene "scenes/Biker/SpotGrenades06.vcd" //Pipe bombs!
-}
-Rule SurvivorSpottedGrenadeBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsPipeBomb IsWorldTalkBiker
-	ApplyContext "SaidSpotGrenade:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedGrenadeBiker
-}
-
-Rule SurvivorSpottedGrenadeAutoBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotGrenade IsNotSaidSpotBiker IsPipeBomb IsWorldTalkBiker YesHasGrenade _auto_NotNoSpotting IsNotSpeakingWeight0
-	ApplyContext "SaidSpotGrenade:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedGrenadeBiker
-}
-
-Response SurvivorSpottedGrenadeAutoBiker2 {
-	scene "scenes/Biker/NiceJob17.vcd" //Cool.
-	scene "scenes/Biker/PositiveNoise02.vcd" //[Improv non-verbal pleasure & interest sounds]
-	scene "scenes/Biker/SafeSpotAheadReaction03.vcd" //Cool.
-	scene "scenes/Biker/WorldSmallTown0203.vcd" //Cool.
-	scene "scenes/Biker/Yes01.vcd" //Yes.
-	scene "scenes/Biker/Yes02.vcd" //Okay.
-	scene "scenes/Biker/Yes04.vcd" //Yeah.
-}
-Rule SurvivorSpottedGrenadeAutoBiker2 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasGrenade IsNotAlone IsSaidSpotGrenade IsNotSaidSpotBiker IsPipeBomb IsWorldTalkBiker _auto_NotNoSpotting
-	ApplyContext "SaidSpotGrenade:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedGrenadeAutoBiker2
-}
-
-Response SurvivorSpottedHealthBiker {
-	scene "scenes/Biker/SpotFirstAid01.vcd" //First Aid Kit here!
-	scene "scenes/Biker/SpotFirstAid02.vcd" //First Aid kit here!
-	scene "scenes/Biker/SpotFirstAid03.vcd" //First Aid here!
-	scene "scenes/Biker/SpotFirstAid04.vcd" //First aid kits over here.
-	scene "scenes/Biker/SpotFirstAid05.vcd" //There's a first aid kit here.
-	scene "scenes/Biker/SpotFirstAid06.vcd" //First aid kits over here.
-	scene "scenes/Biker/SpotFirstAid07.vcd" //First aid kit over here.
-}
-Rule SurvivorSpottedHealthBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsFirstAidKit IsWorldTalkBiker
-	ApplyContext "SaidSpotHealth:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedHealthBiker
-}
-
-Rule SurvivorSpottedHealthAutoBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotHealth IsNotSaidSpotBiker IsFirstAidKit IsWorldTalkBiker YesHasFirstAidKit _auto_NotNoSpotting IsNotSpeakingWeight0
-	ApplyContext "SaidSpotHealth:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedHealthBiker
-}
-
-Rule SurvivorSpottedHealthAutoBiker2 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasFirstAidKit IsNotAlone IsSaidSpotHealth IsNotSaidSpotBiker IsFirstAidKit IsWorldTalkBiker _auto_NotNoSpotting
-	ApplyContext "SaidSpotHealth:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedGrenadeAutoBiker2
-}
-
 Response SurvivorSpottedLouisCloseBiker {
 	scene "scenes/Biker/C6DLC3SECONDSAFEROOM07.vcd" //Nerd.
 	scene "scenes/Biker/NameLouis03.vcd" //Louis (quiet)
@@ -1912,56 +1859,6 @@ Response SurvivorSpottedLouisFarBiker {
 Rule SurvivorSpottedLouisFarBiker {
 	criteria ConceptPlayerLook IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto SubjectIsManager IsManagerFar400
 	Response SurvivorSpottedLouisFarBiker
-}
-
-Response SurvivorSpottedMolotovBiker {
-	scene "scenes/Biker/SpotGrenades02.vcd" //Molotov's over here.
-	scene "scenes/Biker/SpotGrenades04.vcd" //Molotov's over here.
-	scene "scenes/Biker/SpotGrenades07.vcd" //Molotovs!
-}
-Rule SurvivorSpottedMolotovBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsMolotov IsWorldTalkBiker
-	ApplyContext "SaidSpotMolotov:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedMolotovBiker
-}
-
-Rule SurvivorSpottedMolotovAutoBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpotBiker IsMolotov IsWorldTalkBiker YesHasMolotov _auto_NotNoSpotting IsNotSpeakingWeight0
-	ApplyContext "SaidSpotMolotov:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedMolotovBiker
-}
-
-Rule SurvivorSpottedMolotovAutoBiker2 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasMolotov IsNotAlone IsSaidSpotMolotov IsNotSaidSpotBiker IsMolotov IsWorldTalkBiker _auto_NotNoSpotting
-	ApplyContext "SaidSpotMolotov:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedGrenadeAutoBiker2
-}
-
-Response SurvivorSpottedPillsBiker {
-	scene "scenes/Biker/SpotPills01.vcd" //Pills here!
-}
-Rule SurvivorSpottedPillsBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsPainPills IsWorldTalkBiker
-	ApplyContext "SaidSpotPills:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedPillsBiker
-}
-
-Rule SurvivorSpottedPillsAutoBiker {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotPills IsNotSaidSpotBiker IsPainPills IsWorldTalkBiker YesHasPainPills _auto_NotNoSpotting IsNotSpeakingWeight0
-	ApplyContext "SaidSpotPills:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedPillsBiker
-}
-
-Rule SurvivorSpottedPillsAutoBiker2 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasPainPills IsNotAlone IsSaidSpotPills IsNotSaidSpotBiker IsPainPills IsWorldTalkBiker _auto_NotNoSpotting
-	ApplyContext "SaidSpotPills:1:5,SaidSpotBiker:1:20"
-	applycontexttoworld
-	Response SurvivorSpottedGrenadeAutoBiker2
 }
 
 Response SurvivorSpottedWorldCloseBiker {
@@ -2039,7 +1936,7 @@ Response SurvivorMovingToBattleStationBiker {
 	scene "scenes/Biker/AnswerReady03.vcd" //Yeah, let's do it.
 	scene "scenes/Biker/AnswerReady04.vcd" //Let's go break stuff!
 	scene "scenes/Biker/AnswerReady05.vcd" //Let's go kill somethin'!
-	scene "scenes/Biker/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/Biker/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/Biker/GenericResponses13.vcd" //I say we just do it.
 }
 Rule SurvivorMovingToBattleStationBiker {
@@ -2065,13 +1962,13 @@ Response SurvivorSpottedBoomerBiker {
 	scene "scenes/Biker/WarnBoomer01.vcd" //BOOMER!
 	scene "scenes/Biker/WarnBoomer02.vcd" //BOOMER!
 	scene "scenes/Biker/WarnBoomer03.vcd" //BOOMER!
-	scene "scenes/Biker/DLC2CanadaSpecial01.vcd" odds 10 //I HEAR A BOOMER! And it sounded Canadian!
 	scene "scenes/Biker/HeardBoomer01.vcd" odds 5 //I hear a Boomer out there.
 	scene "scenes/Biker/HeardBoomer02.vcd" odds 5 //Careful, I hear a Boomer.
 	scene "scenes/Biker/HeardBoomer03.vcd" odds 10 //There's a Boomer around here.
 	scene "scenes/Biker/HeardBoomer04.vcd" odds 10 //Watch it, we got a Boomer.
 	scene "scenes/Biker/HeardBoomer05.vcd" odds 10 //Hear that Boomer? I'm gonna kill its ass.
 	scene "scenes/Biker/HeardBoomer06.vcd" odds 5 //I hear a Boomer.
+	scene "scenes/Biker/DLC2CanadaSpecial01.vcd" odds 15 //I HEAR A BOOMER! And it sounded Canadian!
 }
 Rule SurvivorSpottedBoomerBiker {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeBoomer IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotSpeakingWeight0
@@ -2300,6 +2197,8 @@ Response EmphaticArriveRunBiker {
 	scene "scenes/Biker/EmphaticGo05.vcd" //Get your rear in gear!
 	scene "scenes/Biker/EmphaticGo06.vcd" //Get your rear in gear!
 	scene "scenes/Biker/ArriveGeneric04.vcd" //Let's get out of here. GoGoGO!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun01.vcd" //Don't just stand there! HAUL ASS!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun02.vcd" //Don't just stand there! HAUL ASS!
 }
 Rule EmphaticArriveRunBiker {
 	criteria ConceptEmphaticArriveRun IsNotCoughing IsNotSpeaking IsBiker IsTalkBiker IsNotAlone
@@ -2322,6 +2221,8 @@ Response EmphaticArriveRunBiker {
 	scene "scenes/Biker/EmphaticGo05.vcd" //Get your rear in gear!
 	scene "scenes/Biker/EmphaticGo06.vcd" //Get your rear in gear!
 	scene "scenes/Biker/ArriveGeneric04.vcd" //Let's get out of here. GoGoGO!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun01.vcd" //Don't just stand there! HAUL ASS!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun02.vcd" //Don't just stand there! HAUL ASS!
 }
 Rule EmphaticArriveRunBiker {
 	criteria ConceptEmphaticArriveRun IsNotSpeaking IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -2345,6 +2246,8 @@ Response EmphaticArriveRun1Biker {
 	scene "scenes/Biker/EmphaticGo05.vcd" then pilot WayToLand foo:0 0.01 //Get your rear in gear!
 	scene "scenes/Biker/EmphaticGo06.vcd" then pilot WayToLand2 foo:0 0.01 //Get your rear in gear!
 	scene "scenes/Biker/ArriveGeneric04.vcd" then pilot WayToLand foo:0 0.01 //Let's get out of here. GoGoGO!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun01.vcd" then pilot WayToLand foo:0 0.01 //Don't just stand there! HAUL ASS!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun02.vcd" then pilot WayToLand2 foo:0 0.01 //Don't just stand there! HAUL ASS!
 }
 Rule EmphaticArriveRun1Biker {
 	criteria ConceptEmphaticArriveRun1 IsBiker IsNotAlone
@@ -2368,6 +2271,7 @@ Rule PlayerAlertGiveItemBiker {
 
 Response PlayerAlertGiveItemMaleBiker {
 	scene "scenes/Biker/AlertGiveItem05.vcd" //Share the wealth, brother.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic06.vcd" //Good luck, my brother!
 }
 Rule PlayerAlertGiveItemMaleBiker {
 	criteria ConceptPlayerAlertGiveItem IsBiker SubjectIsNotTeenGirl SubjectIsNotProducer ChanceToFire30Percent
@@ -2383,6 +2287,7 @@ Response PlayerAlertGiveItemStopBiker {
 	scene "scenes/Biker/DLC1_C6M3_FinaleL4D1ThrowItems03.vcd" //You can have this.
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas01.vcd" //Here, you're gonna need this.
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas02.vcd" //Here, you're gonna need this.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas03.vcd" //Take this, now be safe.
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas04.vcd" //You lookin' for this?
 	scene "scenes/Biker/HealOtherCombat01.vcd" //Hold on! Hold on!
 }
@@ -2392,7 +2297,7 @@ Rule PlayerAlertGiveItemStopBiker {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidBiker {
-	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidBiker
+	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidBiker
 }
 Rule PlayerAlertGiveItemStopAnFirstAidBiker {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsBiker IsTalk IsTalkBiker NoHasFirstAidKit IsWorldTalkBiker
@@ -2400,7 +2305,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidBiker {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidBiker {
-	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidBiker
+	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidBiker
 }
 Rule PlayerAlertGiveItemStopQnFirstAidBiker {
 	criteria ConceptBashWithItem IsNotCoughing IsBiker IsTalk IsTalkBiker IsItemFirstAidKit IsWorldTalkBiker IsNotSpeakingWeight0
@@ -2408,7 +2313,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidBiker {
 }
 
 Response PlayerAlertGiveItemStopMedicalBiker {
-	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalBiker {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsBiker IsTalk IsTalkBiker NoHasPainPills NoHasAdrenaline IsWorldTalkBiker
@@ -2416,7 +2321,7 @@ Rule PlayerAlertGiveItemStopMedicalBiker {
 }
 
 Response PlayerAlertGiveItemMedicalBiker {
-	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/Biker/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalBiker {
 	criteria ConceptBashWithItem IsNotCoughing IsBiker IsTalk IsTalkBiker IsItemMedical IsWorldTalkBiker IsNotSpeakingWeight0
@@ -2551,7 +2456,7 @@ Rule PlayerFriendlyFireNoBulletBiker {
 }
 
 Response SurvivorTauntResponseBiker {
-	scene "scenes/Biker/Hurrah01.vcd" //All right.
+	scene "scenes/Biker/Hurrah01.vcd" //Alright.
 	scene "scenes/Biker/Hurrah02.vcd" //Aw riiiight.
 	scene "scenes/Biker/Hurrah03.vcd" //Awesome.
 	scene "scenes/Biker/Hurrah04.vcd" //Awesome.
@@ -2566,7 +2471,7 @@ Response SurvivorTauntResponseBiker {
 	scene "scenes/Biker/ReactionPositive08.vcd" //Yeah!
 	scene "scenes/Biker/ReactionPositive09.vcd" //Yeah!
 	scene "scenes/Biker/ReactionPositive10.vcd" //Hell yeah!
-	scene "scenes/Biker/ReactionPositive11.vcd" //All right!
+	scene "scenes/Biker/ReactionPositive11.vcd" //Alright!
 	scene "scenes/Biker/Taunt01.vcd" //That's right!
 	scene "scenes/Biker/Taunt02.vcd" //HELL YEAH!
 	scene "scenes/Biker/Taunt03.vcd" //OH YEAH!
@@ -2577,6 +2482,7 @@ Response SurvivorTauntResponseBiker {
 	scene "scenes/Biker/Taunt08.vcd" //YEAH! YEAH!
 	scene "scenes/Biker/Taunt09.vcd" //Damn straight!
 	scene "scenes/Biker/Taunt10.vcd" //HELL YEAH!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" //HELL YEAH!
 }
 Rule SurvivorTauntResponseBiker {
 	criteria ConceptPlayerTaunt IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
@@ -2584,7 +2490,7 @@ Rule SurvivorTauntResponseBiker {
 }
 
 Response SurvivorTauntResponseXBiker {
-	scene "scenes/Biker/Hurrah01.vcd" //All right.
+	scene "scenes/Biker/Hurrah01.vcd" //Alright.
 	scene "scenes/Biker/Hurrah02.vcd" //Aw riiiight.
 	scene "scenes/Biker/Hurrah03.vcd" //Awesome.
 	scene "scenes/Biker/Hurrah04.vcd" //Awesome.
@@ -2599,7 +2505,7 @@ Response SurvivorTauntResponseXBiker {
 	scene "scenes/Biker/ReactionPositive08.vcd" //Yeah!
 	scene "scenes/Biker/ReactionPositive09.vcd" //Yeah!
 	scene "scenes/Biker/ReactionPositive10.vcd" //Hell yeah!
-	scene "scenes/Biker/ReactionPositive11.vcd" //All right!
+	scene "scenes/Biker/ReactionPositive11.vcd" //Alright!
 	scene "scenes/Biker/Taunt01.vcd" //That's right!
 	scene "scenes/Biker/Taunt02.vcd" //HELL YEAH!
 	scene "scenes/Biker/Taunt03.vcd" //OH YEAH!
@@ -2611,6 +2517,7 @@ Response SurvivorTauntResponseXBiker {
 	scene "scenes/Biker/Taunt09.vcd" //Damn straight!
 	scene "scenes/Biker/Taunt10.vcd" //HELL YEAH!
 	scene "scenes/Biker/C6DLC3ZOEYDIES04.vcd" //I hate this!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" //HELL YEAH!
 }
 Rule SurvivorTauntResponseXBiker {
 	criteria ConceptPlayerTaunt IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -3375,7 +3282,7 @@ Rule PlayerRemarkairport04_vanBiker {
 
 Response PlayerRemarkcrashcourse01_path01Biker {
 	scene "scenes/Biker/DLC2PilotComment01.vcd" then TeenGirl crashcourse01_path01zresp foo:0 .05 //Hey, Zoey, here's the pilot. Case you wanna shoot him again.
-	scene "scenes/Biker/dlc2misc01.vcd" then TeenGirl crashcourse01_path01zresp foo:0 .05 //How many pilots HAVE you shot, Zoey? Rough ballpark guess. RARE
+	scene "scenes/Biker/dlc2misc01.vcd" then TeenGirl crashcourse01_path01zresp foo:0 .05 //How many pilots HAVE you shot, Zoey? Rough ballpark guess.
 }
 Rule PlayerRemarkcrashcourse01_path01Biker {
 	criteria ConceptRemark IsBiker Iscrashcourse01_path01 IsNotSaidcrashcourse01_path01 IsNotCoughing NotInCombat IsTalk IsTalkBiker IsSubjectNear200 IsTeenGirlNear500
@@ -4457,7 +4364,7 @@ Response SafeSpotAheadResponse {
 	scene "scenes/Biker/SafeSpotAheadReaction01.vcd" //Finally!
 	scene "scenes/Biker/SafeSpotAheadReaction02.vcd" //A-men to that!
 	scene "scenes/Biker/SafeSpotAheadReaction03.vcd" //A-men to that!
-	scene "scenes/Biker/SafeSpotAheadReaction04.vcd" //Well, all right!
+	scene "scenes/Biker/SafeSpotAheadReaction04.vcd" //Well, alright!
 	scene "scenes/Biker/SafeSpotAheadReaction05.vcd" //Finally.
 	scene "scenes/Biker/SafeSpotAheadReaction07.vcd" //A-frickin'-men.
 }
@@ -4623,6 +4530,8 @@ Response PlayerHurryUpBiker {
 	scene "scenes/Biker/EmphaticRun06.vcd" //SHIT! Run!
 	scene "scenes/Biker/EmphaticRun09.vcd" //Get the lead out!
 	scene "scenes/Biker/EmphaticRun10.vcd" //Haul Ass!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun01.vcd" //Don't just stand there! HAUL ASS!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun02.vcd" //Don't just stand there! HAUL ASS!
 }
 Rule PlayerHurryUpBiker {
 	criteria ConceptPlayerHurryUp IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsWithThree
@@ -4654,6 +4563,8 @@ Response PlayerHurryUpXBiker {
 	scene "scenes/Biker/EmphaticRun06.vcd" //SHIT! Run!
 	scene "scenes/Biker/EmphaticRun09.vcd" //Get the lead out!
 	scene "scenes/Biker/EmphaticRun10.vcd" //Haul Ass!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun01.vcd" //Don't just stand there! HAUL ASS!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleBridgeRun02.vcd" //Don't just stand there! HAUL ASS!
 }
 Rule PlayerHurryUpXBiker {
 	criteria ConceptPlayerHurryUp IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -4723,7 +4634,7 @@ Rule PlayerLeadOnXBiker {
 Response PlayerMoveOnBiker {
 	scene "scenes/Biker/DLC2Intro30.vcd" //Let's just hike the hell out of here.
 	scene "scenes/Biker/DLC2M1Goal01.vcd" //I already hate this place. Let's get outta here.
-	scene "scenes/Biker/MoveOn01.vcd" //Allright, let's go
+	scene "scenes/Biker/MoveOn01.vcd" //Alright, let's go
 	scene "scenes/Biker/MoveOn02.vcd" //Come on, we ain't got all day.
 	scene "scenes/Biker/MoveOn03.vcd" //Let's go.
 	scene "scenes/Biker/MoveOn04.vcd" //Let's get moving.
@@ -4750,7 +4661,7 @@ Rule PlayerMoveOnBiker {
 Response PlayerMoveOnXBiker {
 	scene "scenes/Biker/DLC2Intro30.vcd" //Let's just hike the hell out of here.
 	scene "scenes/Biker/DLC2M1Goal01.vcd" //I already hate this place. Let's get outta here.
-	scene "scenes/Biker/MoveOn01.vcd" //Allright, let's go
+	scene "scenes/Biker/MoveOn01.vcd" //Alright, let's go
 	scene "scenes/Biker/MoveOn02.vcd" //Come on, we ain't got all day.
 	scene "scenes/Biker/MoveOn03.vcd" //Let's go.
 	scene "scenes/Biker/MoveOn04.vcd" //Let's get moving.
@@ -4825,7 +4736,7 @@ Response PlayerAskReadyBiker {
 	scene "scenes/Biker/AnswerReady03.vcd" //Yeah, let's do it.
 	scene "scenes/Biker/AnswerReady04.vcd" //Let's go break stuff!
 	scene "scenes/Biker/AnswerReady05.vcd" //Let's go kill somethin'!
-	scene "scenes/Biker/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/Biker/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/Biker/GenericResponses13.vcd" //I say we just do it.
 }
 Rule PlayerAskReadyBiker {
@@ -4849,7 +4760,7 @@ Response PlayerAskReadyXBiker {
 	scene "scenes/Biker/AnswerReady03.vcd" //Yeah, let's do it.
 	scene "scenes/Biker/AnswerReady04.vcd" //Let's go break stuff!
 	scene "scenes/Biker/AnswerReady05.vcd" //Let's go kill somethin'!
-	scene "scenes/Biker/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/Biker/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/Biker/GenericResponses13.vcd" //I say we just do it.
 }
 Rule PlayerAskReadyXBiker {
@@ -4878,28 +4789,26 @@ Rule PlayerImWithYouBiker {
 }
 
 Response PlayerLaughBiker {
-	scene "scenes/Biker/DLC2GasTanks04.vcd" //Ha ha ha.. Nice.
 	scene "scenes/Biker/HurtMajor04.vcd" //[Pain noise - ugh]
 	scene "scenes/Biker/Laughter01.vcd" //<Short Laugh>
 	scene "scenes/Biker/Laughter02.vcd" //<Nervous Laugh>
+	scene "scenes/Biker/Laughter03.vcd" //<Snort>
 	scene "scenes/Biker/Laughter04.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter05.vcd" //<Short Laugh>
 	scene "scenes/Biker/Laughter06.vcd" //<Nervous Laugh>
 	scene "scenes/Biker/Laughter07.vcd" //<Short Laugh>
+	scene "scenes/Biker/Laughter08.vcd" //<Short laugh>
 	scene "scenes/Biker/Laughter09.vcd" //<Short Laugh>
 	scene "scenes/Biker/Laughter11.vcd" //<Short Laugh>
+	scene "scenes/Biker/Laughter10.vcd" //<Snort>
 	scene "scenes/Biker/Laughter12.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter13.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter14.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter15.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/ReactionPositive01.vcd" //[Laughs]
-	scene "scenes/Biker/ViolenceAwe07.vcd" //<laugh>Whoa-ho-ho, YEAH!
 	scene "scenes/Biker/Taunt05.vcd" //[Loud, evil laugh]
-	scene "scenes/Biker/Taunt06.vcd" //[Loud, evil laugh]
-	scene "scenes/Biker/Taunt07.vcd" //[Loud, evil laugh]
-	scene "scenes/Biker/Laughter03.vcd" //<Snort>
-	scene "scenes/Biker/Laughter08.vcd" //<Short laugh>
-	scene "scenes/Biker/Laughter10.vcd" //<Snort>
+	scene "scenes/Biker/ViolenceAwe07.vcd" //<laugh>Whoa-ho-ho, YEAH!
+	scene "scenes/Biker/DLC2GasTanks04.vcd" //Ha ha ha.. Nice.
 }
 Rule PlayerLaughBiker {
 	criteria ConceptPlayerLaugh IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -4910,24 +4819,22 @@ Response PlayerLaughXBiker {
 	scene "scenes/Biker/HurtMajor04.vcd" //[Pain noise - ugh]
 	scene "scenes/Biker/Laughter01.vcd" //<Short Laugh>
 	scene "scenes/Biker/Laughter02.vcd" //<Nervous Laugh>
+	scene "scenes/Biker/Laughter03.vcd" //<Snort>
 	scene "scenes/Biker/Laughter04.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter05.vcd" //<Short Laugh>
 	scene "scenes/Biker/Laughter06.vcd" //<Nervous Laugh>
 	scene "scenes/Biker/Laughter07.vcd" //<Short Laugh>
+	scene "scenes/Biker/Laughter08.vcd" //<Short laugh>
 	scene "scenes/Biker/Laughter09.vcd" //<Short Laugh>
+	scene "scenes/Biker/Laughter10.vcd" //<Snort>
 	scene "scenes/Biker/Laughter11.vcd" //<Short Laugh>
 	scene "scenes/Biker/Laughter12.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter13.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter14.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/Laughter15.vcd" //<Hearty Laugh>
 	scene "scenes/Biker/ReactionPositive01.vcd" //[Laughs]
-	scene "scenes/Biker/ViolenceAwe07.vcd" //<laugh>Whoa-ho-ho, YEAH!
 	scene "scenes/Biker/Taunt05.vcd" //[Loud, evil laugh]
-	scene "scenes/Biker/Taunt06.vcd" //[Loud, evil laugh]
-	scene "scenes/Biker/Taunt07.vcd" //[Loud, evil laugh]
-	scene "scenes/Biker/Laughter03.vcd" //<Snort>
-	scene "scenes/Biker/Laughter08.vcd" //<Short laugh>
-	scene "scenes/Biker/Laughter10.vcd" //<Snort>
+	scene "scenes/Biker/ViolenceAwe07.vcd" //<laugh>Whoa-ho-ho, YEAH!
 }
 Rule PlayerLaughXBiker {
 	criteria ConceptPlayerLaugh IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
@@ -4963,14 +4870,14 @@ Response PlayerNiceJobResponseBiker {
 	scene "scenes/Biker/NiceJob01.vcd" //Nice.
 	scene "scenes/Biker/NiceJob02.vcd" //Nice.
 	scene "scenes/Biker/NiceJob03.vcd" //Nice job.
-	scene "scenes/Biker/NiceJob04.vcd" //Shit, that was all right
+	scene "scenes/Biker/NiceJob04.vcd" //Shit, that was alright
 	scene "scenes/Biker/NiceJob05.vcd" //Damn, not bad.
 	scene "scenes/Biker/NiceJob06.vcd" //Nice job.
 	scene "scenes/Biker/NiceJob07.vcd" //Nice.
 	scene "scenes/Biker/NiceJob08.vcd" //Nice job.
 	scene "scenes/Biker/NiceJob09.vcd" //Nice job.
 	scene "scenes/Biker/NiceJob10.vcd" //Nice work.
-	scene "scenes/Biker/NiceJob11.vcd" //Well, shit, that was all right
+	scene "scenes/Biker/NiceJob11.vcd" //Well, shit, that was alright
 	scene "scenes/Biker/NiceJob12.vcd" //Nice damn job.
 	scene "scenes/Biker/NiceJob13.vcd" //Damn, not bad.
 	scene "scenes/Biker/NiceJob14.vcd" //Shiiiit.
@@ -5004,6 +4911,7 @@ Response PlayerNoBiker {
 	scene "scenes/Biker/No16.vcd" //Nope.
 	scene "scenes/Biker/No17.vcd" //No siree bob.
 	scene "scenes/Biker/No18.vcd" //Not a chance.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic12.vcd" //No, I haven't heard that one.
 }
 Rule PlayerNoBiker {
 	criteria ConceptPlayerNo IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -5091,6 +4999,7 @@ Response SorryABiker {
 	scene "scenes/Biker/Sorry17.vcd" then subject Prof foo:0 0 //That was my fault.
 	scene "scenes/Biker/Sorry18.vcd" then subject Prof foo:0 0 //My bad.
 	scene "scenes/Biker/GenericResponses11.vcd" then subject Prof foo:0 0 //Ah shit, here we go again.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting40.vcd" then subject Prof foo:0 0 //Sorry, can't.
 }
 Rule SorryABiker {
 	criteria SorryA IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone ChanceToFire50Percent
@@ -5116,6 +5025,7 @@ Response PlayerSorryBiker {
 	scene "scenes/Biker/Sorry17.vcd" then subject Prof foo:0 0 //That was my fault.
 	scene "scenes/Biker/Sorry18.vcd" then subject Prof foo:0 0 //My bad.
 	scene "scenes/Biker/GenericResponses11.vcd" then subject Prof foo:0 0 //Ah shit, here we go again.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting40.vcd" then subject Prof foo:0 0 //Sorry, can't.
 }
 Rule PlayerSorryBiker {
 	criteria ConceptPlayerSorry IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -5131,7 +5041,7 @@ Response PlayerThanksBiker {
 	scene "scenes/Biker/ScenarioJoin04.vcd" predelay ".2,.5" //Hello!
 }
 Rule PlayerThanksBiker {
-	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsHealthy5
+	criteria ConceptPlayerThanks IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsNotHealthyHalf
 	Response PlayerThanksBiker
 }
 
@@ -5200,6 +5110,12 @@ Response PlayerYesBiker {
 	scene "scenes/Biker/Yes06.vcd" //Roger that good buddy.
 	scene "scenes/Biker/GenericResponses04.vcd" //Sure, why not?
 	scene "scenes/Biker/WorldFarmhouseNPC03.vcd" //Rodger dodger.
+	scene "scenes/Biker/C6DLC3INTRO25.vcd" //Aye, Aye Captain!
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat35.vcd" //Yeah, okay.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting15.vcd" //(fumbling) Uhhh yyyeaaah.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting16.vcd" //Yeah.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting37.vcd" //Oh yeah.. uh, yeah it is.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic19.vcd" //Yeah.
 }
 Rule PlayerYesBiker {
 	criteria ConceptPlayerYes IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -5390,7 +5306,7 @@ Response PlayerHurrahBiker {
 	scene "scenes/Biker/Hurrah13.vcd" then Any PlayerHurrahAlso foo:0 0 //Everyone havin' fun?
 	scene "scenes/Biker/Hurrah14.vcd" then Any PlayerHurrahAlso foo:0 0 //You know all those monsters? I don't think they're gonna make it.
 	scene "scenes/Biker/Hurrah15.vcd" then Any PlayerHurrahAlso foo:0 0 //We just might make it out of here after all.
-	scene "scenes/Biker/Hurrah21.vcd" then Any PlayerHurrahAlso foo:0 0 //You guys are all right.
+	scene "scenes/Biker/Hurrah21.vcd" then Any PlayerHurrahAlso foo:0 0 //You guys are alright.
 	scene "scenes/Biker/Hurrah22.vcd" then Any PlayerHurrahAlso foo:0 0 //I think we gotta chance
 	scene "scenes/Biker/Hurrah23.vcd" then Any PlayerHurrahAlso foo:0 0 //lookin good
 	scene "scenes/Biker/Hurrah24.vcd" then Any PlayerHurrahAlso foo:0 0 //Hey, this is just gettin fun.
@@ -5464,7 +5380,14 @@ Rule IntroSmalltown3Biker {
 
 //Spawn - Join
 Response SurvivorSpawnBiker {
+	scene "scenes/Biker/ScenarioJoin01.vcd" //I'm here!
+	scene "scenes/Biker/ScenarioJoin02.vcd" //Hey, I'm here!
+	scene "scenes/Biker/ScenarioJoin03.vcd" //Hey, I'm here!
 	scene "scenes/Biker/ScenarioJoin04.vcd" //Hello!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting20.vcd" //Hey!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting27.vcd" //HEY!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting28.vcd" //HEY!
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat44.vcd" //What's up?
 }
 Rule SurvivorSpawnBiker {
 	criteria ConceptPlayerScenarioJoin IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
@@ -5472,13 +5395,10 @@ Rule SurvivorSpawnBiker {
 }
 
 Response SurvivorSpawnLastMainstreetBiker {
-	scene "scenes/Biker/ScenarioJoin01.vcd" //I'm here!
-	scene "scenes/Biker/ScenarioJoin02.vcd" //Hey, I'm here!
-	scene "scenes/Biker/ScenarioJoin03.vcd" //Hey, I'm here!
-	scene "scenes/Biker/ScenarioJoin04.vcd" //Hello!
+	scene "scenes/Biker/ScenarioJoinLast01.vcd" //We're all here!
 }
 Rule SurvivorSpawnLastMainstreetBiker {
-	criteria ConceptPlayerScenarioJoinLast IsBiker IsSmalltown04 IsNotAlone
+	criteria ConceptPlayerScenarioJoinLast IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsEveryoneAlive
 	ApplyContext "RemarkableReadyToGo:1:500,RemarkableBlocker:1:5"
 	applycontexttoworld
 	Response SurvivorSpawnLastMainstreetBiker
@@ -5576,20 +5496,20 @@ Rule PlayerGetInsideCheckPointXBiker {
 	Response PlayerGetInsideCheckPointXBiker
 }
 
-Response PlayerGrabbedByJockeyBiker {
-	scene "scenes/Biker/HurtCritical04.vcd" //[Pain noise - loud major pain]
-	scene "scenes/Biker/HurtCritical08.vcd" //[Pain noise - loud major pain]
-	scene "scenes/Biker/ScreamWhilePounced01.vcd" //GET IT OFF!
-	scene "scenes/Biker/ScreamWhilePounced02.vcd" //GET IT OFF!
-	scene "scenes/Biker/ScreamWhilePounced03.vcd" //GET IT OFF!
-	scene "scenes/Biker/ScreamWhilePounced04.vcd" //GET IT OFF! GET IT OFF!
-}
-Rule PlayerGrabbedByJockeyBiker {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidBeenJockeyedBiker IsWorldTalkBiker
-	ApplyContext "SaidBeenJockeyedBiker:1:6,_auto_NoSpotting:1:4"
-	applycontexttoworld
-	Response PlayerGrabbedByJockeyBiker
-}
+//Response PlayerGrabbedByJockeyBiker {
+//scene "scenes/Biker/HurtCritical04.vcd" //[Pain noise - loud major pain]
+//scene "scenes/Biker/HurtCritical08.vcd" //[Pain noise - loud major pain]
+//scene "scenes/Biker/ScreamWhilePounced01.vcd" //GET IT OFF!
+//scene "scenes/Biker/ScreamWhilePounced02.vcd" //GET IT OFF!
+//scene "scenes/Biker/ScreamWhilePounced03.vcd" //GET IT OFF!
+//scene "scenes/Biker/ScreamWhilePounced04.vcd" //GET IT OFF! GET IT OFF!
+//}
+//Rule PlayerGrabbedByJockeyBiker {
+//criteria ConceptSurvivorJockeyed IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidBeenJockeyedBiker IsWorldTalkBiker
+//ApplyContext "SaidBeenJockeyedBiker:1:6,_auto_NoSpotting:1:4"
+//applycontexttoworld
+//Response PlayerGrabbedByJockeyBiker
+//}
 
 Response PlayerGrenadeBiker {
 	scene "scenes/Biker/Grenade01.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -0.791 //GRENADE!
@@ -5600,7 +5520,7 @@ Response PlayerGrenadeBiker {
 	scene "scenes/Biker/downinfront03" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Get down!
 }
 Rule PlayerGrenadeBiker {
-	criteria ConceptThrewGrenade IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone YesHasGrenade
+	criteria ConceptThrewGrenade IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone
 	Response PlayerGrenadeBiker
 }
 
@@ -5609,6 +5529,7 @@ Response PlayerGrenadeMBiker {
 	scene "scenes/Biker/Grenade05.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -1.097 //FIRE IN THE HOLE!!
 	scene "scenes/Biker/Grenade06.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -1.610 //FIRE IN THE HOLE!!
 	scene "scenes/Biker/SwearCoupDeGrace01.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Burn you son of a bitch.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas05.vcd" predelay ".5,1" odds 15 then Any GrenadeCareful foo:0 0.01 //Here, I was startin' to hate this can.
 }
 Rule PlayerGrenadeMBiker {
 	criteria ConceptThrewGrenade IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsNotAlone YesHasMolotov
@@ -5646,8 +5567,7 @@ Response PlayerKillConfirmationBiker {
 	scene "scenes/Biker/KillConfirmation05.vcd" then Any PlayerNiceShot foo:0 0 //Dead!
 	scene "scenes/Biker/KillConfirmation06.vcd" then Any PlayerNiceShot foo:0 0 //Popped it!
 	scene "scenes/Biker/KillConfirmation07.vcd" then Any PlayerNiceShot foo:0 0 //Popped a cap in his ass!
-	scene "scenes/Biker/C6DLC3ZOEYDIES04.vcd" then Any PlayerNiceShot foo:0 0 //I hate this!
-	scene "scenes/Biker/Hurrah01.vcd" then Any PlayerNiceShot foo:0 0 //All right.
+	scene "scenes/Biker/Hurrah01.vcd" then Any PlayerNiceShot foo:0 0 //Alright.
 	scene "scenes/Biker/Hurrah02.vcd" //Aw riiiight.
 	scene "scenes/Biker/Hurrah03.vcd" then Any PlayerNiceShot foo:0 0 //Awesome.
 	scene "scenes/Biker/Hurrah04.vcd" then Any PlayerNiceShot foo:0 0 //Awesome.
@@ -5662,7 +5582,7 @@ Response PlayerKillConfirmationBiker {
 	scene "scenes/Biker/ReactionPositive08.vcd" then Any PlayerNiceShot foo:0 0 //Yeah!
 	scene "scenes/Biker/ReactionPositive09.vcd" then Any PlayerNiceShot foo:0 0 //Yeah!
 	scene "scenes/Biker/ReactionPositive10.vcd" //Hell yeah!
-	scene "scenes/Biker/ReactionPositive11.vcd" then Any PlayerNiceShot foo:0 0 //All right!
+	scene "scenes/Biker/ReactionPositive11.vcd" then Any PlayerNiceShot foo:0 0 //Alright!
 	scene "scenes/Biker/Taunt01.vcd" then Any PlayerNiceShot foo:0 0 //That's right!
 	scene "scenes/Biker/Taunt02.vcd" //HELL YEAH!
 	scene "scenes/Biker/Taunt03.vcd" //OH YEAH!
@@ -5673,6 +5593,7 @@ Response PlayerKillConfirmationBiker {
 	scene "scenes/Biker/Taunt08.vcd" //YEAH! YEAH!
 	scene "scenes/Biker/Taunt09.vcd" then Any PlayerNiceShot foo:0 0 //Damn straight!
 	scene "scenes/Biker/Taunt10.vcd" //HELL YEAH!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" then Any PlayerNiceShot foo:0 0 //HELL YEAH!
 }
 Rule PlayerKillConfirmationBiker {
 	criteria ConceptKilledZombie IsNotCoughing IsBiker IsTalk IsTalkBiker SubjectIsNotTank IsSubjectFar300 ChanceToFire50Percent IsWorldTalkBiker IsNotSpeakingWeight0 IsNotAlone
@@ -5680,7 +5601,7 @@ Rule PlayerKillConfirmationBiker {
 }
 
 Response PlayerKillConfirmationXBiker {
-	scene "scenes/Biker/Hurrah01.vcd" then Any PlayerNiceShot foo:0 0 //All right.
+	scene "scenes/Biker/Hurrah01.vcd" then Any PlayerNiceShot foo:0 0 //Alright.
 	scene "scenes/Biker/Hurrah02.vcd" //Aw riiiight.
 	scene "scenes/Biker/Hurrah11.vcd" then Any PlayerNiceShot foo:0 0 //YEAH!
 	scene "scenes/Biker/Hurrah17.vcd" //Aw riiiight.
@@ -5697,6 +5618,7 @@ Response PlayerKillConfirmationXBiker {
 	scene "scenes/Biker/Taunt06.vcd" //[Loud, evil laugh]
 	scene "scenes/Biker/Taunt07.vcd" //[Loud, evil laugh]
 	scene "scenes/Biker/Taunt10.vcd" //HELL YEAH!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" then Any PlayerNiceShot foo:0 0 //HELL YEAH!
 }
 Rule PlayerKillConfirmationXBiker {
 	criteria ConceptKilledZombie IsNotCoughing IsBiker IsTalk IsTalkBiker SubjectIsNotTank IsSubjectFar300 ChanceToFire50Percent IsWorldTalkBiker IsNotSpeakingWeight0
@@ -5705,7 +5627,7 @@ Rule PlayerKillConfirmationXBiker {
 
 Response PlayerKillTankConfirmationBiker {
 	scene "scenes/Biker/GenericResponses12.vcd" //[laughing] Go to hell.
-	scene "scenes/Biker/PlayerTransitionClose02.vcd" //Heh heh, well all right!
+	scene "scenes/Biker/PlayerTransitionClose02.vcd" //Heh heh, well alright!
 	scene "scenes/Biker/PlayerTransitionClose03.vcd" //That was close!
 	scene "scenes/Biker/PlayerTransitionClose04.vcd" //Thought we were goners (lauging)
 	scene "scenes/Biker/PlayerTransitionClose05.vcd" //This shit ain't easy.
@@ -5881,18 +5803,19 @@ Response PlayerTransitionBiker {
 	scene "scenes/Biker/Hurrah10.vcd" //We are unstoppable!
 	scene "scenes/Biker/Hurrah23.vcd" //lookin good
 	scene "scenes/Biker/Hurrah24.vcd" //Hey, this is just gettin fun.
-	scene "scenes/Biker/NiceJob04.vcd" //Shit, that was all right
+	scene "scenes/Biker/NiceJob04.vcd" //Shit, that was alright
 	scene "scenes/Biker/ReactionPositive03.vcd" //Rock-n-roll!
 	scene "scenes/Biker/ReactionPositive08.vcd" //Yeah!
 	scene "scenes/Biker/ReactionPositive06.vcd" //Hell yeah!
 	scene "scenes/Biker/SafeSpotAheadReaction01.vcd" //Finally!
 	scene "scenes/Biker/SafeSpotAheadReaction02.vcd" //A-men to that!
-	scene "scenes/Biker/SafeSpotAheadReaction04.vcd" //Well, all right!
+	scene "scenes/Biker/SafeSpotAheadReaction04.vcd" //Well, alright!
 	scene "scenes/Biker/SafeSpotAheadReaction07.vcd" //A-frickin'-men.
 	scene "scenes/Biker/Taunt05.vcd" //[Loud, evil laugh]
 	scene "scenes/Biker/Taunt07.vcd" //[Loud, evil laugh]
 	scene "scenes/Biker/Taunt08.vcd" //YEAH! YEAH!
 	scene "scenes/Biker/ViolenceAwe07.vcd" //Whoa-ho-ho, YEAH!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting17.vcd" //HELL YEAH!
 }
 Rule PlayerTransitionBiker {
 	criteria ConceptPlayerTransition IsNotCoughing IsBiker IsNotSaidPlayerTransition IsTalk IsTalkBiker IsEveryoneAlive IsWorldTalkBiker
@@ -5903,7 +5826,7 @@ Rule PlayerTransitionBiker {
 
 Response PlayerTransitionCloseBiker {
 	scene "scenes/Biker/PlayerTransitionClose01.vcd" //Any zombie fight you can crawl away from means you won it.
-	scene "scenes/Biker/PlayerTransitionClose02.vcd" //Heh heh, well all right!
+	scene "scenes/Biker/PlayerTransitionClose02.vcd" //Heh heh, well alright!
 	scene "scenes/Biker/PlayerTransitionClose03.vcd" //That was close!
 	scene "scenes/Biker/PlayerTransitionClose04.vcd" //Thought we were goners (lauging)
 	scene "scenes/Biker/PlayerTransitionClose05.vcd" //This shit ain't easy.
@@ -5918,7 +5841,7 @@ Rule PlayerTransitionCloseBiker {
 }
 
 Response PlayerTransitionCloseXBiker {
-	scene "scenes/Biker/PlayerTransitionClose02.vcd" //Heh heh, well all right!
+	scene "scenes/Biker/PlayerTransitionClose02.vcd" //Heh heh, well alright!
 	scene "scenes/Biker/PlayerTransitionClose03.vcd" //That was close!
 	scene "scenes/Biker/PlayerTransitionClose05.vcd" //This shit ain't easy.
 }
@@ -6689,9 +6612,10 @@ Rule PlayerLedgeHangStartXBiker {
 //Vocalizer - Death
 Response DoubleDeath2Biker {
 	scene "scenes/Biker/DoubleDeathResponse02.vcd" predelay ".5,1.25" //Just two of us left. Shit.
-	scene "scenes/Biker/StayTogether01.vcd" predelay ".5,1.25" //Stay close!
 	scene "scenes/Biker/StayTogether02.vcd" predelay ".5,1.25" //We gotta stay together.
-	scene "scenes/Biker/StayTogether07.vcd" predelay ".5,1.25" //Stay close.
+	scene "scenes/Biker/StayTogether09.vcd" predelay ".5,1.25" //Stay together!
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic02.vcd" predelay ".5,1.25" //I'm gonna miss them.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic01.vcd" predelay ".5,1.25" //You know, they were alright.
 }
 Rule DoubleDeath2Biker {
 	criteria ConceptDeath2Left IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSaidSomeoneDiedDouble2 IsWithTwo IsNotIncapacitated ChanceToFire50Percent IsWorldTalkBiker
@@ -6760,7 +6684,7 @@ Response SurvivorPickupAutoShotgunBiker {
 	scene "scenes/Biker/TakeAutoShotgun01.vcd" //Got an auto shotgun.
 	scene "scenes/Biker/TakeAutoShotgun02.vcd" //Come to daddy my sweet shotgun.
 	scene "scenes/Biker/TakeAutoShotgun03.vcd" //Now this is a shotgun I can love.
-//scene "scenes/Biker/TakeAutoShotgun04.vcd" //Those bastards think they're sick now, wait'll they get a taste of this.
+	scene "scenes/Biker/TakeAutoShotgun04.vcd" //Those bastards think they're sick now, wait'll they get a taste of this.
 	scene "scenes/Biker/TakeAutoShotgun05.vcd" //Got an auto shotgun.
 	scene "scenes/Biker/TakeAutoShotgun06.vcd" //Come to daddy my sweet shotgun.
 	scene "scenes/Biker/TakeAutoShotgun07.vcd" //Now this is a shotgun I can love.
@@ -6780,8 +6704,8 @@ Rule SurvivorPickupShotgun_spasBiker {
 
 Response SurvivorPickupFirstAidKitBiker {
 	scene "scenes/Biker/TakeFirstAid01.vcd" //Ho oh, some first aid.
-	scene "scenes/Biker/TakeFirstAid02.vcd" //Grabbing First Aid.
-	scene "scenes/Biker/TakeFirstAid03.vcd" //Grabbing First Aid.
+	scene "scenes/Biker/TakeFirstAid02.vcd" //Grabbing First aid.
+	scene "scenes/Biker/TakeFirstAid03.vcd" //Grabbing First aid.
 	scene "scenes/Biker/TakeFirstAid04.vcd" //Might need these.
 }
 Rule SurvivorPickupFirstAidKitBiker {
@@ -6809,9 +6733,9 @@ Rule SurvivorPickupSniper_militaryBiker {
 }
 
 Response SurvivorPickupMolotovBiker {
-	scene "scenes/Biker/TakeMolotov01.vcd" //Allright, cocktails! [to self]
-	scene "scenes/Biker/TakeMolotov02.vcd" //Grabbing a Molotov. [to self]
-	scene "scenes/Biker/TakeMolotov03.vcd" //Fire! (to self)
+	scene "scenes/Biker/TakeMolotov01.vcd" //Alright, cocktails!
+	scene "scenes/Biker/TakeMolotov02.vcd" //Grabbing a Molotov.
+	scene "scenes/Biker/TakeMolotov03.vcd" //Fire!
 }
 Rule SurvivorPickupMolotovBiker {
 	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpMolotov IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent BikerNotPickedUpItem IsTalk IsTalkBiker IsWorldTalkBiker
@@ -6834,8 +6758,8 @@ Response SurvivorPickupPipeBombBiker {
 	scene "scenes/Biker/TakePipeBomb01.vcd" //Ah great, homemade explosives.
 	scene "scenes/Biker/TakePipeBomb02.vcd" //Grabbing a pipe bomb.
 	scene "scenes/Biker/TakePipeBomb03.vcd" //Grabbing a pipe bomb.
-//scene "scenes/Biker/TakePipeBomb04.vcd" //This'll blow some shit up.
-//scene "scenes/Biker/TakePipeBomb05.vcd" //This'll blow the crap outta something.
+	scene "scenes/Biker/TakePipeBomb04.vcd" //This'll blow some shit up.
+	scene "scenes/Biker/TakePipeBomb05.vcd" //This'll blow the crap outta something.
 }
 Rule SurvivorPickupPipeBombBiker {
 	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPipeBomb IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent BikerNotPickedUpItem IsTalk IsTalkBiker IsWorldTalkBiker
@@ -6844,10 +6768,10 @@ Rule SurvivorPickupPipeBombBiker {
 }
 
 Response SurvivorPickupPumpShotgunBiker {
-	scene "scenes/Biker/TakeShotgun01.vcd" //Shotgun! Allright folks, I'm on crowd control.
+	scene "scenes/Biker/TakeShotgun01.vcd" //Shotgun! Alright folks, I'm on crowd control.
 	scene "scenes/Biker/TakeShotgun02.vcd" //Grabbing a shotgun.
 	scene "scenes/Biker/TakeShotgun03.vcd" //Grabbing a shotgun.
-//scene "scenes/Biker/TakeShotgun04.vcd" //I'll take this room sweeper.
+	scene "scenes/Biker/TakeShotgun04.vcd" //I'll take this room sweeper.
 }
 Rule SurvivorPickupPumpShotgunBiker {
 	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpPumpShotgun IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent BikerNotPickedUpItem IsTalk IsTalkBiker IsWorldTalkBiker
@@ -6862,12 +6786,12 @@ Rule SurvivorPickupShotgun_chromeBiker {
 }
 
 Response SurvivorPickupRifleBiker {
-//scene "scenes/Biker/TakeAssaultRifle01.vcd" //This oughtta put the fear a' God into 'em.
+	scene "scenes/Biker/TakeAssaultRifle01.vcd" //This oughtta put the fear a' God into 'em.
 	scene "scenes/Biker/TakeAssaultRifle02.vcd" //Gonna rack some up with this assault rifle.
 	scene "scenes/Biker/TakeAssaultRifle03.vcd" //This assault rifle should help.
 	scene "scenes/Biker/TakeAssaultRifle04.vcd" //This assault rifle should help.
 	scene "scenes/Biker/TakeAssaultRifle05.vcd" //I'm grabbing this rifle.
-//scene "scenes/Biker/TakeAssaultRifle06.vcd" //This oughtta put the fear a' God into 'em.
+	scene "scenes/Biker/TakeAssaultRifle06.vcd" //This oughtta put the fear a' God into 'em.
 	scene "scenes/Biker/TakeAssaultRifle07.vcd" //Gonna rack some up with this assault rifle.
 	scene "scenes/Biker/TakeAssaultRifle08.vcd" //This assault rifle should help.
 }
@@ -6927,7 +6851,7 @@ Rule TakeShotgunGroovyBikerLaugh {
 }
 
 Response TakeShotgunGroovyZoey2Biker {
-	scene "scenes/Biker/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/Biker/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/Biker/ReactionPositive08.vcd" //Yeah!
 	scene "scenes/Biker/SafeSpotAheadReaction07.vcd" //A-frickin'-men.
 }
@@ -6940,7 +6864,7 @@ Rule TakeShotgunGroovyZoey2Biker {
 //Vocalizer - Rescue
 Response PlayerGettingRevivedBiker {
 	scene "scenes/Biker/GettingRevived01.vcd" then subject ReviveBgo foo:0 -1.964 //I'm okay.
-	scene "scenes/Biker/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.887 //No, no, I'm allright.
+	scene "scenes/Biker/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.887 //No, no, I'm alright.
 	scene "scenes/Biker/GettingRevived03.vcd" then subject ReviveBfine foo:0 -1.066 //[groan]
 	scene "scenes/Biker/GettingRevived04.vcd" then subject ReviveBfine foo:0 -2.269 //Hell if I know.
 	scene "scenes/Biker/GettingRevived05.vcd" then subject ReviveBgo foo:0 -3.925 //Ah, hey, is this my blood?
@@ -6962,7 +6886,7 @@ Rule PlayerGettingRevivedBiker {
 
 Response PlayerGettingRevivedBiker {
 	scene "scenes/Biker/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm okay.
-	scene "scenes/Biker/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0 //No, no, I'm allright.
+	scene "scenes/Biker/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0 //No, no, I'm alright.
 	scene "scenes/Biker/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0 //[groan]
 	scene "scenes/Biker/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0 //Hell if I know.
 	scene "scenes/Biker/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0 //Ah, hey, is this my blood?
@@ -7024,12 +6948,13 @@ Rule PlayerLedgeSaveBiker {
 }
 
 Response PlayerReviveFriendBiker {
-	scene "scenes/Biker/ReviveFriend01.vcd" //Hang on, hang on, I'm here. Relax, I gotcha. Get up. Get up now. We gotta move. -5.753
-	scene "scenes/Biker/ReviveFriend02.vcd" //Woah, I thought you were hosed for sure, but I think I can get you back on your feet. -4.901
-	scene "scenes/Biker/ReviveFriend03.vcd" //Come on, lazy - can't have ya laying around all day. We gotta get moving. Let me get you up. -7.218
-	scene "scenes/Biker/ReviveFriend04.vcd" //You look like shit, but I think I can get you up on your feet enough to keep moving. -6.523
-	scene "scenes/Biker/ReviveFriend05.vcd" //C'mon, let's get you on your feet. You look pretty messed up, but that might help you out a little if you know what I mean. -10.248
-	scene "scenes/Biker/ReviveFriend06.vcd" //Don't worry, don't worry, we all go down sometime. Lemme get you up. -6.092
+	scene "scenes/Biker/ReviveFriend01.vcd" //Hang on, hang on, I'm here. Relax, I gotcha. Get up. Get up now. We gotta move.
+	scene "scenes/Biker/ReviveFriend02.vcd" //Woah, I thought you were hosed for sure, but I think I can get you back on your feet.
+	scene "scenes/Biker/ReviveFriend03.vcd" //Come on, lazy - can't have ya laying around all day. We gotta get moving. Let me get you up.
+	scene "scenes/Biker/ReviveFriend04.vcd" //You look like shit, but I think I can get you up on your feet enough to keep moving.
+	scene "scenes/Biker/ReviveFriend05.vcd" //C'mon, let's get you on your feet. You look pretty messed up, but that might help you out a little if you know what I mean.
+	scene "scenes/Biker/ReviveFriend06.vcd" //Don't worry, don't worry, we all go down sometime. Lemme get you up.
+	scene "scenes/Biker/DLC1_C6M3_FinaleChat25.vcd" odds 15 //WITCH! Oh sorry, got confused by all your crying.
 }
 Rule PlayerReviveFriendBiker {
 	criteria ConceptPlayerReviveFriend IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
@@ -7233,6 +7158,7 @@ Response SurvivorSpottedWeaponBiker {
 	scene "scenes/Biker/SpotWeapons02.vcd" //Weapon's over here!
 	scene "scenes/Biker/SpotWeapons04.vcd" //Weapon's over here!
 	scene "scenes/Biker/SpotWeapons05.vcd" //We got weapons over here.
+	scene "scenes/Biker/SpotGrenades08.vcd" //Weapons!
 }
 Rule SurvivorSpottedWeaponBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsWorldTalkBiker
@@ -7241,9 +7167,116 @@ Rule SurvivorSpottedWeaponBiker {
 	Response SurvivorSpottedWeaponBiker
 }
 
+Response SurvivorSpottedGrenadeBiker {
+	scene "scenes/Biker/SpotGrenades03.vcd" //There's a pipe bomb here.
+	scene "scenes/Biker/SpotGrenades05.vcd" //There's a pipe bomb here.
+	scene "scenes/Biker/SpotGrenades06.vcd" //Pipe bombs!
+}
+Rule SurvivorSpottedGrenadeBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsPipeBomb IsWorldTalkBiker
+	ApplyContext "SaidSpotGrenade:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeBiker
+}
+Rule SurvivorSpottedGrenadeAutoBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotGrenade IsNotSaidSpotBiker IsPipeBomb IsWorldTalkBiker YesHasGrenade _auto_NotNoSpotting IsNotSpeakingWeight0
+	ApplyContext "SaidSpotGrenade:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeBiker
+}
 
-//biker_dlc3.txt
-//Item Spotted
+Response SurvivorSpottedGrenadeAutoBiker2 {
+	scene "scenes/Biker/NiceJob17.vcd" //Cool.
+	scene "scenes/Biker/PositiveNoise02.vcd" //[Improv non-verbal pleasure & interest sounds]
+	scene "scenes/Biker/SafeSpotAheadReaction03.vcd" //Cool.
+	scene "scenes/Biker/WorldSmallTown0203.vcd" //Cool.
+	scene "scenes/Biker/Yes01.vcd" //Yes.
+	scene "scenes/Biker/Yes02.vcd" //Okay.
+	scene "scenes/Biker/Yes04.vcd" //Yeah.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting16.vcd" //Yeah.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic19.vcd" //Yeah.
+}
+Rule SurvivorSpottedGrenadeAutoBiker2 {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasGrenade IsNotAlone IsSaidSpotGrenade IsNotSaidSpotBiker IsPipeBomb IsWorldTalkBiker _auto_NotNoSpotting
+	ApplyContext "SaidSpotGrenade:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeAutoBiker2
+}
+
+Response SurvivorSpottedMolotovBiker {
+	scene "scenes/Biker/SpotGrenades02.vcd" //Molotov's over here.
+	scene "scenes/Biker/SpotGrenades04.vcd" //Molotov's over here.
+	scene "scenes/Biker/SpotGrenades07.vcd" //Molotovs!
+}
+Rule SurvivorSpottedMolotovBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsMolotov IsWorldTalkBiker
+	ApplyContext "SaidSpotMolotov:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedMolotovBiker
+}
+Rule SurvivorSpottedMolotovAutoBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto YesHasThrow IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpotBiker IsMolotov IsWorldTalkBiker YesHasMolotov _auto_NotNoSpotting IsNotSpeakingWeight0
+	ApplyContext "SaidSpotMolotov:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedMolotovBiker
+}
+Rule SurvivorSpottedMolotovAutoBiker2 {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasMolotov IsNotAlone IsSaidSpotMolotov IsNotSaidSpotBiker IsMolotov IsWorldTalkBiker _auto_NotNoSpotting
+	ApplyContext "SaidSpotMolotov:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeAutoBiker2
+}
+
+Response SurvivorSpottedHealthBiker {
+	scene "scenes/Biker/SpotFirstAid01.vcd" //First aid kit here!
+	scene "scenes/Biker/SpotFirstAid02.vcd" //First aid kit here!
+	scene "scenes/Biker/SpotFirstAid03.vcd" //First aid here!
+	scene "scenes/Biker/SpotFirstAid04.vcd" //First aid kits over here.
+	scene "scenes/Biker/SpotFirstAid05.vcd" //There's a first aid kit here.
+	scene "scenes/Biker/SpotFirstAid06.vcd" //First aid kits over here.
+	scene "scenes/Biker/SpotFirstAid07.vcd" //First aid kit over here.
+}
+Rule SurvivorSpottedHealthBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsFirstAidKit IsWorldTalkBiker
+	ApplyContext "SaidSpotHealth:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedHealthBiker
+}
+Rule SurvivorSpottedHealthAutoBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotHealth IsNotSaidSpotBiker IsFirstAidKit IsWorldTalkBiker YesHasFirstAidKit _auto_NotNoSpotting IsNotSpeakingWeight0
+	ApplyContext "SaidSpotHealth:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedHealthBiker
+}
+Rule SurvivorSpottedHealthAutoBiker2 {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasFirstAidKit IsNotAlone IsSaidSpotHealth IsNotSaidSpotBiker IsFirstAidKit IsWorldTalkBiker _auto_NotNoSpotting
+	ApplyContext "SaidSpotHealth:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeAutoBiker2
+}
+
+Response SurvivorSpottedPillsBiker {
+	scene "scenes/Biker/SpotPills01.vcd" //Pills here!
+}
+Rule SurvivorSpottedPillsBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsNotSmartLookAuto IsPainPills IsWorldTalkBiker
+	ApplyContext "SaidSpotPills:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedPillsBiker
+}
+Rule SurvivorSpottedPillsAutoBiker {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotPills IsNotSaidSpotBiker IsPainPills IsWorldTalkBiker YesHasPainPills _auto_NotNoSpotting IsNotSpeakingWeight0
+	ApplyContext "SaidSpotPills:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedPillsBiker
+}
+Rule SurvivorSpottedPillsAutoBiker2 {
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasPainPills IsNotAlone IsSaidSpotPills IsNotSaidSpotBiker IsPainPills IsWorldTalkBiker _auto_NotNoSpotting
+	ApplyContext "SaidSpotPills:1:5,SaidSpotBiker:1:20"
+	applycontexttoworld
+	Response SurvivorSpottedGrenadeAutoBiker2
+}
+
 Response SurvivorSpottedAdrenalineBiker {
 	scene "scenes/Biker/SpotPills01.vcd" //Pills here!
 }
@@ -7253,14 +7286,12 @@ Rule SurvivorSpottedAdrenalineBiker {
 	applycontexttoworld
 	Response SurvivorSpottedAdrenalineBiker
 }
-
 Rule SurvivorSpottedAdrenalineAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotAdrenaline IsNotSaidSpotBiker IsAdrenaline IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotAdrenaline:1:5,SaidSpotBiker:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedAdrenalineBiker
 }
-
 Rule SurvivorSpottedAdrenalineAutoBiker2 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasAdrenaline IsNotAlone IsSaidSpotAdrenaline IsNotSaidSpotBiker IsAdrenaline IsWorldTalkBiker _auto_NotNoSpotting
 	ApplyContext "SaidSpotAdrenaline:1:5,SaidSpotBiker:1:20"
@@ -7283,14 +7314,12 @@ Rule SurvivorSpottedDefibrillatorBiker {
 	applycontexttoworld
 	Response SurvivorSpottedDefibrillatorBiker
 }
-
 Rule SurvivorSpottedDefibrillatorAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidDefibrillator IsNotSaidSpotBiker IsDefibrillator IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotDefibrillator:1:5,SaidSpotBiker:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedDefibrillatorBiker
 }
-
 Rule SurvivorSpottedDefibrillatorAutoBiker2 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot NoHasDefibrillator IsNotAlone IsSaidSpotDefibrillator IsNotSaidSpotBiker IsDefibrillator IsWorldTalkBiker _auto_NotNoSpotting
 	ApplyContext "SaidSpotDefibrillator:1:5,SaidSpotBiker:1:20"
@@ -7307,14 +7336,12 @@ Rule SurvivorSpottedGrenadeLauncherBiker {
 	applycontexttoworld
 	Response SurvivorSpottedGrenadeLauncherBiker
 }
-
 Rule SurvivorSpottedGrenadeLauncherAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotgrenade_launcher IsNotSaidSpotBiker IsGrenade_Launcher IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotGrenade_Launcher:1:5,SaidSpotBiker:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedGrenadeLauncherBiker
 }
-
 Rule SurvivorSpottedGrenadeLauncherAutoBiker2 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsSaidSpotgrenade_launcher IsNotSaidSpotBiker IsGrenade_Launcher IsWorldTalkBiker _auto_NotNoSpotting
 	ApplyContext "SaidSpotGrenade_Launcher:1:5,SaidSpotBiker:1:20"
@@ -7476,7 +7503,6 @@ Rule SurvivorPickupAdrenalineBiker {
 }
 
 Response SurvivorPickupbaseball_batBiker {
-	scene "scenes/Biker/C6DLC3FIRSTSAFEROOM04.vcd" //Nice.
 	scene "scenes/Biker/Generic63.vcd" then Manager TakeShotgunGroovyLouis foo:0 0 //Groovy.
 	scene "scenes/Biker/Generic63.vcd" then TeenGirl TakeShotgunGroovyZoey foo:0 0 //Groovy.
 	scene "scenes/Biker/NiceJob01.vcd" //Nice.
@@ -7488,6 +7514,9 @@ Response SurvivorPickupbaseball_batBiker {
 	scene "scenes/Biker/WorldSmallTown0203.vcd" //Cool.
 	scene "scenes/Biker/Yes01.vcd" //Yes.
 	scene "scenes/Biker/Yes04.vcd" //Yeah.
+	scene "scenes/Biker/C6DLC3FIRSTSAFEROOM04.vcd" //Nice.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting16.vcd" //Yeah.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic19.vcd" //Yeah.
 }
 Rule SurvivorPickupbaseball_batBiker {
 	criteria ConceptPlayerPickup IsNotCoughing IsBiker IsPickedUpbaseball_bat IsNotSpeaking BikerNotPickedUpItem IsTalk IsTalkBiker IsWorldTalkBiker
@@ -7836,7 +7865,6 @@ Rule SurvivorSpottedMagnumBiker {
 	applycontexttoworld
 	Response SurvivorSpottedMagnumBiker
 }
-
 Rule SurvivorSpottedMagnumAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpotBiker IsMagnum IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpotBiker:1:20"
@@ -7850,7 +7878,6 @@ Rule SurvivorSpottedtonfaBiker {
 	applycontexttoworld
 	Response SurvivorSpottedWeaponBiker
 }
-
 Rule SurvivorSpottedtonfaAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpotBiker Istonfa IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpotBiker:1:20"
@@ -7868,7 +7895,6 @@ Rule SurvivorSpottedAutoShotgunBiker {
 	applycontexttoworld
 	Response SurvivorSpottedAutoShotgunBiker
 }
-
 Rule SurvivorSpottedAutoShotgunAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpotBiker IsAutoShotgun IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpotBiker:1:20"
@@ -7886,7 +7912,6 @@ Rule SurvivorSpottedHuntingRifleBiker {
 	applycontexttoworld
 	Response SurvivorSpottedHuntingRifleBiker
 }
-
 Rule SurvivorSpottedHuntingRifleAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpotBiker IsHuntingRifle IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpotBiker:1:20"
@@ -7911,7 +7936,6 @@ Rule SurvivorSpottedRifleBiker {
 	applycontexttoworld
 	Response SurvivorSpottedRifleBiker
 }
-
 Rule SurvivorSpottedRifleAutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpotBiker IsRifle IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpotBiker:1:20"
@@ -7929,7 +7953,6 @@ Rule SurvivorSpottedRifle_AK47Biker {
 	applycontexttoworld
 	Response SurvivorSpottedRifle_AK47Biker
 }
-
 Rule SurvivorSpottedRifle_AK47AutoBiker {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsBiker IsTalk IsTalkBiker IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotWeapons IsNotSaidSpotBiker IsRifle_AK47 IsWorldTalkBiker _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotWeapons:1:5,SaidSpotBiker:1:20"
@@ -8224,9 +8247,20 @@ Response What3Biker {
 	scene "scenes/Biker/C6DLC3TANKINTRAINYARD10.vcd" then TeenGirl LaughFrancis foo:0 0 //What?
 	scene "scenes/Biker/Generic65.vcd" then TeenGirl LaughFrancis foo:0 0 //What?
 	scene "scenes/Biker/GenericResponses02.vcd" then TeenGirl LaughFrancis foo:0 0 //[Disbelief] What?
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic09.vcd" then TeenGirl LaughFrancis foo:0 0 //What? Seriously, what?
 }
 Rule What3Biker {
-	criteria What3 IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker
+	criteria What3 IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker ChanceToFire50Percent
 	Response What3Biker
 }
 
+criterion "HeardThat" "Concept" "HeardThat" required
+Response HeardThatBiker {
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting27.vcd" //HEY!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting28.vcd" //HEY!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting29.vcd" //HEY! I heard that!
+}
+Rule HeardThatBiker {
+	criteria HeardThat IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker IsSubjectDistNear500 ChanceToFire50Percent
+	Response What3Biker
+}

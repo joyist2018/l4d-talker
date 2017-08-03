@@ -1,6 +1,3 @@
-//TeenGirl Response Rule File
-//For L4D2 by New Day & Morning Nine Nine
-
 criterion "TeenGirlNotPickedUpItem" "TeenGirlPickedUpItem" "!=1" required weight 0
 criterion "IsTeenGirlFriendlyFire" "worldTeenGirlFriendlyFire" "1" required weight 0
 criterion "IsNotTeenGirlFriendlyFire" "worldTeenGirlFriendlyFire" "!=1" required weight 0
@@ -24,7 +21,7 @@ criterion "ConceptZoeyStory" "Concept" "ZoeyStory" required
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankTeenGirl {
-	speak "TeenGirl_Blank" noscene //Blank
+	speak "TeenGirl_Blank" noscene
 }
 
 Response PlayerNiceShotTeenGirl {
@@ -482,12 +479,15 @@ Response BotNoteHumanAttentionTeenGirl {
 	scene "scenes/TeenGirl/GenericResponses08.vcd" //Yeah, let's do it.
 	scene "scenes/TeenGirl/ImWithYou10.vcd" //I'm here.
 	scene "scenes/TeenGirl/ImWithYou11.vcd" //Let's go.
+	scene "scenes/TeenGirl/ImWithYou22.vcd" //Right behind you.
 	scene "scenes/TeenGirl/ImWithYou26.vcd" //I'm with you.
 	scene "scenes/TeenGirl/ScenarioJoin13.vcd" //Hey, I'm here.
 	scene "scenes/TeenGirl/ScenarioJoin14.vcd" //Hey, I'm here.
 	scene "scenes/TeenGirl/ScenarioJoin15.vcd" //I'm here!
 	scene "scenes/TeenGirl/ScenarioJoin16.vcd" //I'm here!
 	scene "scenes/TeenGirl/ScenarioJoin21.vcd" //Hey, I'm here.
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat15.vcd" //Hey.
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat16.vcd" //Hey.
 }
 Rule BotNoteHumanAttentionTeenGirl {
 	criteria ConceptSurvivorBotNoteHumanAttention IsNotCoughing IsNotSpeaking IsTeenGirl IsNotBotAttention IsTalk IsTalkTeenGirl IsNotIncapacitated IsInStartArea IsWorldTalkTeenGirl
@@ -500,13 +500,13 @@ Response BotReassureComingTeenGirl {
 	scene "scenes/TeenGirl/Yes01.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/TeenGirl/Yes02.vcd" predelay "1,3.5" //Yes.
 	scene "scenes/TeenGirl/Yes04.vcd" predelay "1,3.5" //Okay.
-	scene "scenes/TeenGirl/Yes05.vcd" predelay "1,3.5" //Y'allright.
+	scene "scenes/TeenGirl/Yes05.vcd" predelay "1,3.5" //Y'alright.
 	scene "scenes/TeenGirl/Yes06.vcd" predelay "1,3.5" //Yeah, okay
 	scene "scenes/TeenGirl/Yes08.vcd" predelay "1,3.5" //Yep
 	scene "scenes/TeenGirl/Yes09.vcd" predelay "1,3.5" //Yeah sure.
 	scene "scenes/TeenGirl/Yes10.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/TeenGirl/Yes13.vcd" predelay "1,3.5" //Okay.
-	scene "scenes/TeenGirl/Yes14.vcd" predelay "1,3.5" //Y'allright.
+	scene "scenes/TeenGirl/Yes14.vcd" predelay "1,3.5" //Y'alright.
 	scene "scenes/TeenGirl/Yes15.vcd" predelay "1,3.5" //Yeah, okay
 	scene "scenes/TeenGirl/Yes16.vcd" predelay "1,3.5" //Yes.
 	scene "scenes/TeenGirl/Yes17.vcd" predelay "1,3.5" //Yep
@@ -526,7 +526,7 @@ Response BotReassureNearbyTeenGirl {
 	scene "scenes/TeenGirl/ImWithYou18.vcd" predelay "1,3.5" //Coming
 	scene "scenes/TeenGirl/ImWithYou19.vcd" predelay "1,3.5" //I'll be there.
 	scene "scenes/TeenGirl/ImWithYou20.vcd" predelay "1,3.5" //I'm there.
-	scene "scenes/TeenGirl/ImWithYou22.vcd" predelay "1,3.5" //Right behind you!
+	scene "scenes/TeenGirl/ImWithYou22.vcd" predelay "1,3.5" //Right behind you.
 	scene "scenes/TeenGirl/ImWithYou26.vcd" predelay "1,3.5" //I'm with you.
 	scene "scenes/TeenGirl/ImWithYou27.vcd" predelay "1,3.5" //I got your back.
 	scene "scenes/TeenGirl/ImWithYou31.vcd" predelay "1,3.5" //Right behind you!
@@ -556,13 +556,13 @@ Response BotYesReadyTeenGirl {
 	scene "scenes/TeenGirl/Yes01.vcd" predelay "0,1.0" //Yeah.
 	scene "scenes/TeenGirl/Yes02.vcd" predelay "0,1.0" //Yes.
 	scene "scenes/TeenGirl/Yes04.vcd" predelay "0,1.0" //Okay.
-	scene "scenes/TeenGirl/Yes05.vcd" predelay "0,1.0" //Y'allright.
+	scene "scenes/TeenGirl/Yes05.vcd" predelay "0,1.0" //Y'alright.
 	scene "scenes/TeenGirl/Yes06.vcd" predelay "0,1.0" //Yeah, okay
 	scene "scenes/TeenGirl/Yes08.vcd" predelay "0,1.0" //Yep
 	scene "scenes/TeenGirl/Yes09.vcd" predelay "0,1.0" //Yeah sure.
 	scene "scenes/TeenGirl/Yes10.vcd" predelay "0,1.0" //Yeah.
 	scene "scenes/TeenGirl/Yes13.vcd" predelay "0,1.0" //Okay.
-	scene "scenes/TeenGirl/Yes14.vcd" predelay "0,1.0" //Y'allright.
+	scene "scenes/TeenGirl/Yes14.vcd" predelay "0,1.0" //Y'alright.
 	scene "scenes/TeenGirl/Yes15.vcd" predelay "0,1.0" //Yeah, okay
 	scene "scenes/TeenGirl/Yes16.vcd" predelay "0,1.0" //Yes.
 	scene "scenes/TeenGirl/Yes17.vcd" predelay "0,1.0" //Yep
@@ -586,13 +586,13 @@ Response BotYesReadyXTeenGirl {
 	scene "scenes/TeenGirl/Yes01.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/TeenGirl/Yes02.vcd" predelay "1,3.5" //Yes.
 	scene "scenes/TeenGirl/Yes04.vcd" predelay "1,3.5" //Okay.
-	scene "scenes/TeenGirl/Yes05.vcd" predelay "1,3.5" //Y'allright.
+	scene "scenes/TeenGirl/Yes05.vcd" predelay "1,3.5" //Y'alright.
 	scene "scenes/TeenGirl/Yes06.vcd" predelay "1,3.5" //Yeah, okay
 	scene "scenes/TeenGirl/Yes08.vcd" predelay "1,3.5" //Yep
 	scene "scenes/TeenGirl/Yes09.vcd" predelay "1,3.5" //Yeah sure.
 	scene "scenes/TeenGirl/Yes10.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/TeenGirl/Yes13.vcd" predelay "1,3.5" //Okay.
-	scene "scenes/TeenGirl/Yes14.vcd" predelay "1,3.5" //Y'allright.
+	scene "scenes/TeenGirl/Yes14.vcd" predelay "1,3.5" //Y'alright.
 	scene "scenes/TeenGirl/Yes15.vcd" predelay "1,3.5" //Yeah, okay
 	scene "scenes/TeenGirl/Yes16.vcd" predelay "1,3.5" //Yes.
 	scene "scenes/TeenGirl/Yes17.vcd" predelay "1,3.5" //Yep
@@ -620,7 +620,7 @@ Response PlayerToTheRescueTeenGirl {
 	scene "scenes/TeenGirl/ImWithYou32.vcd" predelay "0.75,1.5" //I'm coming!
 }
 Rule PlayerToTheRescueTeenGirl {
-	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600 IsWorldTalkTeenGirl
+	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsNotSpeaking IsTeenGirl IsTalk IsTalkTeenGirl NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600 IsWorldTalkTeenGirl
 	ApplyContext "SaidRescueComing:1:20"
 	applycontexttoworld
 	Response PlayerToTheRescueTeenGirl
@@ -703,7 +703,7 @@ Rule HowitzerBurnEnd02TeenGirl {
 //DLC2 - Finale
 Response CrashFinaleGenerator2OnSpkTeenGirl {
 	scene "scenes/TeenGirl/dlc2m2finalebuttonpresslift01.vcd" then Biker Finalewaiting foo:0 0.1 //Thats right! Come to mama
-	scene "scenes/TeenGirl/Taunt18.vcd" then Manager Finalewaiting foo:0 0.1 //All right!
+	scene "scenes/TeenGirl/Taunt18.vcd" then Manager Finalewaiting foo:0 0.1 //Alright!
 	scene "scenes/TeenGirl/Taunt21.vcd" then Manager Finalewaiting foo:0 0.1 //YESSS!
 	scene "scenes/TeenGirl/Taunt35.vcd" then Biker Finalewaiting foo:0 0.1 //YESSS!
 }
@@ -713,7 +713,7 @@ Rule CrashFinaleGenerator2OnSpkTeenGirl {
 }
 
 Response CrashFinaleGenerator2SpeakTeenGirl {
-	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself..
 	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen202.vcd" //Come on, come on, come ON! Come on, god dammit, come ON!
 	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen203.vcd" //Come on, stupid generator for jerks.
 	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen301.vcd" //Damn it damn it damn it damn it! Stinking generator, why are you TAKING so LONG?!
@@ -878,9 +878,9 @@ Rule CrashFinaleTruckResp02TeenGirl {
 }
 
 Response IntroCrashWalkingTeenGirl {
-	scene "scenes/TeenGirl/DLC2Intro09.vcd" then Manager IntroCrashWalkingB foo:0 0.05 //I knew it was too good to last. RARE
+	scene "scenes/TeenGirl/DLC2Intro09.vcd" then Manager IntroCrashWalkingB foo:0 0.05 //I knew it was too good to last.
 	scene "scenes/TeenGirl/DLC2Intro10.vcd" then Manager IntroCrashWalkingB foo:0 0.05 //Well, boys, I guess we're walking.
-	scene "scenes/TeenGirl/DLC2Intro11.vcd" then Manager IntroCrashWalkingB foo:0 0.05 //Well, at least we got out of the city. And.. into.. a different city.. RARE
+	scene "scenes/TeenGirl/DLC2Intro11.vcd" then Manager IntroCrashWalkingB foo:0 0.05 //Well, at least we got out of the city. And.. into.. a different city..
 }
 Rule IntroCrashWalkingTeenGirl {
 	criteria ConceptIntroCrashWalking IsTeenGirl
@@ -919,10 +919,10 @@ Rule CrashCourseR01TeenGirl {
 }
 
 Response CrashCourseR03TeenGirl {
-	scene "scenes/TeenGirl/DLC2Misc04.vcd" //He.. No! He was a zombie.. RARE
+	scene "scenes/TeenGirl/DLC2Misc04.vcd" //He.. No! He was a zombie..
 	scene "scenes/TeenGirl/DLC2Misc05.vcd" //Okay, you know what? He was a zombie. ZOMBIE, ZOMBIE, ZOMBIE. Not a pilot. He was a ZOMBIE, Francis!
 	scene "scenes/TeenGirl/DLC2Misc07.vcd" //ZOMBIE! Francis, He Was A ZOMBIE!
-	scene "scenes/TeenGirl/DLC2Misc08.vcd" //He was a zombie, Francis. RARE
+	scene "scenes/TeenGirl/DLC2Misc08.vcd" //He was a zombie, Francis.
 	scene "scenes/TeenGirl/DLC2TrainWreck01.vcd" //The chopper pilot was a ZOMBIE, Francis!
 	scene "scenes/TeenGirl/DLCZombieTruck01.vcd" //The pilot was a zombie, Francis!
 	scene "scenes/TeenGirl/dlc2m2finaletruckend02.vcd" //The pilot was a zombie, Francis!
@@ -1111,8 +1111,8 @@ Rule PlayerRemarkcrashcourse01_path25TeenGirl {
 
 Response PlayerRemarkcrashcourse02_path02TeenGirl {
 	scene "scenes/TeenGirl/DLC2MetalSupply01.vcd" //Metal Supply! Oh thank God. I was running low on metal.
-	scene "scenes/TeenGirl/DLC2MetalSupply02.vcd" //Metal Supply! Oh thank God. I was running low on metal. RARE
-	scene "scenes/TeenGirl/DLC2MetalSupply03.vcd" //Metal Supply! Oh thank God. I was running low on metal. RARE
+	scene "scenes/TeenGirl/DLC2MetalSupply02.vcd" //Metal Supply! Oh thank God. I was running low on metal.
+	scene "scenes/TeenGirl/DLC2MetalSupply03.vcd" //Metal Supply! Oh thank God. I was running low on metal.
 	scene "scenes/TeenGirl/DLC2M2Directional01.vcd" //Which way to the depot?
 }
 Rule PlayerRemarkcrashcourse02_path02TeenGirl {
@@ -1252,7 +1252,7 @@ Rule IntroCrashR11TeenGirl {
 
 Response IntroCrashR19TeenGirl {
 	scene "scenes/TeenGirl/DLC2Intro01.vcd" then Biker IntroCrashR20 foo:0 0.05 //He turned into a zombie, Francis! He wasn't gonna LAND the thing!
-	scene "scenes/TeenGirl/DLC2Misc02.vcd" then Biker IntroCrashR20 foo:0 0.05 //We would've been the in-flight snack. RARE
+	scene "scenes/TeenGirl/DLC2Misc02.vcd" then Biker IntroCrashR20 foo:0 0.05 //We would've been the in-flight snack.
 }
 Rule IntroCrashR19TeenGirl {
 	criteria ConceptIntroCrashR19 IsTeenGirl
@@ -1260,11 +1260,11 @@ Rule IntroCrashR19TeenGirl {
 }
 
 Response IntroCrashR28TeenGirl {
-	scene "scenes/TeenGirl/DLC2Misc02.vcd" //We would've been the in-flight snack. RARE
+	scene "scenes/TeenGirl/DLC2Misc02.vcd" //We would've been the in-flight snack.
 	scene "scenes/TeenGirl/DLC2Misc03.vcd" //He was a ZOMBIE, Francis!
-	scene "scenes/TeenGirl/DLC2Misc04.vcd" //He.. No! He was a zombie.. RARE
+	scene "scenes/TeenGirl/DLC2Misc04.vcd" //He.. No! He was a zombie..
 	scene "scenes/TeenGirl/DLC2Misc07.vcd" //ZOMBIE! Francis, He Was A ZOMBIE!
-	scene "scenes/TeenGirl/DLC2Misc08.vcd" //He was a zombie, Francis. RARE
+	scene "scenes/TeenGirl/DLC2Misc08.vcd" //He was a zombie, Francis.
 	scene "scenes/TeenGirl/DLC2TrainWreck01.vcd" //The chopper pilot was a ZOMBIE, Francis!
 	scene "scenes/TeenGirl/DLCZombieTruck01.vcd" //The pilot was a zombie, Francis!
 	scene "scenes/TeenGirl/dlc2m2finaletruckend02.vcd" //The pilot was a zombie, Francis!
@@ -1275,9 +1275,9 @@ Rule IntroCrashR28TeenGirl {
 }
 
 Response IntroCrashR33TeenGirl {
-	scene "scenes/TeenGirl/DLC2Intro09.vcd" then Biker IntroCrashR27 foo:0 0.05 //RARE
+	scene "scenes/TeenGirl/DLC2Intro09.vcd" then Biker IntroCrashR27 foo:0 0.05
 	scene "scenes/TeenGirl/DLC2Intro10.vcd" then Biker IntroCrashR27 foo:0 0.05 //Well, boys, I guess we're walking.
-	scene "scenes/TeenGirl/DLC2Intro11.vcd" then Biker IntroCrashR27 foo:0 0.05 //RARE
+	scene "scenes/TeenGirl/DLC2Intro11.vcd" then Biker IntroCrashR27 foo:0 0.05
 }
 Rule IntroCrashR33TeenGirl {
 	criteria ConceptIntroCrashR33 IsTeenGirl
@@ -1328,7 +1328,7 @@ Rule CrashCourseI01TeenGirl {
 }
 
 Response PlayerRemarkcrashcourse02_introTeenGirl {
-	scene "scenes/TeenGirl/DLC2M2Saferoom01.vcd" then any CrashCourseI01 foo:0 0.05 //We should check out that truck depot. RARE
+	scene "scenes/TeenGirl/DLC2M2Saferoom01.vcd" then any CrashCourseI01 foo:0 0.05 //We should check out that truck depot.
 	scene "scenes/TeenGirl/DLC2M2Saferoom02.vcd" then any CrashCourseI01 foo:0 0.05 //We should check out that truck depot.
 }
 Rule PlayerRemarkcrashcourse02_introTeenGirl {
@@ -1396,7 +1396,7 @@ Rule SurvivorBoomerBlunderTeenGirl {
 
 //Finale Speech
 Response SurvivorFinaleTriggeredBoatTeenGirl {
-	scene "scenes/TeenGirl/RadioUsedBoat01.vcd" predelay ".5,1" //Allright guys, a boat's on its way.
+	scene "scenes/TeenGirl/RadioUsedBoat01.vcd" predelay ".5,1" //Alright guys, a boat's on its way.
 }
 Rule SurvivorFinaleTriggeredBoatTeenGirl {
 	criteria ConceptFinaleTriggered IsTriggeredByTeenGirl ismap_l4d_smalltown05_houseboat IsNotSaidRadioTriggered IsTalk IsTalkTeenGirl IsTeenGirl IsNotIncapacitated IsWithThree
@@ -1826,9 +1826,9 @@ Rule SurvivorSpottedFrancisFarTeenGirl {
 }
 
 Response SurvivorSpottedGrenadeTeenGirl {
-	scene "scenes/TeenGirl/SpotGrenades05.vcd" //There's a pipebomb here.
-	scene "scenes/TeenGirl/SpotGrenades09.vcd" //There's a pipebomb here.
-	scene "scenes/TeenGirl/SpotGrenades10.vcd" //I got a pipebomb over here.
+	scene "scenes/TeenGirl/SpotGrenades05.vcd" //There's a pipe bomb here.
+	scene "scenes/TeenGirl/SpotGrenades09.vcd" //There's a pipe bomb here.
+	scene "scenes/TeenGirl/SpotGrenades10.vcd" //I got a pipe bomb over here.
 }
 Rule SurvivorSpottedGrenadeTeenGirl {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotSmartLookAuto IsPipeBomb IsWorldTalkTeenGirl
@@ -1858,11 +1858,11 @@ Rule SurvivorSpottedGrenadeAutoTeenGirl2 {
 }
 
 Response SurvivorSpottedHealthTeenGirl {
-	scene "scenes/TeenGirl/SpotFirstAid01.vcd" //First Aid Kit here!
-	scene "scenes/TeenGirl/SpotFirstAid02.vcd" //First Aid here!
+	scene "scenes/TeenGirl/SpotFirstAid01.vcd" //First aid kit here!
+	scene "scenes/TeenGirl/SpotFirstAid02.vcd" //First aid here!
 	scene "scenes/TeenGirl/SpotFirstAid03.vcd" //Grab some first aid
-	scene "scenes/TeenGirl/SpotFirstAid04.vcd" //First Aid Kit here!
-	scene "scenes/TeenGirl/SpotFirstAid05.vcd" //First Aid here!
+	scene "scenes/TeenGirl/SpotFirstAid04.vcd" //First aid kit here!
+	scene "scenes/TeenGirl/SpotFirstAid05.vcd" //First aid here!
 	scene "scenes/TeenGirl/SpotFirstAid06.vcd" //Grab some first aid
 	scene "scenes/TeenGirl/SpotFirstAid07.vcd" //Grab some first aid
 	scene "scenes/TeenGirl/SpotFirstAid08.vcd" //First aid kits over here.
@@ -1950,7 +1950,7 @@ Rule SurvivorSpottedMolotovAutoTeenGirl {
 }
 
 Rule SurvivorSpottedMolotovAutoTeenGirl2 {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto IsNotInSafeSpot NoHasMolotov IsNotAlone IsSaidSpotMolotov IsNotSaidSpotTeenGirl IsMolotov IsWorldTalkTeenGirl _auto_NotNoSpotting
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsSmartLookAuto IsNotInSafeSpot YesHasThrow NoHasMolotov IsNotAlone IsSaidSpotMolotov IsNotSaidSpotTeenGirl IsMolotov IsWorldTalkTeenGirl _auto_NotNoSpotting
 	ApplyContext "SaidSpotMolotov:1:5,SaidSpotTeenGirl:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedGrenadeAutoTeenGirl2
@@ -2350,6 +2350,8 @@ Response PlayerAlertGiveItemTeenGirl {
 	scene "scenes/TeenGirl/AlertGiveItem11.vcd" //Take this.
 	scene "scenes/TeenGirl/AlertGiveItem12.vcd" //Here.
 	scene "scenes/TeenGirl/AlertGiveItem15.vcd" //Here you go, you can have this.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleFinalGas03.vcd" //Take this, good luck.
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting24.vcd" //Good luck.
 }
 Rule PlayerAlertGiveItemTeenGirl {
 	criteria ConceptPlayerAlertGiveItem IsTeenGirl
@@ -2377,7 +2379,7 @@ Rule PlayerAlertGiveItemStopTeenGirl {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidTeenGirl {
-	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidTeenGirl
+	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidTeenGirl
 }
 Rule PlayerAlertGiveItemStopAnFirstAidTeenGirl {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl NoHasFirstAidKit IsWorldTalkTeenGirl
@@ -2385,7 +2387,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidTeenGirl {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidTeenGirl {
-	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidTeenGirl
+	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidTeenGirl
 }
 Rule PlayerAlertGiveItemStopQnFirstAidTeenGirl {
 	criteria ConceptBashWithItem IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsItemFirstAidKit IsWorldTalkTeenGirl IsNotSpeakingWeight0
@@ -2393,7 +2395,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidTeenGirl {
 }
 
 Response PlayerAlertGiveItemStopMedicalTeenGirl {
-	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalTeenGirl {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl NoHasPainPills NoHasAdrenaline IsWorldTalkTeenGirl
@@ -2401,7 +2403,7 @@ Rule PlayerAlertGiveItemStopMedicalTeenGirl {
 }
 
 Response PlayerAlertGiveItemMedicalTeenGirl {
-	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/TeenGirl/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalTeenGirl {
 	criteria ConceptBashWithItem IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsItemMedical IsWorldTalkTeenGirl IsNotSpeakingWeight0
@@ -2518,7 +2520,7 @@ Response SurvivorTauntResponseTeenGirl {
 	scene "scenes/TeenGirl/Hurrah52.vcd" //Whoo!
 	scene "scenes/TeenGirl/Taunt02.vcd" //Thats right. [grim, determined]
 	scene "scenes/TeenGirl/Taunt13.vcd" //Awesome!
-	scene "scenes/TeenGirl/Taunt18.vcd" //All right!
+	scene "scenes/TeenGirl/Taunt18.vcd" //Alright!
 	scene "scenes/TeenGirl/Taunt19.vcd" //Awesome!
 	scene "scenes/TeenGirl/Taunt20.vcd" //YEAH!
 	scene "scenes/TeenGirl/Taunt21.vcd" //YESSS!
@@ -2530,7 +2532,7 @@ Response SurvivorTauntResponseTeenGirl {
 	scene "scenes/TeenGirl/Taunt35.vcd" //YESSS!
 	scene "scenes/TeenGirl/Taunt39.vcd" //YEAHHHH!
 	scene "scenes/TeenGirl/DLC2BulletinBoard01.vcd" //'Funny, sexy brunette zombie killer wanted to lead three helpless men to safety.' Huh.
-	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself..
 	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM01.vcd" //Ohhhh. Boo.
 }
 Rule SurvivorTauntResponseTeenGirl {
@@ -2549,7 +2551,7 @@ Response SurvivorTauntResponseXTeenGirl {
 	scene "scenes/TeenGirl/Hurrah52.vcd" //Whoo!
 	scene "scenes/TeenGirl/Taunt02.vcd" //Thats right. [grim, determined]
 	scene "scenes/TeenGirl/Taunt13.vcd" //Awesome!
-	scene "scenes/TeenGirl/Taunt18.vcd" //All right!
+	scene "scenes/TeenGirl/Taunt18.vcd" //Alright!
 	scene "scenes/TeenGirl/Taunt19.vcd" //Awesome!
 	scene "scenes/TeenGirl/Taunt20.vcd" //YEAH!
 	scene "scenes/TeenGirl/Taunt21.vcd" //YESSS!
@@ -2915,12 +2917,12 @@ Rule HelpResponseLouisTeenGirl {
 
 //Remarkable Conversation
 Response crashcourse01_path01zrTeenGirl {
-	scene "scenes/TeenGirl/DLC2Misc02.vcd" //We would've been the in-flight snack. RARE
+	scene "scenes/TeenGirl/DLC2Misc02.vcd" //We would've been the in-flight snack.
 	scene "scenes/TeenGirl/DLC2Misc03.vcd" //He was a ZOMBIE, Francis!
-	scene "scenes/TeenGirl/DLC2Misc04.vcd" //He.. No! He was a zombie.. RARE
+	scene "scenes/TeenGirl/DLC2Misc04.vcd" //He.. No! He was a zombie..
 	scene "scenes/TeenGirl/DLC2Misc05.vcd" //Okay, you know what? He was a zombie. ZOMBIE, ZOMBIE, ZOMBIE. Not a pilot. He was a ZOMBIE, Francis!
 	scene "scenes/TeenGirl/DLC2Misc07.vcd" //ZOMBIE! Francis, He Was A ZOMBIE!
-	scene "scenes/TeenGirl/DLC2Misc08.vcd" //He was a zombie, Francis. RARE
+	scene "scenes/TeenGirl/DLC2Misc08.vcd" //He was a zombie, Francis.
 	scene "scenes/TeenGirl/DLC2TrainWreck01.vcd" //The chopper pilot was a ZOMBIE, Francis!
 	scene "scenes/TeenGirl/DLCZombieTruck01.vcd" //The pilot was a zombie, Francis!
 	scene "scenes/TeenGirl/dlc2m2finaletruckend02.vcd" //The pilot was a zombie, Francis!
@@ -2929,7 +2931,6 @@ Rule crashcourse01_path01zrTeenGirl {
 	criteria Conceptcrashcourse01_path01zresp IsNotCoughing NotInCombat IsTeenGirl IsTalk IsTalkTeenGirl
 	Response crashcourse01_path01zrTeenGirl
 }
-
 
 //RemarkableVocalize
 Response PlayerAirport02CraneStartedTeenGirl {
@@ -4873,7 +4874,7 @@ Response PlayerLaughTeenGirl {
 	scene "scenes/TeenGirl/Laughter20.vcd" //<Short laugh>
 	scene "scenes/TeenGirl/Laughter21.vcd" //<Short laugh>
 	scene "scenes/TeenGirl/PositiveNoise02.vcd" //[laugh]
-	scene "scenes/TeenGirl/DLC2GasTanks02.vcd" then Biker CrashYerKiddingZ foo:0 0.05 //Hahaha farting RARE
+	scene "scenes/TeenGirl/DLC2GasTanks02.vcd" then Biker CrashYerKiddingZ foo:0 0.05 //Hahaha farting
 }
 Rule PlayerLaughTeenGirl {
 	criteria ConceptPlayerLaugh IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotAlone
@@ -4999,6 +5000,10 @@ Response PlayerNoTeenGirl {
 	scene "scenes/TeenGirl/NegativeNoise02.vcd" //[Improv non-verbal displeasure sounds]
 	scene "scenes/TeenGirl/NegativeNoise09.vcd" //[Improv non-verbal displeasure sounds]
 	scene "scenes/TeenGirl/NegativeNoise10.vcd" //[Improv non-verbal displeasure sounds]
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting25.vcd" //Not exactly.
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting27.vcd" //Well.. no.
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting28.vcd" //Umm, no, I can't.
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting29.vcd" //Umm, no.
 }
 Rule PlayerNoTeenGirl {
 	criteria ConceptPlayerNo IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotAlone
@@ -5164,7 +5169,7 @@ Response SorryABillTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3BILLDIES10.vcd" then NamVet ConceptBlock622_N foo:0 -2.4 //I'm sorry Bill. I love you!
 }
 Rule SorryABillTeenGirl {
-	criteria SorryA IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl SubjectIsNamVet IsSubjectDistNear400 ChanceToFire30Percent IsWorldTalkTeenGirl
+	criteria SorryA IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl SubjectIsNamVet IsSubjectDistNear400 ChanceToFire5Percent IsWorldTalkTeenGirl
 	Response SorryABillTeenGirl
 }
 
@@ -5198,7 +5203,7 @@ Response PlayerSorryBillTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3BILLDIES10.vcd" then NamVet ConceptBlock622_N foo:0 -2.4 //I'm sorry Bill. I love you!
 }
 Rule PlayerSorryBillTeenGirl {
-	criteria ConceptPlayerSorry IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl SubjectIsNamVet IsSubjectDistNear400 ChanceToFire30Percent IsWorldTalkTeenGirl
+	criteria ConceptPlayerSorry IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl SubjectIsNamVet IsSubjectDistNear400 ChanceToFire5Percent IsWorldTalkTeenGirl
 	Response PlayerSorryBillTeenGirl
 }
 
@@ -5212,7 +5217,7 @@ Response PlayerThanksTeenGirl {
 	scene "scenes/TeenGirl/ScenarioJoin12.vcd" predelay ".2,.5" //Hello!
 }
 Rule PlayerThanksTeenGirl {
-	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsHealthy5
+	criteria ConceptPlayerThanks IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsNotHealthyHalf
 	Response PlayerThanksTeenGirl
 }
 
@@ -5287,13 +5292,13 @@ Response PlayerYesTeenGirl {
 	scene "scenes/TeenGirl/Yes01.vcd" //Yeah.
 	scene "scenes/TeenGirl/Yes02.vcd" //Yes.
 	scene "scenes/TeenGirl/Yes04.vcd" //Okay.
-	scene "scenes/TeenGirl/Yes05.vcd" //Y'allright.
+	scene "scenes/TeenGirl/Yes05.vcd" //Y'alright.
 	scene "scenes/TeenGirl/Yes06.vcd" //Yeah, okay
 	scene "scenes/TeenGirl/Yes08.vcd" //Yep
 	scene "scenes/TeenGirl/Yes09.vcd" //Yeah sure.
 	scene "scenes/TeenGirl/Yes10.vcd" //Yeah.
 	scene "scenes/TeenGirl/Yes13.vcd" //Okay.
-	scene "scenes/TeenGirl/Yes14.vcd" //Y'allright.
+	scene "scenes/TeenGirl/Yes14.vcd" //Y'alright.
 	scene "scenes/TeenGirl/Yes15.vcd" //Yeah, okay
 	scene "scenes/TeenGirl/Yes16.vcd" //Yes.
 	scene "scenes/TeenGirl/Yes17.vcd" //Yep
@@ -5572,7 +5577,7 @@ Rule PlayerHeardWitchTeenGirl {
 
 Response PlayerHurrahTeenGirl {
 	scene "scenes/TeenGirl/Hurrah07.vcd" then Any PlayerHurrahAlso foo:0 0 //I think we're gonna make it
-	scene "scenes/TeenGirl/Hurrah10.vcd" then Any PlayerHurrahAlso foo:0 0 //We're doing all right.
+	scene "scenes/TeenGirl/Hurrah10.vcd" then Any PlayerHurrahAlso foo:0 0 //We're doing alright.
 	scene "scenes/TeenGirl/Hurrah13.vcd" then Any PlayerHurrahAlso foo:0 0 //We're gonna be okay
 	scene "scenes/TeenGirl/Hurrah18.vcd" then Any PlayerHurrahAlso foo:0 0 //We are kickin' ass
 	scene "scenes/TeenGirl/Hurrah19.vcd" then Any PlayerHurrahAlso foo:0 0 //No stopping us!
@@ -5580,7 +5585,7 @@ Response PlayerHurrahTeenGirl {
 	scene "scenes/TeenGirl/Hurrah23.vcd" then Any PlayerHurrahAlso foo:0 0 //Well, that was refreshing
 	scene "scenes/TeenGirl/Hurrah31.vcd" then Any PlayerHurrahAlso foo:0 0 //Oh god, we're gonna be okay
 	scene "scenes/TeenGirl/Hurrah35.vcd" then Any PlayerHurrahAlso foo:0 0 //We might actually make it through this
-	scene "scenes/TeenGirl/Hurrah38.vcd" then Any PlayerHurrahAlso foo:0 0 //We're doing all right.
+	scene "scenes/TeenGirl/Hurrah38.vcd" then Any PlayerHurrahAlso foo:0 0 //We're doing alright.
 	scene "scenes/TeenGirl/Hurrah46.vcd" then Any PlayerHurrahAlso foo:0 0 //Oh, thank god!
 	scene "scenes/TeenGirl/Hurrah48.vcd" then Any PlayerHurrahAlso foo:0 0 //Wow, I can't believe we did that.
 	scene "scenes/TeenGirl/Hurrah53.vcd" then Any PlayerHurrahAlso foo:0 0 //We are awesome together.
@@ -5662,6 +5667,13 @@ Response SurvivorSpawnTeenGirl {
 	scene "scenes/TeenGirl/ScenarioJoin02.vcd" //Hello!
 	scene "scenes/TeenGirl/ScenarioJoin07.vcd" //Hello!
 	scene "scenes/TeenGirl/ScenarioJoin12.vcd" //Hello!
+	scene "scenes/TeenGirl/ScenarioJoin13.vcd" //Hey, I'm here.
+	scene "scenes/TeenGirl/ScenarioJoin14.vcd" //Hey, I'm here.
+	scene "scenes/TeenGirl/ScenarioJoin15.vcd" //I'm here!
+	scene "scenes/TeenGirl/ScenarioJoin16.vcd" //I'm here!
+	scene "scenes/TeenGirl/ScenarioJoin21.vcd" //Hey, I'm here.
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat15.vcd" //Hey.
+	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat16.vcd" //Hey.
 }
 Rule SurvivorSpawnTeenGirl {
 	criteria ConceptPlayerScenarioJoin IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsNotAlone
@@ -5669,17 +5681,11 @@ Rule SurvivorSpawnTeenGirl {
 }
 
 Response SurvivorSpawnLastMainstreetTeenGirl {
-	scene "scenes/TeenGirl/ScenarioJoin02.vcd" //Hello!
-	scene "scenes/TeenGirl/ScenarioJoin07.vcd" //Hello!
-	scene "scenes/TeenGirl/ScenarioJoin12.vcd" //Hello!
-	scene "scenes/TeenGirl/ScenarioJoin13.vcd" //Hey, I'm here.
-	scene "scenes/TeenGirl/ScenarioJoin14.vcd" //Hey, I'm here.
-	scene "scenes/TeenGirl/ScenarioJoin15.vcd" //I'm here!
-	scene "scenes/TeenGirl/ScenarioJoin16.vcd" //I'm here!
-	scene "scenes/TeenGirl/ScenarioJoin21.vcd" //Hey, I'm here.
+	scene "scenes/TeenGirl/ScenarioJoinLast01.vcd" //We're all here
+	scene "scenes/TeenGirl/ScenarioJoinLast02.vcd" //Well, we're all here
 }
 Rule SurvivorSpawnLastMainstreetTeenGirl {
-	criteria ConceptPlayerScenarioJoinLast IsTeenGirl IsSmalltown04 IsNotAlone
+	criteria ConceptPlayerScenarioJoinLast IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsEveryoneAlive
 	ApplyContext "RemarkableReadyToGo:1:500,RemarkableBlocker:1:5"
 	applycontexttoworld
 	Response SurvivorSpawnLastMainstreetTeenGirl
@@ -5825,12 +5831,10 @@ Response PlayerGrenadeTeenGirl {
 	scene "scenes/TeenGirl/Grenade02.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -0.994 //GRENADE!
 	scene "scenes/TeenGirl/Grenade09.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -0.982 //GRENADE!
 	scene "scenes/TeenGirl/Grenade12.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -0.829 //GRENADE!
-	scene "scenes/TeenGirl/downinfront1.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Down in front.
-	scene "scenes/TeenGirl/downinfront2.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Duck.
-	scene "scenes/TeenGirl/downinfront4.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Down in front!
+	scene "scenes/TeenGirl/DownInFront02.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Duck.
 }
 Rule PlayerGrenadeTeenGirl {
-	criteria ConceptThrewGrenade IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl YesHasGrenade IsNotAlone
+	criteria ConceptThrewGrenade IsNotCoughing IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsNotAlone
 	Response PlayerGrenadeTeenGirl
 }
 
@@ -5889,7 +5893,7 @@ Response PlayerKillConfirmationTeenGirl {
 	scene "scenes/TeenGirl/Hurrah51.vcd" //Oh god!
 	scene "scenes/TeenGirl/Hurrah52.vcd" //Whoo!
 	scene "scenes/TeenGirl/Taunt13.vcd" //Awesome!
-	scene "scenes/TeenGirl/Taunt18.vcd" //All right!
+	scene "scenes/TeenGirl/Taunt18.vcd" //Alright!
 	scene "scenes/TeenGirl/Taunt19.vcd" //Awesome!
 	scene "scenes/TeenGirl/Taunt20.vcd" then Any PlayerNiceShot foo:0 0 //YEAH!
 	scene "scenes/TeenGirl/Taunt21.vcd" then Any PlayerNiceShot foo:0 0 //YESSS!
@@ -5899,7 +5903,7 @@ Response PlayerKillConfirmationTeenGirl {
 	scene "scenes/TeenGirl/Taunt35.vcd" then Any PlayerNiceShot foo:0 0 //YESSS!
 	scene "scenes/TeenGirl/Taunt39.vcd" //YEAHHHH!
 	scene "scenes/TeenGirl/DLC2BulletinBoard01.vcd" //'Funny, sexy brunette zombie killer wanted to lead three helpless men to safety.' Huh.
-	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself..
 	scene "scenes/TeenGirl/C6DLC3SECONDSAFEROOM01.vcd" //Ohhhh. Boo.
 }
 Rule PlayerKillConfirmationTeenGirl {
@@ -5926,7 +5930,7 @@ Response PlayerKillConfirmationXTeenGirl {
 	scene "scenes/TeenGirl/Hurrah51.vcd" //Oh god!
 	scene "scenes/TeenGirl/Hurrah52.vcd" //Whoo!
 	scene "scenes/TeenGirl/Taunt13.vcd" //Awesome!
-	scene "scenes/TeenGirl/Taunt18.vcd" //All right!
+	scene "scenes/TeenGirl/Taunt18.vcd" //Alright!
 	scene "scenes/TeenGirl/Taunt19.vcd" //Awesome!
 	scene "scenes/TeenGirl/Taunt20.vcd" then Any PlayerNiceShot foo:0 0 //YEAH!
 	scene "scenes/TeenGirl/Taunt21.vcd" then Any PlayerNiceShot foo:0 0 //YESSS!
@@ -5955,7 +5959,7 @@ Response PlayerKillConfirmationX2TeenGirl {
 	scene "scenes/TeenGirl/Hurrah51.vcd" //Oh god!
 	scene "scenes/TeenGirl/Hurrah52.vcd" //Whoo!
 	scene "scenes/TeenGirl/Taunt13.vcd" //Awesome!
-	scene "scenes/TeenGirl/Taunt18.vcd" //All right!
+	scene "scenes/TeenGirl/Taunt18.vcd" //Alright!
 	scene "scenes/TeenGirl/Taunt19.vcd" //Awesome!
 	scene "scenes/TeenGirl/Taunt20.vcd" then Any PlayerNiceShot foo:0 0 //YEAH!
 	scene "scenes/TeenGirl/Taunt21.vcd" then Any PlayerNiceShot foo:0 0 //YESSS!
@@ -6171,7 +6175,6 @@ Rule PlayerSuggestMeHealthTeenGirlTeenGirl {
 }
 
 Response PlayerTransitionTeenGirl {
-	scene "scenes/TeenGirl/DLC2Misc01.vcd" //[kind laugh] Yeah. We're on a HUGE lucky streak, aren't we?
 	scene "scenes/TeenGirl/GenericResponses37.vcd" //Game over, man! Game over!
 	scene "scenes/TeenGirl/Hurrah18.vcd" //We are kickin' ass
 	scene "scenes/TeenGirl/Hurrah22.vcd" //Oh yeah, oh yeah, oh yeah.
@@ -6181,10 +6184,6 @@ Response PlayerTransitionTeenGirl {
 	scene "scenes/TeenGirl/NiceJob21.vcd" //Yess!
 	scene "scenes/TeenGirl/ReactionPositive01.vcd" //Sweet
 	scene "scenes/TeenGirl/ReactionPositive02.vcd" //Killer
-	scene "scenes/TeenGirl/SafeSpotAheadReaction02.vcd" //Finally!
-	scene "scenes/TeenGirl/SafeSpotAheadReaction08.vcd" //Thank God!
-	scene "scenes/TeenGirl/SafeSpotAheadReaction10.vcd" //Oh thank god!
-	scene "scenes/TeenGirl/SafeSpotAheadReaction14.vcd" //Sweet Jesus!
 	scene "scenes/TeenGirl/Taunt21.vcd" //YESSS!
 	scene "scenes/TeenGirl/DLC2BulletinBoard01.vcd" //'Funny, sexy brunette zombie killer wanted to lead three helpless men to safety.' Huh.
 }
@@ -6201,6 +6200,10 @@ Response PlayerTransitionCloseTeenGirl {
 	scene "scenes/TeenGirl/TransitionClose07.vcd" //That was close
 	scene "scenes/TeenGirl/TransitionClose09.vcd" //That was close
 	scene "scenes/TeenGirl/TransitionClose10.vcd" //Close one
+	scene "scenes/TeenGirl/SafeSpotAheadReaction02.vcd" //Finally!
+	scene "scenes/TeenGirl/SafeSpotAheadReaction08.vcd" //Thank God!
+	scene "scenes/TeenGirl/SafeSpotAheadReaction10.vcd" //Oh thank god!
+	scene "scenes/TeenGirl/SafeSpotAheadReaction14.vcd" //Sweet Jesus!
 }
 Rule PlayerTransitionCloseTeenGirl {
 	criteria ConceptPlayerTransition IsNotCoughing IsTeenGirl IsNotSaidPlayerTransition IsTalk IsTalkTeenGirl IsCloseTransition IsWorldTalkTeenGirl
@@ -7086,9 +7089,9 @@ Rule SurvivorPickupShotgun_spasTeenGirl {
 
 Response SurvivorPickupFirstAidKitTeenGirl {
 	scene "scenes/TeenGirl/TakeFirstAid01.vcd" //This first aid'll help
-	scene "scenes/TeenGirl/TakeFirstAid02.vcd" //Grabbing First Aid!
+	scene "scenes/TeenGirl/TakeFirstAid02.vcd" //Grabbing First aid!
 	scene "scenes/TeenGirl/TakeFirstAid03.vcd" //We might need these.
-	scene "scenes/TeenGirl/TakeFirstAid05.vcd" //Grabbing First Aid!
+	scene "scenes/TeenGirl/TakeFirstAid05.vcd" //Grabbing First aid!
 }
 Rule SurvivorPickupFirstAidKitTeenGirl {
 	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpFirstAidKit IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent TeenGirlNotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
@@ -7142,7 +7145,7 @@ Rule SurvivorPickupPainPillsTeenGirl {
 
 Response SurvivorPickupPipeBombTeenGirl {
 	scene "scenes/TeenGirl/TakePipeBomb02.vcd" //Grabbing a pipe bomb
-//scene "scenes/TeenGirl/TakePipeBomb04.vcd" //Well, this looks dangerous
+	scene "scenes/TeenGirl/TakePipeBomb04.vcd" //Well, this looks dangerous
 }
 Rule SurvivorPickupPipeBombTeenGirl {
 	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpPipeBomb IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent TeenGirlNotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
@@ -7212,10 +7215,10 @@ Rule SurvivorPickupSecondPistolTeenGirl {
 }
 
 Response SurvivorPickupSMGTeenGirl {
-//scene "scenes/TeenGirl/TakeSubMachineGun01.vcd" //I can handle this
+	scene "scenes/TeenGirl/TakeSubMachineGun01.vcd" //I can handle this
 	scene "scenes/TeenGirl/TakeSubMachineGun03.vcd" //Grabbing a machinegun
 	scene "scenes/TeenGirl/TakeSubMachineGun04.vcd" //A machinegun
-//scene "scenes/TeenGirl/TakeSubMachineGun05.vcd" //I can handle this
+	scene "scenes/TeenGirl/TakeSubMachineGun05.vcd" //I can handle this
 }
 Rule SurvivorPickupSMGTeenGirl {
 	criteria ConceptPlayerPickup IsNotCoughing IsTeenGirl IsPickedUpSMG IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent TeenGirlNotPickedUpItem IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
@@ -7339,15 +7342,15 @@ Rule PlayerLedgeSaveLouisTeenGirl {
 }
 
 Response PlayerReviveFriendTeenGirl {
-	scene "scenes/TeenGirl/ReviveFriend01.vcd" //Hang on. It's all right. I gotcha. Now get up - we gotta move.
+	scene "scenes/TeenGirl/ReviveFriend01.vcd" //Hang on. It's alright. I gotcha. Now get up - we gotta move.
 	scene "scenes/TeenGirl/ReviveFriend03.vcd" //This isn't it for you yet. C'mon, up and at 'em. We gotta keep moving.
 	scene "scenes/TeenGirl/ReviveFriend04.vcd" //I have you. Lie still and let me help. We gotta get you back on your feet. Okay, up we go.
 	scene "scenes/TeenGirl/ReviveFriend06.vcd" //I gotcha - I was worried there. Now get up, come on. We gotta keep moving.
 	scene "scenes/TeenGirl/ReviveFriend08.vcd" //This looks bad, but I can get your back up. Get you moving again.
 	scene "scenes/TeenGirl/ReviveFriend10.vcd" //Here, let me help you up. I gotcha. I'm gonna help you. We're gonna get you fixed up.
-	scene "scenes/TeenGirl/ReviveFriend11.vcd" //Allright, Tiger, up and at 'em. Nobody's leaving anyone behind. You're gonna be fine, but we gotta keep moving.
+	scene "scenes/TeenGirl/ReviveFriend11.vcd" //Alright, Tiger, up and at 'em. Nobody's leaving anyone behind. You're gonna be fine, but we gotta keep moving.
 	scene "scenes/TeenGirl/ReviveFriend12.vcd" //Okay, okay, you're okay. I was worried there. Let's get you up on your feet.
-	scene "scenes/TeenGirl/ReviveFriend16.vcd" //I have you, you're gonna be allright. Just let me fix this up, okay? Allright.. Good as new.
+	scene "scenes/TeenGirl/ReviveFriend16.vcd" //I have you, you're gonna be alright. Just let me fix this up, okay? Alright.. Good as new.
 	scene "scenes/TeenGirl/ReviveFriend17.vcd" //Come on, we have to get you up. We need to keep moving.
 	scene "scenes/TeenGirl/ReviveFriend19.vcd" //Don't worry, I can help you up.. I can help.
 	scene "scenes/TeenGirl/ReviveFriend25.vcd" //I can get your back up. Get you moving again.
@@ -7360,7 +7363,7 @@ Rule PlayerReviveFriendTeenGirl {
 }
 
 Response PlayerReviveFriendCriticalTeenGirl {
-	scene "scenes/TeenGirl/ReviveCriticalFriend01.vcd" //It's all right - I gotcha. Boy we need to find you some first aid. If you go down like this again, that's it for you.
+	scene "scenes/TeenGirl/ReviveCriticalFriend01.vcd" //It's alright - I gotcha. Boy we need to find you some first aid. If you go down like this again, that's it for you.
 	scene "scenes/TeenGirl/ReviveCriticalFriend02.vcd" //You're going to be okay, I can get you back up, but we need to find you some first aid. If you go down like this again, that's it for you.
 	scene "scenes/TeenGirl/ReviveCriticalFriend03.vcd" //Don't worry, don't worry, I can help. But we need to find you some first aid. If you go down like this again, that's it for you.
 	scene "scenes/TeenGirl/ReviveCriticalFriend04.vcd" //I' m here. I'll help you. We need to find you some first aid. If you go down like this again, that's it for you.
@@ -7377,7 +7380,7 @@ Rule PlayerReviveFriendCriticalTeenGirl {
 Response PlayerReviveFriendLoudTeenGirl {
 	scene "scenes/TeenGirl/ReviveFriendLoud01.vcd" //Come on, come on! I got you, you're going to be okay.
 	scene "scenes/TeenGirl/ReviveFriendLoud02.vcd" //Oh god, oh god, let's get you back up on your feet
-	scene "scenes/TeenGirl/ReviveFriendLoud03.vcd" //It's all right, you are going to be okay easy, easy
+	scene "scenes/TeenGirl/ReviveFriendLoud03.vcd" //It's alright, you are going to be okay easy, easy
 	scene "scenes/TeenGirl/ReviveFriendLoud04.vcd" //Hold on. I'm gonna get you up!
 	scene "scenes/TeenGirl/ReviveFriendLoud13.vcd" //Dude, I'm half your size. Come on, get up!
 }
@@ -7960,6 +7963,9 @@ Response PlayerLostCallTeenGirl {
 	scene "scenes/TeenGirl/LostCall07.vcd" //Anyone Around?
 	scene "scenes/TeenGirl/LostCall09.vcd" //Hey guys, where are you?
 	scene "scenes/TeenGirl/LostCall13.vcd" //Guys?
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic19.vcd" //Y'all come back now!
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic20.vcd" //Y'all come back now!
+	scene "scenes/TeenGirl/DLC1_L4D1Tank01.vcd" //Guys come back!
 }
 Rule PlayerLostCallTeenGirl {
 	criteria ConceptTalkIdle IsTeenGirl IsClosestSurvivorFar3000 IsNotSaidPlayerLostCall _auto_NotNoLostCall IsNotSpeakingWeight0 IsNotInSafeSpot
@@ -8327,7 +8333,7 @@ Rule MTZoeyStoryTeenGirl {
 }
 
 Response NickChargedTeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D11stSpot07.vcd" //That Charger's just beating the shit out of Nick. (Codes by Random Engineer)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D11stSpot07.vcd" //That Charger's just beating the shit out of Nick.
 }
 Rule NickChargedTeenGirl {
 	criteria ConceptNickCharged IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
@@ -8336,7 +8342,7 @@ Rule NickChargedTeenGirl {
 
 Response PlayerChainSawUsedTeenGirl {
 	scene "scenes/TeenGirl/GenericResponses37.vcd" //Game over, man! Game over!
-	scene "scenes/TeenGirl/GameSpeech01.vcd" //If it's not one of us, kill it. Notoneofus_01.wav
+	scene "scenes/TeenGirl/GameSpeech01.vcd" //If it's not one of us, kill it.
 	scene "scenes/TeenGirl/Taunt39.vcd" //YEAHHHH!
 }
 Rule PlayerChainSawUsedTeenGirl {
@@ -8347,7 +8353,7 @@ Rule PlayerChainSawUsedTeenGirl {
 }
 
 Response PlayerFriendlyFireReplyToNickTeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting13.vcd" //Boohoo hoo, I don't know what to do¡K Go to hell Colonel Sanders!
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting13.vcd" //Boohoo hoo, I don't know what to do! Go to hell Colonel Sanders!
 }
 Rule PlayerFriendlyFireReplyToNickTeenGirl {
 	criteria ConceptFriendlyFireReplyToNick IsNotCoughing IsNotSpeaking IsTeenGirl IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl
@@ -8541,15 +8547,15 @@ criterion "ConceptSpecial" "Concept" "Special" required
 Response SpecialTeenGirl {
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting06.vcd" then Mechanic C6M1Intro_11a foo:0 -1.426 //Nice car, dude!
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting13.vcd" then Producer C6M1Intro_15c foo:0 -4.693 //Boohoo hoo, I don't know what to doÐŽK Go to hell Colonel Sanders!
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting14.vcd" then Gambler C6M1Intro_15e foo:0 -2.340 //I could shoot you where you stand. (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting14.vcd" then Gambler C6M1Intro_15e foo:0 -2.340 //I could shoot you where you stand.
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting15.vcd" then Gambler C6M1Intro_15e foo:0 -2.340 //I could shoot you where you stand.
 	scene "scenes/TeenGirl/DLC1_C6M3_FinaleChat14.vcd" //Hello! Morons. I think we have a bridge to lower.
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic08.vcd" then Biker LoveInYou foo:0 -4.872 //Francis, it's nice to see you still have that in you.
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic09.vcd" then Biker LoveInYou foo:0 -4.872 //Francis, it's nice to see you still have that in you. (Rare)
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic10.vcd" then Biker LoveInYou foo:0 -4.872 //Francis, it's nice to see you still have that in you. (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic09.vcd" then Biker LoveInYou foo:0 -4.872 //Francis, it's nice to see you still have that in you.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic10.vcd" then Biker LoveInYou foo:0 -4.872 //Francis, it's nice to see you still have that in you.
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic15.vcd" //(10 commandments) Go - proclaim liberty throughout all the lands, and to all the inhabitants thereof!
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic16.vcd" //(Planet of the apes) You finally really did it. You maniacs! You blew it up! God damn you! God damn you all to hell!
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic17.vcd" //Remember soylent green is people! (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic17.vcd" //Remember soylent green is people!
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic18.vcd" //Remember soylent green is people!
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic21.vcd" then Biker BuddyEllis foo:0 -5.788 //I ever tell you about the time my buddy Ellis stole a race car from the mall and drove it over some zombies?
 	scene "scenes/TeenGirl/dlc1_communityl4d101.vcd" then NamVet Community05 foo:0 0.01 //Think anyone is still alive?
@@ -8589,4 +8595,12 @@ Response WhatIamDoingTeenGirl {
 Rule WhatIamDoingTeenGirl {
 	criteria WhatIamDoing IsTeenGirl ChanceToFire50Percent
 	Response WhatIamDoingTeenGirl
+}
+criterion "DD3" "Concept" "DD3" required
+Response DD3TeenGirl {
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic01.vcd" //Yeah, but.. it's us three now.
+}
+Rule DD3TeenGirl {
+	criteria DD3 IsTeenGirl ChanceToFire50Percent IsSubjectNear500 ChanceToFire50Percent
+	Response DD3TeenGirl
 }

@@ -1,6 +1,3 @@
-//Biker Response Rule File
-
-
 //C6M1
 Response C6M1Intro_01bBiker {
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting02.vcd" then Mechanic C6M1Intro_01c foo:0 -0.675 //Nope!
@@ -14,7 +11,7 @@ Rule C6M1Intro_01bBiker {
 
 Response C6M1Intro_01Biker01Biker {
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting01.vcd" then Mechanic C6M1Intro_01a foo:0 -2.440 //Heyyy! Nice ride!
-	scene "scenes/Biker/DLC1_C6M1_InitialMeeting07.vcd" then Mechanic C6M1Intro_01a foo:0 -2.440 //Heyyy! Nice ride! (Rare)
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting07.vcd" then Mechanic C6M1Intro_01a foo:0 -2.440 //Heyyy! Nice ride!
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting08.vcd" then Mechanic C6M1Intro_02a foo:0 -2.371 //Heyy! Are you a racecar driver?
 }
 Rule C6M1Intro_01Biker01Biker {
@@ -57,9 +54,9 @@ Rule C6M1Intro_01Biker06Biker {
 
 Response C6M1Intro_01Biker07Biker {
 	scene "scenes/Biker/DLC1_C6M1_InitialMeeting20.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //Hey!
-	scene "scenes/Biker/DLC1_C6M1_InitialMeeting27.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //Hey! (Rare)
-	scene "scenes/Biker/DLC1_C6M1_InitialMeeting28.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //Hey! (Rare)
-	scene "scenes/Biker/DLC1_C6M1_InitialMeeting29.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //Hey! (Rare)
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting27.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //Hey!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting28.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //Hey!
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting29.vcd" then Gambler C6M1Intro_09a foo:0 -0.634 //HEY! I heard that!
 }
 Rule C6M1Intro_01Biker07Biker {
 	criteria ConceptintroC6M1 IsBiker IsFrancisIntroActor IsNotSaidIntroScene FrancisGroup7 IsNotVersus
@@ -353,7 +350,7 @@ Rule c6m3_outroL4D108aBiker {
 }
 
 Response c6m3_outroL4D1AllBiker {
-	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic01.vcd" then TeenGirl c6m3_outroL4D101a foo:0 -2.209 //You know, they were all right.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic01.vcd" then TeenGirl c6m3_outroL4D101a foo:0 -2.209 //You know, they were alright.
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic02.vcd" then Manager c6m3_outroL4D102a foo:0 -1.086 //I'm gonna miss them.
 }
 Rule c6m3_outroL4D1AllBiker {
@@ -389,7 +386,7 @@ Rule c6m3_outroL4D1CopBiker {
 
 Response c6m3_outroL4D1GamblerBiker {
 	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic05.vcd" //Nick! Good luck, my brother!
-	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic06.vcd" //Good luck, my brother! (Rare)
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleCinematic06.vcd" //Good luck, my brother!
 }
 Rule c6m3_outroL4D1GamblerBiker {
 	criteria Conceptc6m3_outro3 IsBiker isC6m3_port IsGamblerAlive IsNotVersus IsNotSaidc6m3_outro3
@@ -453,13 +450,13 @@ Rule IncapBounce2Biker {
 
 Response L4D1_AttractPlayerForThrowBiker {
 	scene "scenes/Biker/AlertGiveItem06.vcd" //Hold up I got something for you.
-	scene "scenes/Biker/DLC1_C6M3_FinaleL4D1ThrowItems01.vcd" //Hey come over here.
-	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas02.vcd" //Here, you're gonna need this.
-	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas04.vcd" //You lookin' for this?
 	scene "scenes/Biker/LookHere01.vcd" //Check this out.
 	scene "scenes/Biker/LookHere02.vcd" //Look at this.
 	scene "scenes/Biker/LookHere05.vcd" //Look here.
 	scene "scenes/Biker/LostCall01.vcd" //Hello
+	scene "scenes/Biker/DLC1_C6M3_FinaleL4D1ThrowItems01.vcd" //Hey come over here.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas02.vcd" //Here, you're gonna need this.
+	scene "scenes/Biker/DLC1_C6M3_L4D1FinaleFinalGas04.vcd" //You lookin' for this?
 }
 Rule L4D1_AttractPlayerForThrowBiker {
 	criteria ConceptL4D1_AttractPlayerForThrow IsBiker
@@ -503,8 +500,8 @@ Rule WorldC6M3_ByBridge01EllisBiker {
 //Monster Spotted
 Response L4D1SpottedTankBiker {
 	scene "scenes/Biker/DLC1_L4D1Tank01.vcd" //Lead 'em over here!
-	scene "scenes/Biker/DLC1_L4D1Tank02.vcd" odds 1 //Oh shit, two tanks!
-	scene "scenes/Biker/DLC1_L4D1Tank03.vcd" odds 1 //TWO TANKS! I HATE THE SOUTH!
+	scene "scenes/Biker/DLC1_L4D1Tank02.vcd" odds 50 //Oh shit, two tanks!
+	scene "scenes/Biker/DLC1_L4D1Tank03.vcd" odds 50 //TWO TANKS! I HATE THE SOUTH!
 }
 Rule L4D1SpottedTankBiker {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeTank IsNotCoughing IsBiker IsTalk IsTalkBiker IsWorldTalkBiker Isc6m3_port IsNotSpeakingWeight0
@@ -512,9 +509,3 @@ Rule L4D1SpottedTankBiker {
 	applycontexttoworld
 	Response L4D1SpottedTankBiker
 }
-
-
-//Player File
-
-//Vocalizer
-

@@ -2,7 +2,7 @@
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 
 
@@ -161,7 +161,7 @@ Rule C6M1Intro_24cMechanic {
 }
 
 Response C6M1Intro_24eMechanic {
-	scene "scenes/Mechanic/DLC1_C6M1_InitialMeeting20.vcd" then Producer C6M1Intro_24_alien foo:0 -9.550 //Ahh I gotcha and that's what y'all need help with. All right okay, I don't like it. But okay.
+	scene "scenes/Mechanic/DLC1_C6M1_InitialMeeting20.vcd" then Producer C6M1Intro_24_alien foo:0 -9.550 //Ahh I gotcha and that's what y'all need help with. Alright okay, I don't like it. But okay.
 }
 Rule C6M1Intro_24eMechanic {
 	criteria ConceptC6M1Intro_24e IsMechanic
@@ -856,7 +856,7 @@ Response PlayerRemarkWorldC6M1_IntotheparkMechanic {
 	scene "scenes/Mechanic/DLC1_C6M1_IntoPark04.vcd" //By Jimmy Gibb Jr, don't worry we're gonna come back for you.
 	scene "scenes/Mechanic/DLC1_C6M1_IntoPark05.vcd" //(calling out) Hey can you all watch the car while we're gone?
 	scene "scenes/Mechanic/DLC1_C6M1_IntoPark07.vcd" //Should I stay here and guard the car?
-	scene "scenes/Mechanic/DLC1_C6M1_IntoPark08.vcd" //All right..
+	scene "scenes/Mechanic/DLC1_C6M1_IntoPark08.vcd" //Alright..
 }
 Rule PlayerRemarkWorldC6M1_IntotheparkMechanic {
 	criteria ConceptRemark IsMechanic IsWorldC6M1_Intothepark IsNotSaidWorldC6M1_Intothepark IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear200 IsNotSpeakingWeight0 IsNotVersus
@@ -1181,8 +1181,8 @@ Rule PlayerRemarkWorldC6M2_IntoPoolHallMechanic {
 }
 
 Response PlayerRemarkWorldC6M2_JukeBoxMechanic {
-	scene "scenes/Mechanic/DLC1_C6M2_StartingJukeBox01.vcd" //All right, baby, the jukebox works!
-	scene "scenes/Mechanic/DLC1_C6M2_StartingJukeBox02.vcd" //AY! Haha, all right, the jukebox works!
+	scene "scenes/Mechanic/DLC1_C6M2_StartingJukeBox01.vcd" //Alright, baby, the jukebox works!
+	scene "scenes/Mechanic/DLC1_C6M2_StartingJukeBox02.vcd" //AY! Haha, alright, the jukebox works!
 }
 Rule PlayerRemarkWorldC6M2_JukeBoxMechanic {
 	criteria ConceptRemark IsMechanic IsWorldC6M2_JukeBox IsNotSaidWorldC6M2_JukeBox IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear150 IsNotSpeakingWeight0

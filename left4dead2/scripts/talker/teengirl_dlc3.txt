@@ -1,12 +1,7 @@
-//TeenGirl Response Rule File
-//For L4D2 by New Day & Morning Nine Nine
 
-
-//Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankTeenGirl {
-	speak "TeenGirl_Blank" noscene //Blank
+	speak "TeenGirl_Blank" noscene
 }
-
 
 //C7M1
 Response C7M1_saferoom02TeenGirl {
@@ -96,7 +91,7 @@ Response C7M1OpenTankDoorTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR05.vcd" //I cannot believe I am doing this.
 	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR06.vcd" //Unbelievable. You guys are the biggest chickenshits.
 	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR07.vcd" //Unbelievable..
-	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself..
 	scene "scenes/TeenGirl/DLC2BulletinBoard01.vcd" //'Funny, sexy brunette zombie killer wanted to lead three helpless men to safety.' Huh.
 }
 Rule C7M1OpenTankDoorTeenGirl {
@@ -114,7 +109,7 @@ Response C7M1OpenTankDoorXTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR05.vcd" //I cannot believe I am doing this.
 	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR06.vcd" //Unbelievable. You guys are the biggest chickenshits.
 	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR07.vcd" //Unbelievable..
-	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself.. RARE
+	scene "scenes/TeenGirl/DLC2M2FinaleButtonPressGen201.vcd" //Alright, guys, real brave, I guess I'LL do it.. by myself..
 }
 Rule C7M1OpenTankDoorXTeenGirl {
 	criteria Conceptc7m1opentankdoorspeakTeenGirl IsTeenGirl _auto_NotsaidC7M1OpenTankDoor IsWithThree
@@ -140,7 +135,7 @@ Rule C7M1OpenTankDoorX2TeenGirl {
 Response C7M1SafeRoomIdleTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3INTRO04.vcd" then Biker C7M1_saferoom05 foo:0 .1 //Francis: Tell Bill I'm ready to go.
 	scene "scenes/TeenGirl/C6DLC3INTRO05.vcd" then NamVet C7M1_saferoom09 foo:0 .1 //This was your plan, Bill? A train to the Keys? This isn't the keys, Bill. We're nowhere.
-	scene "scenes/TeenGirl/C6DLC3INTRO13.vcd" then NamVet C7M1_saferoom15 foo:0 .1 //Well--better get moving. Remember, if you fall behind, Bill thinks it's okay to let you die.
+	scene "scenes/TeenGirl/C6DLC3INTRO13.vcd" then NamVet C7M1_saferoom15 foo:0 .1 //Well–better get moving. Remember, if you fall behind, Bill thinks it's okay to let you die.
 	scene "scenes/TeenGirl/C6DLC3INTRO16.vcd" then Manager C7M1_saferoom19 foo:0 .1 //Are you kidding me? This is the middle of nowhere. We left all those people behind for THIS?
 	scene "scenes/TeenGirl/C6DLC3INTRO20.vcd" then NamVet C7M1_saferoom20 foo:0 .1 //Good thing we left all those people behind so WE could escape, Bill.
 	scene "scenes/TeenGirl/C6DLC3INTRO21.vcd" then NamVet C7M1_saferoom20 foo:0 .1
@@ -503,11 +498,6 @@ Rule C7M3WaveOverGen2TeenGirl {
 	Response C7M3WaveOverGen2TeenGirl
 }
 
-
-//Item Spotted
-
-//Not Rosetta - Responses
-
 //RemarkableVocalize
 Response PlayerRemarkc7m1_bricktopTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3GENERIC05.vcd" //On top of the bricks.
@@ -659,7 +649,7 @@ Rule PlayerRemarkc7m2_throughhereTeenGirl {
 Response PlayerRemarkc7m3_seesailboatTeenGirl {
 	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT01.vcd" //We'll need to raise that bridge if we want to get that boat out of here.
 	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT02.vcd" //We can use that sailboat by the bridge!
-	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT03.vcd" //We need to raise the.
+	scene "scenes/TeenGirl/C6DLC3SPOTTINGSAILBOAT03.vcd" //We need to raise the bridge.
 }
 Rule PlayerRemarkc7m3_seesailboatTeenGirl {
 	criteria ConceptRemark IsTeenGirl Isc7m3_seesailboat IsNotSaidc7m3_seesailboat IsNotCoughing NotInCombat IsTalk IsTalkTeenGirl IsWorldTalkTeenGirl IsFirstGenerator IsNotSpeakingWeight0 IsNotAlone
@@ -753,14 +743,12 @@ Rule Player.C7M2CrowsFlyXTeenGirl {
 }
 
 Response Player.C7M3BridgeLeapTeenGirl {
-	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE02.vcd" //Stay put! I'll be right back! I hope.
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE03.vcd" //Stay up there! I got this!
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE04.vcd" //What am I doing what am I doing what am I doing..
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE05.vcd" //Stay put! I'll be right back!
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE06.vcd" //What am I doing what am I doing what am I doing..
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE07.vcd" //This is the last time you're gonna see these! Guns!
-	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE09.vcd" //Oh god, I am so screwed.
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE10.vcd" //Oh god, I am so screwed.
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE11.vcd" //I've got this! Not a big deal. Oh.. shit.
@@ -779,14 +767,12 @@ Rule Player.C7M3BridgeLeapTeenGirl {
 }
 
 Response Player.C7M3BridgeLeapXTeenGirl {
-	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE02.vcd" //Stay put! I'll be right back! I hope.
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE03.vcd" //Stay up there! I got this!
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE04.vcd" //What am I doing what am I doing what am I doing..
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE05.vcd" //Stay put! I'll be right back!
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE06.vcd" //What am I doing what am I doing what am I doing..
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE07.vcd" //This is the last time you're gonna see these! Guns!
-	scene "scenes/TeenGirl/Blank.vcd" then self LeapLouis foo:0 0
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE09.vcd" //Oh god, I am so screwed.
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE10.vcd" //Oh god, I am so screwed.
 	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE11.vcd" //I've got this! Not a big deal. Oh.. shit.
@@ -802,18 +788,7 @@ Rule Player.C7M3BridgeLeapXTeenGirl {
 	Response Player.C7M3BridgeLeapXTeenGirl
 }
 
-criterion "LeapLouis" "Concept" "LeapLouis" required
-Response LeapLouisTeenGirl {
-	scene "scenes/TeenGirl/C6DLC3JUMPINGOFFBRIDGE08.vcd" //Louis! I will always be your friend!
-}
-Rule LeapLouisTeenGirl {
-	criteria LeapLouis IsTeenGirl IsManagerNear500
-	Response LeapLouisTeenGirl
-}
-
-
 //Vocalizer - Pickups
-
 //Vocalizer Convo (AUTO)
 Response InfoReminfo_powerboat4TeenGirl {
 	scene "scenes/TeenGirl/C6DLC3OTHERBOATS01.vcd" then Biker InfoReminfo_powerboat4a foo:0 -2.953 //Francis, you do know what a sailboat looks like right?
@@ -824,7 +799,3 @@ Rule InfoReminfo_powerboat4TeenGirl {
 	criteria ConceptInfoReminfo_powerboat4 IsTeenGirl IsTeenGirlNear800
 	Response InfoReminfo_powerboat4TeenGirl
 }
-
-
-//Weapon Spotted
-

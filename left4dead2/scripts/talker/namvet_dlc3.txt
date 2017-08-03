@@ -1,12 +1,6 @@
-//NamVet Response Rule File
-//For L4D2 by New Day & Morning Nine Nine
-
-
-//Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankNamVet {
-	speak "NamVet_Blank" noscene //Blank
+	speak "NamVet_Blank" noscene
 }
-
 
 //C7M1
 Response C7M1_saferoom01aNamVet {
@@ -301,7 +295,7 @@ Rule C7M2_saferoom05NamVet {
 }
 
 Response C7M2_saferoom05bNamVet {
-	scene "scenes/NamVet/C6DLC3FIRSTSAFEROOM04.vcd" then Manager C7M2_saferoom05c foo:0 .1 //Shut up, Franc-- alright, that's not a bad idea.
+	scene "scenes/NamVet/C6DLC3FIRSTSAFEROOM04.vcd" then Manager C7M2_saferoom05c foo:0 .1 //Shut up, Franc– alright, that's not a bad idea.
 	scene "scenes/NamVet/C6DLC3FIRSTSAFEROOM05.vcd" then Manager C7M2_saferoom05c foo:0 .1
 }
 Rule C7M2_saferoom05bNamVet {
@@ -632,7 +626,7 @@ Rule HitThatButtonNamVet {
 
 Response C7M3SafeRoomIdleNamVet {
 	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM06.vcd" then Biker C7M3_saferoom008 foo:0 .1 //We have to be getting close. Once we're on the boat, we're home free.
-	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM11.vcd" then Manager C7M3_saferoom011 foo:0 .1 //Allright, people. There's gotta be a sailboat around here somewhere. We're gonna find it, get to the keys, and build ourselves a little piece of paradise.
+	scene "scenes/NamVet/C6DLC3SECONDSAFEROOM11.vcd" then Manager C7M3_saferoom011 foo:0 .1 //Alright, people. There's gotta be a sailboat around here somewhere. We're gonna find it, get to the keys, and build ourselves a little piece of paradise.
 }
 Rule C7M3SafeRoomIdleNamVet {
 	criteria ConceptC7M3SafeRoom2 IsNamVet AutoIsNotScavenge AutoIsNotSurvival _auto_NotC7M3SafeRoomConvo IsNotSpeakingWeight0
@@ -691,13 +685,6 @@ Rule C7M3WaveOverGen2XNamVet {
 	applycontexttoworld
 	Response C7M3WaveOverGen2XNamVet
 }
-
-
-//Item Spotted
-
-//Monster Spotted
-
-//Not Rosetta - Responses
 
 //RemarkableVocalize
 Response PlayerRemarkc7m1_bricktopNamVet {
@@ -862,7 +849,7 @@ Rule PlayerShotGasCanNamVet {
 }
 
 Response ScavengeStartNamVet {
-	scene "scenes/NamVet/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/NamVet/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/NamVet/MoveOn02.vcd" //Let's move people.
 	scene "scenes/NamVet/MoveOn08.vcd" //Alright, let's go.
 	scene "scenes/NamVet/MoveOn10.vcd" //Come on, let's go.
@@ -1029,7 +1016,7 @@ Response PlayerIncapC7m3NamVet {
 	scene "scenes/NamVet/C6DLC3MOVIELINE09.vcd" //I'm ready.
 	scene "scenes/NamVet/C6DLC3MOVIELINE10.vcd" //I'll see peace back on Earth… if I gotta murder every one of you bastards…. with my bare goddamn hands.
 	scene "scenes/NamVet/C6DLC3MOVIELINE11.vcd" //Awwww, horseshit.
-	scene "scenes/NamVet/C6DLC3MOVIELINE12.vcd" //You want me, come and get it. I'm just scars and tar anyway. But you didn't get them--did you, you sons of bitches?
+	scene "scenes/NamVet/C6DLC3MOVIELINE12.vcd" //You want me, come and get it. I'm just scars and tar anyway. But you didn't get them–did you, you sons of bitches?
 	scene "scenes/NamVet/C6DLC3MOVIELINE13.vcd" //Guess you can't unmake how things end up. None of it. This is all just how it is. But you never got them, did you? They're safe. So that's just fine.
 	scene "scenes/NamVet/C6DLC3MOVIELINE14.vcd" //I gotta admit.. this ain't how I pictured it. Good enough. Good enough.
 	scene "scenes/NamVet/C6DLC3MOVIELINE15.vcd" //I gotta admit.. this ain't how I pictured it. Good enough.
@@ -1037,7 +1024,7 @@ Response PlayerIncapC7m3NamVet {
 	scene "scenes/NamVet/C6DLC3MOVIELINE17.vcd" //I had a good run. I wouldn't have changed a thing.
 	scene "scenes/NamVet/C6DLC3MOVIELINE18.vcd" //That felt like no time at all.
 	scene "scenes/NamVet/C6DLC3MOVIELINE19.vcd" //That all you brought?
-	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out–guess I woulda saved the shoe leather and fought you there.
 }
 Rule PlayerIncapC7m3NamVet {
 	criteria ConceptPlayerIncapacitated IsNotCoughing IsNamVet IsTalk IsTalkNamVet ismapc7m3_port SaidC7M3BridgeLeap IsNotSaidC7M3NamVetDownFinal IsWithThree
@@ -1059,27 +1046,10 @@ Response PlayerIncapC7m3XNamVet {
 	scene "scenes/NamVet/C6DLC3MOVIELINE17.vcd" //I had a good run. I wouldn't have changed a thing.
 	scene "scenes/NamVet/C6DLC3MOVIELINE18.vcd" //That felt like no time at all.
 	scene "scenes/NamVet/C6DLC3MOVIELINE19.vcd" //That all you brought?
-	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out--guess I woulda saved the shoe leather and fought you there.
+	scene "scenes/NamVet/C6DLC3MOVIELINE20.vcd" //If I'd known how many of you sonsabitches there were when we started out–guess I woulda saved the shoe leather and fought you there.
 }
 Rule PlayerIncapC7m3XNamVet {
 	criteria ConceptPlayerIncapacitated IsNotCoughing IsNamVet IsTalk IsTalkNamVet ismapc7m3_port SaidC7M3BridgeLeap IsNotSaidC7M3NamVetDownFinal
 	ApplyContext "TalkNamVet:1:2,C7M3NamVetDownFinal:1:0"
 	Response PlayerIncapC7m3XNamVet
 }
-
-criterion "test1" "concept" "test1" required
-Response Playertest1NamVet {
-	scene "scenes/NamVet/C6DLC3GRAVELHILL03.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Goddamn it.. crows!
-	scene "scenes/NamVet/C6DLC3GRAVELHILL04.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Horseshit goddamn birds..
-	scene "scenes/NamVet/C6DLC3GRAVELHILL05.vcd" predelay "1,2" then Any Player.WarnMegaMobc7m201 3 1 //Shut-up you goddamn birds!
-}
-Rule Playertest1NamVet {
-	criteria test1 IsNotCoughing IsNamVet IsTalk IsTalkNamVet
-	Response Playertest1NamVet
-}
-
-
-//Vocalize
-
-//Weapon Spotted
-

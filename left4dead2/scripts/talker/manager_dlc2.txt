@@ -21,7 +21,7 @@ criterion "IsNotSaidSpotManager" "SaidSpotManager" "!=1" required weight 0
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankManager {
-	speak "Manager_Blank" noscene //Blank
+	speak "Manager_Blank" noscene
 }
 
 Response PlayerNiceShotManager {
@@ -472,12 +472,13 @@ Rule BotNoteHumanAttentionManager {
 }
 
 Response BotReassureComingManager {
-	scene "scenes/Manager/Yes01.vcd" predelay "1,3.5" //Allright.
+	scene "scenes/Manager/Yes01.vcd" predelay "1,3.5" //Alright.
 	scene "scenes/Manager/Yes02.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/Manager/Yes05.vcd" predelay "1,3.5" //Okay.
 	scene "scenes/Manager/Yes07.vcd" predelay "1,3.5" //Yeah, I'm cool with that
 	scene "scenes/Manager/Yes08.vcd" predelay "1,3.5" //Yes
 	scene "scenes/Manager/Yes09.vcd" predelay "1,3.5" //Cool
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat39.vcd" predelay "1,3.5" //Okay.
 }
 Rule BotReassureComingManager {
 	criteria ConceptSurvivorBotReassureComing IsNotCoughing IsNotSpeaking IsManager IsTalk IsTalkManager IsWorldTalkManager
@@ -499,12 +500,13 @@ Rule BotReassureNearbyManager {
 Response BotYesReadyManager {
 	scene "scenes/Manager/AnswerReady01.vcd" predelay "1,3.5" //Ready!
 	scene "scenes/Manager/AskReady08.vcd" predelay "1,3.5" //Yeah, let's get ready
-	scene "scenes/Manager/Yes01.vcd" predelay "1,3.5" //Allright.
+	scene "scenes/Manager/Yes01.vcd" predelay "1,3.5" //Alright.
 	scene "scenes/Manager/Yes02.vcd" predelay "1,3.5" //Yeah.
 	scene "scenes/Manager/Yes05.vcd" predelay "1,3.5" //Okay.
 	scene "scenes/Manager/Yes07.vcd" predelay "1,3.5" //Yeah, I'm cool with that
 	scene "scenes/Manager/Yes08.vcd" predelay "1,3.5" //Yes
 	scene "scenes/Manager/WorldAirportNPC07.vcd" predelay "1,3.5" //Okay, let's do it!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat39.vcd" predelay "1,3.5" //Okay.
 }
 Rule BotYesReadyManager {
 	criteria ConceptSurvivorBotYesReady IsNotCoughing IsNotSpeaking IsManager IsTalk IsTalkManager IsWorldTalkManager
@@ -518,7 +520,7 @@ Response PlayerToTheRescueManager {
 	scene "scenes/Manager/C6DLC3JUMPINGOFFBRIDGE11.vcd" predelay "0.75,1.5" //I swear to god I'm coming back!
 }
 Rule PlayerToTheRescueManager {
-	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsManager IsTalk IsTalkManager NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600
+	criteria ConceptSurvivorBotMovingToReviveFriend IsNotCoughing IsNotSpeaking IsManager IsTalk IsTalkManager NotInCombat IsNotSaidRescueComing IsDistanceSubjectO600
 	ApplyContext "SaidRescueComing:1:20"
 	applycontexttoworld
 	Response PlayerToTheRescueManager
@@ -666,8 +668,8 @@ Rule CrashFinaleGeneratorNagXManager {
 }
 
 Response CrashFinaleGeneratorSpeakManager {
-	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Allright, allright. Come onnnn. Come on, catch.
-	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Allright, allright. Come on baby, start for me.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Alright, alright. Come onnnn. Come on, catch.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Alright, alright. Come on baby, start for me.
 	scene "scenes/Manager/C6DLC3PRESTART1STGEN02.vcd" //Let's start this generator.
 	scene "scenes/Manager/dlc2m2finalebuttonpresslift01.vcd" //I am sure this take just a second
 }
@@ -677,8 +679,8 @@ Rule CrashFinaleGeneratorSpeakManager {
 }
 
 Response CrashFinaleGeneratorSpeakXManager {
-	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Allright, allright. Come onnnn. Come on, catch.
-	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Allright, allright. Come on baby, start for me.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen101.vcd" //Alright, alright. Come onnnn. Come on, catch.
+	scene "scenes/Manager/DLC2M2FinaleButtonPressGen102.vcd" //Alright, alright. Come on baby, start for me.
 }
 Rule CrashFinaleGeneratorSpeakXManager {
 	criteria ConceptCrashFinaleGeneratorSpeak IsManager
@@ -1170,7 +1172,7 @@ Rule PlayerRemarkcrashcourse02_introManager {
 Response PlayerRemarkcrashcourse02_startaManager {
 	scene "scenes/Manager/AnswerReady02.vcd" //Let's do it!
 	scene "scenes/Manager/AnswerReady04.vcd" //Come on, let's do it!
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 }
 Rule PlayerRemarkcrashcourse02_startaManager {
 	criteria ConceptRemark IsManager Iscrashcourse02_starta NotCrash02IntroReady IsSubjectNear400 IsNotAlone
@@ -1238,7 +1240,7 @@ Rule SurvivorFinaleTriggeredBoatManager {
 
 Response SurvivorFinaleTriggeredFarmManager {
 	scene "scenes/Manager/RadioUsedGeneric01.vcd" predelay ".5,1" //Our ride out of here's on its way.
-	scene "scenes/Manager/RadioUsedTruck01.vcd" predelay ".5,1" //Allright, now we just gotta hold out til the truck gets here.
+	scene "scenes/Manager/RadioUsedTruck01.vcd" predelay ".5,1" //Alright, now we just gotta hold out til the truck gets here.
 }
 Rule SurvivorFinaleTriggeredFarmManager {
 	criteria ConceptFinaleTriggered IsTriggeredByManager ismap_l4d_farm05_cornfield IsNotSaidRadioTriggered IsTalk IsTalkManager IsManager IsNotIncapacitated IsWorldTalkManager IsNotAlone
@@ -1548,6 +1550,7 @@ Response SurvivorSpottedGrenadeAutoManager2 {
 	scene "scenes/Manager/PositiveNoise04.vcd" //[Improv non-verbal pleasure & interest sounds]
 	scene "scenes/Manager/Yes02.vcd" //Yeah.
 	scene "scenes/Manager/Yes09.vcd" //Cool
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat38.vcd" //Okay.
 }
 Rule SurvivorSpottedGrenadeAutoManager2 {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsSmartLookAuto IsNotInSafeSpot NoHasGrenade IsNotAlone IsSaidSpotGrenade IsNotSaidSpotManager IsPipeBomb IsWorldTalkManager _auto_NotNoSpotting
@@ -1557,8 +1560,8 @@ Rule SurvivorSpottedGrenadeAutoManager2 {
 }
 
 Response SurvivorSpottedHealthManager {
-	scene "scenes/Manager/SpotFirstAid01.vcd" //A First Aid Kit here!
-	scene "scenes/Manager/SpotFirstAid02.vcd" //First Aid here!
+	scene "scenes/Manager/SpotFirstAid01.vcd" //A First aid kit here!
+	scene "scenes/Manager/SpotFirstAid02.vcd" //First aid here!
 	scene "scenes/Manager/SpotFirstAid03.vcd" //First aid kit over here!
 	scene "scenes/Manager/SpotFirstAid04.vcd" //First aid here!
 }
@@ -1595,7 +1598,7 @@ Rule SurvivorSpottedMolotovManager {
 }
 
 Rule SurvivorSpottedMolotovAutoManager {
-	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsSmartLookAuto IsNotInSafeSpot IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpotManager IsMolotov IsWorldTalkManager YesHasMolotov _auto_NotNoSpotting IsNotSpeakingWeight0
+	criteria ConceptPlayerSpotWeapon IsNotCoughing IsManager IsTalk IsTalkManager IsSmartLookAuto IsNotInSafeSpot YesHasThrow IsNotAlone IsNotSaidSpotMolotov IsNotSaidSpotManager IsMolotov IsWorldTalkManager YesHasMolotov _auto_NotNoSpotting IsNotSpeakingWeight0
 	ApplyContext "SaidSpotMolotov:1:5,SaidSpotManager:1:20"
 	applycontexttoworld
 	Response SurvivorSpottedMolotovManager
@@ -2054,7 +2057,7 @@ Rule PlayerAlertGiveItemStopManager {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidManager {
-	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidManager
+	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidManager
 }
 Rule PlayerAlertGiveItemStopAnFirstAidManager {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsManager IsTalk IsTalkManager NoHasFirstAidKit IsWorldTalkManager
@@ -2062,7 +2065,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidManager {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidManager {
-	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidManager
+	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidManager
 }
 Rule PlayerAlertGiveItemStopQnFirstAidManager {
 	criteria ConceptBashWithItem IsNotCoughing IsManager IsTalk IsTalkManager IsItemFirstAidKit IsWorldTalkManager IsNotSpeakingWeight0
@@ -2070,7 +2073,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidManager {
 }
 
 Response PlayerAlertGiveItemStopMedicalManager {
-	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalManager {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsManager IsTalk IsTalkManager NoHasPainPills NoHasAdrenaline IsWorldTalkManager
@@ -2078,7 +2081,7 @@ Rule PlayerAlertGiveItemStopMedicalManager {
 }
 
 Response PlayerAlertGiveItemMedicalManager {
-	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/Manager/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalManager {
 	criteria ConceptBashWithItem IsNotCoughing IsManager IsTalk IsTalkManager IsItemMedical IsWorldTalkManager IsNotSpeakingWeight0
@@ -2143,7 +2146,6 @@ Rule PlayerFriendlyFireFromBillManager {
 }
 
 Response PlayerFriendlyFireFromFrancisManager {
-	scene "scenes/Manager/C6DLC3FIRSTSAFEROOM05.vcd" then Biker SorryA foo:0 0 //Francis is an idiot too.
 	scene "scenes/Manager/FriendlyFire01.vcd" then Biker SorryA foo:0 0 //Hey, man, that hurt.
 	scene "scenes/Manager/FriendlyFire07.vcd" then Biker SorryA foo:0 0 //Man, what the hell, quit shooting me
 	scene "scenes/Manager/Manager_FriendlyFireFrancis01.vcd" then Biker SorryA foo:0 0 //Francis, that's MY ass your shootin'.
@@ -2153,6 +2155,7 @@ Response PlayerFriendlyFireFromFrancisManager {
 	scene "scenes/Manager/Manager_FriendlyFireFrancis08.vcd" then Biker SorryA foo:0 0 //[angry] Francis!
 	scene "scenes/Manager/NameFrancis01.vcd" then Biker SorryA foo:0 0 //Francis! (loud)
 	scene "scenes/Manager/genericresponses25.vcd" then Biker SorryA foo:0 0 //Tell me you aint serious
+	scene "scenes/Manager/C6DLC3SECONDSAFEROOM36.vcd" then Biker SorryA foo:0 0 //Come on, Francis. Give it a rest.
 	scene "scenes/Manager/C6DLC3SECONDSAFEROOM35.vcd" then TeenGirl C7M3_saferoom016c foo:0 .1 //Hey Francis, I got a good feeling about wearing your skin as a pretty dress.
 	scene "scenes/Manager/C6DLC3SECONDSAFEROOM34.vcd" then Biker SorryA foo:0 0 //I'm in too good a mood to get mad at you, Francis.
 }
@@ -2210,12 +2213,12 @@ Response SurvivorTauntResponseManager {
 	scene "scenes/Manager/Hurrah03.vcd" //Hell yeah.
 	scene "scenes/Manager/Hurrah14.vcd" //YEAH!
 	scene "scenes/Manager/Hurrah15.vcd" //YEAH WOO!
-	scene "scenes/Manager/ReactionPositive05.vcd" //Allright!
+	scene "scenes/Manager/ReactionPositive05.vcd" //Alright!
 	scene "scenes/Manager/ReactionPositive06.vcd" //Heh hehhhh.
 	scene "scenes/Manager/ReactionPositive07.vcd" //Nice!
 	scene "scenes/Manager/Taunt01.vcd" //That's right!
 	scene "scenes/Manager/Taunt02.vcd" //Woo Hoo, that's right!
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 	scene "scenes/Manager/Taunt05.vcd" //Oh yeah, who's your momma, who's your daddy
 	scene "scenes/Manager/Taunt06.vcd" //Helll yeah, Hell yeah!
 	scene "scenes/Manager/Taunt07.vcd" //[loud, evil laugh]
@@ -2237,14 +2240,14 @@ Response SurvivorTauntResponseTManager {
 	scene "scenes/Manager/Hurrah03.vcd" //Hell yeah.
 	scene "scenes/Manager/Hurrah14.vcd" //YEAH!
 	scene "scenes/Manager/Hurrah15.vcd" //YEAH WOO!
-	scene "scenes/Manager/ReactionPositive05.vcd" //Allright!
+	scene "scenes/Manager/ReactionPositive05.vcd" //Alright!
 	scene "scenes/Manager/ReactionPositive06.vcd" //Heh hehhhh.
 	scene "scenes/Manager/ReactionPositive07.vcd" //Nice!
 	scene "scenes/Manager/ReactionPositive09.vcd" //Sweet Baby!
 	scene "scenes/Manager/Taunt01.vcd" //That's right!
 	scene "scenes/Manager/Taunt02.vcd" //Woo Hoo, that's right!
 	scene "scenes/Manager/Taunt03.vcd" //Yeah, baby, Yeah!
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 	scene "scenes/Manager/Taunt05.vcd" //Oh yeah, who's your momma, who's your daddy
 	scene "scenes/Manager/Taunt06.vcd" //Helll yeah, Hell yeah!
 	scene "scenes/Manager/Taunt07.vcd" //[loud, evil laugh]
@@ -2265,11 +2268,11 @@ Response SurvivorTauntResponseXManager {
 	scene "scenes/Manager/Hurrah03.vcd" //Hell yeah.
 	scene "scenes/Manager/Hurrah14.vcd" //YEAH!
 	scene "scenes/Manager/Hurrah15.vcd" //YEAH WOO!
-	scene "scenes/Manager/ReactionPositive05.vcd" //Allright!
+	scene "scenes/Manager/ReactionPositive05.vcd" //Alright!
 	scene "scenes/Manager/ReactionPositive06.vcd" //Heh hehhhh.
 	scene "scenes/Manager/Taunt01.vcd" //That's right!
 	scene "scenes/Manager/Taunt02.vcd" //Woo Hoo, that's right!
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 	scene "scenes/Manager/Taunt05.vcd" //Oh yeah, who's your momma, who's your daddy
 	scene "scenes/Manager/Taunt06.vcd" //Helll yeah, Hell yeah!
 	scene "scenes/Manager/Taunt07.vcd" //[loud, evil laugh]
@@ -2440,7 +2443,7 @@ Rule SurvivorMinorHurtManager {
 }
 
 Response SurvivorReloadingManager {
-//scene "scenes/Manager/Reloading01.vcd" //Reloading! - fucking L4D2 devs //test
+	scene "scenes/Manager/Reloading01.vcd" //Reloading!
 	scene "scenes/Manager/Reloading02.vcd" //Reloading!
 	scene "scenes/Manager/Reloading03.vcd" //Reloading!
 }
@@ -2533,7 +2536,7 @@ Rule HelpResponseZoeyManager {
 
 //RemarkableVocalize
 Response hospital02_path03a1 {
-	scene "scenes/Manager/WorldHospital0206.vcd" //Allright, no problem. Now we gotta get out of the subway.
+	scene "scenes/Manager/WorldHospital0206.vcd" //Alright, no problem. Now we gotta get out of the subway.
 }
 Rule hospital02_path03a1 {
 	criteria Concepthospital02_path03a1 IsManager IsTalk IsTalkManager IsSubjectNear400 NotInCombat
@@ -2594,7 +2597,7 @@ Rule PlayerAirport03FirePathClearaManager {
 Response PlayerAirport03FireStartedXManager {
 	scene "scenes/Manager/AnswerReady02.vcd" //Let's do it!
 	scene "scenes/Manager/AnswerReady04.vcd" //Come on, let's do it!
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 }
 Rule PlayerAirport03FireStartedXManager {
 	criteria ConceptAirport03FireStartedX IsManager IsNotCoughing IsTalk IsTalkManager IsNotSaidAirport03FireStarted IsNotAlone
@@ -2604,7 +2607,7 @@ Rule PlayerAirport03FireStartedXManager {
 }
 
 Response PlayerAirport03FireStartedX2Manager {
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 }
 Rule PlayerAirport03FireStartedX2Manager {
 	criteria ConceptAirport03FireStartedX IsManager IsNotCoughing IsTalk IsTalkManager IsNotSaidAirport03FireStarted
@@ -2657,7 +2660,7 @@ Rule PlayerLaughFrancisManager {
 Response PlayerRemarkairport02_creshendo01aManager {
 	scene "scenes/Manager/AnswerReady02.vcd" //Let's do it!
 	scene "scenes/Manager/AnswerReady04.vcd" //Come on, let's do it!
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 }
 Rule PlayerRemarkairport02_creshendo01aManager {
 	criteria ConceptRemark IsManager Isairport02_creshendo01a IsNotSaidairport02_creshendo01a IsNotCoughing NotInCombat IsTalk IsTalkManager IsNotAlone
@@ -3859,7 +3862,7 @@ Rule PlayerRemarkUpThatLadderManager {
 }
 
 Response PlayerZoeySuggestsCraneManager {
-	scene "scenes/Manager/GenericResponses09.vcd" //Allright, then, let's do it.
+	scene "scenes/Manager/GenericResponses09.vcd" //Alright, then, let's do it.
 	scene "scenes/Manager/GenericResponses10.vcd" //Good thinking.
 }
 Rule PlayerZoeySuggestsCraneManager {
@@ -4170,20 +4173,21 @@ Rule PlayerLeadOnXManager {
 }
 
 Response PlayerMoveOnManager {
-	scene "scenes/Manager/C6DLC3INTRO26.vcd" //Come on, we have to keep moving.
-	scene "scenes/Manager/C6DLC3INTRO27.vcd" //Come on, we have to keep moving.
-	scene "scenes/Manager/C6DLC3INTRO28.vcd" //Come on, we have to keep moving.
-	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/Manager/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/Manager/MoveOn02.vcd" //Time to move.
 	scene "scenes/Manager/MoveOn03.vcd" //Let's go.
 	scene "scenes/Manager/MoveOn04.vcd" //Let's Move, Let's Move!
 	scene "scenes/Manager/MoveOn05.vcd" //I really think we should keep moving.
 	scene "scenes/Manager/MoveOn06.vcd" //Whaddya say we get moving?
 	scene "scenes/Manager/MoveOn07.vcd" //Let's go.
-	scene "scenes/Manager/MoveOn08.vcd" //Tme to move
+	scene "scenes/Manager/MoveOn08.vcd" //Time to move
 	scene "scenes/Manager/ReviveFriendB10.vcd" //Let's move!
 	scene "scenes/Manager/FollowMe02.vcd" //Follow me.
 	scene "scenes/Manager/FollowMe03.vcd" //Follow me!
+	scene "scenes/Manager/C6DLC3INTRO26.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO27.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO28.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/DLC1_CommunityL4D107.vcd" odds 50 //I'm sure someone's alive, let's go look!
 }
 Rule PlayerMoveOnManager {
 	criteria ConceptPlayerMoveOn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsWithThree
@@ -4191,19 +4195,20 @@ Rule PlayerMoveOnManager {
 }
 
 Response PlayerMoveOnXManager {
-	scene "scenes/Manager/C6DLC3INTRO26.vcd" //Come on, we have to keep moving.
-	scene "scenes/Manager/C6DLC3INTRO27.vcd" //Come on, we have to keep moving.
-	scene "scenes/Manager/C6DLC3INTRO28.vcd" //Come on, we have to keep moving.
-	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/Manager/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/Manager/MoveOn02.vcd" //Time to move.
 	scene "scenes/Manager/MoveOn03.vcd" //Let's go.
 	scene "scenes/Manager/MoveOn04.vcd" //Let's Move, Let's Move!
 	scene "scenes/Manager/MoveOn05.vcd" //I really think we should keep moving.
 	scene "scenes/Manager/MoveOn07.vcd" //Let's go.
-	scene "scenes/Manager/MoveOn08.vcd" //Tme to move
+	scene "scenes/Manager/MoveOn08.vcd" //Time to move
 	scene "scenes/Manager/ReviveFriendB10.vcd" //Let's move!
 	scene "scenes/Manager/FollowMe02.vcd" //Follow me.
 	scene "scenes/Manager/FollowMe03.vcd" //Follow me!
+	scene "scenes/Manager/C6DLC3INTRO26.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO27.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/C6DLC3INTRO28.vcd" //Come on, we have to keep moving.
+	scene "scenes/Manager/DLC1_CommunityL4D107.vcd" odds 50 //I'm sure someone's alive, let's go look!
 }
 Rule PlayerMoveOnXManager {
 	criteria ConceptPlayerMoveOn IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone
@@ -4398,10 +4403,10 @@ Response PlayerNoManager {
 	scene "scenes/Manager/No04.vcd" //Not a chance.
 	scene "scenes/Manager/No05.vcd" //No way, man.
 	scene "scenes/Manager/No08.vcd" //No.
-	scene "scenes/Manager/No09.vcd" //I said No
+	scene "scenes/Manager/No09.vcd" //I said no
 	scene "scenes/Manager/DLC2Intro03.vcd" //No.
 	scene "scenes/Manager/GenericResponses39.vcd" //Oh no. Ain't no damn way..
-	scene "scenes/Manager/genericresponses32.vcd" odds 10 //You are damn right?
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat29.vcd" //I don't think that would work.
 }
 Rule PlayerNoManager {
 	criteria ConceptPlayerNo IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone
@@ -4484,18 +4489,8 @@ Response PlayerThanksManager {
 	scene "scenes/Manager/ScenarioJoin02.vcd" predelay ".2,.5" //Hello!
 }
 Rule PlayerThanksManager {
-	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone SubjectIsNotTeenGirl IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsHealthy5
+	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov NoHasAdrenaline NoHasDefibrillator NoHasVomitJar IsNotHealthyHalf
 	Response PlayerThanksManager
-}
-
-Response PlayerThanksTManager {
-	 norepeat
-	scene "scenes/Manager/ToTheRescueThanks01.vcd" predelay ".2,.5" //Thanks for getting me out of there!
-	scene "scenes/Manager/ToTheRescueThanks04.vcd" predelay ".2,.5" //Thanks. Thought I was gonna die in that closet.
-}
-Rule PlayerThanksTManager {
-	criteria ConceptPlayerThanks IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone SubjectIsTeenGirl IsNotInCheckpoint IsNotInSafeSpot IsNotInStartArea NoHasFirstAidKit NoHasPainPills NoHasGrenade NoHasMolotov IsHealthy5 IsTeenGirlNear200
-	Response PlayerThanksTManager
 }
 
 Response PlayerThanksUManager {
@@ -4550,7 +4545,7 @@ Rule UThanksZoeyManager {
 }
 
 Response PlayerYesManager {
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 	scene "scenes/Manager/Yes02.vcd" //Yeah.
 	scene "scenes/Manager/Yes05.vcd" //Okay.
 	scene "scenes/Manager/Yes07.vcd" //Yeah, I'm cool with that
@@ -4558,6 +4553,8 @@ Response PlayerYesManager {
 	scene "scenes/Manager/Yes09.vcd" //Cool
 	scene "scenes/Manager/GenericResponses15.vcd" //Okay..
 	scene "scenes/Manager/GenericResponses16.vcd" //Hell yes.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat38.vcd" //Okay.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat39.vcd" //Okay.
 }
 Rule PlayerYesManager {
 	criteria ConceptPlayerYes IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone
@@ -4881,7 +4878,7 @@ Rule IntroSmalltownManager {
 Response IntroSmalltown3Manager {
 	scene "scenes/Manager/C6DLC3SECONDSAFEROOM24.vcd" //Sounds good to me.
 	scene "scenes/Manager/WorldFarmHouseNPC10.vcd" //Sounds good to me.
-	scene "scenes/Manager/WorldSmallTownIntro02.vcd" //We get to Riverside and we'll probably be allright.
+	scene "scenes/Manager/WorldSmallTownIntro02.vcd" //We get to Riverside and we'll probably be alright.
 }
 Rule IntroSmalltown3Manager {
 	criteria ConceptIntroSmalltown3 IsManager
@@ -4894,6 +4891,8 @@ Rule IntroSmalltown3Manager {
 //Spawn - Join
 Response SurvivorSpawnManager {
 	scene "scenes/Manager/ScenarioJoin02.vcd" //Hello!
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat11.vcd" predelay ".2,.5" //Where you guys headin'?
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat23.vcd" predelay ".2,.5" //Hey guys! My name's Louis.
 }
 Rule SurvivorSpawnManager {
 	criteria ConceptPlayerScenarioJoin IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone
@@ -4901,12 +4900,10 @@ Rule SurvivorSpawnManager {
 }
 
 Response SurvivorSpawnLastMainstreetManager {
-	scene "scenes/Manager/ScenarioJoin01.vcd" //I'm here!
-	scene "scenes/Manager/ScenarioJoin02.vcd" //Hello!
-	scene "scenes/Manager/ScenarioJoin03.vcd" //Hey, I'm here!
+	scene "scenes/Manager/ScenarioJoinLast01.vcd" //We're all here
 }
 Rule SurvivorSpawnLastMainstreetManager {
-	criteria ConceptPlayerScenarioJoinLast IsManager IsSmalltown04 IsNotAlone
+	criteria ConceptPlayerScenarioJoinLast IsManager IsTalk IsTalkManager IsWorldTalkManager IsEveryoneAlive
 	ApplyContext "RemarkableReadyToGo:1:500,RemarkableBlocker:1:5"
 	applycontexttoworld
 	Response SurvivorSpawnLastMainstreetManager
@@ -4997,21 +4994,21 @@ Rule PlayerGetInsideCheckPointManager {
 	Response PlayerGetInsideCheckPointManager
 }
 
-Response PlayerGrabbedByJockeyManager {
-	scene "scenes/Manager/HurtCritical01.vcd" //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical02.vcd" //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtCritical03.vcd" //[Pain noise - loud major pain]
-	scene "scenes/Manager/HurtMajor08.vcd" //[Pain noise - ugh]
-	scene "scenes/Manager/ScreamWhilePounced01.vcd" //Get it off me! Get it off me!
-	scene "scenes/Manager/ScreamWhilePounced02.vcd" //GET IT GET IT Get it off me! Get it off me!
-	scene "scenes/Manager/ScreamWhilePounced03.vcd" //GET IT GET IT Get it off me! Get it off me!
-}
-Rule PlayerGrabbedByJockeyManager {
-	criteria ConceptSurvivorJockeyed IsNotCoughing IsManager IsTalk IsTalkManager IsNotSaidBeenJockeyedManager IsWorldTalkManager
-	ApplyContext "SaidBeenJockeyedManager:1:6,_auto_NoSpotting:1:4"
-	applycontexttoworld
-	Response PlayerGrabbedByJockeyManager
-}
+//Response PlayerGrabbedByJockeyManager {
+//scene "scenes/Manager/HurtCritical01.vcd" //[Pain noise - loud major pain]
+//scene "scenes/Manager/HurtCritical02.vcd" //[Pain noise - loud major pain]
+//scene "scenes/Manager/HurtCritical03.vcd" //[Pain noise - loud major pain]
+//scene "scenes/Manager/HurtMajor08.vcd" //[Pain noise - ugh]
+//scene "scenes/Manager/ScreamWhilePounced01.vcd" //Get it off me! Get it off me!
+//scene "scenes/Manager/ScreamWhilePounced02.vcd" //GET IT GET IT Get it off me! Get it off me!
+//scene "scenes/Manager/ScreamWhilePounced03.vcd" //GET IT GET IT Get it off me! Get it off me!
+//}
+//Rule PlayerGrabbedByJockeyManager {
+//criteria ConceptSurvivorJockeyed IsNotCoughing IsManager IsTalk IsTalkManager IsNotSaidBeenJockeyedManager IsWorldTalkManager
+//ApplyContext "SaidBeenJockeyedManager:1:6,_auto_NoSpotting:1:4"
+//applycontexttoworld
+//Response PlayerGrabbedByJockeyManager
+//}
 
 Response PlayerGrenadeManager {
 	scene "scenes/Manager/Grenade01.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -0.728 //GRENADE!
@@ -5024,7 +5021,7 @@ Response PlayerGrenadeManager {
 	scene "scenes/Manager/downinfront03.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 0.01 //Duck!
 }
 Rule PlayerGrenadeManager {
-	criteria ConceptThrewGrenade IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone YesHasGrenade
+	criteria ConceptThrewGrenade IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager IsNotAlone
 	Response PlayerGrenadeManager
 }
 
@@ -5081,7 +5078,7 @@ Response PlayerKillConfirmationManager {
 	scene "scenes/Manager/Hurrah14.vcd" then Any PlayerNiceShot foo:0 0 //YEAH!
 	scene "scenes/Manager/Taunt01.vcd" then Any PlayerNiceShot foo:0 0 //That's right!
 	scene "scenes/Manager/Taunt02.vcd" //Woo Hoo, that's right!
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 	scene "scenes/Manager/Taunt05.vcd" //Oh yeah, who's your momma, who's your daddy
 	scene "scenes/Manager/Taunt06.vcd" then Any PlayerNiceShot foo:0 0 //Helll yeah, Hell yeah!
 	scene "scenes/Manager/Taunt07.vcd" //[loud, evil laugh]
@@ -5112,7 +5109,7 @@ Response PlayerKillConfirmationTManager {
 	scene "scenes/Manager/Taunt01.vcd" then Any PlayerNiceShot foo:0 0 //That's right!
 	scene "scenes/Manager/Taunt02.vcd" //Woo Hoo, that's right!
 	scene "scenes/Manager/Taunt03.vcd" //Yeah, baby, Yeah!
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 	scene "scenes/Manager/Taunt05.vcd" //Oh yeah, who's your momma, who's your daddy
 	scene "scenes/Manager/Taunt06.vcd" then Any PlayerNiceShot foo:0 0 //Helll yeah, Hell yeah!
 	scene "scenes/Manager/Taunt07.vcd" //[loud, evil laugh]
@@ -5135,7 +5132,7 @@ Response PlayerKillConfirmationXManager {
 	scene "scenes/Manager/Hurrah14.vcd" then Any PlayerNiceShot foo:0 0 //YEAH!
 	scene "scenes/Manager/Taunt01.vcd" then Any PlayerNiceShot foo:0 0 //That's right!
 	scene "scenes/Manager/Taunt02.vcd" //Woo Hoo, that's right!
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 	scene "scenes/Manager/Taunt05.vcd" //Oh yeah, who's your momma, who's your daddy
 	scene "scenes/Manager/Taunt06.vcd" then Any PlayerNiceShot foo:0 0 //Helll yeah, Hell yeah!
 	scene "scenes/Manager/Taunt07.vcd" //[loud, evil laugh]
@@ -5156,6 +5153,8 @@ Response PlayerKillTankConfirmationManager {
 	scene "scenes/Manager/SafeSpotAheadReaction03.vcd" //Knew we'd make it!
 	scene "scenes/Manager/SafeSpotAheadReaction05.vcd" //Man, I KNEW we was gonna make it.
 	scene "scenes/Manager/dlc2swearcoupdegrace17.vcd" //Oh, its a bitch apocalypse now! Bitch!
+	scene "scenes/Manager/DLC1_KILLFINALTANK01.vcd" odds 15 then any HurrahAlso foo:0 0 //That is for Bill!
+	scene "scenes/Manager/DLC1_KILLFINALTANK02.vcd" odds 15 then any HurrahAlso foo:0 0 //That is for Bill!
 }
 Rule PlayerKillTankConfirmationManager {
 	criteria ConceptKilledZombie IsNotCoughing IsManager IsTalk IsTalkManager SubjectIsTank IsNotSaidTankDead IsNotAlone IsNotIncapacitated IsWorldTalkManager
@@ -5324,7 +5323,7 @@ Response PlayerTransitionManager {
 	scene "scenes/Manager/PlayerTransitionClose04.vcd" //BOOM-diah
 	scene "scenes/Manager/PositiveNoise02.vcd" //[Improv non-verbal pleasure & interest sounds]
 	scene "scenes/Manager/PositiveNoise03.vcd" //[Improv non-verbal pleasure & interest sounds]
-	scene "scenes/Manager/ReactionPositive05.vcd" //Allright!
+	scene "scenes/Manager/ReactionPositive05.vcd" //Alright!
 	scene "scenes/Manager/ReactionPositive06.vcd" //Heh hehhhh.
 	scene "scenes/Manager/ReactionPositive07.vcd" //Nice!
 	scene "scenes/Manager/ReactionPositive09.vcd" //Sweet Baby!
@@ -5887,8 +5886,8 @@ Rule SurvivorVocalizeGoingToDie3XManager {
 }
 
 Response SurvivorVocalizeGoingToDie3NoKitManager {
-	scene "scenes/Manager/GoingToDie05.vcd" //I really need to get some First Aid.
-	scene "scenes/Manager/GoingToDie21.vcd" //I'm not kidding, we need to find me some First Aid.
+	scene "scenes/Manager/GoingToDie05.vcd" //I really need to get some First aid.
+	scene "scenes/Manager/GoingToDie21.vcd" //I'm not kidding, we need to find me some First aid.
 }
 Rule SurvivorVocalizeGoingToDie3NoKitManager {
 	criteria ConceptPlayerGoingToDie IsNotSpeaking IsNotCoughing IsManager IsOnThirdStrike IsTalk IsTalkManager IsNotComplainBlock IsWorldTalkManager IsNotInCheckpoint NoHasFirstAidKit ChanceToFire30Percent IsNotAlone
@@ -6112,7 +6111,6 @@ Rule PlayerLedgeHangStartXTManager {
 	Response PlayerLedgeHangStartXTManager
 }
 
-
 Response DoubleDeathManager {
 	scene "scenes/Manager/DoubleDeathResponse01.vcd" predelay ".5,1.25" //This shit was not in my plans.
 	scene "scenes/Manager/DoubleDeathResponse02.vcd" predelay ".5,1.25" //We gotta pull ourselves together.
@@ -6123,12 +6121,30 @@ Response DoubleDeathManager {
 	scene "scenes/Manager/StayTogether05.vcd" predelay ".5,1.25" //We've got to stick together.
 }
 Rule DoubleDeathManager {
-	criteria ConceptSurvivorDied IsNotCoughing IsManager IsSaidSomeoneDied IsTalk IsTalkManager IsNotSaidSomeoneDiedDouble IsWorldTalkManager
+	criteria ConceptSurvivorDied IsNotCoughing IsManager IsWithThree IsSaidSomeoneDied IsTalk IsTalkManager IsNotSaidSomeoneDiedDouble IsWorldTalkManager
 	ApplyContext "SaidSomeoneDied:1:10,SaidSomeoneDiedDouble:1:10,SaidSomeoneDiedKill:1:20"
 	applycontexttoworld
 	Response DoubleDeathManager
 }
 
+Response DoubleDeath2Manager {
+	scene "scenes/TeenGirl/DoubleDeathResponse02.vcd" predelay ".5,1.25" //It's just you and me left!
+	scene "scenes/TeenGirl/Generic01.vcd" predelay ".5,1.25" //It's not going to get any better you know.
+	scene "scenes/TeenGirl/Generic03.vcd" predelay ".5,1.25" //Things like this never end well.
+	scene "scenes/TeenGirl/StayTogether02.vcd" //We should stay together
+	scene "scenes/TeenGirl/StayTogether03.vcd" //Let's stick together!
+	scene "scenes/TeenGirl/StayTogether04.vcd" //Come on, we're together.
+	scene "scenes/TeenGirl/StayTogether06.vcd" //Stay close!
+	scene "scenes/TeenGirl/StayTogether07.vcd" //Let's try to stay together
+	scene "scenes/TeenGirl/StayTogether11.vcd" //We need to stick together
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic01.vcd" //I'm gonna miss them.
+}
+Rule DoubleDeath2Manager {
+	criteria ConceptDeath2Left IsNotCoughing IsManager IsTalk IsTalkManager IsNotSaidSomeoneDiedDouble2 IsWithTwo IsNotIncapacitated IsWorldTalkManager ChanceToFire50Percent
+	ApplyContext "SaidSomeoneDiedDouble2:1:10"
+	applycontexttoworld
+	Response DoubleDeath2Manager
+}
 Response SurvivorDiedBillManager {
 	scene "scenes/Manager/C6DLC3BILLDIES03.vcd" predelay ".5,1.25" then Any Death2Left foo:0 0 //BILLLLLLLL!
 	scene "scenes/Manager/GriefVet01.vcd" predelay ".5,1.25" then Any Death2Left foo:0 0 //Bill, no!
@@ -6196,8 +6212,8 @@ Rule SurvivorPickupShotgun_spasManager {
 }
 
 Response SurvivorPickupFirstAidKitManager {
-	scene "scenes/Manager/TakeFirstAid01.vcd" //First Aid. [to self]
-	scene "scenes/Manager/TakeFirstAid02.vcd" //Grabbing First Aid!
+	scene "scenes/Manager/TakeFirstAid01.vcd" //First aid. [to self]
+	scene "scenes/Manager/TakeFirstAid02.vcd" //Grabbing First aid!
 	scene "scenes/Manager/TakeFirstAid03.vcd" //Oh, this first aid is mine!
 }
 Rule SurvivorPickupFirstAidKitManager {
@@ -6341,7 +6357,7 @@ Rule TakeShotgunGroovyLouis {
 //Vocalizer - Rescue
 Response PlayerGettingRevivedManager {
 	scene "scenes/Manager/GettingRevived01.vcd" then subject ReviveBgo foo:0 -1.022 //I'm okay.
-	scene "scenes/Manager/GettingRevived02.vcd" then subject ReviveBfine foo:0 -1.280 //I'm allright.
+	scene "scenes/Manager/GettingRevived02.vcd" then subject ReviveBfine foo:0 -1.280 //I'm alright.
 	scene "scenes/Manager/GettingRevived03.vcd" then subject ReviveBgo foo:0 -2.048 //[groan]
 	scene "scenes/Manager/GettingRevived04.vcd" then subject ReviveBgo foo:0 -1.287 //I don't even know.
 	scene "scenes/Manager/GettingRevived05.vcd" then subject ReviveBfine foo:0 -2.278 //Aw hell, I'm bleedin'.
@@ -6360,7 +6376,7 @@ Rule PlayerGettingRevivedManager {
 
 Response PlayerGettingRevivedManager {
 	scene "scenes/Manager/GettingRevived01.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm okay.
-	scene "scenes/Manager/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm allright.
+	scene "scenes/Manager/GettingRevived02.vcd" then From ReviveFriendDownFinal foo:0 0 //I'm alright.
 	scene "scenes/Manager/GettingRevived03.vcd" then From ReviveFriendDownFinal foo:0 0 //[groan]
 	scene "scenes/Manager/GettingRevived04.vcd" then From ReviveFriendDownFinal foo:0 0 //I don't even know.
 	scene "scenes/Manager/GettingRevived05.vcd" then From ReviveFriendDownFinal foo:0 0 //Aw hell, I'm bleedin'.
@@ -6782,6 +6798,7 @@ Rule PlayerYellRunManager {
 Response GrabbingGasSCManager {
 	scene "scenes/Manager/KillConfirmation04.vcd" //Got it!
 	scene "scenes/Manager/Yes05.vcd" //Okay.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat39.vcd" //Okay.
 }
 Rule GrabbingGasSCManager {
 	criteria ConceptPlayerEquippedScavengeItem IsManager IsTalk IsTalkManager IsWorldTalkManager ManagerNotSaidGrabbingCan
@@ -6806,7 +6823,7 @@ Rule PlayerShotGasCanManager {
 }
 
 Response ScavengeStartManager {
-	scene "scenes/Manager/MoveOn01.vcd" //Allright, let's go.
+	scene "scenes/Manager/MoveOn01.vcd" //Alright, let's go.
 	scene "scenes/Manager/MoveOn03.vcd" //Let's go.
 	scene "scenes/Manager/MoveOn04.vcd" //Let's Move, Let's Move!
 }
@@ -6843,9 +6860,11 @@ Response SurvivorPickupbaseball_batManager {
 	scene "scenes/Manager/GenericResponses23.vcd" //Works for me.
 	scene "scenes/Manager/GenericResponses40.vcd" //Hell yeah.
 	scene "scenes/Manager/ReactionPositive03.vcd" //Oh, Cool
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 	scene "scenes/Manager/Yes05.vcd" //Okay.
 	scene "scenes/Manager/Yes09.vcd" //Cool
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat38.vcd" //Okay.
+	scene "scenes/Manager/DLC1_C6M3_FinaleChat39.vcd" //Okay.
 }
 Rule SurvivorPickupbaseball_batManager {
 	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpbaseball_bat IsNotSpeaking ManagerNotPickedUpItem IsTalk IsTalkManager IsWorldTalkManager
@@ -6963,7 +6982,7 @@ Response SurvivorPickupUpExplosiveAmmoManager {
 	scene "scenes/Manager/ReactionPositive07.vcd" //Nice!
 	scene "scenes/Manager/ReactionPositive09.vcd" //Sweet Baby!
 	scene "scenes/Manager/ReactionPositive10.vcd" //That's what I'm talkin' about
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 }
 Rule SurvivorPickupUpExplosiveAmmoManager {
 	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpExplosiveAmmo IsNotSpeaking IsTalk IsTalkManager IsWorldTalkManager
@@ -6989,7 +7008,7 @@ Response SurvivorPickupUpIncendiaryAmmoManager {
 	scene "scenes/Manager/ReactionPositive07.vcd" //Nice!
 	scene "scenes/Manager/ReactionPositive09.vcd" //Sweet Baby!
 	scene "scenes/Manager/ReactionPositive10.vcd" //That's what I'm talkin' about
-	scene "scenes/Manager/Taunt04.vcd" //Alllright!
+	scene "scenes/Manager/Taunt04.vcd" //Allright!
 }
 Rule SurvivorPickupUpIncendiaryAmmoManager {
 	criteria ConceptPlayerPickup IsNotCoughing IsManager IsPickedUpIncendiaryAmmo IsNotSpeaking IsTalk IsTalkManager IsWorldTalkManager
@@ -7530,6 +7549,15 @@ Response What3Manager {
 	scene "scenes/Manager/GenericResponses02.vcd" then TeenGirl PlayerLaughLouis foo:0 0 //[Disbelief] What?
 }
 Rule What3Manager {
-	criteria What3 IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager
+	criteria What3 IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager ChanceToFire50Percent
 	Response What3Manager
+}
+
+Response PlayerKillHunterConfirmationManager {
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic08.vcd" //I think we're gonna be seeing more of that guy!
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic09.vcd" then TeenGirl c6m3_outroL4D105a foo:0 -2.622 //I think we're gonna be seeing more of that guy!
+}
+Rule PlayerKillHunterConfirmationManager {
+	criteria ConceptKilledZombie IsNotCoughing IsManager IsTalk IsTalkManager SubjectIsHunter IsSubjectNear250 ChanceToFire15Percent IsWorldTalkManager IsNotSpeakingWeight0
+	Response PlayerKillHunterConfirmationManager
 }

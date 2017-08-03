@@ -23,7 +23,7 @@ criterion "IsSaidUsingDefibrillatorGambler" "SaidUsingDefibrillatorGambler" "1" 
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 
 Response C1M1InSmokeGambler {
@@ -67,7 +67,7 @@ Rule C1M3DoorAlarmGambler {
 }
 
 Response C1M3SafeRoomGambler {
-	scene "scenes/Gambler/Blank.vcd" then any C1M3SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Gambler/Blank.vcd" then any C1M3SafeRoom2 foo:0 3
 }
 Rule C1M3SafeRoomGambler {
 	criteria ConceptTalkIdle Joined2 IsGambler IsNotSaidC1M3SafeRoom2 ismap_c1m3_mall IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -77,7 +77,7 @@ Rule C1M3SafeRoomGambler {
 }
 
 Response C1M4SafeRoomGambler {
-	scene "scenes/Gambler/Blank.vcd" then any C1M4SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Gambler/Blank.vcd" then any C1M4SafeRoom2 foo:0 3
 }
 Rule C1M4SafeRoomGambler {
 	criteria ConceptTalkIdle Joined2 IsGambler IsNotSaidC1M4SafeRoom2 ismap_c1m4_atrium IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -104,8 +104,8 @@ Response PlayerNiceShotGambler {
 	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead10.vcd" //Wow, true.
 	scene "scenes/Gambler/EllisInterrupt13.vcd" //That's terrific.
 	scene "scenes/Gambler/EllisInterrupt14.vcd" //Wow, really.
-	scene "scenes/Gambler/NiceJob01.vcd" //Well all right!
-	scene "scenes/Gambler/NiceJob02.vcd" //Well all right!
+	scene "scenes/Gambler/NiceJob01.vcd" //Well alright!
+	scene "scenes/Gambler/NiceJob02.vcd" //Well alright!
 	scene "scenes/Gambler/NiceJob03.vcd" //Nice job!
 	scene "scenes/Gambler/NiceJob05.vcd" odds 50 //That was surprisingly good.
 	scene "scenes/Gambler/NiceJob09.vcd" odds 50 //That's what I like to see.
@@ -122,7 +122,7 @@ Response PlayerNiceShotGambler {
 	scene "scenes/Gambler/WorldC1M1B53.vcd" //Okay, let's keep this up.
 	scene "scenes/Gambler/WorldC1M1B55.vcd" //Nice work out there.
 	scene "scenes/Gambler/WorldC1M2B33.vcd" //I gotta respect that!
-	scene "scenes/Gambler/WorldC4M1B08.vcd" //All right, fine.
+	scene "scenes/Gambler/WorldC4M1B08.vcd" //Alright, fine.
 }
 Rule PlayerNiceShotGambler {
 	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsNotSpeakingWeight0 IsTalk IsTalkGambler ChanceToFire30Percent IsWorldTalkGambler
@@ -135,8 +135,8 @@ Response PlayerNiceShotCoachGambler {
 	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead05.vcd" //That's a good one Coach.
 	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead06.vcd" //Coach! That's a good one.
 	scene "scenes/Gambler/DLC1_C6M1_WeddingWitchDead07.vcd" //Spectacular, Coach.
-	scene "scenes/Gambler/NiceShotCoach01.vcd" //All right Coach.
-	scene "scenes/Gambler/NiceShotCoach02.vcd" //All right Coach.
+	scene "scenes/Gambler/NiceShotCoach01.vcd" //Alright Coach.
+	scene "scenes/Gambler/NiceShotCoach02.vcd" //Alright Coach.
 }
 Rule PlayerNiceShotCoachGambler {
 	criteria ConceptPlayerNiceShot IsNotCoughing IsGambler IssuerClose IsNotSpeakingWeight0 IsTalk IsTalkGambler ChanceToFire20Percent SubjectIsCoach IsWorldTalkGambler
@@ -205,7 +205,7 @@ Rule L4D1PlayerNiceShotLouisGambler {
 
 Response L4D1PlayerNiceShotZoeyGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing03.vcd" //Thanks, Zoey!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing05.vcd" //Zoey, all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing05.vcd" //Zoey, alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Killing07.vcd" //Nice shot, Zoey!
 }
 Rule L4D1PlayerNiceShotZoeyGambler {
@@ -446,7 +446,7 @@ Rule PlayerC3M1FerryLanded2Gambler {
 }
 
 Response PlayerC3M1FerryLaunched2aGambler {
-	scene "scenes/Gambler/Blank.vcd" //Blank
+	scene "scenes/Gambler/Blank.vcd"
 }
 Rule PlayerC3M1FerryLaunched2aGambler {
 	criteria ConceptC3M1FerryLaunched2 IsGambler IsTalk IsTalkGambler IsNotSaidC3M1FerryLaunched2 IsWorldTalkGambler AutoIsNotScavenge AutoIsNotSurvival
@@ -528,7 +528,7 @@ Rule PlayerintroC1M1Gambler {
 }
 
 Response PlayerPlayerUsingColaBottlesGambler {
-	scene "scenes/Gambler/Blank.vcd" then orator whitakerputcola foo:0 0 //Blank
+	scene "scenes/Gambler/Blank.vcd" then orator whitakerputcola foo:0 0
 }
 Rule PlayerPlayerUsingColaBottlesGambler {
 	criteria ConceptPlayerUsingColaBottles IsGambler IsTalk IsTalkGambler IsNotSaidPlayerUsingColaBottles IsWorldTalkGambler
@@ -713,7 +713,7 @@ Rule ThanksProducerGotItemGambler {
 
 Response ThanksBikerGotItemGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" predelay "1.5" //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay "1.5" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay "1.5" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" predelay "1.5" //Thanks, greaseball! -1.067
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "1.5" //Thanks, pal!
 	scene "scenes/Gambler/WorldC1M1B137.vcd" predelay "1.5" //Well, this is unexpected.
@@ -727,8 +727,8 @@ Rule ThanksBikerGotItemGambler {
 
 Response ThanksManagerGotItemGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items02.vcd" predelay "1.5" //Thanks, we'll make good use of this.
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay "1.5" //Sorry if I was rude before. You guys are all right!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" predelay "1.5" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" predelay "1.5" //Sorry if I was rude before. You guys are alright!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" predelay "1.5" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" predelay "1.5" //Thanks, pal!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay "1.5" //Got it, thank you!
 }
@@ -748,7 +748,7 @@ Rule ThanksNamVetGotItemGambler {
 
 Response ThanksTeenGirlGotItemGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items02.vcd" predelay "1.5" //Thanks, we'll make good use of this.
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" predelay "1.5" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" predelay "1.5" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" predelay "1.5" //Hey thanks, babe!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" predelay "1.5" //Got it, thank you!
 }
@@ -958,8 +958,8 @@ Rule PlayerToTheRescueGambler {
 }
 
 Response RespondAffirmativeGambler {
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting13.vcd" //All right.
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting14.vcd" //Yeah, all right.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting13.vcd" //Alright.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting14.vcd" //Yeah, alright.
 	scene "scenes/Gambler/DLC1_C6M2_Phase2InWater08.vcd" //YES.
 	scene "scenes/Gambler/Yes01.vcd" //Yes.
 	scene "scenes/Gambler/Yes04.vcd" //Yeppers.
@@ -1019,7 +1019,7 @@ Rule C1M2LeavingSafeRoomGambler {
 }
 
 Response C1M2SafeRoomGambler {
-	scene "scenes/Gambler/Blank.vcd" then any C1M2SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Gambler/Blank.vcd" then any C1M2SafeRoom2 foo:0 3
 }
 Rule C1M2SafeRoomGambler {
 	criteria ConceptTalkIdle Joined2 IsGambler IsNotSaidC1M2SafeRoom2 ismap_c1m2_streets IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -1180,7 +1180,7 @@ criterion "IsNotSrcGrp_C2M2_SAFE002" "worldSrcGrp_C2M2_SAFE002" "<1" required
 
 //C2M3
 Response c2m3_DownHoleGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule c2m3_DownHoleGambler {
 	criteria Conceptc2m3downhole IsGambler AutoIsNotScavenge AutoIsNotSurvival
@@ -1243,7 +1243,7 @@ criterion "IsNotSrcGrp_C2M3_SPOT02" "worldSrcGrp_C2M3_SPOT02" "<1" required
 criterion "IsNotSrcGrp_C2M3_007" "worldSrcGrp_C2M3_007" "<1" required
 
 Response PlayerRemarkc2m3_saferoomaGambler {
-	scene "scenes/Gambler/Blank.vcd" //Blank
+	scene "scenes/Gambler/Blank.vcd"
 }
 Rule PlayerRemarkc2m3_saferoomaGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea Ismap_c2m3 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M3_007 IsNotSpeakingWeight0
@@ -1271,7 +1271,7 @@ Rule C2M4_saferoom01Gambler {
 criterion "IsNotSrcGrp_C2M4_700" "worldSrcGrp_C2M4_700" "<1" required
 
 Response c2m4_saferoominitGambler {
-	scene "scenes/Gambler/blank.vcd" //Blank
+	scene "scenes/Gambler/blank.vcd"
 }
 Rule c2m4_saferoominitGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea ismap_c2m4 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M4_700 IsNotSpeakingWeight0
@@ -1447,7 +1447,7 @@ Rule C2M5_PlanWorkedGambler {
 criterion "IsNotSrcGrp_C2M5_001" "worldSrcGrp_C2M5_001" "<1" required
 
 Response c2m5_saferoominitGambler {
-	scene "scenes/Gambler/blank.vcd" //Blank
+	scene "scenes/Gambler/blank.vcd"
 }
 Rule c2m5_saferoominitGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea Ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M5_001 _auto_NotSafeRoomStart IsNotSpeakingWeight0
@@ -1805,7 +1805,7 @@ Rule C4M5BoatNagsGambler {
 criterion "IsNotSrcGrp_C4M5_001" "worldSrcGrp_C4M5_001" "<1" required
 
 Response PlayerRemarkc4m5_saferoomaGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule PlayerRemarkc4m5_saferoomaGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea Isc4m5 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M5_001 IsNotSpeakingWeight0
@@ -2189,7 +2189,7 @@ Rule PlayerRemarkc5m3freewayGambler {
 }
 
 Response PlayerRemarkc5m3insewerGambler {
-	scene "scenes/Gambler/blank.vcd" //Blank
+	scene "scenes/Gambler/blank.vcd"
 }
 Rule PlayerRemarkc5m3insewerGambler {
 	criteria ConceptRemark IsGambler Isc5m3insewer IsNotSaidc5m3insewer IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear250 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -2607,7 +2607,7 @@ Rule C5M5_saferoom001Gambler {
 
 Response C5M5_saferoom003Gambler {
 	scene "scenes/Gambler/WorldC5M5B02.vcd" //Oh yeah.
-	scene "scenes/Gambler/WorldC5M5B04.vcd" //[chuckles] Okay, allright, let's go.
+	scene "scenes/Gambler/WorldC5M5B04.vcd" //[chuckles] Okay, alright, let's go.
 }
 Rule C5M5_saferoom003Gambler {
 	criteria ConceptC5M5_saferoom003 IsGambler IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSoldierChatter _auto_NotButton2
@@ -2616,7 +2616,7 @@ Rule C5M5_saferoom003Gambler {
 
 Response C5M5_saferoom004Gambler {
 	scene "scenes/Gambler/WorldC5M5B02.vcd" //Oh yeah.
-	scene "scenes/Gambler/WorldC5M5B03.vcd" //[chuckles] Allright, let's go.
+	scene "scenes/Gambler/WorldC5M5B03.vcd" //[chuckles] Alright, let's go.
 }
 Rule C5M5_saferoom004Gambler {
 	criteria ConceptC5M5_saferoom004 IsGambler IsInStartArea AutoIsNotScavenge AutoIsNotSurvival _auto_NotSoldierChatter _auto_NotButton2
@@ -2704,7 +2704,7 @@ Rule C5M5HearSoldiersNagGambler {
 criterion "IsNotSrcGrp_C5M5_001" "worldSrcGrp_C5M5_001" "<1" required
 
 Response C5M5LeaveSafeGambler {
-	scene "scenes/Gambler/Blank.vcd" then orator C5M5_Soldier1 foo:0 0.01 //Blank
+	scene "scenes/Gambler/Blank.vcd" then orator C5M5_Soldier1 foo:0 0.01
 }
 Rule C5M5LeaveSafeGambler {
 	criteria ConceptSurvivorLeavingInitialCheckpoint IsGambler IsMapc5m5_bridge IsNotSrcGrp_C5M5_001
@@ -2761,7 +2761,7 @@ Rule C5M5SafeRoomIdleGambler {
 criterion "IsNotSrcGrp_C5M5_003" "worldSrcGrp_C5M5_003" "<1" required
 
 Response C5M5SafeRoomStartGambler {
-	scene "scenes/Gambler/Blank.vcd" //Blank
+	scene "scenes/Gambler/Blank.vcd"
 }
 Rule C5M5SafeRoomStartGambler {
 	criteria ConceptTalkIdle IsGambler IsMapc5m5_bridge IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C5M5_003 _auto_NotSafeRoomStart _auto_NotSoldierChatter _auto_NotButton2 IsNotSpeakingWeight0
@@ -2796,7 +2796,7 @@ Rule PlayerCallForRescueGambler {
 
 //Counter
 Response ScenarioJoinLastGambler {
-	scene "scenes/Gambler/blank.vcd" //Blank
+	scene "scenes/Gambler/blank.vcd"
 }
 Rule ScenarioJoinLastGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea JoinedLess5 IsNotSpeakingWeight0 _auto_NotSafeRoomStart _auto_NotTurnOffJoinLast
@@ -2949,10 +2949,10 @@ Rule SurvivorSpottedDefibrillatorAutoGambler2 {
 }
 
 Response SurvivorSpottedGrenadeGambler {
-	scene "scenes/Gambler/SpotGrenades01.vcd" //There's a pipebomb here.
+	scene "scenes/Gambler/SpotGrenades01.vcd" //There's a pipe bomb here.
 	scene "scenes/Gambler/SpotGrenades02.vcd" //Pipe bomb.
 	scene "scenes/Gambler/SpotGrenades03.vcd" //Pipe bombs!
-	scene "scenes/Gambler/SpotGrenades05.vcd" //Pipebomb here.
+	scene "scenes/Gambler/SpotGrenades05.vcd" //Pipe bomb here.
 }
 Rule SurvivorSpottedGrenadeGambler {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto IsPipeBomb IsWorldTalkGambler
@@ -3023,9 +3023,9 @@ Response SurvivorSpottedHealthGambler {
 	scene "scenes/Gambler/DLC1_C6M1_IntoPark04.vcd" //Everyone grab a health kit.
 	scene "scenes/Gambler/DLC1_C6M1_IntoPark05.vcd" //Don't forget a health kit.
 	scene "scenes/Gambler/DLC1_C6M1_IntoPark06.vcd" //Quick, grab a health kit.
-	scene "scenes/Gambler/SpotFirstAid01.vcd" //First Aid Kit here!
-	scene "scenes/Gambler/SpotFirstAid02.vcd" //First Aid here!
-	scene "scenes/Gambler/SpotFirstAid03.vcd" //First Aid!
+	scene "scenes/Gambler/SpotFirstAid01.vcd" //First aid kit here!
+	scene "scenes/Gambler/SpotFirstAid02.vcd" //First aid here!
+	scene "scenes/Gambler/SpotFirstAid03.vcd" //First aid!
 }
 Rule SurvivorSpottedHealthGambler {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsGambler IsTalk IsTalkGambler IsNotSmartLookAuto IsFirstAidKit IsWorldTalkGambler
@@ -3049,8 +3049,8 @@ Rule SurvivorSpottedHealthAutoGambler2 {
 }
 
 Response SurvivorSpottedHealthAutoHasHealthGambler {
-	scene "scenes/Gambler/SpotFirstAids01.vcd" //First Aid Kits here!
-	scene "scenes/Gambler/SpotFirstAids02.vcd" //First Aid Kits!
+	scene "scenes/Gambler/SpotFirstAids01.vcd" //First aid kits here!
+	scene "scenes/Gambler/SpotFirstAids02.vcd" //First aid kits!
 }
 Rule SurvivorSpottedHealthAutoHasHealthGambler {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsGambler IsTalk IsTalkGambler IsSmartLookAuto IsNotInSafeSpot YesHasPack IsNotAlone IsNotSaidSpotHealth IsNotSaidSpotGambler IsFirstAidKit ChanceToFire60Percent IsWorldTalkGambler _auto_NotNoSpotting IsNotSpeakingWeight0
@@ -3960,7 +3960,7 @@ Response PlayerFriendlyFireGambler {
 	scene "scenes/Gambler/FriendlyFire02.vcd" //I don't want to hear any excuses, just stop shooting me.
 	scene "scenes/Gambler/FriendlyFire03.vcd" //STOP SHOOTING ME!
 	scene "scenes/Gambler/FriendlyFire04.vcd" //Can you stop shooting me?
-	scene "scenes/Gambler/FriendlyFire05.vcd" //You know, ot's not all right that you are SHOOTING ME!
+	scene "scenes/Gambler/FriendlyFire05.vcd" //You know, ot's not alright that you are SHOOTING ME!
 	scene "scenes/Gambler/FriendlyFire06.vcd" //DAMN! You suck at shooting.
 	scene "scenes/Gambler/FriendlyFire07.vcd" //Stop shooting me.
 	scene "scenes/Gambler/FriendlyFire08.vcd" //Well thank you for ventilating my suit.
@@ -4499,7 +4499,7 @@ Response PlayerHelpIncappedGambler {
 	scene "scenes/Gambler/LedgeHangEnd03.vcd" //Don't be leaving me here DAMNIT! HELP!
 	scene "scenes/Gambler/LedgeHangMiddle02.vcd" //Don't even think of leaving me here!
 	scene "scenes/Gambler/LedgeHangMiddle03.vcd" //Could use a hand over here.
-	scene "scenes/Gambler/LedgeHangMiddle04.vcd" //Could use some help here .
+	scene "scenes/Gambler/LedgeHangMiddle04.vcd" //Could use some help here.
 	scene "scenes/Gambler/LedgeHangStart03.vcd" //Hey! Give me a hand.
 	scene "scenes/Gambler/LedgeHangStart04.vcd" //I need a hand.
 }
@@ -4512,7 +4512,7 @@ Rule PlayerHelpIncappedGambler {
 
 //PlayerIncappedResponse
 Response HelpResponseGamblerGambler {
-	scene "scenes/Gambler/Blank.vcd" //Blank
+	scene "scenes/Gambler/Blank.vcd"
 }
 Rule HelpResponseGamblerGambler {
 	criteria ConceptFriendNeedsHelp IsGambler IsTalk IsTalkGambler IsNotIncapacitated IsInSafeSpot FromIsGambler IsNotInStartArea NotAloneInSafeSpot IsWorldTalkGambler
@@ -4583,7 +4583,7 @@ Rule C3M3BridgeButtonGambler {
 }
 
 Response EndOfWavWindow5Gambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule EndOfWavWindow5Gambler {
 	criteria ConceptEndOfWavWindow5 IsGambler
@@ -5357,7 +5357,7 @@ criterion "IsNotSrcGrp_C2M2_FOOD_003" "worldSrcGrp_C2M2_FOOD_003" "<1" required
 criterion "IsNotSrcGrp_C2M2_910" "worldSrcGrp_C2M2_910" "<1" required
 
 Response PlayerRemarkc2m2_saferoomaGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule PlayerRemarkc2m2_saferoomaGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea Ismap_c2m2 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M2_910 IsNotSpeakingWeight0
@@ -6792,7 +6792,7 @@ Rule PlayerRemarkc4m3_safehousedowncGambler {
 criterion "IsNotSrcGrp_C4M3_001" "worldSrcGrp_C4M3_001" "<1" required
 
 Response PlayerRemarkc4m3_startsaferoomaGambler {
-	scene "scenes/Gambler/Blank.vcd" //Blank
+	scene "scenes/Gambler/Blank.vcd"
 }
 Rule PlayerRemarkc4m3_startsaferoomaGambler {
 	criteria ConceptTalkIdle IsGambler IsInStartArea Isc4m3 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M3_001 IsNotSpeakingWeight0
@@ -6854,7 +6854,7 @@ Rule PlayerRemarkc4m4_garagesalebGambler {
 criterion "IsNotSrcGrp_C4M4_003" "worldSrcGrp_C4M4_003" "<1" required
 
 Response PlayerRemarkc4m4_pastplaygroundaGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule PlayerRemarkc4m4_pastplaygroundaGambler {
 	criteria ConceptRemark IsGambler Isc4m4_pastplaygrounda IsNotSaidc4m4_pastplaygrounda IsNotCoughing NotInCombat IsTalk IsTalkGambler IsWorldTalkGambler IsSubjectNear600 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M4_003 IsNotSpeakingWeight0
@@ -7441,8 +7441,8 @@ Response PlayerMoveOnGambler {
 	scene "scenes/Gambler/WorldC1M4B41.vcd" //Time to leave people!
 	scene "scenes/Gambler/WorldC1M4B42.vcd" //Time to go!
 	scene "scenes/Gambler/WorldC1M4B43.vcd" //Let's go people, let's go!
-	scene "scenes/Gambler/WorldC5M5B03.vcd" odds 10 //[chuckles] Allright, let's go.
-	scene "scenes/Gambler/WorldC5M5B04.vcd" odds 10 //[chuckles] Okay, allright, let's go.
+	scene "scenes/Gambler/WorldC5M5B03.vcd" odds 10 //[chuckles] Alright, let's go.
+	scene "scenes/Gambler/WorldC5M5B04.vcd" odds 10 //[chuckles] Okay, alright, let's go.
 	scene "scenes/Gambler/ReviveFriendB03.vcd" //Let's hit the road.
 	scene "scenes/Gambler/ReviveFriendB04.vcd" //Here we go.
 	scene "scenes/Gambler/ReviveFriendB06.vcd" //Let's roll.
@@ -7565,8 +7565,8 @@ Rule MTLostCallGambler {
 Response PlayerNiceJobResponseGambler {
 	scene "scenes/Gambler/EllisInterrupt13.vcd" //That's terrific.
 	scene "scenes/Gambler/MeleeWeapons18.vcd" //Niiiiice.
-	scene "scenes/Gambler/NiceJob01.vcd" //Well all right!
-	scene "scenes/Gambler/NiceJob02.vcd" //Well all right!
+	scene "scenes/Gambler/NiceJob01.vcd" //Well alright!
+	scene "scenes/Gambler/NiceJob02.vcd" //Well alright!
 	scene "scenes/Gambler/NiceJob03.vcd" //Nice job!
 	scene "scenes/Gambler/NiceJob04.vcd" //Nice job!
 	scene "scenes/Gambler/NiceJob05.vcd" //That was surprisingly good.
@@ -7581,7 +7581,7 @@ Response PlayerNiceJobResponseGambler {
 	scene "scenes/Gambler/WorldC1M1B53.vcd" //Okay, let's keep this up.
 	scene "scenes/Gambler/WorldC1M1B55.vcd" //Nice work out there.
 	scene "scenes/Gambler/WorldC1M2B33.vcd" //I gotta respect that!
-	scene "scenes/Gambler/WorldC4M1B08.vcd" //All right, fine.
+	scene "scenes/Gambler/WorldC4M1B08.vcd" //Alright, fine.
 }
 Rule PlayerNiceJobResponseGambler {
 	criteria ConceptPlayerNiceJob IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
@@ -7743,8 +7743,8 @@ Rule PlayerYellRunGambler {
 }
 
 Response PlayerYesGambler {
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting13.vcd" //All right.
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting14.vcd" //Yeah, all right.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting13.vcd" //Alright.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting14.vcd" //Yeah, alright.
 	scene "scenes/Gambler/DLC1_C6M2_Phase2InWater08.vcd" //YES.
 	scene "scenes/Gambler/WorldC1M2B19.vcd" //Sure, why not.
 	scene "scenes/Gambler/WorldC2M460.vcd" //Okay.
@@ -7938,7 +7938,7 @@ Rule PlayerWarnCarefulGambler {
 
 //Scavenge
 Response GasPour10MoreSCGambler {
-	print " " then self GasPour10More foo:0 0.01 //Blank
+	print " " then self GasPour10More foo:0 0.01
 }
 Rule GasPour10MoreSCGambler {
 	criteria ConceptPlayerPourFinished IsGambler IsTalk IsTalkGambler IsWorldTalkGambler Score10MoreSC
@@ -7948,7 +7948,7 @@ Rule GasPour10MoreSCGambler {
 }
 
 Response GasPour10MoreWaitGambler {
-	print " " then self GasPour10More foo:0 0.1 //Blank
+	print " " then self GasPour10More foo:0 0.1
 }
 Rule GasPour10MoreWaitGambler {
 	criteria ConceptGasPour10More IsGambler IsSpeaking _auto_IsGasCountOK
@@ -7956,7 +7956,7 @@ Rule GasPour10MoreWaitGambler {
 }
 
 Response GasPour1MoreSCGambler {
-	print " " then self GasPour1More foo:0 0.01 //Blank
+	print " " then self GasPour1More foo:0 0.01
 }
 Rule GasPour1MoreSCGambler {
 	criteria ConceptPlayerPourFinished IsGambler IsTalk IsTalkGambler IsWorldTalkGambler Score1MoreSC
@@ -7966,7 +7966,7 @@ Rule GasPour1MoreSCGambler {
 }
 
 Response GasPour1MoreWaitGambler {
-	print " " then self GasPour1More foo:0 0.1 //Blank
+	print " " then self GasPour1More foo:0 0.1
 }
 Rule GasPour1MoreWaitGambler {
 	criteria ConceptGasPour1More IsGambler IsSpeaking _auto_IsGasCountOK
@@ -7974,7 +7974,7 @@ Rule GasPour1MoreWaitGambler {
 }
 
 Response GasPour2MoreSCGambler {
-	print " " then self GasPour2More foo:0 0.01 //Blank
+	print " " then self GasPour2More foo:0 0.01
 }
 Rule GasPour2MoreSCGambler {
 	criteria ConceptPlayerPourFinished IsGambler IsTalk IsTalkGambler IsWorldTalkGambler Score2MoreSC
@@ -7984,7 +7984,7 @@ Rule GasPour2MoreSCGambler {
 }
 
 Response GasPour2MoreWaitGambler {
-	print " " then self GasPour2More foo:0 0.1 //Blank
+	print " " then self GasPour2More foo:0 0.1
 }
 Rule GasPour2MoreWaitGambler {
 	criteria ConceptGasPour2More IsGambler IsSpeaking _auto_IsGasCountOK
@@ -7992,7 +7992,7 @@ Rule GasPour2MoreWaitGambler {
 }
 
 Response GasPour3MoreSCGambler {
-	print " " then self GasPour3More foo:0 0.01 //Blank
+	print " " then self GasPour3More foo:0 0.01
 }
 Rule GasPour3MoreSCGambler {
 	criteria ConceptPlayerPourFinished IsGambler IsTalk IsTalkGambler IsWorldTalkGambler Score3MoreSC
@@ -8002,7 +8002,7 @@ Rule GasPour3MoreSCGambler {
 }
 
 Response GasPour3MoreWaitGambler {
-	print " " then self GasPour3More foo:0 0.1 //Blank
+	print " " then self GasPour3More foo:0 0.1
 }
 Rule GasPour3MoreWaitGambler {
 	criteria ConceptGasPour3More IsGambler IsSpeaking _auto_IsGasCountOK
@@ -8010,7 +8010,7 @@ Rule GasPour3MoreWaitGambler {
 }
 
 Response GasPour5MoreSCGambler {
-	print " " then self GasPour5More foo:0 0.01 //Blank
+	print " " then self GasPour5More foo:0 0.01
 }
 Rule GasPour5MoreSCGambler {
 	criteria ConceptPlayerPourFinished IsGambler IsTalk IsTalkGambler IsWorldTalkGambler Score5MoreSC
@@ -8020,7 +8020,7 @@ Rule GasPour5MoreSCGambler {
 }
 
 Response GasPour5MoreWaitGambler {
-	print " " then self GasPour5More foo:0 0.1 //Blank
+	print " " then self GasPour5More foo:0 0.1
 }
 Rule GasPour5MoreWaitGambler {
 	criteria ConceptGasPour5More IsGambler IsSpeaking _auto_IsGasCountOK
@@ -8200,7 +8200,7 @@ Response GoingToDieCoachCoachGambler {
 	scene "scenes/Gambler/GoingToDie17.vcd" then coach coachcoaches foo:0 .5 //Don't worry. I'm not done yet.
 	scene "scenes/Gambler/GoingToDie18.vcd" then coach coachcoaches foo:0 .5 //I am sick and tired of being sick and tired.
 	scene "scenes/Gambler/GoingToDie23.vcd" then coach coachcoaches foo:0 .5 //What was I thinking coming down here?
-	scene "scenes/Gambler/GoingToDie24.vcd" then coach coachcoaches foo:0 .5 //Okay, all right, I can do this. I can do this.
+	scene "scenes/Gambler/GoingToDie24.vcd" then coach coachcoaches foo:0 .5 //Okay, alright, I can do this. I can do this.
 	scene "scenes/Gambler/GoingToDie25.vcd" then coach coachcoaches foo:0 .5 //I'm not going to die down here.
 	scene "scenes/Gambler/GoingToDie26.vcd" then coach coachcoaches foo:0 .5 //I am not dying in the middle of nowhere.
 }
@@ -8225,7 +8225,7 @@ Rule PlayerAlertGiveItemStopGambler {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidGambler {
-	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidGambler
+	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidGambler
 }
 Rule PlayerAlertGiveItemStopAnFirstAidGambler {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsGambler IsTalk IsTalkGambler NoHasFirstAidKit IsWorldTalkGambler
@@ -8233,7 +8233,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidGambler {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidGambler {
-	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidGambler
+	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidGambler
 }
 Rule PlayerAlertGiveItemStopQnFirstAidGambler {
 	criteria ConceptBashWithItem IsNotCoughing IsGambler IsTalk IsTalkGambler IsItemFirstAidKit IsWorldTalkGambler IsNotSpeakingWeight0
@@ -8241,7 +8241,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidGambler {
 }
 
 Response PlayerAlertGiveItemStopMedicalGambler {
-	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalGambler {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsGambler IsTalk IsTalkGambler NoHasPainPills IsWorldTalkGambler
@@ -8249,7 +8249,7 @@ Rule PlayerAlertGiveItemStopMedicalGambler {
 }
 
 Response PlayerAlertGiveItemMedicalGambler {
-	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/Gambler/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalGambler {
 	criteria ConceptBashWithItem IsNotCoughing IsGambler IsTalk IsTalkGambler IsItemMedical IsWorldTalkGambler IsNotSpeakingWeight0
@@ -8747,7 +8747,7 @@ Rule PlayerSuggestMeHealthProducerGambler {
 }
 
 Response PlayerTransitionGambler {
-	scene "scenes/Gambler/Blank.vcd" odds 50 then Producer PlayerTransitionMT foo:0 0.1 //Blank
+	scene "scenes/Gambler/Blank.vcd" odds 50 then Producer PlayerTransitionMT foo:0 0.1
 	scene "scenes/Gambler/Hurrah03.vcd" //You guys aren't so damn bad.
 	scene "scenes/Gambler/Hurrah04.vcd" //What do ya know, we're going to make it.
 	scene "scenes/Gambler/Hurrah07.vcd" //I'm starting to like you guys.
@@ -9074,7 +9074,7 @@ Rule PlayerWorldInfectedDet2Gambler {
 }
 
 Response PlayerWorldIntroC31BlankGambler {
-	scene "scenes/Gambler/Blank.vcd" then any WorldIntroC31 foo:0 5 //Blank
+	scene "scenes/Gambler/Blank.vcd" then any WorldIntroC31 foo:0 5
 }
 Rule PlayerWorldIntroC31BlankGambler {
 	criteria ConceptintroC3M1 IsNotCoughing IsGambler IsTalk ismap_c3m1_plankcountry AutoIsNotScavenge AutoIsNotSurvival
@@ -9082,7 +9082,7 @@ Rule PlayerWorldIntroC31BlankGambler {
 }
 
 Response PlayerWorldIntroC51Gambler {
-	scene "scenes/Gambler/Blank.vcd" then orator C5M1_intro001 foo:0 0.01 //Blank
+	scene "scenes/Gambler/Blank.vcd" then orator C5M1_intro001 foo:0 0.01
 }
 Rule PlayerWorldIntroC51Gambler {
 	criteria ConceptWorldIntroC51 IsNotCoughing IsGambler IsNotSaidWorldIntroC51 IsTalk IsTalkGambler IsWorldTalkGambler
@@ -9352,7 +9352,7 @@ Response SurvivorVocalizeGoingToDieGambler {
 	scene "scenes/Gambler/GoingToDie17.vcd" //Don't worry. I'm not done yet.
 	scene "scenes/Gambler/GoingToDie18.vcd" //I am sick and tired of being sick and tired.
 	scene "scenes/Gambler/GoingToDie23.vcd" //What was I thinking coming down here?
-	scene "scenes/Gambler/GoingToDie24.vcd" //Okay, all right, I can do this. I can do this.
+	scene "scenes/Gambler/GoingToDie24.vcd" //Okay, alright, I can do this. I can do this.
 	scene "scenes/Gambler/GoingToDie25.vcd" //I'm not going to die down here.
 	scene "scenes/Gambler/GoingToDie26.vcd" //I am not dying in the middle of nowhere.
 	scene "scenes/Gambler/WorldC1M1B66.vcd" //We're pretty screwed.
@@ -9366,7 +9366,7 @@ Rule SurvivorVocalizeGoingToDieGambler {
 
 Response SurvivorVocalizeGoingToDie3Gambler {
 	scene "scenes/Gambler/GoingToDie301.vcd" //I am not going to make it much longer my friends, I am seriously screwed up.
-	scene "scenes/Gambler/GoingToDie302.vcd" //All right, I gotta call uncle here. I need some help.
+	scene "scenes/Gambler/GoingToDie302.vcd" //Alright, I gotta call uncle here. I need some help.
 	scene "scenes/Gambler/GoingToDie303.vcd" //Well boys, this looks like its for me.
 	scene "scenes/Gambler/GoingToDie304.vcd" //Doesn't this beat all. I am about to die.
 	scene "scenes/Gambler/GoingToDie305.vcd" //Man, man.. It has been a long time since I have felt this bad.
@@ -9464,7 +9464,7 @@ Response PlayerLedgeHangMiddleGambler {
 	scene "scenes/Gambler/LedgeHangMiddle01.vcd" //I am hanging over here!
 	scene "scenes/Gambler/LedgeHangMiddle02.vcd" //Don't even think of leaving me here!
 	scene "scenes/Gambler/LedgeHangMiddle03.vcd" //Could use a hand over here.
-	scene "scenes/Gambler/LedgeHangMiddle04.vcd" //Could use some help here .
+	scene "scenes/Gambler/LedgeHangMiddle04.vcd" //Could use some help here.
 }
 Rule PlayerLedgeHangMiddleGambler {
 	criteria ConceptPlayerLedgeHangMiddle IsNotCoughing IsGambler IsTalk IsTalkGambler IsWorldTalkGambler
@@ -9737,7 +9737,7 @@ Response SurvivorPickupFirstAidKitGambler {
 	scene "scenes/Gambler/TakeFirstAid02.vcd" //I need this.
 	scene "scenes/Gambler/TakeFirstAid03.vcd" //Grabbing the first aid.
 	scene "scenes/Gambler/TakeFirstAid04.vcd" //I'll hold on to the first aid kit.
-	scene "scenes/Gambler/TakeFirstAid05.vcd" //First Aid Kit.
+	scene "scenes/Gambler/TakeFirstAid05.vcd" //First aid kit.
 }
 Rule SurvivorPickupFirstAidKitGambler {
 	criteria ConceptPlayerPickup IsNotCoughing IsGambler IsPickedUpFirstAidKit IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent GamblerNotPickedUpItem IsTalk IsTalkGambler IsWorldTalkGambler IsNotScavenge
@@ -10074,7 +10074,7 @@ Rule SurvivorPickupUpIncendiaryGambler {
 
 Response SurvivorPickupUpIncendiaryAmmoGambler {
 	scene "scenes/Gambler/IncendAmmo03.vcd" //Let's start some fires, people!
-	scene "scenes/Gambler/NiceJob01.vcd" //Well all right!
+	scene "scenes/Gambler/NiceJob01.vcd" //Well alright!
 	scene "scenes/Gambler/PositiveNoise12.vcd" //Goddamn right!
 	scene "scenes/Gambler/PositiveNoise13.vcd" //YES!
 	scene "scenes/Gambler/TakeMelee02.vcd" //This feels good.
@@ -10266,7 +10266,7 @@ Rule PlayerReviveFriendGambler {
 }
 
 Response PlayerReviveFriendFFGambler {
-	scene "scenes/Gambler/ReviveFriendFF01.vcd" //Let me say. Look, if I did this, I .. I apologize.
+	scene "scenes/Gambler/ReviveFriendFF01.vcd" //Let me say. Look, if I did this, I.. I apologize.
 	scene "scenes/Gambler/ReviveFriendFF02.vcd" //I'll just say. If I did this, I'm sorry.
 }
 Rule PlayerReviveFriendFFGambler {
@@ -10410,7 +10410,7 @@ Response ReviveLoverBMechanicGambler {
 	scene "scenes/Gambler/ReactionNegative37.vcd" //What an assclown.
 	scene "scenes/Gambler/ReactionNegative38.vcd" //Dumbshit.
 	scene "scenes/Gambler/WorldC1M1B121.vcd" //Call 911, I hurt his feelings.
-	scene "scenes/Gambler/WorldC2M2B21.vcd" //All right, but keep your hands to yourself.
+	scene "scenes/Gambler/WorldC2M2B21.vcd" //Alright, but keep your hands to yourself.
 	scene "scenes/Gambler/WorldC2M309.vcd" //No holding hands, please.
 	scene "scenes/Gambler/WorldC2M315.vcd" //This isn't very romantic.
 	scene "scenes/Gambler/WorldC3M105.vcd" //What you? Really?
@@ -10447,7 +10447,7 @@ Response ReviveLoverBManagerGambler {
 	scene "scenes/Gambler/ReactionNegative37.vcd" //What an assclown.
 	scene "scenes/Gambler/ReactionNegative38.vcd" //Dumbshit.
 	scene "scenes/Gambler/WorldC1M1B121.vcd" //Call 911, I hurt his feelings.
-	scene "scenes/Gambler/WorldC2M2B21.vcd" //All right, but keep your hands to yourself.
+	scene "scenes/Gambler/WorldC2M2B21.vcd" //Alright, but keep your hands to yourself.
 	scene "scenes/Gambler/WorldC2M309.vcd" //No holding hands, please.
 	scene "scenes/Gambler/WorldC2M315.vcd" //This isn't very romantic.
 	scene "scenes/Gambler/WorldC3M105.vcd" //What you? Really?
@@ -10992,8 +10992,8 @@ Rule _introc1m1a01Gambler {
 
 Response _introc1m1b03Gambler {
 	scene "scenes/Gambler/WorldC1M1B107.vcd" then coach _introc1m1b04 foo:0 -1.307 //You could have yelled if you wanted.
-	scene "scenes/Gambler/WorldC1M1B123.vcd" then coach _introc1m1b04 foo:0 -2.133 //They saw us all right, and they're not coming back.
-	scene "scenes/Gambler/WorldC1M1B124.vcd" then coach _introc1m1b04 foo:0 -3.965 //They saw us all right, and they're not coming back.
+	scene "scenes/Gambler/WorldC1M1B123.vcd" then coach _introc1m1b04 foo:0 -2.133 //They saw us alright, and they're not coming back.
+	scene "scenes/Gambler/WorldC1M1B124.vcd" then coach _introc1m1b04 foo:0 -3.965 //They saw us alright, and they're not coming back.
 }
 Rule _introc1m1b03Gambler {
 	criteria Concept_introc1m1b03 IsGambler AutoIsNotScavenge AutoIsNotSurvival
@@ -11430,7 +11430,7 @@ Rule C2M3SafeIntro013Gambler {
 }
 
 Response C4EnterCoverGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule C4EnterCoverGambler {
 	criteria ConceptC4EnterCover IsGambler
@@ -11440,7 +11440,7 @@ Rule C4EnterCoverGambler {
 }
 
 Response C4ExitCoverGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 Rule C4ExitCoverGambler {
 	criteria ConceptC4ExitCover IsGambler
@@ -12301,11 +12301,11 @@ Rule PlayerTeenGirlPouncedGambler {
 
 Response ReviveThanksBikerGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" then Biker FriendlyFireReplyToNick foo:0 -1.067 //Thanks, greaseball!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" //Thanks, pal!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" then subject PlayerYouAreWelcome foo:0 0 //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" then subject PlayerYouAreWelcome foo:0 0 //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" then subject PlayerYouAreWelcome foo:0 0 //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" then Biker PlayerNegative foo:0 -1.067 //Thanks, greaseball!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" then subject PlayerYouAreWelcome foo:0 0 //Thanks, pal!
 	scene "scenes/Gambler/WorldC1M1B137.vcd" //Well, this is unexpected.
@@ -12317,9 +12317,9 @@ Rule ReviveThanksBikerGambler {
 }
 
 Response ReviveThanksTeenGirlGambler {
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" //Hey thanks, babe!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" then subject PlayerYouAreWelcome foo:0 0 //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" then subject PlayerYouAreWelcome foo:0 0 //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" then subject PlayerYouAreWelcome foo:0 0 //Hey thanks, babe!
 }
 Rule ReviveThanksTeenGirlGambler {

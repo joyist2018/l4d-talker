@@ -26,7 +26,7 @@ criterion "IsSaidUsingDefibrillatorMechanic" "SaidUsingDefibrillatorMechanic" "1
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 
 Response C1M1InSmokeMechanic {
@@ -68,7 +68,7 @@ Rule C1M3DoorAlarmMechanic {
 }
 
 Response C1M3SafeRoomMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then any C1M3SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then any C1M3SafeRoom2 foo:0 3
 }
 Rule C1M3SafeRoomMechanic {
 	criteria ConceptTalkIdle Joined2 IsMechanic IsNotSaidC1M3SafeRoom2 ismap_c1m3_mall IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -78,7 +78,7 @@ Rule C1M3SafeRoomMechanic {
 }
 
 Response C1M4SafeRoomMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then any C1M4SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then any C1M4SafeRoom2 foo:0 3
 }
 Rule C1M4SafeRoomMechanic {
 	criteria ConceptTalkIdle Joined2 IsMechanic IsNotSaidC1M4SafeRoom2 ismap_c1m4_atrium IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -102,7 +102,7 @@ Response PlayerNiceShotMechanic {
 	scene "scenes/Mechanic/Generic03.vcd" odds 25 //Well, butter my butt and call me a biscuit.
 	scene "scenes/Mechanic/HealOtherEllis03.vcd" //That there's a good job you're doin.
 	scene "scenes/Mechanic/HealOtherMechanic02.vcd" //You do a nice job with that.
-	scene "scenes/Mechanic/NiceJob07.vcd" //All right!
+	scene "scenes/Mechanic/NiceJob07.vcd" //Alright!
 	scene "scenes/Mechanic/NiceJob08.vcd" //See? Don't that feel good?
 	scene "scenes/Mechanic/NiceJob09.vcd" //Hey, don't that feel good?
 	scene "scenes/Mechanic/NiceJob10.vcd" //You did a good job.
@@ -121,7 +121,7 @@ Response PlayerNiceShotMechanic {
 	scene "scenes/Mechanic/PositiveNoise01.vcd" //WHOOO!
 	scene "scenes/Mechanic/PositiveNoise02.vcd" //Hee-Haw!
 	scene "scenes/Mechanic/PositiveNoise03.vcd" //Ha ha! Yeah!
-	scene "scenes/Mechanic/PositiveNoise04.vcd" //All right!
+	scene "scenes/Mechanic/PositiveNoise04.vcd" //Alright!
 	scene "scenes/Mechanic/PositiveNoise05.vcd" //<Hurrah sound>
 	scene "scenes/Mechanic/PositiveNoise08.vcd" //Alright!
 	scene "scenes/Mechanic/PositiveNoise09.vcd" //Yeah.
@@ -447,7 +447,7 @@ Rule PlayerC3M1FerryLanded2Mechanic {
 }
 
 Response PlayerC3M1FerryLaunched2aMechanic {
-	scene "scenes/Mechanic/Blank.vcd" //Blank
+	scene "scenes/Mechanic/Blank.vcd"
 }
 Rule PlayerC3M1FerryLaunched2aMechanic {
 	criteria ConceptC3M1FerryLaunched2 IsMechanic IsTalk IsTalkMechanic IsNotSaidC3M1FerryLaunched2 IsWorldTalkMechanic AutoIsNotScavenge AutoIsNotSurvival
@@ -503,7 +503,7 @@ Rule Playerc5m4floatendMechanic {
 Response Playerc5m4floatstart2Mechanic {
 	scene "scenes/Mechanic/MiscDirectional34.vcd" //Hit it!
 	scene "scenes/Mechanic/World420.vcd" //I'll hit it. Get ready.
-	scene "scenes/Mechanic/WorldC5M112.vcd" //All right, I'm hittin' it.
+	scene "scenes/Mechanic/WorldC5M112.vcd" //Alright, I'm hittin' it.
 }
 Rule Playerc5m4floatstart2Mechanic {
 	criteria Conceptc5m4floatstart2 IsMechanic AutoIsNotScavenge AutoIsNotSurvival
@@ -523,7 +523,7 @@ Rule PlayerintroC1M1Mechanic {
 }
 
 Response PlayerPlayerUsingColaBottlesMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then orator whitakerputcola foo:0 0 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then orator whitakerputcola foo:0 0
 }
 Rule PlayerPlayerUsingColaBottlesMechanic {
 	criteria ConceptPlayerUsingColaBottles IsMechanic IsTalk IsTalkMechanic IsNotSaidPlayerUsingColaBottles IsWorldTalkMechanic
@@ -677,7 +677,7 @@ Response ThanksGotItemMechanic {
 	scene "scenes/Mechanic/Thanks02.vcd" predelay "1.5" //Much obliged
 	scene "scenes/Mechanic/Thanks04.vcd" predelay "1.5" //I owe you one.
 	scene "scenes/Mechanic/Thanks05.vcd" predelay "1.5" //Hey, thanks a lot.
-	scene "scenes/Mechanic/WorldC3M436.vcd" predelay "1.5" //All right, thank you very much!
+	scene "scenes/Mechanic/WorldC3M436.vcd" predelay "1.5" //Alright, thank you very much!
 	scene "scenes/Mechanic/WorldC5M108.vcd" predelay "1.5" //Thank you.
 	scene "scenes/Mechanic/WorldGeneric02.vcd" predelay "1.5" //Thanks, I like it too.
 	scene "scenes/Mechanic/WorldGeneric03.vcd" predelay "1.5" //Yeah, thanks. It's a favor..
@@ -804,7 +804,7 @@ Response HealThanksMechanic {
 	scene "scenes/Mechanic/Thanks04.vcd" //I owe you one.
 	scene "scenes/Mechanic/Thanks05.vcd" //Hey, thanks a lot.
 	scene "scenes/Mechanic/WorldC2M1B11.vcd" //Thank you.
-	scene "scenes/Mechanic/WorldC3M436.vcd" //All right, thank you very much!
+	scene "scenes/Mechanic/WorldC3M436.vcd" //Alright, thank you very much!
 	scene "scenes/Mechanic/WorldC5M108.vcd" //Thank you.
 	scene "scenes/Mechanic/WorldGeneric02.vcd" //Thanks, I like it too.
 	scene "scenes/Mechanic/WorldGeneric03.vcd" //Yeah, thanks. It's a favor..
@@ -821,13 +821,13 @@ Response ReviveThanksMechanic {
 	scene "scenes/Mechanic/Thanks04.vcd" predelay ".2,.5" //I owe you one.
 	scene "scenes/Mechanic/Thanks05.vcd" predelay ".2,.5" //Hey, thanks a lot.
 	scene "scenes/Mechanic/WorldC2M1B11.vcd" predelay ".2,.5" //Thank you.
-	scene "scenes/Mechanic/WorldC3M436.vcd" predelay ".2,.5" //All right, thank you very much!
+	scene "scenes/Mechanic/WorldC3M436.vcd" predelay ".2,.5" //Alright, thank you very much!
 	scene "scenes/Mechanic/WorldC5M108.vcd" predelay ".2,.5" //Thank you.
 	scene "scenes/Mechanic/Thanks02.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //Much obliged
 	scene "scenes/Mechanic/Thanks04.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //I owe you one.
 	scene "scenes/Mechanic/Thanks05.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //Hey, thanks a lot.
 	scene "scenes/Mechanic/WorldC2M1B11.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //Thank you.
-	scene "scenes/Mechanic/WorldC3M436.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //All right, thank you very much!
+	scene "scenes/Mechanic/WorldC3M436.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //Alright, thank you very much!
 	scene "scenes/Mechanic/WorldC5M108.vcd" predelay ".2,.5" then subject PlayerYouAreWelcome foo:0 0 //Thank you.
 }
 Rule ReviveThanksMechanic {
@@ -913,7 +913,7 @@ Rule BotReassureNearbyMechanic {
 Response BotYesReadyMechanic {
 	scene "scenes/Mechanic/DLC1_C6M3_FinaleCinematic10.vcd" predelay "2,3.5" //Here we go!
 	scene "scenes/Mechanic/DLC1_C6M3_FinaleCinematic11.vcd" predelay "2,3.5" //Here we go!
-	scene "scenes/Mechanic/World424.vcd" predelay "2,3.5" //All right, y'all, let's go!
+	scene "scenes/Mechanic/World424.vcd" predelay "2,3.5" //Alright, y'all, let's go!
 	scene "scenes/Mechanic/WorldC2M4B02.vcd" predelay "2,3.5" //I was born ready. So.. yes.
 	scene "scenes/Mechanic/WorldC2M5B05.vcd" predelay "2,3.5" //I'm in. Let's rock and roll.
 	scene "scenes/Mechanic/WorldC3M442.vcd" predelay "1,3.5" //Okay.
@@ -932,7 +932,7 @@ Rule BotYesReadyMechanic {
 
 Response BotHurrahAlsoMechanic {
 	scene "scenes/Mechanic/Hurrah08.vcd" //Ahh HELL YEAH!
-	scene "scenes/Mechanic/Hurrah09.vcd" //All right then!
+	scene "scenes/Mechanic/Hurrah09.vcd" //Alright then!
 	scene "scenes/Mechanic/Hurrah11.vcd" //That's how it's done RIGHT!
 	scene "scenes/Mechanic/Hurrah13.vcd" //DAMN, we are good.
 	scene "scenes/Mechanic/Hurrah16.vcd" //In the ZOMBIE-killin' bidness, or what?!
@@ -943,7 +943,7 @@ Response BotHurrahAlsoMechanic {
 	scene "scenes/Mechanic/PositiveNoise01.vcd" //WHOOO!
 	scene "scenes/Mechanic/PositiveNoise02.vcd" //Hee-Haw!
 	scene "scenes/Mechanic/PositiveNoise03.vcd" //Ha ha! Yeah!
-	scene "scenes/Mechanic/PositiveNoise04.vcd" //All right!
+	scene "scenes/Mechanic/PositiveNoise04.vcd" //Alright!
 	scene "scenes/Mechanic/PositiveNoise05.vcd" //<Hurrah sound>
 	scene "scenes/Mechanic/PositiveNoise06.vcd" //Ha ha!
 	scene "scenes/Mechanic/PositiveNoise07.vcd" //That's what I'm talkin' 'bout!
@@ -1079,7 +1079,7 @@ Rule C1M2LeavingSafeRoomMechanic {
 }
 
 Response C1M2SafeRoomMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then any C1M2SafeRoom2 foo:0 3 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then any C1M2SafeRoom2 foo:0 3
 }
 Rule C1M2SafeRoomMechanic {
 	criteria ConceptTalkIdle Joined2 IsMechanic IsNotSaidC1M2SafeRoom2 ismap_c1m2_streets IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -1165,7 +1165,7 @@ Rule C1M4PlayerGetToRescueVehicleMechanic {
 }
 
 Response c1m4startelevatorMechanic {
-	scene "scenes/Mechanic/blank.vcd" then any c1m4startelevator foo:0 0 //blank
+	scene "scenes/Mechanic/blank.vcd" then any c1m4startelevator foo:0 0
 }
 Rule c1m4startelevatorMechanic {
 	criteria Conceptc1m4startelevator IsMechanic AutoIsNotScavenge AutoIsNotSurvival
@@ -1347,7 +1347,7 @@ Rule C2M1Intro_408Mechanic {
 
 //C2M3
 Response c2m3_DownHoleMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule c2m3_DownHoleMechanic {
 	criteria Conceptc2m3downhole IsMechanic AutoIsNotScavenge AutoIsNotSurvival
@@ -1439,7 +1439,7 @@ Rule c2m3SpotKatanaMechanic {
 }
 
 Response PlayerRemarkc2m3_saferoomaMechanic {
-	scene "scenes/Mechanic/Blank.vcd" //Blank
+	scene "scenes/Mechanic/Blank.vcd"
 }
 Rule PlayerRemarkc2m3_saferoomaMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea Ismap_c2m3 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M3_007 IsNotSpeakingWeight0
@@ -1461,7 +1461,7 @@ Rule C2M4_saferoom02Mechanic {
 }
 
 Response c2m4_saferoominitMechanic {
-	scene "scenes/Mechanic/blank.vcd" //Blank
+	scene "scenes/Mechanic/blank.vcd"
 }
 Rule c2m4_saferoominitMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea ismap_c2m4 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M4_700 IsNotSpeakingWeight0
@@ -1664,7 +1664,7 @@ Rule C2M5_PlanWorkedMechanic {
 }
 
 Response c2m5_saferoominitMechanic {
-	scene "scenes/Mechanic/blank.vcd" //Blank
+	scene "scenes/Mechanic/blank.vcd"
 }
 Rule c2m5_saferoominitMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea Ismap_c2m5 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M5_001 _auto_NotSafeRoomStart IsNotSpeakingWeight0
@@ -2037,7 +2037,7 @@ Rule C4M5BoatNagsMechanic {
 }
 
 Response PlayerRemarkc4m5_saferoomaMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule PlayerRemarkc4m5_saferoomaMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea Isc4m5 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M5_001 IsNotSpeakingWeight0
@@ -2336,7 +2336,7 @@ Rule PlayerRemarkc5m3crashedheliMechanic {
 }
 
 Response PlayerRemarkc5m3insewerMechanic {
-	scene "scenes/Mechanic/blank.vcd" //Blank
+	scene "scenes/Mechanic/blank.vcd"
 }
 Rule PlayerRemarkc5m3insewerMechanic {
 	criteria ConceptRemark IsMechanic Isc5m3insewer IsNotSaidc5m3insewer IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear250 AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -2528,7 +2528,7 @@ Rule PlayerRemarkc5m4tractornagMechanic {
 
 //C5M5
 Response C5M5_Button2Mechanic {
-	scene "scenes/Mechanic/Blank.vcd" //Blank
+	scene "scenes/Mechanic/Blank.vcd"
 }
 Rule C5M5_Button2Mechanic {
 	criteria ConceptC5M5_Button2 IsMechanic AutoIsNotScavenge AutoIsNotSurvival
@@ -2695,7 +2695,7 @@ Rule C5M5HearSoldiersNagMechanic {
 }
 
 Response C5M5LeaveSafeMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then orator C5M5_Soldier1 foo:0 0.01 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then orator C5M5_Soldier1 foo:0 0.01
 }
 Rule C5M5LeaveSafeMechanic {
 	criteria ConceptSurvivorLeavingInitialCheckpoint IsMechanic IsMapc5m5_bridge IsNotSrcGrp_C5M5_001
@@ -2731,7 +2731,7 @@ Rule C5M5RunToHeliMechanic {
 }
 
 Response C5M5SafeRoomStartMechanic {
-	scene "scenes/Mechanic/Blank.vcd" //Blank
+	scene "scenes/Mechanic/Blank.vcd"
 }
 Rule C5M5SafeRoomStartMechanic {
 	criteria ConceptTalkIdle IsMechanic IsMapc5m5_bridge IsInStartArea AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C5M5_003 _auto_NotSafeRoomStart _auto_NotSoldierChatter _auto_NotButton2 IsNotSpeakingWeight0
@@ -2773,7 +2773,7 @@ Rule PlayerCallForRescueMechanic {
 
 //Counter
 Response ScenarioJoinLastMechanic {
-	scene "scenes/Mechanic/blank.vcd" //Blank
+	scene "scenes/Mechanic/blank.vcd"
 }
 Rule ScenarioJoinLastMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea JoinedLess5 IsNotSpeakingWeight0 _auto_NotSafeRoomStart _auto_NotTurnOffJoinLast
@@ -2922,7 +2922,7 @@ Rule C2M3EllisStoryStartMMechanic {
 }
 
 Response C2M3EllisStoryStartNMechanic {
-	scene "scenes/Mechanic/EllisStoriesN01.vcd" then any EllisInterrupt foo:0 -12.07 //I ever tell you about the time me and Keith snuck into a Tunnel of Love? Man, if you get your spit thick enough, y'see, y'all can hang a loogie off the overhang, right, so when smoochin' sons of bitches behind you--
+	scene "scenes/Mechanic/EllisStoriesN01.vcd" then any EllisInterrupt foo:0 -12.07 //I ever tell you about the time me and Keith snuck into a Tunnel of Love? Man, if you get your spit thick enough, y'see, y'all can hang a loogie off the overhang, right, so when smoochin' sons of bitches behind you–
 	scene "scenes/Mechanic/EllisStoriesN01.vcd" then Gambler EllisInterrupt2 foo:0 -10.27
 	scene "scenes/Mechanic/EllisStoriesN01.vcd" then Producer EllisInterrupt2 foo:0 -7.87
 }
@@ -3542,8 +3542,8 @@ Rule SurvivorSpottedGamblerFarC1Mechanic {
 }
 
 Response SurvivorSpottedGrenadeMechanic {
-	scene "scenes/Mechanic/SpotGrenades01.vcd" //Pipebomb here.
-	scene "scenes/Mechanic/SpotGrenades02.vcd" //Hey, there's a pipebomb right here.
+	scene "scenes/Mechanic/SpotGrenades01.vcd" //Pipe bomb here.
+	scene "scenes/Mechanic/SpotGrenades02.vcd" //Hey, there's a pipe bomb right here.
 	scene "scenes/Mechanic/SpotGrenades03.vcd" //Pipe bomb.
 }
 Rule SurvivorSpottedGrenadeMechanic {
@@ -3618,10 +3618,10 @@ Rule SurvivorSpottedGrenadeLauncherAutoMechanic2 {
 Response SurvivorSpottedHealthMechanic {
 	scene "scenes/Mechanic/DLC1_C6M1_IntoPark02.vcd" //Grab a health kit.
 	scene "scenes/Mechanic/DLC1_C6M1_IntoPark03.vcd" //Everybody grab a health kit, now.
-	scene "scenes/Mechanic/SpotFirstAid01.vcd" //First Aid Kit here!
-	scene "scenes/Mechanic/SpotFirstAid02.vcd" //First Aid here!
-	scene "scenes/Mechanic/SpotFirstAid03.vcd" //First Aid!
-	scene "scenes/Mechanic/SpotFirstAid04.vcd" //First Aid Kit here!
+	scene "scenes/Mechanic/SpotFirstAid01.vcd" //First aid kit here!
+	scene "scenes/Mechanic/SpotFirstAid02.vcd" //First aid here!
+	scene "scenes/Mechanic/SpotFirstAid03.vcd" //First aid!
+	scene "scenes/Mechanic/SpotFirstAid04.vcd" //First aid kit here!
 }
 Rule SurvivorSpottedHealthMechanic {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsNotSmartLookAuto IsFirstAidKit IsWorldTalkMechanic
@@ -3645,9 +3645,9 @@ Rule SurvivorSpottedHealthAutoMechanic2 {
 }
 
 Response SurvivorSpottedHealthAutoHasHealthMechanic {
-	scene "scenes/Mechanic/SpotFirstAids01.vcd" //First Aid Kits!
-	scene "scenes/Mechanic/SpotFirstAids02.vcd" //First Aid Kits right here!
-	scene "scenes/Mechanic/SpotFirstAids03.vcd" //First Aid Kits right here!
+	scene "scenes/Mechanic/SpotFirstAids01.vcd" //First aid kits!
+	scene "scenes/Mechanic/SpotFirstAids02.vcd" //First aid kits right here!
+	scene "scenes/Mechanic/SpotFirstAids03.vcd" //First aid kits right here!
 }
 Rule SurvivorSpottedHealthAutoHasHealthMechanic {
 	criteria ConceptPlayerSpotWeapon IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsSmartLookAuto IsNotInSafeSpot YesHasPack IsNotAlone IsNotSaidSpotHealth IsNotSaidSpotMechanic IsFirstAidKit ChanceToFire60Percent IsWorldTalkMechanic _auto_NotNoSpotting IsNotSpeakingWeight0
@@ -5069,7 +5069,7 @@ Rule PlayerHelpIncappedMechanic {
 
 //PlayerIncappedResponse
 Response HelpResponseMechanicMechanic {
-	scene "scenes/Mechanic/Blank.vcd" //Blank
+	scene "scenes/Mechanic/Blank.vcd"
 }
 Rule HelpResponseMechanicMechanic {
 	criteria ConceptFriendNeedsHelp IsMechanic IsTalk IsTalkMechanic IsNotIncapacitated IsInSafeSpot FromIsMechanic IsNotInStartArea NotAloneInSafeSpot IsWorldTalkMechanic
@@ -5148,7 +5148,7 @@ Rule C3M3BridgeButtonMechanic {
 }
 
 Response EndOfWavWindow5Mechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule EndOfWavWindow5Mechanic {
 	criteria ConceptEndOfWavWindow5 IsMechanic
@@ -5783,7 +5783,7 @@ Rule PlayerRemarkc2m2_kiddielandMechanic {
 }
 
 Response PlayerRemarkc2m2_saferoomaMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule PlayerRemarkc2m2_saferoomaMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea Ismap_c2m2 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C2M2_910 IsNotSpeakingWeight0
@@ -6594,7 +6594,7 @@ Rule PlayerRemarkc4m2_millentranceexitMechanic {
 }
 
 Response PlayerRemarkc4m2_seegasstationaMechanic {
-	scene "scenes/Mechanic/WorldC4M2B15.vcd" then self _c4m2_seestation01 foo:0 0.01 //Allright!! There's the gas station!
+	scene "scenes/Mechanic/WorldC4M2B15.vcd" then self _c4m2_seestation01 foo:0 0.01 //Alright!! There's the gas station!
 }
 Rule PlayerRemarkc4m2_seegasstationaMechanic {
 	criteria ConceptRemark IsMechanic Isc4m2_seegasstationa IsNotSaidc4m2_seegasstationa IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear150 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M2_001 IsNotSpeakingWeight0
@@ -6973,7 +6973,7 @@ Rule PlayerRemarkc4m3_safehousedowncMechanic {
 }
 
 Response PlayerRemarkc4m3_startsaferoomaMechanic {
-	scene "scenes/Mechanic/Blank.vcd" //Blank
+	scene "scenes/Mechanic/Blank.vcd"
 }
 Rule PlayerRemarkc4m3_startsaferoomaMechanic {
 	criteria ConceptTalkIdle IsMechanic IsInStartArea Isc4m3 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M3_001 IsNotSpeakingWeight0
@@ -7027,7 +7027,7 @@ Rule PlayerRemarkc4m4_garagesalebMechanic {
 }
 
 Response PlayerRemarkc4m4_pastplaygroundaMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule PlayerRemarkc4m4_pastplaygroundaMechanic {
 	criteria ConceptRemark IsMechanic Isc4m4_pastplaygrounda IsNotSaidc4m4_pastplaygrounda IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsWorldTalkMechanic IsSubjectNear600 AutoIsNotScavenge AutoIsNotSurvival IsNotSrcGrp_C4M4_003 IsNotSpeakingWeight0
@@ -7566,7 +7566,7 @@ Rule PlayerRemarkWorldC3M1StayOnMechanic {
 
 Response PlayerRemarkWorldC3M1WalkwaysMechanic {
 	scene "scenes/Mechanic/WorldC3M161.vcd" //Alright, stay on the walkways.
-	scene "scenes/Mechanic/WorldC3M163.vcd" //We should be all right if we stay on the walkways.
+	scene "scenes/Mechanic/WorldC3M163.vcd" //We should be alright if we stay on the walkways.
 }
 Rule PlayerRemarkWorldC3M1WalkwaysMechanic {
 	criteria ConceptRemark IsMechanic IsWorldC3M1Walkways IsNotSaidWorldC3M1Walkways IsNotCoughing NotInCombat IsTalk IsTalkMechanic IsSubjectNear600 IsWorldTalkMechanic AutoIsNotScavenge AutoIsNotSurvival IsNotSpeakingWeight0
@@ -7587,7 +7587,7 @@ Rule PlayerRemarkWorldC3M1WhichWayMechanic {
 }
 
 Response PlayerRemarkWorldC502AlarmStoppedMechanic {
-	scene "scenes/Mechanic/World138.vcd" then orator C5M2_BusDoors01 foo:0 18.5 //Whew, it's off all right!
+	scene "scenes/Mechanic/World138.vcd" then orator C5M2_BusDoors01 foo:0 18.5 //Whew, it's off alright!
 }
 Rule PlayerRemarkWorldC502AlarmStoppedMechanic {
 	criteria ConceptWorldC502AlarmStopped IsMechanic IsNotSaidWorldC502AlarmStopped IsNotCoughing IsTalk IsTalkMechanic IsWorldTalkMechanic
@@ -7626,7 +7626,7 @@ Rule AUTOBLANK_PlayerRemarkWorldC502BusStoryMechanic {
 }
 
 Response PlayerRemarkWorldC502BusStory2bMechanic {
-	scene "scenes/Mechanic/World144.vcd" then Gambler MTEllisInterrupt foo:0 -4.665 //All right Nick. But how about this, did ya know Graceland ain't nothin' but a little house in the ghetto.
+	scene "scenes/Mechanic/World144.vcd" then Gambler MTEllisInterrupt foo:0 -4.665 //Alright Nick. But how about this, did ya know Graceland ain't nothin' but a little house in the ghetto.
 	scene "scenes/Mechanic/World145.vcd" //Okay. But I do love goin' on bus rides.
 	scene "scenes/Mechanic/World146.vcd" then self WorldC502BusStory2c foo:0 -2.060 //Nick, you ever even been to Graceland?
 }
@@ -7834,7 +7834,7 @@ Response PlayerMoveOnMechanic {
 	scene "scenes/Mechanic/MoveOn06.vcd" //You reckon we should move out now?
 	scene "scenes/Mechanic/MoveOn07.vcd" //Hey, we should get goin', man.
 	scene "scenes/Mechanic/World423.vcd" //We gotta keep moving.
-	scene "scenes/Mechanic/World424.vcd" //All right, y'all, let's go!
+	scene "scenes/Mechanic/World424.vcd" //Alright, y'all, let's go!
 	scene "scenes/Mechanic/WorldC1M1B115.vcd" //Let's go then.
 	scene "scenes/Mechanic/WorldC1M4B58.vcd" //Let's get outta here!
 	scene "scenes/Mechanic/WorldC1M4B62.vcd" odds 10 //Come on, let's GO!
@@ -7962,11 +7962,11 @@ Response PlayerNiceJobResponseMechanic {
 	scene "scenes/Mechanic/HealOtherMechanic02.vcd" //You do a nice job with that.
 	scene "scenes/Mechanic/NiceJob01.vcd" //Nice, man!
 	scene "scenes/Mechanic/NiceJob02.vcd" //Hey, y'all done good!
-	scene "scenes/Mechanic/NiceJob03.vcd" //You're all right!
+	scene "scenes/Mechanic/NiceJob03.vcd" //You're alright!
 	scene "scenes/Mechanic/NiceJob04.vcd" //That's the ticket!
 	scene "scenes/Mechanic/NiceJob05.vcd" //Hey, you're takin' charge, man.
 	scene "scenes/Mechanic/NiceJob06.vcd" //Nice job, man!
-	scene "scenes/Mechanic/NiceJob07.vcd" //All right!
+	scene "scenes/Mechanic/NiceJob07.vcd" //Alright!
 	scene "scenes/Mechanic/NiceJob08.vcd" //See? Don't that feel good?
 	scene "scenes/Mechanic/NiceJob09.vcd" //Hey, don't that feel good?
 	scene "scenes/Mechanic/NiceJob10.vcd" //You did a good job.
@@ -8066,7 +8066,7 @@ Rule PlayerSorryMechanic {
 
 Response PlayerSorrySarcasmMechanic {
 	scene "scenes/Mechanic/ReviveFriendA05.vcd" then Subject PlayerAnswerLostCall foo:0 0 //Does it hurt?
-	scene "scenes/Mechanic/ReviveFriendB04.vcd" then Subject PlayerAnswerLostCall foo:0 0 //All right, upsy daisy!
+	scene "scenes/Mechanic/ReviveFriendB04.vcd" then Subject PlayerAnswerLostCall foo:0 0 //Alright, upsy daisy!
 }
 Rule PlayerSorrySarcasmMechanic {
 	criteria ConceptPlayerSorry IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsShotTeammateMechanic IsNotSaidSorrySarcasm ChanceToFire10Percent IsWorldTalkMechanic
@@ -8087,7 +8087,7 @@ Response PlayerThanksMechanic {
 	scene "scenes/Mechanic/Thanks02.vcd" //Much obliged
 	scene "scenes/Mechanic/Thanks04.vcd" //I owe you one.
 	scene "scenes/Mechanic/Thanks05.vcd" //Hey, thanks a lot.
-	scene "scenes/Mechanic/WorldC3M436.vcd" //All right, thank you very much!
+	scene "scenes/Mechanic/WorldC3M436.vcd" //Alright, thank you very much!
 	scene "scenes/Mechanic/WorldC5M108.vcd" //Thank you.
 }
 Rule PlayerThanksMechanic {
@@ -8250,7 +8250,7 @@ Response PlayerHurrahMechanic {
 	scene "scenes/Mechanic/Hurrah06.vcd" then Any HurrahAlso foo:0 0 //Hey, let me tell ya something. Y'all are the best!
 	scene "scenes/Mechanic/Hurrah07.vcd" then Any HurrahAlso foo:0 0 //Well, slap my head and call me silly we are kickin' some ass!
 	scene "scenes/Mechanic/Hurrah08.vcd" //Ahh HELL YEAH!
-	scene "scenes/Mechanic/Hurrah09.vcd" //All right then!
+	scene "scenes/Mechanic/Hurrah09.vcd" //Alright then!
 	scene "scenes/Mechanic/Hurrah10.vcd" then Any HurrahAlso foo:0 0 //I ain't no god damn son of a bitch, yeah ya better think about that baby.
 	scene "scenes/Mechanic/Hurrah11.vcd" //That's how it's done RIGHT!
 	scene "scenes/Mechanic/Hurrah12.vcd" then Any HurrahAlso foo:0 0 //We're kickin' more ass than a boot in an ass factory!
@@ -8265,7 +8265,7 @@ Response PlayerHurrahMechanic {
 	scene "scenes/Mechanic/PositiveNoise01.vcd" //WHOOO!
 	scene "scenes/Mechanic/PositiveNoise02.vcd" //Hee-Haw!
 	scene "scenes/Mechanic/PositiveNoise03.vcd" //Ha ha! Yeah!
-	scene "scenes/Mechanic/PositiveNoise04.vcd" //All right!
+	scene "scenes/Mechanic/PositiveNoise04.vcd" //Alright!
 	scene "scenes/Mechanic/PositiveNoise05.vcd" //<Hurrah sound>
 	scene "scenes/Mechanic/PositiveNoise07.vcd" //That's what I'm talkin' 'bout!
 	scene "scenes/Mechanic/TransitionClose01.vcd" //YEAH!
@@ -8298,7 +8298,7 @@ Rule PlayerWarnCarefulMechanic {
 
 //Scavenge
 Response GasPour10MoreSCMechanic {
-	print " " then self GasPour10More foo:0 0.01 //Blank
+	print " " then self GasPour10More foo:0 0.01
 }
 Rule GasPour10MoreSCMechanic {
 	criteria ConceptPlayerPourFinished IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic Score10MoreSC
@@ -8308,7 +8308,7 @@ Rule GasPour10MoreSCMechanic {
 }
 
 Response GasPour10MoreWaitMechanic {
-	print " " then self GasPour10More foo:0 0.1 //Blank
+	print " " then self GasPour10More foo:0 0.1
 }
 Rule GasPour10MoreWaitMechanic {
 	criteria ConceptGasPour10More IsMechanic IsSpeaking _auto_IsGasCountOK
@@ -8316,7 +8316,7 @@ Rule GasPour10MoreWaitMechanic {
 }
 
 Response GasPour1MoreSCMechanic {
-	print " " then self GasPour1More foo:0 0.01 //Blank
+	print " " then self GasPour1More foo:0 0.01
 }
 Rule GasPour1MoreSCMechanic {
 	criteria ConceptPlayerPourFinished IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic Score1MoreSC
@@ -8326,7 +8326,7 @@ Rule GasPour1MoreSCMechanic {
 }
 
 Response GasPour1MoreWaitMechanic {
-	print " " then self GasPour1More foo:0 0.1 //Blank
+	print " " then self GasPour1More foo:0 0.1
 }
 Rule GasPour1MoreWaitMechanic {
 	criteria ConceptGasPour1More IsMechanic IsSpeaking _auto_IsGasCountOK
@@ -8334,7 +8334,7 @@ Rule GasPour1MoreWaitMechanic {
 }
 
 Response GasPour2MoreSCMechanic {
-	print " " then self GasPour2More foo:0 0.01 //Blank
+	print " " then self GasPour2More foo:0 0.01
 }
 Rule GasPour2MoreSCMechanic {
 	criteria ConceptPlayerPourFinished IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic Score2MoreSC
@@ -8344,7 +8344,7 @@ Rule GasPour2MoreSCMechanic {
 }
 
 Response GasPour2MoreWaitMechanic {
-	print " " then self GasPour2More foo:0 0.1 //Blank
+	print " " then self GasPour2More foo:0 0.1
 }
 Rule GasPour2MoreWaitMechanic {
 	criteria ConceptGasPour2More IsMechanic IsSpeaking _auto_IsGasCountOK
@@ -8352,7 +8352,7 @@ Rule GasPour2MoreWaitMechanic {
 }
 
 Response GasPour3MoreSCMechanic {
-	print " " then self GasPour3More foo:0 0.01 //Blank
+	print " " then self GasPour3More foo:0 0.01
 }
 Rule GasPour3MoreSCMechanic {
 	criteria ConceptPlayerPourFinished IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic Score3MoreSC
@@ -8362,7 +8362,7 @@ Rule GasPour3MoreSCMechanic {
 }
 
 Response GasPour3MoreWaitMechanic {
-	print " " then self GasPour3More foo:0 0.1 //Blank
+	print " " then self GasPour3More foo:0 0.1
 }
 Rule GasPour3MoreWaitMechanic {
 	criteria ConceptGasPour3More IsMechanic IsSpeaking _auto_IsGasCountOK
@@ -8370,7 +8370,7 @@ Rule GasPour3MoreWaitMechanic {
 }
 
 Response GasPour5MoreSCMechanic {
-	print " " then self GasPour5More foo:0 0.01 //Blank
+	print " " then self GasPour5More foo:0 0.01
 }
 Rule GasPour5MoreSCMechanic {
 	criteria ConceptPlayerPourFinished IsMechanic IsTalk IsTalkMechanic IsWorldTalkMechanic Score5MoreSC
@@ -8380,7 +8380,7 @@ Rule GasPour5MoreSCMechanic {
 }
 
 Response GasPour5MoreWaitMechanic {
-	print " " then self GasPour5More foo:0 0.1 //Blank
+	print " " then self GasPour5More foo:0 0.1
 }
 Rule GasPour5MoreWaitMechanic {
 	criteria ConceptGasPour5More IsMechanic IsSpeaking _auto_IsGasCountOK
@@ -8648,7 +8648,7 @@ Rule PlayerAlertGiveItemStopC1Mechanic {
 }
 
 Response PlayerAlertGiveItemStopAnFirstAidMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidMechanic
+	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStop foo:0 0 IsNotSaidAlertGiveItemStopFirstAidMechanic
 }
 Rule PlayerAlertGiveItemStopAnFirstAidMechanic {
 	criteria ConceptAlertGiveItemStopFirstAidA IsNotCoughing IsMechanic IsTalk IsTalkMechanic NoHasFirstAidKit IsWorldTalkMechanic
@@ -8656,7 +8656,7 @@ Rule PlayerAlertGiveItemStopAnFirstAidMechanic {
 }
 
 Response PlayerAlertGiveItemStopQnFirstAidMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 //Blank IsNotSaidAlertGiveItemStopFirstAidMechanic
+	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStopFirstAidA foo:0 0 IsNotSaidAlertGiveItemStopFirstAidMechanic
 }
 Rule PlayerAlertGiveItemStopQnFirstAidMechanic {
 	criteria ConceptBashWithItem IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsItemFirstAidKit IsWorldTalkMechanic IsNotSpeakingWeight0
@@ -8664,7 +8664,7 @@ Rule PlayerAlertGiveItemStopQnFirstAidMechanic {
 }
 
 Response PlayerAlertGiveItemStopMedicalMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStop foo:0 0 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStop foo:0 0
 }
 Rule PlayerAlertGiveItemStopMedicalMechanic {
 	criteria ConceptAlertGiveItemStopMedical IsNotCoughing IsMechanic IsTalk IsTalkMechanic NoHasPainPills IsWorldTalkMechanic
@@ -8672,7 +8672,7 @@ Rule PlayerAlertGiveItemStopMedicalMechanic {
 }
 
 Response PlayerAlertGiveItemMedicalMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then subject AlertGiveItemStopMedical foo:0 0
 }
 Rule PlayerAlertGiveItemMedicalMechanic {
 	criteria ConceptBashWithItem IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsItemMedical IsWorldTalkMechanic IsNotSpeakingWeight0
@@ -8829,7 +8829,7 @@ Response PlayerGrenadeVomitJarMechanic {
 	scene "scenes/Mechanic/BoomerJar13.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -1.554 //Tossin' a bile bomb!
 	scene "scenes/Mechanic/BoomerJar14.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -2.623 //Here comes the bile, you sons of bitches!
 	scene "scenes/Mechanic/BoomerJar15.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -3.842 odds 10 //Heads up, zombies! It's about to RAIN!
-	scene "scenes/Mechanic/BoomerJar19.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -2.276 //All right, here ya go. Chase this!
+	scene "scenes/Mechanic/BoomerJar19.vcd" predelay ".5,1" then Any GrenadeCareful foo:0 -2.276 //Alright, here ya go. Chase this!
 }
 Rule PlayerGrenadeVomitJarMechanic {
 	criteria ConceptThrewGrenade IsNotCoughing IsMechanic IsTalk IsTalkMechanic IsGrenadeVomitJar IsWorldTalkMechanic
@@ -8883,7 +8883,7 @@ Response PlayerFarKillMechanic {
 	scene "scenes/Mechanic/PositiveNoise01.vcd" then Any PlayerNiceShot foo:0 -1.190 //WHOOO!
 	scene "scenes/Mechanic/PositiveNoise02.vcd" then Any PlayerNiceShot foo:0 -2.494 //Hee-Haw!
 	scene "scenes/Mechanic/PositiveNoise03.vcd" then Any PlayerNiceShot foo:0 -2.036 //Ha ha! Yeah!
-	scene "scenes/Mechanic/PositiveNoise04.vcd" then Any PlayerNiceShot foo:0 -0.792 //All right!
+	scene "scenes/Mechanic/PositiveNoise04.vcd" then Any PlayerNiceShot foo:0 -0.792 //Alright!
 	scene "scenes/Mechanic/PositiveNoise05.vcd" then Any PlayerNiceShot foo:0 -1.634 //<Hurrah sound>
 	scene "scenes/Mechanic/PositiveNoise06.vcd" then Any PlayerNiceShot foo:0 -1.108 //Ha ha!
 	scene "scenes/Mechanic/PositiveNoise07.vcd" then Any PlayerNiceShot foo:0 -1.264 //That's what I'm talkin' 'bout!
@@ -9209,7 +9209,7 @@ Rule PlayerSuggestMeHealthProducerMechanic {
 }
 
 Response PlayerTransitionMechanic {
-	scene "scenes/Mechanic/Blank.vcd" odds 50 then Producer PlayerTransitionMT foo:0 0.1 //Blank
+	scene "scenes/Mechanic/Blank.vcd" odds 50 then Producer PlayerTransitionMT foo:0 0.1
 	scene "scenes/Mechanic/Hurrah02.vcd" //I'm thinkin' we can take on anything!
 	scene "scenes/Mechanic/Hurrah03.vcd" //We are kings of the world!
 	scene "scenes/Mechanic/Hurrah05.vcd" //We are a right damn good team!
@@ -9218,7 +9218,7 @@ Response PlayerTransitionMechanic {
 	scene "scenes/Mechanic/Hurrah21.vcd" //Humans four, zombies nuthin'.
 	scene "scenes/Mechanic/PositiveNoise01.vcd" //WHOOO!
 	scene "scenes/Mechanic/PositiveNoise03.vcd" //Ha ha! Yeah!
-	scene "scenes/Mechanic/PositiveNoise04.vcd" //All right!
+	scene "scenes/Mechanic/PositiveNoise04.vcd" //Alright!
 	scene "scenes/Mechanic/PositiveNoise05.vcd" //<Hurrah sound>
 	scene "scenes/Mechanic/PositiveNoise07.vcd" //That's what I'm talkin' 'bout!
 	scene "scenes/Mechanic/Taunt02.vcd" //They ain't takin' us alive!
@@ -9491,7 +9491,7 @@ Rule PlayerWarnWitchAngryMechanic {
 }
 
 Response PlayerWorldIntroC31BlankMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then any WorldIntroC31 foo:0 5 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then any WorldIntroC31 foo:0 5
 }
 Rule PlayerWorldIntroC31BlankMechanic {
 	criteria ConceptintroC3M1 IsNotCoughing IsMechanic IsTalk ismap_c3m1_plankcountry AutoIsNotScavenge AutoIsNotSurvival
@@ -9499,7 +9499,7 @@ Rule PlayerWorldIntroC31BlankMechanic {
 }
 
 Response PlayerWorldIntroC51Mechanic {
-	scene "scenes/Mechanic/Blank.vcd" then orator C5M1_intro001 foo:0 0.01 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then orator C5M1_intro001 foo:0 0.01
 }
 Rule PlayerWorldIntroC51Mechanic {
 	criteria ConceptWorldIntroC51 IsNotCoughing IsMechanic IsNotSaidWorldIntroC51 IsTalk IsTalkMechanic IsWorldTalkMechanic
@@ -9509,7 +9509,7 @@ Rule PlayerWorldIntroC51Mechanic {
 }
 
 Response PlayerWorldIntroC51BlankMechanic {
-	scene "scenes/Mechanic/Blank.vcd" then any WorldIntroC51 foo:0 3 //Blank
+	scene "scenes/Mechanic/Blank.vcd" then any WorldIntroC51 foo:0 3
 }
 Rule PlayerWorldIntroC51BlankMechanic {
 	criteria ConceptPlayerScenarioJoinLast IsNotCoughing IsMechanic IsTalk IsTalkMechanic ismap_c5m1_waterfront IsWorldTalkMechanic
@@ -10233,7 +10233,7 @@ Rule SurvivorPickupFireAxeMechanic {
 Response SurvivorPickupFirstAidKitMechanic {
 	scene "scenes/Mechanic/TakeFirstAid01.vcd" //Hope you don't mind, I'm a take this first aid kit here.
 	scene "scenes/Mechanic/TakeFirstAid02.vcd" //Grabbing first aid.
-	scene "scenes/Mechanic/TakeFirstAid03.vcd" //First Aid Kit.
+	scene "scenes/Mechanic/TakeFirstAid03.vcd" //First aid kit.
 	scene "scenes/Mechanic/TakeFirstAid04.vcd" //Hey I got a first aid kit if somebody needs it.
 }
 Rule SurvivorPickupFirstAidKitMechanic {
@@ -10473,7 +10473,7 @@ Rule SurvivorPickupPainPillsMechanic {
 Response SurvivorPickupPipeBombMechanic {
 	scene "scenes/Mechanic/TakePipeBomb01.vcd" //Grabbing a pipe bomb.
 	scene "scenes/Mechanic/TakePipeBomb02.vcd" //Pipe bomb, baby!
-	scene "scenes/Mechanic/TakePipeBomb03.vcd" //I got a pipebomb!
+	scene "scenes/Mechanic/TakePipeBomb03.vcd" //I got a pipe bomb!
 }
 Rule SurvivorPickupPipeBombMechanic {
 	criteria ConceptPlayerPickup IsNotCoughing IsMechanic IsPickedUpPipeBomb IsNotSpeaking IsNotInSafeSpot ChanceToFire30Percent MechanicNotPickedUpItem IsTalk IsTalkMechanic IsWorldTalkMechanic
@@ -10646,7 +10646,7 @@ Rule SurvivorPickupUpIncendiaryAmmoMechanic {
 Response SurvivorPickupVomitJarMechanic {
 	scene "scenes/Mechanic/BoomerJar06.vcd" //Grabbin' a bile bomb!
 	scene "scenes/Mechanic/BoomerJar07.vcd" //Grabbin' a bile jar!
-	scene "scenes/Mechanic/BoomerJar16.vcd" odds 25 //All right, I ain't seen a good brawl in a while.
+	scene "scenes/Mechanic/BoomerJar16.vcd" odds 25 //Alright, I ain't seen a good brawl in a while.
 	scene "scenes/Mechanic/BoomerJar17.vcd" odds 25 //Man, I hate zombies, but I LOVE watchin' 'em fight.
 	scene "scenes/Mechanic/BoomerJar25.vcd" //Grabbin' a bile bomb!
 }
@@ -10672,7 +10672,7 @@ Response PlayerGettingRevivedMechanic {
 	scene "scenes/Mechanic/GettingRevived11.vcd" then subject ReviveBfine foo:0 -0.916 //Good.. I think.
 	scene "scenes/Mechanic/GettingRevived12.vcd" then subject ReviveBfine foo:0 -1.949 //I could be better.
 	scene "scenes/Mechanic/GettingRevived13.vcd" then subject ReviveBfine foo:0 -0.948 //Hell, I don't know.
-	scene "scenes/Mechanic/GettingRevived14.vcd" then subject ReviveBgo foo:0 -0.996 //Do I look all right?
+	scene "scenes/Mechanic/GettingRevived14.vcd" then subject ReviveBgo foo:0 -0.996 //Do I look alright?
 	scene "scenes/Mechanic/GettingRevived15.vcd" then subject ReviveBgo foo:0 -0.591 //Hurtin'.
 	scene "scenes/Mechanic/GettingRevived16.vcd" then subject ReviveBgo foo:0 -0.779 //Been better.
 	scene "scenes/Mechanic/GettingRevived17.vcd" then subject ReviveBgo foo:0 -0.927 //Cool.
@@ -10969,9 +10969,9 @@ Response PlayerReviveLoverMechanic {
 	scene "scenes/Mechanic/ReviveFriendA06.vcd" then Subject GettingRevivedMT foo:0 -0.452 //Can I help?
 	scene "scenes/Mechanic/ReviveFriendA07.vcd" then Subject GettingRevivedMT foo:0 -0.527 //You good?
 	scene "scenes/Mechanic/ReviveFriendA09.vcd" then Subject GettingRevivedMT foo:0 -0.574 //You okay?
-	scene "scenes/Mechanic/ReviveFriendA11.vcd" then Subject GettingRevivedMT foo:0 -1.219 //Hey, you all right?
+	scene "scenes/Mechanic/ReviveFriendA11.vcd" then Subject GettingRevivedMT foo:0 -1.219 //Hey, you alright?
 	scene "scenes/Mechanic/ReviveFriendA15.vcd" then Subject GettingRevivedMT foo:0 -2.586 //Look at me. You gonna be okay.
-	scene "scenes/Mechanic/ReviveFriendA16.vcd" then Subject GettingRevivedMT foo:0 -1.567 //Hey, you gonna be all right.
+	scene "scenes/Mechanic/ReviveFriendA16.vcd" then Subject GettingRevivedMT foo:0 -1.567 //Hey, you gonna be alright.
 }
 Rule PlayerReviveLoverMechanic {
 	criteria ConceptPlayerReviveFriend IsNotCoughing IsMechanic IsTalk IsTalkMechanic SubjectIsManager ChanceToFire30Percent IsWorldTalkMechanic
@@ -10980,7 +10980,7 @@ Rule PlayerReviveLoverMechanic {
 }
 
 Response PlayerReviveFriendAMechanic {
-	scene "scenes/Mechanic/ReviveFriendA01.vcd" then Subject GettingRevived foo:0 -0.664 //Hey you all right?
+	scene "scenes/Mechanic/ReviveFriendA01.vcd" then Subject GettingRevived foo:0 -0.664 //Hey you alright?
 	scene "scenes/Mechanic/ReviveFriendA02.vcd" then Subject GettingRevived foo:0 -0.645 //Y'all okay?
 	scene "scenes/Mechanic/ReviveFriendA03.vcd" then Subject GettingRevived foo:0 -0.900 //Hey you gonna be right?
 	scene "scenes/Mechanic/ReviveFriendA04.vcd" then Subject GettingRevived foo:0 -0.558 //Can you make it?
@@ -10990,12 +10990,12 @@ Response PlayerReviveFriendAMechanic {
 	scene "scenes/Mechanic/ReviveFriendA08.vcd" then Subject GettingRevived foo:0 -0.553 //You okay?
 	scene "scenes/Mechanic/ReviveFriendA09.vcd" then Subject GettingRevived foo:0 -0.574 //You okay?
 	scene "scenes/Mechanic/ReviveFriendA10.vcd" then Subject GettingRevived foo:0 -0.596 //How ya doin'?
-	scene "scenes/Mechanic/ReviveFriendA11.vcd" then Subject GettingRevived foo:0 -1.219 //Hey, you all right?
-	scene "scenes/Mechanic/ReviveFriendA12.vcd" then Subject GettingRevived foo:0 -0.522 //You all right?
-	scene "scenes/Mechanic/ReviveFriendA13.vcd" then Subject GettingRevived foo:0 -0.769 //You gonna be all right?
+	scene "scenes/Mechanic/ReviveFriendA11.vcd" then Subject GettingRevived foo:0 -1.219 //Hey, you alright?
+	scene "scenes/Mechanic/ReviveFriendA12.vcd" then Subject GettingRevived foo:0 -0.522 //You alright?
+	scene "scenes/Mechanic/ReviveFriendA13.vcd" then Subject GettingRevived foo:0 -0.769 //You gonna be alright?
 	scene "scenes/Mechanic/ReviveFriendA14.vcd" then Subject GettingRevived foo:0 -0.688 //You gonna be okay?
 	scene "scenes/Mechanic/ReviveFriendA15.vcd" then Subject GettingRevived foo:0 -2.586 //Look at me. You gonna be okay.
-	scene "scenes/Mechanic/ReviveFriendA16.vcd" then Subject GettingRevived foo:0 -1.567 //Hey, you gonna be all right.
+	scene "scenes/Mechanic/ReviveFriendA16.vcd" then Subject GettingRevived foo:0 -1.567 //Hey, you gonna be alright.
 	scene "scenes/Mechanic/ScenarioJoin05.vcd" then Subject GettingRevived foo:0 -0.932 //Wassup?
 	scene "scenes/Mechanic/WorldC3M419.vcd" then Subject GettingRevived foo:0 -0.763 //How ya doin'?ChanceToFire90Percent
 }
@@ -11026,10 +11026,10 @@ Response PlayerReviveFriendBfineMechanic {
 	scene "scenes/Mechanic/ReviveFriendB04.vcd" //Alright, upsy daisy!
 	scene "scenes/Mechanic/ReviveFriendB05.vcd" //See you're all good.
 	scene "scenes/Mechanic/ReviveFriendB06.vcd" //I knew you'd be okay.
-	scene "scenes/Mechanic/ReviveFriendB11.vcd" //Alright now, you gonna be all right.
+	scene "scenes/Mechanic/ReviveFriendB11.vcd" //Alright now, you gonna be alright.
 	scene "scenes/Mechanic/ReviveFriendB12.vcd" //There ya go. Good as new.
 	scene "scenes/Mechanic/ReviveFriendB13.vcd" //You'll be good.
-	scene "scenes/Mechanic/ReviveFriendB14.vcd" //Ah come on now, you'll be all right.
+	scene "scenes/Mechanic/ReviveFriendB14.vcd" //Ah come on now, you'll be alright.
 }
 Rule PlayerReviveFriendBfineMechanic {
 	criteria ConceptReviveBfine IsNotReviveInterrupt IsMechanic
@@ -11742,7 +11742,7 @@ Rule _introc1m1Mechanic {
 }
 
 Response _introc1m1a04Mechanic {
-	scene "scenes/Mechanic/WorldC1M1B12.vcd" then any _introc1m1a05 foo:0 -5.084 //All right, everybody calm down! That chopper looks like it's headin' to the evac center over at the mall.
+	scene "scenes/Mechanic/WorldC1M1B12.vcd" then any _introc1m1a05 foo:0 -5.084 //Alright, everybody calm down! That chopper looks like it's headin' to the evac center over at the mall.
 	scene "scenes/Mechanic/WorldC1M1B13.vcd" then any _introc1m1a05 foo:0 -2.515 //That chopper looks like it's headin' to the evac center over at the mall.
 	scene "scenes/Mechanic/WorldC1M1B14.vcd" then any _introc1m1a05 foo:0 -4.592 //I bet that chopper's headin' to the evac station at the mall. We can still catch up to it if we hurry.
 	scene "scenes/Mechanic/WorldC1M1B16.vcd" //Hey, I bet it's headed to the mall. There's an evacuation center there. Grab some weapons and I'll lead the way.
@@ -12085,7 +12085,7 @@ Rule C2M5_lipsync002Mechanic {
 }
 
 Response C4EnterCoverMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule C4EnterCoverMechanic {
 	criteria ConceptC4EnterCover IsMechanic
@@ -12095,7 +12095,7 @@ Rule C4EnterCoverMechanic {
 }
 
 Response C4ExitCoverMechanic {
-	speak "Mechanic_Blank" noscene //Blank
+	speak "Mechanic_Blank" noscene
 }
 Rule C4ExitCoverMechanic {
 	criteria ConceptC4ExitCover IsMechanic
@@ -12877,7 +12877,7 @@ Response MTEllisStoryMechanic {
 	scene "scenes/Mechanic/EllisStoriesK01.vcd" then Any MTEllisInterrupt3 foo:0 -19.75
 	scene "scenes/Mechanic/EllisStoriesL01.vcd" then any MTEllisInterrupt foo:0 -15.53 //I ever tell you guys about the time my buddy Keith got rolled by a gator in a swamp? He didn't antagonize it or nothing, we were just trying to grab two so we could piss them off and get 'em to fight.
 	scene "scenes/Mechanic/EllisStoriesM01.vcd" then any MTEllisInterrupt foo:0 -15.02 //I ever tell you about the time my buddy Keith drowned in a tunnel of love? You wouldn't think it could happen cause the water's so shallow, but that's how it gets you: Over confidence.
-	scene "scenes/Mechanic/EllisStoriesN01.vcd" then any MTEllisInterrupt foo:0 -12.07 //I ever tell you about the time me and Keith snuck into a Tunnel of Love? Man, if you get your spit thick enough, y'see, y'all can hang a loogie off the overhang, right, so when smoochin' sons of bitches behind you--
+	scene "scenes/Mechanic/EllisStoriesN01.vcd" then any MTEllisInterrupt foo:0 -12.07 //I ever tell you about the time me and Keith snuck into a Tunnel of Love? Man, if you get your spit thick enough, y'see, y'all can hang a loogie off the overhang, right, so when smoochin' sons of bitches behind you–
 	scene "scenes/Mechanic/EllisStoriesP01.vcd" then any MTEllisInterrupt foo:0 -10.17 //I ever tell you about the time me and Keith snuck paintball guns on a roller coaster? I never heard of nobody else doing it, so I think we might have invented a sport. Keith called the patent office but-
 	scene "scenes/Mechanic/EllisStoriesQ01.vcd" then any MTEllisInterrupt foo:0 -12.00 //I ever tell you about the time me and Keith made a homemade bumper car ride with riding mowers in Keith's back yard? Mower blade wounds over 90% of his body. I didn't run him over, either, he somehow managed to fall under his own -
 	scene "scenes/Mechanic/EllisStoriesQ01.vcd" then Any MTEllisInterrupt3 foo:0 -12.00

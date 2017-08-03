@@ -3,7 +3,7 @@
 
 //Auto-generated blank response for padding out InfoRemarkables
 Response _PlayerInfoRemarkableBlankGambler {
-	speak "Gambler_Blank" noscene //Blank
+	speak "Gambler_Blank" noscene
 }
 
 
@@ -101,8 +101,8 @@ Rule C6M1Intro_10eGambler {
 }
 
 Response C6M1Intro_11dGambler {
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting13.vcd" //All right.
-	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting14.vcd" //Yeah, all right.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting13.vcd" //Alright.
+	scene "scenes/Gambler/DLC1_C6M1_InitialMeeting14.vcd" //Yeah, alright.
 }
 Rule C6M1Intro_11dGambler {
 	criteria ConceptC6M1Intro_11d IsGambler
@@ -567,7 +567,7 @@ Rule C6M3_elevatorFrancisGambler {
 
 Response C6M3_GivenItemBikerGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items01.vcd" //Shit, thanks!
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items03.vcd" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items05.vcd" //Thanks, greaseball!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items07.vcd" //Thanks, pal!
 }
@@ -578,7 +578,7 @@ Rule C6M3_GivenItemBikerGambler {
 
 Response C6M3_GivenItemTeenGirlGambler {
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items02.vcd" //Thanks, we'll make good use of this.
-	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" //Sorry if I was rude before. You guys are all right!
+	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items04.vcd" //Sorry if I was rude before. You guys are alright!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items06.vcd" //Hey thanks, babe!
 	scene "scenes/Gambler/DLC1_C6M3_FinaleL4D1Items08.vcd" //Got it, thank you!
 }

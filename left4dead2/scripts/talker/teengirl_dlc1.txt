@@ -15,7 +15,7 @@ Rule C6M1Intro_01TeenGirl01TeenGirl {
 }
 
 Response C6M1Intro_01TeenGirl02TeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting08.vcd" then Mechanic C6M1Intro_13a foo:0 -3.987 //Hello down there! Sorry but we can't lower the bridge. (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting08.vcd" then Mechanic C6M1Intro_13a foo:0 -3.987 //Hello down there! Sorry but we can't lower the bridge.
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting09.vcd" then Mechanic C6M1Intro_13a foo:0 -3.987 //Hello down there! Sorry but we can't lower the bridge.
 }
 Rule C6M1Intro_01TeenGirl02TeenGirl {
@@ -26,7 +26,7 @@ Rule C6M1Intro_01TeenGirl02TeenGirl {
 }
 
 Response C6M1Intro_01TeenGirl03TeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting19.vcd" then Producer C6M1Intro_22a foo:0 -1.253 //Hello down there! (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting19.vcd" then Producer C6M1Intro_22a foo:0 -1.253 //Hello down there!
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting21.vcd" then Producer C6M1Intro_22a foo:0 -1.253 //Hello down there!
 }
 Rule C6M1Intro_01TeenGirl03TeenGirl {
@@ -98,7 +98,7 @@ Rule C6M1Intro_15bTeenGirl {
 }
 
 Response C6M1Intro_15dTeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting14.vcd" then Gambler C6M1Intro_15e foo:0 -2.340 //I could shoot you where you stand. (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting14.vcd" then Gambler C6M1Intro_15e foo:0 -2.340 //I could shoot you where you stand.
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting15.vcd" then Gambler C6M1Intro_15e foo:0 -2.340 //I could shoot you where you stand.
 }
 Rule C6M1Intro_15dTeenGirl {
@@ -116,7 +116,7 @@ Rule C6M1Intro_17aTeenGirl {
 
 Response C6M1Intro_17cTeenGirl {
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting17.vcd" then Producer C6M1Intro_17d foo:0 -2.035 //Sorry, good luck?
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting18.vcd" then Producer C6M1Intro_17d foo:0 -2.035 //Sorry, good luck? (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting18.vcd" then Producer C6M1Intro_17d foo:0 -2.035 //Sorry, good luck?
 }
 Rule C6M1Intro_17cTeenGirl {
 	criteria ConceptC6M1Intro_17c IsTeenGirl
@@ -124,7 +124,7 @@ Rule C6M1Intro_17cTeenGirl {
 }
 
 Response C6M1Intro_22bTeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting20.vcd" then Producer C6M1Intro_22c foo:0 -1.913 //Yeah, I know that feeling. (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting20.vcd" then Producer C6M1Intro_22c foo:0 -1.913 //Yeah, I know that feeling.
 	scene "scenes/TeenGirl/DLC1_C6M1_InitialMeeting23.vcd" then Producer C6M1Intro_22c foo:0 -1.913 //Yeah, I know that feeling.
 }
 Rule C6M1Intro_22bTeenGirl {
@@ -172,10 +172,10 @@ Rule C6M1Intro_23cTeenGirl {
 Response c6m3_outroL4D1TeenGirl {
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic15.vcd" //(10 commandments) Go - proclaim liberty throughout all the lands, and to all the inhabitants thereof!
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic16.vcd" //(Planet of the apes) You finally really did it. You maniacs! You blew it up! God damn you! God damn you all to hell!
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic17.vcd" //Remember soylent green is people! (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic17.vcd" //Remember soylent green is people!
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic18.vcd" //Remember soylent green is people!
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic19.vcd" //Y'all come back now!
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic20.vcd" //Y'all come back now! (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic20.vcd" //Y'all come back now!
 }
 Rule c6m3_outroL4D1TeenGirl {
 	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsNotVersus IsNotSaidc6m3_outro3
@@ -211,8 +211,8 @@ Rule c6m3_outroL4D103aTeenGirl {
 
 Response c6m3_outroL4D104aTeenGirl {
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic08.vcd" then Biker c6m3_outroL4D104b foo:0 -4.872 //Francis, it's nice to see you still have that in you.
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic09.vcd" then Biker c6m3_outroL4D104b foo:0 -4.872 //Francis, it's nice to see you still have that in you. (Rare)
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic10.vcd" then Biker c6m3_outroL4D104b foo:0 -4.872 //Francis, it's nice to see you still have that in you. (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic09.vcd" then Biker c6m3_outroL4D104b foo:0 -4.872 //Francis, it's nice to see you still have that in you.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic10.vcd" then Biker c6m3_outroL4D104b foo:0 -4.872 //Francis, it's nice to see you still have that in you.
 }
 Rule c6m3_outroL4D104aTeenGirl {
 	criteria Conceptc6m3_outroL4D104a IsTeenGirl
@@ -220,9 +220,9 @@ Rule c6m3_outroL4D104aTeenGirl {
 }
 
 Response c6m3_outroL4D105aTeenGirl {
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic11.vcd" //Where (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic11.vcd" //Where
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic12.vcd" //Where? At the mall?
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic13.vcd" //Where (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic13.vcd" //Where
 }
 Rule c6m3_outroL4D105aTeenGirl {
 	criteria Conceptc6m3_outroL4D105a IsTeenGirl
@@ -247,7 +247,7 @@ Rule c6m3_outroL4D109aTeenGirl {
 
 Response c6m3_outroL4D1AllTeenGirl {
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic04.vcd" //Bye Ellis! Bye Rochelle! Bye Coach! Bye Nick!
-	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic05.vcd" //Bye Ellis! Bye Rochelle! Bye Coach! Bye Nick! (Rare)
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleCinematic05.vcd" //Bye Ellis! Bye Rochelle! Bye Coach! Bye Nick!
 }
 Rule c6m3_outroL4D1AllTeenGirl {
 	criteria Conceptc6m3_outro3 IsTeenGirl isC6m3_port IsEveryoneAliveWeight0 IsNotVersus IsNotSaidc6m3_outro3
@@ -318,6 +318,7 @@ Response L4D1_SurvivorBotTakeThisItemTeenGirl {
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleFinalGas01.vcd" //Here, be safe.
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleFinalGas03.vcd" //Take this, good luck.
 	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleFinalGas04.vcd" //Good luck!
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D1FinaleFinalGas02.vcd" odds 30 //Here, then get your asses to your car.
 }
 Rule L4D1_SurvivorBotTakeThisItemTeenGirl {
 	criteria ConceptL4D1_SurvivorBotTakeThisItem IsTeenGirl
@@ -350,7 +351,7 @@ Rule WorldC6M3_ByBridge01EllisTeenGirl {
 Response L4D1SpottedTankTeenGirl {
 	scene "scenes/TeenGirl/DLC1_L4D1Tank01.vcd" //Guys come back!
 	scene "scenes/TeenGirl/DLC1_L4D1Tank02.vcd" //Guys let us cover you!
-	scene "scenes/TeenGirl/DLC1_L4D1Tank03.vcd" odds 1 //TWO TANKS!
+	scene "scenes/TeenGirl/DLC1_L4D1Tank03.vcd" odds 50 //TWO TANKS!
 	scene "scenes/TeenGirl/DLC1_L4D1Tank04.vcd" //Bring the tanks back here!
 }
 Rule L4D1SpottedTankTeenGirl {
@@ -360,8 +361,14 @@ Rule L4D1SpottedTankTeenGirl {
 	Response L4D1SpottedTankTeenGirl
 }
 
-
-//Player File
-
-//Vocalizer
-
+Response PlayerCommentJockeyC6M3TeenGirl {
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D11stSpot01.vcd" //Watch out for that.. WHAT HELL IS THAT!?!?
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D11stSpot08.vcd" //That doesn't look right.
+	scene "scenes/TeenGirl/DLC1_C6M3_L4D11stSpot09.vcd" //What is that zombie doing to him?
+}
+Rule PlayerCommentJockeyC6M3TeenGirl {
+	criteria ConceptCommentJockey IsTeenGirl IssuerCloseEnough IsNotIncapacitated IntensityUnder50 IsNotSaidCommentJockey isC6m3_port
+	ApplyContext "SaidCommentJockey:1:0"
+	applycontexttoworld
+	Response PlayerCommentJockeyC6M3TeenGirl
+}

@@ -66,7 +66,7 @@ criterion "MilitaryIntransit" "worldMilitaryIntransit" "<1" required
 
 
 //Inital broadcast from boat couple as survivors approach boathouse (ONGOING LOOP)
-	criterion "ConceptBlock500" "Concept" "ConceptBlock500" required
+criterion "ConceptBlock500" "Concept" "ConceptBlock500" required
 Response ConceptBlock500 {
 	scene "scenes/npcs/boatman_radioinitialbroadcast02.vcd" then self ConceptBlock500 foo:0 10 //If there is anyone out there. This is John and Amanda Slater. We are a small fishing vessel anchored off Riverside.
 	scene "scenes/npcs/boatman_radioinitialbroadcast03.vcd" then self ConceptBlock500 foo:0 10 //If there are any survivors, please respond.
@@ -90,7 +90,7 @@ Rule ConceptBlock500 {
 }
 
 //Inital broadcast from boat couple as survivors approach boathouse (FIRST FIRE ONLY)
-	criterion "ConceptBlock501" "Concept" "boat_radio_broadcast" required
+criterion "ConceptBlock501" "Concept" "boat_radio_broadcast" required
 Response ConceptBlock501 {
 	scene "scenes/npcs/boatman_radioinitialbroadcast02.vcd" then self ConceptBlock500 foo:0 6 //If there is anyone out there. This is John and Amanda Slater. We are a small fishing vessel anchored off Riverside.
 }
@@ -100,7 +100,7 @@ Rule ConceptBlock501 {
 }
 
 //NamVet hits radio button first time
-	criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
+criterion "ConceptBlock514" "Concept" "boat_radio_button1" required
 Response ConceptBlock514 {
 	scene "scenes/npcs/boatman_blank.vcd" then NamVet ConceptBlock515 foo:0 .05 //[BLANK]
 }
@@ -111,7 +111,7 @@ Rule ConceptBlock514 {
 	Response ConceptBlock514
 }
 
-	criterion "ConceptBlock515" "Concept" "ConceptBlock515" required
+criterion "ConceptBlock515" "Concept" "ConceptBlock515" required
 Response ConceptBlock515 {
 	scene "scenes/NamVet/ReviveFriendA07.vcd" then orator_boat_radio ConceptBlock522 foo:0 -1.136 //How ya doin'?
 	scene "scenes/NamVet/WorldFarmHouseNPC02.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.720 //Hello?
@@ -133,7 +133,7 @@ Rule ConceptBlock516 {
 	Response ConceptBlock516
 }
 
-	criterion "ConceptBlock517" "Concept" "ConceptBlock517" required
+criterion "ConceptBlock517" "Concept" "ConceptBlock517" required
 Response ConceptBlock517 {
 	scene "scenes/Biker/ReviveFriendA07.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.863 //How ya doin'?
 	scene "scenes/Biker/WorldFarmHouseNPC01.vcd" then orator_boat_radio ConceptBlock522 foo:0 -1.493 //Uh, hello?
@@ -155,7 +155,7 @@ Rule ConceptBlock518 {
 	Response ConceptBlock518
 }
 
-	criterion "ConceptBlock519" "Concept" "ConceptBlock519" required
+criterion "ConceptBlock519" "Concept" "ConceptBlock519" required
 Response ConceptBlock519 {
 	scene "scenes/TeenGirl/scenariojoin12.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.636 //Hello!
 }
@@ -176,7 +176,7 @@ Rule ConceptBlock520 {
 	Response ConceptBlock520
 }
 
-	criterion "ConceptBlock521" "Concept" "ConceptBlock521" required
+criterion "ConceptBlock521" "Concept" "ConceptBlock521" required
 Response ConceptBlock521 {
 	scene "scenes/Manager/WorldFarmHouseNPC01.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.992 //Hello?
 	scene "scenes/Manager/WorldFarmHouseNPC16.vcd" then orator_boat_radio ConceptBlock522 foo:0 -0.948 //Hello?
@@ -186,7 +186,7 @@ Rule ConceptBlock521 {
 	Response ConceptBlock521
 }
 
-	criterion "ConceptBlock522" "Concept" "ConceptBlock522" required
+criterion "ConceptBlock522" "Concept" "ConceptBlock522" required
 Response ConceptBlock522 {
 	scene "scenes/npcs/boatman_radiobutton111.vcd" then Self ConceptBlock523 foo:0 .1 //Hello? Hello!
 }
@@ -195,7 +195,7 @@ Rule ConceptBlock522 {
 	Response ConceptBlock522
 }
 
-	criterion "ConceptBlock523" "Concept" "ConceptBlock523" required
+criterion "ConceptBlock523" "Concept" "ConceptBlock523" required
 Response ConceptBlock523 {
 	scene "scenes/npcs/boatman_radiobutton110.vcd" then Self ConceptBlock525 foo:0 6 //We're heading to the military outpost upriver. We can come get you in ten minutes. Arm yourselves for the trip and tell me when to head out.
 }
@@ -205,7 +205,7 @@ Rule ConceptBlock523 {
 }
 
 //Boat 2nd button push nags
-	criterion "ConceptBlock525" "Concept" "ConceptBlock525" required
+criterion "ConceptBlock525" "Concept" "ConceptBlock525" required
 Response ConceptBlock525 {
 	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock525 foo:0 6 //[BLANK]
 	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock525 foo:0 6 //[BLANK]
@@ -234,7 +234,7 @@ Rule ConceptBlock526 {
 	Response ConceptBlock526
 }
 
-	criterion "ConceptBlock527" "Concept" "ConceptBlock527" required
+criterion "ConceptBlock527" "Concept" "ConceptBlock527" required
 Response ConceptBlock527 {
 	scene "scenes/Biker/worldsmalltownnpcboatman14.vcd" then orator_boat_radio ConceptBlock528 foo:0 -6.401 //Attention boat owner: We are the cops. I command you to pick us up.
 }
@@ -243,7 +243,7 @@ Rule ConceptBlock527 {
 	Response ConceptBlock527
 }
 
-	criterion "ConceptBlock528" "Concept" "ConceptBlock528" required
+criterion "ConceptBlock528" "Concept" "ConceptBlock528" required
 Response ConceptBlock528 {
 	scene "scenes/npcs/boatman_radiobutton123.vcd" then Self ConceptBlock530 foo:0 .05 //Hello? Honey, it's the police!
 }
@@ -252,7 +252,7 @@ Rule ConceptBlock528 {
 	Response ConceptBlock528
 }
 
-	criterion "ConceptBlock530" "Concept" "ConceptBlock530" required
+criterion "ConceptBlock530" "Concept" "ConceptBlock530" required
 Response ConceptBlock530 {
 	scene "scenes/npcs/boatman_radiobutton124.vcd" then Self ConceptBlock531 foo:0 7 //POLICE, RADIO US BACK WHEN YOU ARE READY FOR PICKUP!
 }
@@ -262,7 +262,7 @@ Rule ConceptBlock530 {
 }
 
 //Boat 2nd button push nags [COP GAMBIT]
-	criterion "ConceptBlock531" "Concept" "ConceptBlock531" required
+criterion "ConceptBlock531" "Concept" "ConceptBlock531" required
 Response ConceptBlock531 {
 	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock531 foo:0 10 //[BLANK]
 	scene "scenes/npcs/boatman_blank.vcd" then self ConceptBlock531 foo:0 10 //[BLANK]
@@ -279,7 +279,7 @@ Rule ConceptBlock531 {
 }
 
 //NamVet hits radio button second time
-	criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
+criterion "ConceptBlock532" "Concept" "boat_radio_button2" required
 Response ConceptBlock532 {
 	scene "scenes/npcs/boatman_blank.vcd" then NamVet ConceptBlock536 foo:0 .05 //[BLANK]
 }
@@ -326,7 +326,7 @@ Rule ConceptBlock535 {
 	Response ConceptBlock535
 }
 
-	criterion "ConceptBlock536" "Concept" "ConceptBlock536" required
+criterion "ConceptBlock536" "Concept" "ConceptBlock536" required
 Response ConceptBlock536 {
 	scene "scenes/NamVet/worldsmalltownnpcboatman04.vcd" then orator_boat_radio ConceptBlock540 foo:0 -2.304 //Go on and head out. We're ready.
 	scene "scenes/NamVet/worldsmalltownnpcboatman05.vcd" then orator_boat_radio ConceptBlock540 foo:0 -2.368 //Come and get us. We're good to go.
@@ -336,7 +336,7 @@ Rule ConceptBlock536 {
 	Response ConceptBlock536
 }
 
-	criterion "ConceptBlock537" "Concept" "ConceptBlock537" required
+criterion "ConceptBlock537" "Concept" "ConceptBlock537" required
 Response ConceptBlock537 {
 	scene "scenes/Biker/WorldFarmHouseNPC04.vcd" then orator_boat_radio ConceptBlock540 foo:0 -0.903 //We're ready!
 	scene "scenes/Biker/WorldFarmHouseNPC05.vcd" then orator_boat_radio ConceptBlock540 foo:0 -0.950 //We're all set!
@@ -347,7 +347,7 @@ Rule ConceptBlock537 {
 	Response ConceptBlock537
 }
 
-	criterion "ConceptBlock538" "Concept" "ConceptBlock538" required
+criterion "ConceptBlock538" "Concept" "ConceptBlock538" required
 Response ConceptBlock538 {
 	scene "scenes/TeenGirl/answerready04.vcd" then orator_boat_radio ConceptBlock540 foo:0 -0.875 //Let's go.
 }
@@ -356,7 +356,7 @@ Rule ConceptBlock538 {
 	Response ConceptBlock538
 }
 
-	criterion "ConceptBlock539" "Concept" "ConceptBlock539" required
+criterion "ConceptBlock539" "Concept" "ConceptBlock539" required
 Response ConceptBlock539 {
 	scene "scenes/Manager/worldsmalltownnpcboatman10.vcd" then orator_boat_radio ConceptBlock540 foo:0 -1.666 //Go on and head out. We're ready.
 }
@@ -366,11 +366,11 @@ Rule ConceptBlock539 {
 }
 
 //Boatcouple responds to 2nd button press
-	criterion "ConceptBlock540" "Concept" "ConceptBlock540" required
+criterion "ConceptBlock540" "Concept" "ConceptBlock540" required
 Response ConceptBlock540 {
 	scene "scenes/npcs/boatman_radiobutton205.vcd" //We'll be there in ten minutes.
 	scene "scenes/npcs/boatman_radiobutton207.vcd" //Alright, we're on our way.
-	scene "scenes/npcs/boatman_radiobutton212.vcd" //Allright, we're on our way. Make sure you clear the area. I don't want our first act of kindness to be our last.
+	scene "scenes/npcs/boatman_radiobutton212.vcd" //Alright, we're on our way. Make sure you clear the area. I don't want our first act of kindness to be our last.
 }
 Rule ConceptBlock540 {
 	criteria ConceptBlock540
@@ -389,7 +389,7 @@ Rule ConceptBlock541 {
 	Response ConceptBlock541
 }
 
-	criterion "ConceptBlock542" "Concept" "ConceptBlock542" required
+criterion "ConceptBlock542" "Concept" "ConceptBlock542" required
 Response ConceptBlock542 {
 	scene "scenes/npcs/boatman_radiointransit01.vcd" //Should be there in ten minutes!
 }
@@ -399,7 +399,7 @@ Rule ConceptBlock542 {
 }
 
 //Boat In Transit nag 1
-	criterion "ConceptBlock547" "Concept" "boat_radio_intransit" required
+criterion "ConceptBlock547" "Concept" "boat_radio_intransit" required
 Response ConceptBlock547 {
 	scene "scenes/npcs/boatman_radiointransit03.vcd" //Be there in about five minutes!
 }
@@ -447,7 +447,7 @@ Rule ConceptBlock550 {
 }
 
 //Boat pulls into dock
-	criterion "ConceptBlock561" "Concept" "boat_speaker_arrived" required
+criterion "ConceptBlock561" "Concept" "boat_speaker_arrived" required
 Response ConceptBlock561 {
 	scene "scenes/npcs/boatman_radioarrived01.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //All aboard, folks!
 }
@@ -457,7 +457,7 @@ Rule ConceptBlock561 {
 }
 
 //Boat pulls into dock loop
-	criterion "ConceptBlock563" "Concept" "ConceptBlock563" required
+criterion "ConceptBlock563" "Concept" "ConceptBlock563" required
 Response ConceptBlock563 {
 	scene "scenes/npcs/boatman_radioarrived01.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //All aboard, folks!
 	scene "scenes/npcs/boatman_radioarrived02.vcd" then orator_boat_radio ConceptBlock563 foo:0 4 //Get in! Get in!
@@ -475,7 +475,7 @@ Rule ConceptBlock563 {
 
 
 //Initial Churchguy babbling before he notices the survivors.
-	criterion "ConceptBlock001" "Concept" "churchguy_far" required
+criterion "ConceptBlock001" "Concept" "churchguy_far" required
 Response ConceptBlock001 {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast01.vcd" then self churchguy_far foo:0 .05 //I trusted you. You said you were immune. You said you were immune.
 	scene "scenes/npcs/churchguy_radioinitialbroadcast02.vcd" then self churchguy_far foo:0 .05 //I trusted you. You said you were immune. You said you were immune. Better safe than sorry.
@@ -503,7 +503,7 @@ Rule ConceptBlock001 {
 }
 
 //[SEQUENCE START] Churchguy babbling after he notices the survivors.
-	criterion "ConceptBlock002A" "Concept" "churchguy_close" required
+criterion "ConceptBlock002A" "Concept" "churchguy_close" required
 Response ConceptBlock002A {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast13.vcd" then self ConceptBlock002B foo:0 .5 //Who's there?
 }
@@ -513,7 +513,7 @@ Rule ConceptBlock002A {
 	ApplyContextToWorld
 	Response ConceptBlock002A
 }
-	criterion "ConceptBlock002B" "Concept" "ConceptBlock002B" required
+criterion "ConceptBlock002B" "Concept" "ConceptBlock002B" required
 Response ConceptBlock002B {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast14.vcd" then self ConceptBlock002C foo:0 .5 //Is someone there?
 }
@@ -521,7 +521,7 @@ Rule ConceptBlock002B {
 	criteria ConceptBlock002B ChurchguyPhase2
 	Response ConceptBlock002B
 }
-	criterion "ConceptBlock002C" "Concept" "ConceptBlock002C" required
+criterion "ConceptBlock002C" "Concept" "ConceptBlock002C" required
 Response ConceptBlock002C {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast16.vcd" then Self ConceptBlock053 foo:0 3 //I've got a bell in here!
 }
@@ -531,7 +531,7 @@ Rule ConceptBlock002C {
 }
 //[SEQUENCE END] Churchguy babbling after he notices the survivors.
 
-	criterion "ConceptBlock004" "Concept" "ConceptBlock004" required
+criterion "ConceptBlock004" "Concept" "ConceptBlock004" required
 Response ConceptBlock004 {
 	scene "scenes/npcs/churchguy_radiobutton113.vcd" fire relay_churchbell Trigger 2.9 then self ConceptBlock005 foo:0 .05 //I can make you leave. Don't believe me? [bell]
 }
@@ -540,7 +540,7 @@ Rule ConceptBlock004 {
 	Response ConceptBlock004
 }
 
-	criterion "ConceptBlock005" "Concept" "ConceptBlock005" required
+criterion "ConceptBlock005" "Concept" "ConceptBlock005" required
 Response ConceptBlock005 {
 	scene "scenes/npcs/churchguy_radiobutton114.vcd" then self ConceptBlock006 foo:0 .05 //HOW ABOUT NOW?
 }
@@ -549,7 +549,7 @@ Rule ConceptBlock005 {
 	Response ConceptBlock005
 }
 
-	criterion "ConceptBlock006" "Concept" "ConceptBlock006" required
+criterion "ConceptBlock006" "Concept" "ConceptBlock006" required
 Response ConceptBlock006 {
 	scene "scenes/npcs/churchguy_radiobutton1extended40.vcd" then self ConceptBlock007 foo:0 .05 //Ding dong! Ding dong!
 }
@@ -558,7 +558,7 @@ Rule ConceptBlock006 {
 	Response ConceptBlock006
 }
 
-	criterion "ConceptBlock007" "Concept" "ConceptBlock007" required
+criterion "ConceptBlock007" "Concept" "ConceptBlock007" required
 Response ConceptBlock007 {
 	scene "scenes/npcs/churchguy_radiobutton1extended43.vcd" fire relay_panicevent Trigger 1.6 then any conceptnuttier foo:0 .1 //Dinner's served! Come and get it!
 }
@@ -570,7 +570,7 @@ Rule ConceptBlock007 {
 }
 
 //Biker presses the churchguy button
-	criterion "ConceptBlock008" "Concept" "churchguy_button" required
+criterion "ConceptBlock008" "Concept" "churchguy_button" required
 Response ConceptBlock008 {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast13.vcd" then Biker ConceptBlock009 foo:0 .05 //Who's there?
 	scene "scenes/npcs/churchguy_radiobutton110.vcd" then Biker ConceptBlock040 foo:0 .05 //Go away! No one gets in!
@@ -582,7 +582,7 @@ Rule ConceptBlock008 {
 	Response ConceptBlock008
 }
 
-	criterion "ConceptBlock009" "Concept" "ConceptBlock009" required
+criterion "ConceptBlock009" "Concept" "ConceptBlock009" required
 Response ConceptBlock009 {
 	scene "scenes/Biker/worldsmalltownnpcbellman02.vcd" then churchguy ConceptBlock011 foo:0 -1.965 //Just open the goddamn door.
 	scene "scenes/Biker/worldsmalltownnpcbellman04.vcd" then churchguy ConceptBlock011 foo:0 -6.542 //Well, let's see: I'm Francis, and that's Grandpa Bill, and - THERE'S ZOMBIES OUT HERE OPEN THE GODDAMN DOOR.
@@ -593,7 +593,7 @@ Rule ConceptBlock009 {
 }
 
 //Churchguy responds to Francis telling him they're cops
-	criterion "ConceptBlock010" "Concept" "ConceptBlock010" required
+criterion "ConceptBlock010" "Concept" "ConceptBlock010" required
 Response ConceptBlock010 {
 	scene "scenes/npcs/churchguy_radiobutton1extended25.vcd" fire relay_churchbell Trigger 1 then self ConceptBlock006 foo:0 .05 //You don't sound like cops!
 }
@@ -603,7 +603,7 @@ Rule ConceptBlock010 {
 }
 
 //Churchguy responds to Francis being a smartass
-	criterion "ConceptBlock011" "Concept" "ConceptBlock011" required
+criterion "ConceptBlock011" "Concept" "ConceptBlock011" required
 Response ConceptBlock011 {
 	scene "scenes/npcs/churchguy_radiobutton110.vcd" fire relay_churchbell Trigger 1 then self ConceptBlock006 foo:0 .05 //Go away! No one gets in!
 }
@@ -613,7 +613,7 @@ Rule ConceptBlock011 {
 }
 
 //NamVet responds to Churchguy ringing the bell
-	criterion "ConceptBlock012" "Concept" "ConceptNuttier" required
+criterion "ConceptBlock012" "Concept" "ConceptNuttier" required
 Response ConceptBlock012 {
 	scene "scenes/NamVet/worldsmalltownnpcbellman03.vcd" //This guy's nuttier than candy bar shit.
 	scene "scenes/NamVet/worldsmalltownnpcbellman04.vcd" //I don't believe this.
@@ -649,7 +649,7 @@ Rule ConceptBlock014 {
 	Response ConceptBlock014
 }
 
-	criterion "ConceptBlock015" "Concept" "ConceptBlock015" required
+criterion "ConceptBlock015" "Concept" "ConceptBlock015" required
 Response ConceptBlock015 {
 	scene "scenes/Manager/worldsmalltownnpcbellman01.vcd" then churchguy ConceptBlock016 foo:0 -3.936 //Sir, please! We are NOT infected.
 }
@@ -658,7 +658,7 @@ Rule ConceptBlock015 {
 	Response ConceptBlock015
 }
 
-	criterion "ConceptBlock016" "Concept" "ConceptBlock016" required
+criterion "ConceptBlock016" "Concept" "ConceptBlock016" required
 Response ConceptBlock016 {
 	scene "scenes/npcs/churchguy_radiobutton1extended35.vcd" fire relay_churchbell Trigger 2.85 then Self ConceptBlock006 foo:0 .3 //Not infected? Not infected? Prove it! [bell]
 }
@@ -667,7 +667,7 @@ Rule ConceptBlock016 {
 	Response ConceptBlock016
 }
 
-	criterion "ConceptBlock017" "Concept" "ConceptBlock017" required
+criterion "ConceptBlock017" "Concept" "ConceptBlock017" required
 Response ConceptBlock017 {
 	scene "scenes/Manager/GenericResponses02.vcd" then churchguy ConceptBlock018 foo:0 -0.692 //[Disbelief] What?
 }
@@ -676,7 +676,7 @@ Rule ConceptBlock017 {
 	Response ConceptBlock017
 }
 
-	criterion "ConceptBlock018" "Concept" "ConceptBlock018" required
+criterion "ConceptBlock018" "Concept" "ConceptBlock018" required
 Response ConceptBlock018 {
 	scene "scenes/npcs/churchguy_radiobutton107.vcd" fire relay_churchbell Trigger 8.5 then Self ConceptBlock006 foo:0 .05 //My safehouse! Come here! No! Stay out! Slide your guns under the door! No! Go away! Better safe than sorry! Better safe than sorry! Better safe than sorry!
 }
@@ -685,7 +685,7 @@ Rule ConceptBlock018 {
 	Response ConceptBlock018
 }
 
-	criterion "ConceptBlock019" "Concept" "ConceptBlock019" required
+criterion "ConceptBlock019" "Concept" "ConceptBlock019" required
 Response ConceptBlock019 {
 	scene "scenes/Manager/worldsmalltownnpcbellman08.vcd" then churchguy ConceptBlock020 foo:0 -7.143 //Mister, if one of us get killed out here, I am gonna shoot my way in there and beat you to death with my gun!
 }
@@ -694,7 +694,7 @@ Rule ConceptBlock019 {
 	Response ConceptBlock019
 }
 
-	criterion "ConceptBlock020" "Concept" "ConceptBlock020" required
+criterion "ConceptBlock020" "Concept" "ConceptBlock020" required
 Response ConceptBlock020 {
 	scene "scenes/npcs/churchguy_radiobutton1extended31.vcd" fire relay_churchbell Trigger 1.6 then Self ConceptBlock006 foo:0 .05 //Trying to intimidate me? [bell] Didn't help.
 	scene "scenes/npcs/churchguy_radiobutton1extended07.vcd" fire relay_churchbell Trigger 1 then Self ConceptBlock005 foo:0 1 //Really?
@@ -726,7 +726,7 @@ Rule ConceptBlock022 {
 	Response ConceptBlock022
 }
 
-	criterion "ConceptBlock023" "Concept" "ConceptBlock023" required
+criterion "ConceptBlock023" "Concept" "ConceptBlock023" required
 Response ConceptBlock023 {
 	scene "scenes/Biker/worldsmalltownnpcbellman03.vcd" then churchguy ConceptBlock010 foo:0 -1.753 //We're cops. Open up.
 }
@@ -749,7 +749,7 @@ Rule ConceptBlock024 {
 	Response ConceptBlock024
 }
 
-	criterion "ConceptBlock025" "Concept" "ConceptBlock025" required
+criterion "ConceptBlock025" "Concept" "ConceptBlock025" required
 Response ConceptBlock025 {
 	scene "scenes/NamVet/worldsmalltownnpcbellman02.vcd" then churchguy ConceptBlock026 foo:0 -3.072 //We're as human as they come, son. I promise you.
 	scene "scenes/NamVet/worldsmalltownnpcbellman01.vcd" then churchguy ConceptBlock026 foo:0 -6.624 //Son, we're immune, we're tired, and there's infected in the damn woods. Now cut the shit and let us in!
@@ -759,7 +759,7 @@ Rule ConceptBlock025 {
 	Response ConceptBlock025
 }
 
-	criterion "ConceptBlock026" "Concept" "ConceptBlock026" required
+criterion "ConceptBlock026" "Concept" "ConceptBlock026" required
 Response ConceptBlock026 {
 	scene "scenes/npcs/churchguy_radiobutton1extended35.vcd" fire relay_churchbell Trigger 2.8 then Self ConceptBlock006 foo:0 .05 //Not infected? Not infected? Prove it! [bell]
 	scene "scenes/npcs/churchguy_radiobutton1extended13.vcd" fire relay_churchbell Trigger 6.1 then Self ConceptBlock006 foo:0 .05 //I - I opened the door before, and I got bit for my trouble. [bell] Better safe than sorry. Better safe than sorry!
@@ -771,7 +771,7 @@ Rule ConceptBlock026 {
 	Response ConceptBlock026
 }
 
-	criterion "ConceptBlock027" "Concept" "ConceptBlock027" required
+criterion "ConceptBlock027" "Concept" "ConceptBlock027" required
 Response ConceptBlock027 {
 	scene "scenes/npcs/churchguy_radiobutton1extended20.vcd" then Namvet ConceptBlock028 foo:0 .05 //Nobody rides for free! Ding dong!
 	scene "scenes/npcs/churchguy_radiobutton1extended19.vcd" then Namvet ConceptBlock028 foo:0 .05 //You think you're special with your leather jackets and your fancy blood?
@@ -781,7 +781,7 @@ Rule ConceptBlock027 {
 	Response ConceptBlock027
 }
 
-	criterion "ConceptBlock028" "Concept" "ConceptBlock028" required
+criterion "ConceptBlock028" "Concept" "ConceptBlock028" required
 Response ConceptBlock028 {
 	scene "scenes/NamVet/worldsmalltownnpcbellman07.vcd" then churchguy ConceptBlock029 foo:0 -5.856 //I don't believe this shit. We're arguin' for our lives here with a damn mental moron!
 	scene "scenes/NamVet/GenericResponses02.vcd" then churchguy ConceptBlock030 foo:0 -0.728 //[Disbelief] What?
@@ -792,7 +792,7 @@ Rule ConceptBlock028 {
 	Response ConceptBlock028
 }
 
-	criterion "ConceptBlock029" "Concept" "ConceptBlock029" required
+criterion "ConceptBlock029" "Concept" "ConceptBlock029" required
 Response ConceptBlock029 {
 	scene "scenes/npcs/churchguy_radiobutton1extended21.vcd" fire relay_churchbell Trigger 1.6 then churchguy ConceptBlock006 foo:0 .05 //I am not a mental moron!
 }
@@ -801,7 +801,7 @@ Rule ConceptBlock029 {
 	Response ConceptBlock029
 }
 
-	criterion "ConceptBlock030" "Concept" "ConceptBlock030" required
+criterion "ConceptBlock030" "Concept" "ConceptBlock030" required
 Response ConceptBlock030 {
 	scene "scenes/npcs/churchguy_radiobutton105.vcd" fire relay_churchbell Trigger 5.15 then churchguy ConceptBlock006 foo:0 .1 //I'm gonna ring this bell. I'm going to ring this bell! And they'll come! And they'll finish the job.
 }
@@ -825,7 +825,7 @@ Rule ConceptBlock031 {
 	Response ConceptBlock031
 }
 
-	criterion "ConceptBlock032" "Concept" "ConceptBlock032" required
+criterion "ConceptBlock032" "Concept" "ConceptBlock032" required
 Response ConceptBlock032 {
 	scene "scenes/TeenGirl/worldairport05npc02.vcd" then churchguy ConceptBlock033 foo:0 -3.563 //You know, we can *make* you open that goddamn door.
 	scene "scenes/TeenGirl/worldsmalltown03npc03.vcd" then churchguy ConceptBlock034 foo:0 -3.648 //Hey! Jerkass. Why don't you just open the goddamn door?
@@ -836,7 +836,7 @@ Rule ConceptBlock032 {
 	Response ConceptBlock032
 }
 
-	criterion "ConceptBlock033" "Concept" "ConceptBlock033" required
+criterion "ConceptBlock033" "Concept" "ConceptBlock033" required
 Response ConceptBlock033 {
 	scene "scenes/npcs/churchguy_radiobutton1extended07.vcd" fire relay_churchbell Trigger 0.68 then Self ConceptBlock005 foo:0 .5 //Really?
 	scene "scenes/npcs/churchguy_radiobutton1extended23.vcd" fire relay_churchbell Trigger 0.89 then Self ConceptBlock005 foo:0 .5 //Can you really? [bell]
@@ -847,7 +847,7 @@ Rule ConceptBlock033 {
 	Response ConceptBlock033
 }
 
-	criterion "ConceptBlock034" "Concept" "ConceptBlock034" required
+criterion "ConceptBlock034" "Concept" "ConceptBlock034" required
 Response ConceptBlock034 {
 	scene "scenes/npcs/churchguy_radiobutton1extended10.vcd" fire relay_churchbell Trigger 4.3 then Self ConceptBlock006 foo:0 .5 //Only when you can prove you're immune. And I know just how to do it. [bell]
 	scene "scenes/npcs/churchguy_radiobutton1extended11.vcd" fire relay_churchbell Trigger 3.2 then Self ConceptBlock006 foo:0 .5 //Only when I know you're human. Get ready for the test. [bell]
@@ -857,7 +857,7 @@ Rule ConceptBlock034 {
 	Response ConceptBlock034
 }
 
-	criterion "ConceptBlock035" "Concept" "ConceptBlock035" required
+criterion "ConceptBlock035" "Concept" "ConceptBlock035" required
 Response ConceptBlock035 {
 	scene "scenes/TeenGirl/GenericResponses02.vcd" then churchguy ConceptBlock030 foo:0 -0.426 //[Disbelief] What?
 }
@@ -866,7 +866,7 @@ Rule ConceptBlock035 {
 	Response ConceptBlock035
 }
 
-	criterion "ConceptBlock036" "Concept" "ConceptBlock036" required
+criterion "ConceptBlock036" "Concept" "ConceptBlock036" required
 Response ConceptBlock036 {
 	scene "scenes/npcs/churchguy_radiobutton1extended20.vcd" then TeenGirl ConceptBlock035 foo:0 .05 //Nobody rides for free! Ding dong!
 	scene "scenes/npcs/churchguy_radiobutton1extended19.vcd" then TeenGirl ConceptBlock035 foo:0 .05 //You think you're special with your leather jackets and your fancy blood?
@@ -876,7 +876,7 @@ Rule ConceptBlock036 {
 	Response ConceptBlock036
 }
 
-	criterion "ConceptBlock037" "Concept" "ConceptBlock037" required
+criterion "ConceptBlock037" "Concept" "ConceptBlock037" required
 Response ConceptBlock037 {
 	scene "scenes/TeenGirl/worldairport05npc07.vcd" then churchguy ConceptBlock038 foo:0 -1.056 //What a dick.
 }
@@ -885,7 +885,7 @@ Rule ConceptBlock037 {
 	Response ConceptBlock037
 }
 
-	criterion "ConceptBlock038" "Concept" "ConceptBlock038" required
+criterion "ConceptBlock038" "Concept" "ConceptBlock038" required
 Response ConceptBlock038 {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast22.vcd" then Self ConceptBlock039 foo:0 .1 //I heard that!
 }
@@ -894,7 +894,7 @@ Rule ConceptBlock038 {
 	Response ConceptBlock038
 }
 
-	criterion "ConceptBlock039" "Concept" "ConceptBlock039" required
+criterion "ConceptBlock039" "Concept" "ConceptBlock039" required
 Response ConceptBlock039 {
 	scene "scenes/npcs/churchguy_radiobutton1extended28.vcd" fire relay_churchbell Trigger 1.8 then Self ConceptBlock006 foo:0 .2 //Your word means shit to me! [bell]
 }
@@ -903,7 +903,7 @@ Rule ConceptBlock039 {
 	Response ConceptBlock039
 }
 
-	criterion "ConceptBlock040" "Concept" "ConceptBlock040" required
+criterion "ConceptBlock040" "Concept" "ConceptBlock040" required
 Response ConceptBlock040 {
 	scene "scenes/Biker/worldairport05npc02.vcd" then churchguy ConceptBlock033 foo:0 -4.736 //Listen candy-pants, we can *make* you open that goddamn door.
 	scene "scenes/Biker/swear14.vcd" then Biker ConceptBlock044 foo:0 -1.040 //Ah hell.
@@ -913,7 +913,7 @@ Rule ConceptBlock040 {
 	Response ConceptBlock040
 }
 
-	criterion "ConceptBlock041" "Concept" "ConceptBlock041" required
+criterion "ConceptBlock041" "Concept" "ConceptBlock041" required
 Response ConceptBlock041 {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast22.vcd" then Self ConceptBlock042 foo:0 .2 //I heard that!
 }
@@ -922,7 +922,7 @@ Rule ConceptBlock041 {
 	Response ConceptBlock041
 }
 
-	criterion "ConceptBlock042" "Concept" "ConceptBlock042" required
+criterion "ConceptBlock042" "Concept" "ConceptBlock042" required
 Response ConceptBlock042 {
 	scene "scenes/npcs/churchguy_radiobutton1extended12.vcd" then Self ConceptBlock043 foo:0 .05 //I'm the one who decides who gets through this door.
 }
@@ -931,7 +931,7 @@ Rule ConceptBlock042 {
 	Response ConceptBlock042
 }
 
-	criterion "ConceptBlock043" "Concept" "ConceptBlock043" required
+criterion "ConceptBlock043" "Concept" "ConceptBlock043" required
 Response ConceptBlock043 {
 	scene "scenes/npcs/churchguy_radiobutton1extended20.vcd" fire relay_churchbell Trigger 1.1 then Self ConceptBlock007 foo:0 .05 //Nobody rides for free! Ding dong!
 }
@@ -940,7 +940,7 @@ Rule ConceptBlock043 {
 	Response ConceptBlock043
 }
 
-	criterion "ConceptBlock044" "Concept" "ConceptBlock044" required
+criterion "ConceptBlock044" "Concept" "ConceptBlock044" required
 Response ConceptBlock044 {
 	scene "scenes/Biker/worldairport05npc01.vcd" then churchguy ConceptBlock041 foo:0 -3.280 //Everyone but us is either a zombie or an asshole.
 }
@@ -949,7 +949,7 @@ Rule ConceptBlock044 {
 	Response ConceptBlock044
 }
 
-	criterion "ConceptBlock049" "Concept" "ConceptBlock049" required
+criterion "ConceptBlock049" "Concept" "ConceptBlock049" required
 Response ConceptBlock049 {
 	scene "scenes/Biker/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.800 //[Disbelief] What?
 }
@@ -958,7 +958,7 @@ Rule ConceptBlock049 {
 	Response ConceptBlock049
 }
 
-	criterion "ConceptBlock050" "Concept" "ConceptBlock050" required
+criterion "ConceptBlock050" "Concept" "ConceptBlock050" required
 Response ConceptBlock050 {
 	scene "scenes/Manager/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.692 //[Disbelief] What?
 }
@@ -967,7 +967,7 @@ Rule ConceptBlock050 {
 	Response ConceptBlock050
 }
 
-	criterion "ConceptBlock051" "Concept" "ConceptBlock051" required
+criterion "ConceptBlock051" "Concept" "ConceptBlock051" required
 Response ConceptBlock051 {
 	scene "scenes/NamVet/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.728 //[Disbelief] What?
 }
@@ -976,7 +976,7 @@ Rule ConceptBlock051 {
 	Response ConceptBlock051
 }
 
-	criterion "ConceptBlock052" "Concept" "ConceptBlock052" required
+criterion "ConceptBlock052" "Concept" "ConceptBlock052" required
 Response ConceptBlock052 {
 	scene "scenes/TeenGirl/GenericResponses02.vcd" then churchguy ConceptBlock004 foo:0 -0.426 //[Disbelief] What?
 }
@@ -986,7 +986,7 @@ Rule ConceptBlock052 {
 }
 
 //Churchguy random babbling after he hears survivors
-	criterion "ConceptBlock053" "Concept" "ConceptBlock053" required
+criterion "ConceptBlock053" "Concept" "ConceptBlock053" required
 Response ConceptBlock053 {
 	scene "scenes/npcs/churchguy_radioinitialbroadcast01.vcd" then Self ConceptBlock053 foo:0 .05 //I trusted you. You said you were immune. You said you were immune.
 	scene "scenes/npcs/churchguy_radioinitialbroadcast03.vcd" then Self ConceptBlock053 foo:0 .05 //Better safe than sorry. I can't believe he bit me. Never should have let him in. Can't believe he bit me.
@@ -1031,7 +1031,7 @@ Rule ConceptBlock555 {
 	Response ConceptBlock555
 }
 
-	criterion "ConceptBlock556" "Concept" "ConceptBlock556" required
+criterion "ConceptBlock556" "Concept" "ConceptBlock556" required
 Response ConceptBlock556 {
 	scene "scenes/NamVet/Generic41.vcd" then churchguy ConceptBlock557 foo:0 -0.6 //[indignant] Hey!
 }
@@ -1040,7 +1040,7 @@ Rule ConceptBlock556 {
 	Response ConceptBlock556
 }
 
-	criterion "ConceptBlock557" "Concept" "ConceptBlock557" required
+criterion "ConceptBlock557" "Concept" "ConceptBlock557" required
 Response ConceptBlock557 {
 	scene "scenes/npcs/churchguy_radiobutton1extended16.vcd" then Self ConceptBlock559 foo:0 0.05 //Do you think I care how old you are?
 }
@@ -1049,7 +1049,7 @@ Rule ConceptBlock557 {
 	Response ConceptBlock557
 }
 
-	criterion "ConceptBlock558" "Concept" "ConceptBlock558" required
+criterion "ConceptBlock558" "Concept" "ConceptBlock558" required
 Response ConceptBlock558 {
 	scene "scenes/Biker/worldairport05npc04.vcd" then NamVet ConceptBlock556 foo:0 -3.0 //Have a heart, we gotta a helpless old man with us!
 }
@@ -1058,7 +1058,7 @@ Rule ConceptBlock558 {
 	Response ConceptBlock558
 }
 
-	criterion "ConceptBlock559" "Concept" "ConceptBlock559" required
+criterion "ConceptBlock559" "Concept" "ConceptBlock559" required
 Response ConceptBlock559 {
 	scene "scenes/npcs/churchguy_radiobutton1extended19.vcd" then Self ConceptBlock560 foo:0 0.05 //You think you're special with your leather jackets and your fancy blood?
 }
@@ -1067,7 +1067,7 @@ Rule ConceptBlock559 {
 	Response ConceptBlock559
 }
 
-	criterion "ConceptBlock560" "Concept" "ConceptBlock560" required
+criterion "ConceptBlock560" "Concept" "ConceptBlock560" required
 Response ConceptBlock560 {
 	scene "scenes/npcs/churchguy_radiobutton1extended18.vcd" then Self ConceptBlock043 foo:0 0.05 //[loud] NO!
 }
@@ -1076,20 +1076,14 @@ Rule ConceptBlock560 {
 	Response ConceptBlock560
 }
 
-//Chruchguy turning into a zombie loop
-	criterion "ConceptBlock573" "Concept" "churchguy_door_unlocked" required
+//Churchguy turning into a zombie loop
+criterion "ConceptBlock573" "Concept" "churchguy_door_unlocked" required
 Response ConceptBlock573 {
 	scene "scenes/npcs/churchguy_radiocombatcolor01.vcd" then self churchguy_door_unlocked foo:0 .05 //I can't believe he bit me. Better safe than - [groan] Better safe than [graon] [choke]
 	scene "scenes/npcs/churchguy_radiocombatcolor02.vcd" then self churchguy_door_unlocked foo:0 .05 //Better safe than - [growl] Better safe than [growl]
 	scene "scenes/npcs/churchguy_radiocombatcolor03.vcd" then self churchguy_door_unlocked foo:0 .05 //Better safe than - [growl]
 	scene "scenes/npcs/churchguy_radiocombatcolor04.vcd" then self churchguy_door_unlocked foo:0 .05 //[choking growl]
 	scene "scenes/npcs/churchguy_radiocombatcolor05.vcd" then self churchguy_door_unlocked foo:0 .05 //Must be immune - [groan] Must be immune [scream]
-	speak "npc.churchguy_RadioCombatColor09" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
-	speak "npc.churchguy_RadioCombatColor11" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
-	speak "npc.churchguy_RadioCombatColor12" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
-	speak "npc.churchguy_RadioCombatColor13" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
-	speak "npc.churchguy_RadioCombatColor15" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
-	speak "npc.churchguy_RadioCombatColor16" noscene then self churchguy_door_unlocked foo:0 .05 //[muttering]
 }
 Rule ConceptBlock573 {
 	criteria ConceptBlock573 ChurchguyTurnLoop
@@ -1097,7 +1091,7 @@ Rule ConceptBlock573 {
 }
 
 //Survivor opens churchguy door
-	criterion "ConceptBlock574" "Concept" "churchguy_door_opened" required
+criterion "ConceptBlock574" "Concept" "churchguy_door_opened" required
 Response ConceptBlock574 {
 	scene "scenes/npcs/churchguy_zombieyell.vcd"
 }
@@ -1108,9 +1102,8 @@ Rule ConceptBlock574 {
 	Response ConceptBlock574
 }
 
-
 //Elevator Door Closes in Hospital
-	criterion "ConceptBlock600" "Concept" "elevator_closed" required
+criterion "ConceptBlock600" "Concept" "elevator_closed" required
 Response ConceptBlock600 {
 	scene "scenes/npcs/orator_blank.vcd" then any elevator_conversation foo:0 5 //[BLANK]
 }
@@ -1122,7 +1115,7 @@ Rule ConceptBlock600 {
 }
 
 //NamVet
-	criterion "ConceptBlock606" "Concept" "elevator_conversation" required
+criterion "ConceptBlock606" "Concept" "elevator_conversation" required
 Response ConceptBlock606 {
 	scene "scenes/NamVet/Generic33.vcd" then Biker ConceptBlock607 foo:0 -5.151 //We been immune so far, but - well, if I start to turn, promise you'll shoot me.
 }
@@ -1131,7 +1124,7 @@ Rule ConceptBlock606 {
 	Response ConceptBlock606
 }
 
-	criterion "ConceptBlock607" "Concept" "ConceptBlock607" required
+criterion "ConceptBlock607" "Concept" "ConceptBlock607" required
 Response ConceptBlock607 {
 	scene "scenes/Biker/Generic13.vcd" then NamVet ConceptBlock608 foo:0 -3.808 //What if just your beard starts to turn? Can I shoot that?
 }
@@ -1140,7 +1133,7 @@ Rule ConceptBlock607 {
 	Response ConceptBlock607
 }
 
-	criterion "ConceptBlock608" "Concept" "ConceptBlock608" required
+criterion "ConceptBlock608" "Concept" "ConceptBlock608" required
 Response ConceptBlock608 {
 	scene "scenes/NamVet/C6DLC3INTRO02.vcd" //Shut up, Francis.
 	scene "scenes/NamVet/C6DLC3INTRO16.vcd" //Shut up, Francis.
@@ -1168,7 +1161,7 @@ Rule ConceptBlock609 {
 	Response ConceptBlock609
 }
 
-	criterion "ConceptBlock610" "Concept" "ConceptBlock610" required
+criterion "ConceptBlock610" "Concept" "ConceptBlock610" required
 Response ConceptBlock610 {
 	scene "scenes/Manager/ZombieGenericShort18.vcd" then NamVet ConceptBlock611 foo:0 -2.646 //Humanity's gonna bounce right back, you watch.
 }
@@ -1177,7 +1170,7 @@ Rule ConceptBlock610 {
 	Response ConceptBlock610
 }
 
-	criterion "ConceptBlock611" "Concept" "ConceptBlock611" required
+criterion "ConceptBlock611" "Concept" "ConceptBlock611" required
 Response ConceptBlock611 {
 	scene "scenes/NamVet/Generic44.vcd" //We're fightin' a war of attrition with a horde of brainless killing machines. I ain't exactly optimistic about our chances.
 }
@@ -1187,7 +1180,7 @@ Rule ConceptBlock611 {
 }
 
 //Biker Short Laugh
-	criterion "ConceptBlock612" "Concept" "elevatorShortLaugh" required
+criterion "ConceptBlock612" "Concept" "elevatorShortLaugh" required
 Response ConceptBlock612 {
 	scene "scenes/Biker/Laughter05.vcd" //<Short laugh>
 	scene "scenes/Biker/Laughter07.vcd" //<Short laugh>
@@ -1274,7 +1267,7 @@ Rule ConceptBlock618 {
 	Response ConceptBlock618
 }
 
-	criterion "ConceptBlock619" "Concept" "ConceptBlock619" required
+criterion "ConceptBlock619" "Concept" "ConceptBlock619" required
 Response ConceptBlock619 {
 	scene "scenes/Manager/ZombieGenericShort18.vcd" then TeenGirl ConceptBlock620 foo:0 -2.646 //Humanity's gonna bounce right back, you watch.
 }
@@ -1283,7 +1276,7 @@ Rule ConceptBlock619 {
 	Response ConceptBlock619
 }
 
-	criterion "ConceptBlock620" "Concept" "ConceptBlock620" required
+criterion "ConceptBlock620" "Concept" "ConceptBlock620" required
 Response ConceptBlock620 {
 	scene "scenes/TeenGirl/Generic15.vcd" //You're an optimist. I'll give you that, Louis.
 }
@@ -1302,7 +1295,7 @@ Rule ConceptBlock621 {
 	Response ConceptBlock621
 }
 
-	criterion "ConceptBlock622" "Concept" "ConceptBlock622" required
+criterion "ConceptBlock622" "Concept" "ConceptBlock622" required
 Response ConceptBlock622 {
 	scene "scenes/TeenGirl/GenericResponses02.vcd" //[Disbelief] What?
 }
@@ -1330,12 +1323,12 @@ Rule ConceptBlock622_M {
 	Response ConceptBlock622_M
 }
 
-	criterion "ConceptBlock622_N" "Concept" "ConceptBlock622_N" required
+criterion "ConceptBlock622_N" "Concept" "ConceptBlock622_N" required
 Response ConceptBlock622_N {
 	scene "scenes/NamVet/GenericResponses02.vcd" //[Disbelief] What?
 }
 Rule ConceptBlock622_N {
-	criteria ConceptBlock622_N IsNamVet ChanceToFire50Percent
+	criteria ConceptBlock622_N IsNamVet
 	Response ConceptBlock622_N
 }
 
@@ -1349,7 +1342,7 @@ Rule ConceptBlock623 {
 	Response ConceptBlock623
 }
 
-	criterion "ConceptBlock624" "Concept" "ConceptBlock624" required
+criterion "ConceptBlock624" "Concept" "ConceptBlock624" required
 Response ConceptBlock624 {
 	scene "scenes/Biker/Laughter03.vcd" //<Snort>
 	scene "scenes/Biker/Laughter10.vcd" //<Snort>
@@ -1369,7 +1362,7 @@ Rule ConceptBlock625 {
 	Response ConceptBlock625
 }
 
-	criterion "ConceptBlock626" "Concept" "ConceptBlock626" required
+criterion "ConceptBlock626" "Concept" "ConceptBlock626" required
 Response ConceptBlock626 {
 	scene "scenes/Manager/GenericResponses25.vcd" then Biker ConceptBlock627 foo:0 -2.219 //Tell me you ain't serious.
 }
@@ -1378,7 +1371,7 @@ Rule ConceptBlock626 {
 	Response ConceptBlock626
 }
 
-	criterion "ConceptBlock627" "Concept" "ConceptBlock627" required
+criterion "ConceptBlock627" "Concept" "ConceptBlock627" required
 Response ConceptBlock627 {
 	scene "scenes/Biker/Generic65.vcd" then Manager ConceptBlock628 foo:0 -0.614 //What?
 	scene "scenes/Biker/GenericResponses02.vcd" then NamVet ConceptBlock628_N foo:0 -0.8 //[Disbelief] What?
@@ -1388,7 +1381,7 @@ Rule ConceptBlock627 {
 	Response ConceptBlock627
 }
 
-	criterion "ConceptBlock628" "Concept" "ConceptBlock628" required
+criterion "ConceptBlock628" "Concept" "ConceptBlock628" required
 Response ConceptBlock628 {
 	scene "scenes/Manager/Generic23.vcd" then Biker ConceptBlock629 foo:0 -2.239 //They're ZOMBIES, Francis.
 }
@@ -1397,7 +1390,7 @@ Rule ConceptBlock628 {
 	Response ConceptBlock628
 }
 
-	criterion "ConceptBlock628_N" "Concept" "ConceptBlock628_N" required
+criterion "ConceptBlock628_N" "Concept" "ConceptBlock628_N" required
 Response ConceptBlock628_N {
 	scene "scenes/NamVet/Generic39.vcd" then Biker ConceptBlock697 foo:0 -2.016 //They're zombies, Francis.
 }
@@ -1406,9 +1399,10 @@ Rule ConceptBlock628_N {
 	Response ConceptBlock628_N
 }
 
-	criterion "ConceptBlock629" "Concept" "ConceptBlock629" required
+criterion "ConceptBlock629" "Concept" "ConceptBlock629" required
 Response ConceptBlock629 {
 	scene "scenes/Biker/Vampires06.vcd" then TeenGirl LaughFrancis foo:0 .0 //Yeah whatever you say, Professor Monster.
+	scene "scenes/Biker/DLC1_C6M1_InitialMeeting41.vcd" then Manager Prof foo:0 -2.573 //Louis! I told you, there were vampires!
 }
 Rule ConceptBlock629 {
 	criteria ConceptBlock629 IsBiker
@@ -1425,7 +1419,7 @@ Rule ConceptBlock630 {
 	Response ConceptBlock630
 }
 
-	criterion "ConceptBlock631" "Concept" "ConceptBlock631" required
+criterion "ConceptBlock631" "Concept" "ConceptBlock631" required
 Response ConceptBlock631 {
 	scene "scenes/Manager/GenericResponses02.vcd" then Biker ConceptBlock632 foo:0 -0.692 //[Disbelief] What?
 }
@@ -1434,7 +1428,7 @@ Rule ConceptBlock631 {
 	Response ConceptBlock631
 }
 
-	criterion "ConceptBlock632" "Concept" "ConceptBlock632" required
+criterion "ConceptBlock632" "Concept" "ConceptBlock632" required
 Response ConceptBlock632 {
 	scene "scenes/Biker/Generic68.vcd" then Self ConceptBlock633 foo:0 -3.275 //Most people'll do anything if a cop tells 'em to.
 }
@@ -1443,7 +1437,7 @@ Rule ConceptBlock632 {
 	Response ConceptBlock632
 }
 
-	criterion "ConceptBlock633" "Concept" "ConceptBlock633" required
+criterion "ConceptBlock633" "Concept" "ConceptBlock633" required
 Response ConceptBlock633 {
 	scene "scenes/Biker/Generic71.vcd" //Trust me.
 }
@@ -1462,7 +1456,7 @@ Rule ConceptBlock634 {
 	Response ConceptBlock634
 }
 
-	criterion "ConceptBlock635" "Concept" "ConceptBlock635" required
+criterion "ConceptBlock635" "Concept" "ConceptBlock635" required
 Response ConceptBlock635 {
 	scene "scenes/Biker/PlayerRevive03.vcd" then Any elevatorShortLaugh foo:0 -4.5 //Hey, look on the bright side: even if you don't make it, I'll still be really handsome.-4.863
 }
@@ -1481,7 +1475,7 @@ Rule ConceptBlock636 {
 	Response ConceptBlock636
 }
 
-	criterion "ConceptBlock637" "Concept" "ConceptBlock637" required
+criterion "ConceptBlock637" "Concept" "ConceptBlock637" required
 Response ConceptBlock637 {
 	scene "scenes/Biker/Generic09.vcd" then Any elevatorShortLaugh foo:0 -2.795 //Long enough to know you got a pretty mouth.
 }
@@ -1500,7 +1494,7 @@ Rule ConceptBlock638 {
 	Response ConceptBlock638
 }
 
-	criterion "ConceptBlock639" "Concept" "ConceptBlock639" required
+criterion "ConceptBlock639" "Concept" "ConceptBlock639" required
 Response ConceptBlock639 {
 	scene "scenes/NamVet/Generic29.vcd" then Manager ConceptBlock640 foo:0 -6.3 //I'll see peace back on earth if I gotta murder every one of these bastards with my bare goddamn hands.-6.89
 	scene "scenes/NamVet/GameSpeech01.vcd" then Manager ConceptBlock640 foo:0 -5.7 //I'll see peace back on earth if I gotta murder everyone of these animals with my own bare hands. Ownbare_09.wav-6.216
@@ -1511,7 +1505,7 @@ Rule ConceptBlock639 {
 	Response ConceptBlock639
 }
 
-	criterion "ConceptBlock640" "Concept" "ConceptBlock640" required
+criterion "ConceptBlock640" "Concept" "ConceptBlock640" required
 Response ConceptBlock640 {
 	scene "scenes/Manager/ReactionPositive10.vcd" then NamVet ConceptBlock641 foo:0 -1 //That's what I'm talkin' about-1.171
 
@@ -1521,7 +1515,7 @@ Rule ConceptBlock640 {
 	Response ConceptBlock640
 }
 
-	criterion "ConceptBlock641" "Concept" "ConceptBlock641" required
+criterion "ConceptBlock641" "Concept" "ConceptBlock641" required
 Response ConceptBlock641 {
 	scene "scenes/NamVet/Generic32.vcd" //Damn straight.
 }
@@ -1540,12 +1534,12 @@ Rule ConceptBlock642 {
 	Response ConceptBlock642
 }
 
-	criterion "ConceptBlock643" "Concept" "ConceptBlock643" required
+criterion "ConceptBlock643" "Concept" "ConceptBlock643" required
 Response ConceptBlock643_Z {
 	scene "scenes/TeenGirl/Sorry13.vcd" //Oops, sorry
 	scene "scenes/TeenGirl/NameFrancis03.vcd" then Biker FartSorry foo:0 -1.049 //Francis! (loud)
 	scene "scenes/TeenGirl/NameFrancis14.vcd" then Any elevatorshortlaugh foo:0 -2.654 //Francis (quiet)
-	scene "scenes/TeenGirl/WorldSmallTown0205.vcd" then Biker hospital03_path08a2 //Fresh air!-1.128
+	scene "scenes/TeenGirl/WorldSmallTown0205.vcd" then Biker hospital03_path08a2 foo:0 -1 //Fresh air!-1.128
 	scene "scenes/TeenGirl/DLC2GasTanks02.vcd" then Biker CrashYerKidding foo:0 0.05 //Hahaha farting
 	scene "scenes/TeenGirl/DLC2GasTanks02.vcd" then Biker hospital03_path08a2 //Hahaha farting
 }
@@ -1584,7 +1578,7 @@ Rule ConceptBlock644 {
 	Response ConceptBlock644
 }
 
-	criterion "ConceptBlock645" "Concept" "ConceptBlock645" required
+criterion "ConceptBlock645" "Concept" "ConceptBlock645" required
 Response ConceptBlock645 {
 	scene "scenes/Manager/ZombieGenericLong02.vcd" then NamVet ConceptBlock641 foo:0 -3.533 //I ain't dyin', man. Death gonna have to pry me off the Earth.
 	scene "scenes/Manager/ZombieGenericLong03.vcd" then Any elevatorshortlaugh foo:0 -5.787 //If I go down, go on without me. Actually, wait, no Save my ass.
@@ -1606,7 +1600,7 @@ Rule ConceptBlock646 {
 	Response ConceptBlock646
 }
 
-	criterion "ConceptBlock647" "Concept" "ConceptBlock647" required
+criterion "ConceptBlock647" "Concept" "ConceptBlock647" required
 Response ConceptBlock647 {
 	scene "scenes/TeenGirl/GenericResponses37.vcd" then NamVet ConceptBlock648 foo:0 -2.34 //Game over man! Game over!
 }
@@ -1615,7 +1609,7 @@ Rule ConceptBlock647 {
 	Response ConceptBlock647
 }
 
-	criterion "ConceptBlock648" "Concept" "ConceptBlock648" required
+criterion "ConceptBlock648" "Concept" "ConceptBlock648" required
 Response ConceptBlock648 {
 	scene "scenes/NamVet/Uncertain01.vcd" then TeenGirl ConceptBlock649 foo:0 -0.7 //What the hell was that?
 }
@@ -1624,7 +1618,7 @@ Rule ConceptBlock648 {
 	Response ConceptBlock648
 }
 
-	criterion "ConceptBlock649" "Concept" "ConceptBlock649" required
+criterion "ConceptBlock649" "Concept" "ConceptBlock649" required
 Response ConceptBlock649 {
 	scene "scenes/TeenGirl/PositiveNoise02.vcd" then Manager ConceptBlock650 foo:0 -0.15 //[laugh]
 	scene "scenes/TeenGirl/Laughter04.vcd" then Manager ConceptBlock650 foo:0 -0.15 //<Short laugh>
@@ -1638,7 +1632,7 @@ Rule ConceptBlock649 {
 	Response ConceptBlock649
 }
 
-	criterion "ConceptBlock650" "Concept" "ConceptBlock650" required
+criterion "ConceptBlock650" "Concept" "ConceptBlock650" required
 Response ConceptBlock650 {
 	scene "scenes/Manager/Laughter01.vcd" //<Short laugh>
 	scene "scenes/Manager/Laughter03.vcd" //<Short laugh>
@@ -1668,7 +1662,7 @@ Rule ConceptBlock651 {
 	Response ConceptBlock651
 }
 
-	criterion "ConceptBlock652" "Concept" "ConceptBlock652" required
+criterion "ConceptBlock652" "Concept" "ConceptBlock652" required
 Response ConceptBlock652 {
 	scene "scenes/Manager/NervousHumming01.vcd" then TeenGirl ConceptBlock654 foo:0 0.6 //[Nervous Humming]
 	scene "scenes/Manager/NervousWhislte01.vcd" then TeenGirl ConceptBlock654 foo:0 0.6 //[Nervous Whistle]
@@ -1678,7 +1672,7 @@ Rule ConceptBlock652 {
 	Response ConceptBlock652
 }
 
-	criterion "ConceptBlock653" "Concept" "ConceptBlock653" required
+criterion "ConceptBlock653" "Concept" "ConceptBlock653" required
 Response ConceptBlock653 {
 	scene "scenes/NamVet/NervousHumming01.vcd" then Manager ConceptBlock652 foo:0 -3.2 //[Nervous Humming]
 	scene "scenes/NamVet/NervousWhislte01.vcd" then Manager ConceptBlock652 foo:0 -3.2 //[Nervous Whistle]
@@ -1688,7 +1682,7 @@ Rule ConceptBlock653 {
 	Response ConceptBlock653
 }
 
-	criterion "ConceptBlock654" "Concept" "ConceptBlock654" required
+criterion "ConceptBlock654" "Concept" "ConceptBlock654" required
 Response ConceptBlock654 {
 	scene "scenes/TeenGirl/NervousHumming01.vcd" //[Nervous Humming]
 	scene "scenes/TeenGirl/NervousHumming02.vcd" //[Nervous Humming]
@@ -1714,7 +1708,7 @@ Rule ConceptBlock655 {
 	Response ConceptBlock655
 }
 
-	criterion "ConceptBlock656" "Concept" "ConceptBlock656" required
+criterion "ConceptBlock656" "Concept" "ConceptBlock656" required
 Response ConceptBlock656 {
 	scene "scenes/Manager/ZombieGenericShort10.vcd" then TeenGirl ConceptBlock657 foo:0 -2.571 //Come on, cheer up! We're almost through!
 }
@@ -1723,7 +1717,7 @@ Rule ConceptBlock656 {
 	Response ConceptBlock656
 }
 
-	criterion "ConceptBlock657" "Concept" "ConceptBlock657" required
+criterion "ConceptBlock657" "Concept" "ConceptBlock657" required
 Response ConceptBlock657 {
 	scene "scenes/TeenGirl/NameLouis08.vcd" then Manager ConceptBlock658 foo:0 -0.917 //Louis! (quiet)
 	scene "scenes/TeenGirl/NameLouis10.vcd" then Manager ConceptBlock658 foo:0 -1.218 //Louis (quiet)
@@ -1733,7 +1727,7 @@ Rule ConceptBlock657 {
 	Response ConceptBlock657
 }
 
-	criterion "ConceptBlock658" "Concept" "ConceptBlock658" required
+criterion "ConceptBlock658" "Concept" "ConceptBlock658" required
 Response ConceptBlock658 {
 	scene "scenes/Manager/Hurrah11.vcd" then Manager ConceptBlock659 foo:0 -1.708 //We are unstoppable.
 }
@@ -1742,7 +1736,7 @@ Rule ConceptBlock658 {
 	Response ConceptBlock658
 }
 
-	criterion "ConceptBlock659" "Concept" "ConceptBlock659" required
+criterion "ConceptBlock659" "Concept" "ConceptBlock659" required
 Response ConceptBlock659 {
 	scene "scenes/Manager/Hurrah12.vcd" then TeenGirl ConceptBlock662 foo:0 -2.989 //That's right, we should call ourselves the unstoppables
 }
@@ -1751,7 +1745,7 @@ Rule ConceptBlock659 {
 	Response ConceptBlock659
 }
 
-	criterion "ConceptBlock660" "Concept" "ConceptBlock660" required
+criterion "ConceptBlock660" "Concept" "ConceptBlock660" required
 Response ConceptBlock660 {
 	scene "scenes/Manager/Hurrah10.vcd" then TeenGirl ConceptBlock661 foo:0 -3.9 //Nothing can stop us, do you hear me? Nothing can stop us!
 }
@@ -1760,7 +1754,7 @@ Rule ConceptBlock660 {
 	Response ConceptBlock660
 }
 
-	criterion "ConceptBlock661" "Concept" "ConceptBlock661" required
+criterion "ConceptBlock661" "Concept" "ConceptBlock661" required
 Response ConceptBlock661 {
 	scene "scenes/TeenGirl/Laughter04.vcd" then NamVet ConceptBlock663 foo:0 -0.4 //<Short laugh>
 	scene "scenes/TeenGirl/Laughter08.vcd" then NamVet ConceptBlock663 foo:0 -0.4 //<Short laugh>
@@ -1771,7 +1765,7 @@ Rule ConceptBlock661 {
 	Response ConceptBlock661
 }
 
-	criterion "ConceptBlock662" "Concept" "ConceptBlock662" required
+criterion "ConceptBlock662" "Concept" "ConceptBlock662" required
 Response ConceptBlock662 {
 	scene "scenes/TeenGirl/PositiveNoise02.vcd" then Manager ConceptBlock660 foo:0 -0.01 //[laugh]
 	scene "scenes/TeenGirl/Laughter19.vcd" then Manager ConceptBlock660 foo:0 -0.01 //<Short laugh>
@@ -1783,7 +1777,7 @@ Rule ConceptBlock662 {
 	Response ConceptBlock662
 }
 
-	criterion "ConceptBlock663" "Concept" "ConceptBlock663" required
+criterion "ConceptBlock663" "Concept" "ConceptBlock663" required
 Response ConceptBlock663 {
 	scene "scenes/NamVet/ViolenceAwe06.vcd" //<laugh>Whoa-ho-ho.
 	scene "scenes/NamVet/Taunt07.vcd" //[Loud, evil laugh]
@@ -1806,7 +1800,7 @@ Rule ConceptBlock664 {
 }
 //ELEV FINALE continue to: ConceptBlock695
 //Bridge is ready to cross in smalltown02 mini-finale
-	criterion "ConceptBlock665" "Concept" "BridgeReadyToCross" required
+criterion "ConceptBlock665" "Concept" "BridgeReadyToCross" required
 Response ConceptBlock665 {
 	scene "scenes/npcs/orator_blank.vcd" then any BridgeCrossAlert foo:0 0.05 //[BLANK]
 }
@@ -1816,7 +1810,7 @@ Rule ConceptBlock665 {
 }
 
 //Actual response to Bridge is ready to cross in smalltown02 mini-finale
-	criterion "ConceptBlock666" "Concept" "BridgeCrossAlert" required
+criterion "ConceptBlock666" "Concept" "BridgeCrossAlert" required
 Response ConceptBlock666 {
 	scene "scenes/TeenGirl/PathClear02.vcd" then Any bridgegogogo foo:0 0.5 //We're good to go! Come on!
 }
@@ -1845,7 +1839,7 @@ Rule ConceptBlock668 {
 	Response ConceptBlock668
 }
 
-	criterion "ConceptBlock669" "Concept" "Bridgegogogo" required
+criterion "ConceptBlock669" "Concept" "Bridgegogogo" required
 Response ConceptBlock669 {
 	scene "scenes/Manager/EmphaticGo04.vcd" //GO!
 }
@@ -1895,7 +1889,7 @@ Rule ConceptBlock672 {
 }
 
 //Actual response to Bridge is ready to cross in smalltown02 mini-finale
-	criterion "ConceptBlock673" "Concept" "BridgeCrossAlertFarm03" required
+criterion "ConceptBlock673" "Concept" "BridgeCrossAlertFarm03" required
 Response ConceptBlock673 {
 	scene "scenes/TeenGirl/PathClear02.vcd" then Any bridgegogogo foo:0 0.5 //We're good to go! Come on!
 }
@@ -1916,7 +1910,7 @@ Rule ConceptBlock674 {
 }
 
 //TrainCarUnhooked Biker
-	criterion "ConceptBlock675" "Concept" "TrainUnhooked" required
+criterion "ConceptBlock675" "Concept" "TrainUnhooked" required
 Response ConceptBlock675 {
 	scene "scenes/npcs/orator_blank.vcd" then biker TrainUnhookedBiker foo:0 0.05 //[BLANK]
 }
@@ -1928,7 +1922,7 @@ Rule ConceptBlock675 {
 }
 
 //TrainCarUnhooked Biker
-	criterion "ConceptBlock676" "Concept" "TrainUnhookedBiker" required
+criterion "ConceptBlock676" "Concept" "TrainUnhookedBiker" required
 Response ConceptBlock676 {
 	scene "scenes/Biker/WorldFarmHouse0312.vcd" //Watch out for the train!
 }
@@ -1950,7 +1944,7 @@ Rule ConceptBlock677 {
 }
 
 //TrainCarUnhooked NamVet
-	criterion "ConceptBlock678" "Concept" "TrainUnhookedNamVet" required
+criterion "ConceptBlock678" "Concept" "TrainUnhookedNamVet" required
 Response ConceptBlock678 {
 	scene "scenes/NamVet/WorldFarmHouse0311.vcd" //All Aboard!
 }
@@ -1972,7 +1966,7 @@ Rule ConceptBlock679 {
 }
 
 //TrainCarUnhooked TeenGirl
-	criterion "ConceptBlock680" "Concept" "TrainUnhookedTeenGirl" required
+criterion "ConceptBlock680" "Concept" "TrainUnhookedTeenGirl" required
 Response ConceptBlock680 {
 	scene "scenes/TeenGirl/NiceJob51.vcd" //Okay.
 }
@@ -1994,7 +1988,7 @@ Rule ConceptBlock681 {
 }
 
 //TrainCarUnhooked Manager
-	criterion "ConceptBlock682" "Concept" "TrainUnhookedManager" required
+criterion "ConceptBlock682" "Concept" "TrainUnhookedManager" required
 Response ConceptBlock682 {
 	scene "scenes/Manager/LookOut05.vcd" //Heads up!
 }
@@ -2004,7 +1998,7 @@ Rule ConceptBlock682 {
 }
 
 //Plane Crash in Airport05_Runway
-	criterion "ConceptBlock685" "Concept" "PlaneCrash" required
+criterion "ConceptBlock685" "Concept" "PlaneCrash" required
 Response ConceptBlock685 {
 	scene "scenes/npcs/orator_blank.vcd" then all PlaneCrashResponse foo:0 0.05 //[BLANK]
 }
@@ -2014,7 +2008,7 @@ Rule ConceptBlock685 {
 }
 
 //Plane Crash in Airport05_Runway Biker response
-	criterion "ConceptBlock686" "Concept" "PlaneCrashResponse" required
+criterion "ConceptBlock686" "Concept" "PlaneCrashResponse" required
 Response ConceptBlock686 {
 	scene "scenes/Biker/ViolenceAwe02.vcd" predelay ".5,2" //Jee-zus..
 	scene "scenes/Biker/ViolenceAwe03.vcd" predelay ".5,2" //Holy crap.
@@ -2084,7 +2078,7 @@ Rule ConceptBlock695 {
 	Response ConceptBlock695
 }
 
-	criterion "ConceptBlock696" "Concept" "ConceptBlock696" required
+criterion "ConceptBlock696" "Concept" "ConceptBlock696" required
 Response ConceptBlock696 {
 	scene "scenes/NamVet/Generic39.vcd" then Biker ConceptBlock697 foo:0 -1.3 //They're zombies, Francis.
 }
@@ -2093,7 +2087,7 @@ Rule ConceptBlock696 {
 	Response ConceptBlock696
 }
 
-	criterion "ConceptBlock696_M" "Concept" "ConceptBlock696_M" required
+criterion "ConceptBlock696_M" "Concept" "ConceptBlock696_M" required
 Response ConceptBlock696_M {
 	scene "scenes/Manager/Generic26.vcd" then Any VampiresBeatb foo:0 -3 //They ain't vampires, man, they're zombies. -3.222
 }
@@ -2102,7 +2096,7 @@ Rule ConceptBlock696_M {
 	Response ConceptBlock696_M
 }
 
-	criterion "ConceptBlock697" "Concept" "ConceptBlock697" required
+criterion "ConceptBlock697" "Concept" "ConceptBlock697" required
 Response ConceptBlock697 {
 	scene "scenes/Biker/Vampires10.vcd" //*What*ever.
 }
@@ -2114,7 +2108,7 @@ Rule ConceptBlock697 {
 //BIKER Not giving in to vampires
 //USES criterion "ConceptBlock606" "Concept" "elevator_conversation" required
 Response ConceptBlock698 {
-	scene "scenes/Biker/DoubleDeathResponse01.vcd" then Any ResponseWeCanStill foo:0 -3.984 //Two left. Allright. We can still do this.
+	scene "scenes/Biker/DoubleDeathResponse01.vcd" then Any ResponseWeCanStill foo:0 -3.984 //Two left. Alright. We can still do this.
 	scene "scenes/Biker/DoubleDeathResponse02.vcd" then Any ResponseTwoLeftShit foo:0 -2.182 //Just two of us left. Shit.
 	scene "scenes/Biker/DoubleDeathResponse03.vcd" then Any ResponseTougherFriends foo:0 -2.551 //You and me gotta find some tougher friends.
 }
@@ -2123,11 +2117,11 @@ Rule ConceptBlock698 {
 	Response ConceptBlock698
 }
 
-	criterion "ConceptBlock699" "Concept" "ResponseTougherFriends" required
+criterion "ConceptBlock699" "Concept" "ResponseTougherFriends" required
 Response ConceptBlock699 {
 	scene "scenes/Manager/GenericResponses16.vcd" //Hell yes.
 	scene "scenes/Manager/GenericResponses32.vcd" //You're damn right.
-	scene "scenes/Manager/Yes01.vcd" //Allright.
+	scene "scenes/Manager/Yes01.vcd" //Alright.
 	scene "scenes/Manager/Yes02.vcd" //Yeah.
 }
 Rule ConceptBlock699 {
@@ -2154,7 +2148,7 @@ Rule ConceptBlock701 {
 	Response ConceptBlock701
 }
 
-	criterion "ConceptBlock702" "Concept" "ResponseTwoLeftShit" required
+criterion "ConceptBlock702" "Concept" "ResponseTwoLeftShit" required
 Response ConceptBlock702 {
 	scene "scenes/Manager/GriefBiker03.vcd" //Oh shit. Shit. Shit shit shit.
 	scene "scenes/Manager/GriefBiker06.vcd" //Oh shit. Shit. Shit shit shit.
@@ -2195,7 +2189,7 @@ Rule ConceptBlock704 {
 	Response ConceptBlock704
 }
 
-	criterion "ConceptBlock705" "Concept" "ResponseWeCanStill" required
+criterion "ConceptBlock705" "Concept" "ResponseWeCanStill" required
 Response ConceptBlock705 {
 	scene "scenes/Manager/GenericResponses40.vcd" //Hell yeah.
 	scene "scenes/Manager/GenericResponses16.vcd" //Hell yes.
@@ -2240,7 +2234,7 @@ Rule ConceptBlock708 {
 	Response ConceptBlock708
 }
 
-	criterion "ConceptBlock709" "Concept" "ConceptBlock709" required
+criterion "ConceptBlock709" "Concept" "ConceptBlock709" required
 Response ConceptBlock709 {
 	scene "scenes/Biker/WorldHospital0308.vcd" then Self ConceptBlock710 foo:0 2.0 //I hate sewers.
 	scene "scenes/Biker/WorldHospital0410.vcd" then Self ConceptBlock710 foo:0 2.0 //I hate stairs.
@@ -2251,7 +2245,7 @@ Rule ConceptBlock709 {
 	Response ConceptBlock709
 }
 
-	criterion "ConceptBlock710" "Concept" "ConceptBlock710" required
+criterion "ConceptBlock710" "Concept" "ConceptBlock710" required
 Response ConceptBlock710 {
 	scene "scenes/Biker/WorldHospital0404.vcd" then NamVet ConceptBlock711 foo:0 -4.64 //I hate hospitals. And doctors and lawyers and cops..
 }
@@ -2260,7 +2254,7 @@ Rule ConceptBlock710 {
 	Response ConceptBlock710
 }
 
-	criterion "ConceptBlock711" "Concept" "ConceptBlock711" required
+criterion "ConceptBlock711" "Concept" "ConceptBlock711" required
 Response ConceptBlock711 {
 	scene "scenes/NamVet/Generic03.vcd" then Biker ConceptBlock712 foo:0 -2.721 //Francis, is there anything you don't hate?
 }
@@ -2269,7 +2263,7 @@ Rule ConceptBlock711 {
 	Response ConceptBlock711
 }
 
-	criterion "ConceptBlock712" "Concept" "ConceptBlock712" required
+criterion "ConceptBlock712" "Concept" "ConceptBlock712" required
 Response ConceptBlock712 {
 	scene "scenes/Biker/DLC2Intro20.vcd" then NamVet ConceptBlock622_N foo:0 -4.822 //[sincere] Wow! I love helicopters! I love 'em so much. -4.822
 	scene "scenes/Biker/WorldSmallTown0513.vcd" //You know what I don't hate? I don't hate vests. -3.574
@@ -2307,7 +2301,7 @@ Rule ConceptBlock714 {
 	Response ConceptBlock714
 }
 
-	criterion "ConceptBlock715" "Concept" "ConceptBlock715" required
+criterion "ConceptBlock715" "Concept" "ConceptBlock715" required
 Response ConceptBlock715 {
 	scene "scenes/NamVet/ReactionPositive05.vcd" //[chuckles and giggles]
 }
@@ -2328,7 +2322,7 @@ Rule ConceptBlock716 {
 	Response ConceptBlock716
 }
 
-	criterion "ConceptBlock717" "Concept" "ConceptBlock717" required
+criterion "ConceptBlock717" "Concept" "ConceptBlock717" required
 Response ConceptBlock717 {
 	scene "scenes/Manager/Hurrah16.vcd" //I am bad, yes I am bad, YES I AM! WOO!
 }
@@ -2337,7 +2331,7 @@ Rule ConceptBlock717 {
 	Response ConceptBlock717
 }
 
-	criterion "ConceptBlock718" "Concept" "ConceptBlock718" required
+criterion "ConceptBlock718" "Concept" "ConceptBlock718" required
 Response ConceptBlock718 {
 	scene "scenes/Manager/GenericResponses03.vcd" //You're joking, right?
 }
@@ -2375,7 +2369,7 @@ Rule ConceptBlock720 {
 	Response ConceptBlock720
 }
 
-	criterion "ConceptBlock721" "Concept" "ConceptBlock721" required
+criterion "ConceptBlock721" "Concept" "ConceptBlock721" required
 Response ConceptBlock721 {
 	scene "scenes/Biker/GenericResponses12.vcd" //[laughing] Go to hell.
 }
@@ -2385,12 +2379,11 @@ Rule ConceptBlock721 {
 }
 
 //FARM FINALE
-
-
 //Farm radio attract loop
-	criterion "ConceptBlock575" "Concept" "farm_radio_broadcast" required
+criterion "ConceptBlock575" "Concept" "farm_radio_broadcast" required
 Response ConceptBlock575 {
 	scene "scenes/npcs/soldier_radioinitialbroadcast01.vcd" then self farm_radio_broadcast foo:0 7 //This is an emergency broadcast from the American Safety Zone. Please respond.
+//	speak "npc.soldier_RadioInitialBroadCast05" noscene //You are listening to an emergency broadcast from the US Military. If you can hear this, please use the microphone while pressing the SEND button immediately.
 	scene "scenes/npcs/soldier_radioinitialbroadcast06.vcd" then self farm_radio_broadcast foo:0 7 //This is an emergency broadcast from the US Military. Please respond.
 }
 Rule ConceptBlock575 {
@@ -2398,17 +2391,8 @@ Rule ConceptBlock575 {
 	Response ConceptBlock575
 }
 
-//Inital broadcast from boat couple as survivors approach boathouse (FIRST FIRE ONLY)
-Response ConceptBlock722 {
-	speak "npc.soldier_RadioInitialBroadCast05" noscene //You are listening to an emergency broadcast from the US Military. If you can hear this, please use the microphone while pressing the SEND button immediately.
-}
-Rule ConceptBlock722 {
-	criteria ConceptBlock722 FarmPhase1
-	Response ConceptBlock722
-}
-
 //Biker Presses farm radio button
-	criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
+criterion "ConceptBlock576" "Concept" "farm_radio_button1" required
 Response ConceptBlock576 {
 	scene "scenes/npcs/soldier_blank.vcd" then biker ConceptBlock577 foo:0 .05 //[BLANK]
 }
@@ -2419,7 +2403,7 @@ Rule ConceptBlock576 {
 	Response ConceptBlock576
 }
 
-	criterion "ConceptBlock577" "Concept" "ConceptBlock577" required
+criterion "ConceptBlock577" "Concept" "ConceptBlock577" required
 Response ConceptBlock577 {
 	scene "scenes/Biker/WorldFarmHouseNPC01.vcd" then orator_farm_radio ConceptBlock582 foo:0 -1.493 //Uh, hello?
 }
@@ -2440,7 +2424,7 @@ Rule ConceptBlock578 {
 	Response ConceptBlock578
 }
 
-	criterion "ConceptBlock579" "Concept" "ConceptBlock579" required
+criterion "ConceptBlock579" "Concept" "ConceptBlock579" required
 Response ConceptBlock579 {
 	scene "scenes/NamVet/WorldFarmHouseNPC02.vcd" then orator_farm_radio ConceptBlock582 foo:0 -0.720 //Hello?
 }
@@ -2461,7 +2445,7 @@ Rule ConceptBlock580 {
 	Response ConceptBlock580
 }
 
-	criterion "ConceptBlock581" "Concept" "ConceptBlock581" required
+criterion "ConceptBlock581" "Concept" "ConceptBlock581" required
 Response ConceptBlock581 {
 	scene "scenes/Manager/WorldFarmHouseNPC01.vcd" then orator_farm_radio ConceptBlock582 foo:0 -0.992 //Hello?
 }
@@ -2470,7 +2454,7 @@ Rule ConceptBlock581 {
 	Response ConceptBlock581
 }
 
-	criterion "ConceptBlock582" "Concept" "ConceptBlock582" required
+criterion "ConceptBlock582" "Concept" "ConceptBlock582" required
 Response ConceptBlock582 {
 	scene "scenes/npcs/soldier_radiobutton101.vcd" then Self ConceptBlock583 foo:0 .5 //Holy shit. Captain, someone actually responded!
 	scene "scenes/npcs/soldier_radiobutton108.vcd" then Self ConceptBlock583 foo:0 .5 //I do not believe it. Captain, somebody's survived out there!
@@ -2481,7 +2465,7 @@ Rule ConceptBlock582 {
 	Response ConceptBlock582
 }
 
-	criterion "ConceptBlock583" "Concept" "ConceptBlock583" required
+criterion "ConceptBlock583" "Concept" "ConceptBlock583" required
 Response ConceptBlock583 {
 	scene "scenes/npcs/soldier_radiobutton113.vcd" then self ConceptBlock586 foo:0 15 //We read you loud and clear, survivors! We are prepping an extraction team. Prepare yourselves and radio back when you're ready.
 }
@@ -2502,7 +2486,7 @@ Rule ConceptBlock584 {
 	Response ConceptBlock584
 }
 
-	criterion "ConceptBlock585" "Concept" "ConceptBlock585" required
+criterion "ConceptBlock585" "Concept" "ConceptBlock585" required
 Response ConceptBlock585 {
 	scene "scenes/TeenGirl/scenariojoin12.vcd" then orator_farm_radio ConceptBlock582 foo:0 -0.636 //Hello!
 }
@@ -2512,7 +2496,7 @@ Rule ConceptBlock585 {
 }
 
 //Post-Button1 buttno 2 nag loop
-	criterion "ConceptBlock586" "Concept" "ConceptBlock586" required
+criterion "ConceptBlock586" "Concept" "ConceptBlock586" required
 Response ConceptBlock586 {
 	scene "scenes/npcs/soldier_radionag01.vcd" then self ConceptBlock586 foo:0 10 //Please advise when ready!
 	scene "scenes/npcs/soldier_radionag02.vcd" then self ConceptBlock586 foo:0 10 //Please advise when ready.
@@ -2524,7 +2508,7 @@ Rule ConceptBlock586 {
 }
 
 //Biker Presses farm radio button second time
-	criterion "ConceptBlock587" "Concept" "farm_radio_button2" required
+criterion "ConceptBlock587" "Concept" "farm_radio_button2" required
 Response ConceptBlock587 {
 	scene "scenes/npcs/soldier_blank.vcd" then biker ConceptBlock588 foo:0 .05 //[BLANK]
 }
@@ -2535,7 +2519,7 @@ Rule ConceptBlock587 {
 	Response ConceptBlock587
 }
 
-	criterion "ConceptBlock588" "Concept" "ConceptBlock588" required
+criterion "ConceptBlock588" "Concept" "ConceptBlock588" required
 Response ConceptBlock588 {
 	scene "scenes/Biker/WorldFarmHouseNPC03.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.408 //Rodger dodger.
 	scene "scenes/Biker/WorldFarmHouseNPC04.vcd" then orator_farm_radio ConceptBlock589 foo:0 -0.903 //We're ready!
@@ -2549,7 +2533,7 @@ Rule ConceptBlock588 {
 	Response ConceptBlock588
 }
 
-	criterion "ConceptBlock589" "Concept" "ConceptBlock589" required
+criterion "ConceptBlock589" "Concept" "ConceptBlock589" required
 Response ConceptBlock589 {
 	scene "scenes/npcs/soldier_radiobutton201.vcd" then self SoldierTransit foo:0 -60.408 //Read you loud and clear! Get ready, we're on our way!
 	scene "scenes/npcs/soldier_radiobutton205.vcd" then self SoldierTransit foo:0 -60.408 //We read you just fine. We're on our way.
@@ -2604,7 +2588,7 @@ Rule ConceptBlock591 {
 	Response ConceptBlock591
 }
 
-	criterion "ConceptBlock592" "Concept" "ConceptBlock592" required
+criterion "ConceptBlock592" "Concept" "ConceptBlock592" required
 Response ConceptBlock592 {
 	scene "scenes/NamVet/WorldFarmHouseNPC05.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.440 //We're ready, soldier.
 	scene "scenes/NamVet/WorldFarmHouseNPC07.vcd" then orator_farm_radio ConceptBlock589 foo:0 -1.680 //We're good to go, son.
@@ -2626,7 +2610,7 @@ Rule ConceptBlock593 {
 	Response ConceptBlock593
 }
 
-	criterion "ConceptBlock594" "Concept" "ConceptBlock594" required
+criterion "ConceptBlock594" "Concept" "ConceptBlock594" required
 Response ConceptBlock594 {
 	scene "scenes/Manager/WorldFarmHouseNPC05.vcd" then orator_farm_radio ConceptBlock589 foo:0 -2.997 //We're set to go, sir! Any time you're ready.
 	scene "scenes/Manager/WorldFarmHouseNPC07.vcd" then orator_farm_radio ConceptBlock589 foo:0 -2.178 //Man, we're good to go whenever you are.
@@ -2648,7 +2632,7 @@ Rule ConceptBlock595 {
 	Response ConceptBlock595
 }
 
-	criterion "ConceptBlock596" "Concept" "ConceptBlock596" required
+criterion "ConceptBlock596" "Concept" "ConceptBlock596" required
 Response ConceptBlock596 {
 	scene "scenes/Biker/WorldFarmHouseNPC02.vcd" then orator_farm_radio ConceptBlock597 foo:0 -5.902 //Attention Army: This is the cops.
 }
@@ -2657,7 +2641,7 @@ Rule ConceptBlock596 {
 	Response ConceptBlock596
 }
 
-	criterion "ConceptBlock597" "Concept" "ConceptBlock597" required
+criterion "ConceptBlock597" "Concept" "ConceptBlock597" required
 Response ConceptBlock597 {
 	scene "scenes/npcs/soldier_radiobutton110.vcd" then self ConceptBlock598 foo:0 .8 //Jesus Christ. Captain, we got survivors. They say they're cops!
 }
@@ -2666,7 +2650,7 @@ Rule ConceptBlock597 {
 	Response ConceptBlock597
 }
 
-	criterion "ConceptBlock598" "Concept" "ConceptBlock598" required
+criterion "ConceptBlock598" "Concept" "ConceptBlock598" required
 Response ConceptBlock598 {
 	scene "scenes/npcs/soldier_radiobutton105.vcd" then self ConceptBlock586 foo:0 15 //We'll come get you! Convoy's gonna stir up the infected, though. Prepare yourselves and advise when ready, over.
 }
@@ -2679,7 +2663,7 @@ Rule ConceptBlock598 {
 
 
 //Plane initiate attract loop
-	criterion "ConceptBlock564" "Concept" "plane_radio_broadcast" required
+criterion "ConceptBlock564" "Concept" "plane_radio_broadcast" required
 Response ConceptBlock564 {
 	scene "scenes/npcs/planepilot_radioinitialbroadcast06.vcd" then self ConceptBlock565 foo:0 12 //Hey! You there! Y'all wanna get me fueled up?
 }
@@ -2689,7 +2673,7 @@ Rule ConceptBlock564 {
 }
 
 //Plane attract loop
-	criterion "ConceptBlock565" "Concept" "ConceptBlock565" required
+criterion "ConceptBlock565" "Concept" "ConceptBlock565" required
 Response ConceptBlock565 {
 	scene "scenes/npcs/planepilot_radioinitialbroadcast06.vcd" then self ConceptBlock565 foo:0 12 //Hey! You there! Y'all wanna get me fueled up?
 	scene "scenes/npcs/planepilot_radioinitialbroadcast07.vcd" then self ConceptBlock565 foo:0 12 //Hey there! Don't suppose y'all wanna gas me up?
@@ -2703,7 +2687,7 @@ Rule ConceptBlock565 {
 }
 
 //Survivor presses radio button
-	criterion "ConceptBlock566" "Concept" "plane_radio_button1" required
+criterion "ConceptBlock566" "Concept" "plane_radio_button1" required
 Response ConceptBlock566 {
 	scene "scenes/npcs/planepilot_radiobutton105.vcd" then Self ConceptBlock567 foo:0 .2 //Alright! Gas me up, and we can fly out of here!
 }
@@ -2714,7 +2698,7 @@ Rule ConceptBlock566 {
 	Response ConceptBlock566
 }
 
-	criterion "ConceptBlock567" "Concept" "ConceptBlock567" required
+criterion "ConceptBlock567" "Concept" "ConceptBlock567" required
 Response ConceptBlock567 {
 	scene "scenes/npcs/planepilot_radiobutton104.vcd" then Self ConceptBlock568 foo:0 15 //The pump's gonna make a real racket. So you make sure you're ready for a fight before you start 'er up.
 }
@@ -2724,7 +2708,7 @@ Rule ConceptBlock567 {
 }
 
 //Button press 2 nag
-	criterion "ConceptBlock568" "Concept" "ConceptBlock568" required
+criterion "ConceptBlock568" "Concept" "ConceptBlock568" required
 Response ConceptBlock568 {
 	scene "scenes/npcs/planepilot_radionag04.vcd" then self ConceptBlock568 foo:0 20 //Hit the fuel button and let's get outta here!
 }
@@ -2734,7 +2718,7 @@ Rule ConceptBlock568 {
 }
 
 //Survivor starts gas pump
-	criterion "ConceptBlock569" "Concept" "plane_radio_button2" required
+criterion "ConceptBlock569" "Concept" "plane_radio_button2" required
 Response ConceptBlock569 {
 	scene "scenes/npcs/planepilot_radiobutton203.vcd" then Self ConceptBlock570 foo:0 .05 //That did it! I can hear the truck pumpin'!
 }
@@ -2745,7 +2729,7 @@ Rule ConceptBlock569 {
 	Response ConceptBlock569
 }
 
-	criterion "ConceptBlock570" "Concept" "ConceptBlock570" required
+criterion "ConceptBlock570" "Concept" "ConceptBlock570" required
 Response ConceptBlock570 {
 	scene "scenes/npcs/planepilot_radiobutton205.vcd" //Hold 'em off for me while I fuel up!
 }
@@ -2755,7 +2739,7 @@ Rule ConceptBlock570 {
 }
 
 //Plane's fueled and ready to fly!
-	criterion "ConceptBlock571" "Concept" "plane_radio_ready" required
+criterion "ConceptBlock571" "Concept" "plane_radio_ready" required
 Response ConceptBlock571 {
 	scene "scenes/npcs/planepilot_radioarrived01.vcd" //Alright, we're fueled up! Get in!
 }
@@ -2765,7 +2749,7 @@ Rule ConceptBlock571 {
 }
 
 //Plane's fueled and ready to fly!
-	criterion "ConceptBlock572" "Concept" "ConceptBlock572" required
+criterion "ConceptBlock572" "Concept" "ConceptBlock572" required
 Response ConceptBlock572 {
 	scene "scenes/npcs/planepilot_radioarrived10.vcd" then Self ConceptBlock572 foo:0 4 //What're you waitin' for, your row to be called? Get in!
 }
@@ -2775,7 +2759,7 @@ Rule ConceptBlock572 {
 }
 
 //Plane In Transit nag 1
-	criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
+criterion "ConceptBlock690" "Concept" "plane_radio_intransit" required
 Response ConceptBlock690 {
 	scene "scenes/npcs/planepilot_radiointransit01.vcd" //Gas tank's a quarter full! Sorry, guys, still a ways yet!
 }
@@ -2907,10 +2891,10 @@ Rule ConceptBlock953 {
 }
 
 //BikerGettingRevived
-	criterion "ConceptBlock954" "Concept" "GettingRevived" required
+criterion "ConceptBlock954" "Concept" "GettingRevived" required
 Response ConceptBlock954 {
 	scene "scenes/Biker/GettingRevived01.vcd" then subject ReviveBgo foo:0 -1.964 //I'm okay.
-	scene "scenes/Biker/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.887 //No, no, I'm allright.
+	scene "scenes/Biker/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.887 //No, no, I'm alright.
 	scene "scenes/Biker/GettingRevived03.vcd" then subject ReviveBfine foo:0 -1.066 //[groan]
 	scene "scenes/Biker/GettingRevived04.vcd" then subject ReviveBfine foo:0 -2.269 //Hell if I know.
 	scene "scenes/Biker/GettingRevived05.vcd" then subject ReviveBgo foo:0 -3.925 //Ah, hey, is this my blood?
@@ -2934,7 +2918,7 @@ Rule ConceptBlock954 {
 //USES criterion "ConceptBlock954" "Concept" "GettingRevived" required
 Response ConceptBlock955 {
 	scene "scenes/Manager/GettingRevived01.vcd" then subject ReviveBgo foo:0 -1.022 //I'm okay.
-	scene "scenes/Manager/GettingRevived02.vcd" then subject ReviveBfine foo:0 -1.280 //I'm allright.
+	scene "scenes/Manager/GettingRevived02.vcd" then subject ReviveBfine foo:0 -1.280 //I'm alright.
 	scene "scenes/Manager/GettingRevived03.vcd" then subject ReviveBgo foo:0 -2.048 //[groan]
 	scene "scenes/Manager/GettingRevived04.vcd" then subject ReviveBgo foo:0 -1.287 //I don't even know.
 	scene "scenes/Manager/GettingRevived05.vcd" then subject ReviveBfine foo:0 -2.278 //Aw hell, I'm bleedin'.
@@ -2956,7 +2940,7 @@ Rule ConceptBlock955 {
 Response ConceptBlock956 {
 	scene "scenes/NamVet/FallShort03.vcd" then subject ReviveBfine foo:0 -1 //[Yelp!]
 	scene "scenes/NamVet/GettingRevived01.vcd" then subject ReviveBfine foo:0 -1.600 //I'm okay.
-	scene "scenes/NamVet/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.685 //I'm allright.
+	scene "scenes/NamVet/GettingRevived02.vcd" then subject ReviveBgo foo:0 -1.685 //I'm alright.
 	scene "scenes/NamVet/GettingRevived03.vcd" then subject ReviveBfine foo:0 -3.285 //[groan]
 	scene "scenes/NamVet/GettingRevived04.vcd" then subject ReviveBfine foo:0 -1.451 //Hell if I know.
 	scene "scenes/NamVet/GettingRevived05.vcd" then subject ReviveBgo foo:0 -2.417 //Most of this blood ain't mine.
@@ -3007,7 +2991,7 @@ Rule ConceptBlock958 {
 }
 
 //NamvetNamVetWhoAreYou - SPECIAL: NamVetWhoAreYou Response
-	criterion "ConceptBlock959" "Concept" "NamVetWhoAreYou" required
+criterion "ConceptBlock959" "Concept" "NamVetWhoAreYou" required
 Response ConceptBlock959 {
 	scene "scenes/Biker/GenericResponses18.vcd" //[Bill doesn't recognize him] It's Francis!
 	scene "scenes/Biker/GenericResponses19.vcd" //[Bill doesn't recognize him] Come on, man, it's Francis!
@@ -3031,6 +3015,7 @@ Rule ConceptBlock960 {
 //USES criterion "ConceptBlock959" "Concept" "NamVetWhoAreYou" required
 Response ConceptBlock961 {
 	scene "scenes/TeenGirl/GenericResponses21.vcd" //[Bill doesn't recognize her] Bill, it's Zoey!
+	scene "scenes/TeenGirl/C6DLC3OPENINGDOOR07.vcd" //Unbelievable.
 }
 Rule ConceptBlock961 {
 	criteria ConceptBlock959 IsNotCoughing IsTeenGirl IsTalk
@@ -3038,7 +3023,7 @@ Rule ConceptBlock961 {
 }
 
 //BikerReviveBgo
-	criterion "ConceptBlock962" "Concept" "ReviveBgo" required
+criterion "ConceptBlock962" "Concept" "ReviveBgo" required
 Response ConceptBlock962 {
 	scene "scenes/Biker/ReviveFriendB01.vcd" //Up and at 'em.
 	scene "scenes/Biker/ReviveFriendB02.vcd" //Come on up!
@@ -3076,7 +3061,7 @@ Rule ConceptBlock964 {
 }
 
 //BikerReviveBfine
-	criterion "ConceptBlock965" "Concept" "ReviveBfine" required
+criterion "ConceptBlock965" "Concept" "ReviveBfine" required
 Response ConceptBlock965 {
 	scene "scenes/Biker/ReviveFriendB07.vcd" //Hell, you're fine.
 	scene "scenes/Biker/ReviveFriendB08.vcd" //It don't look bad.

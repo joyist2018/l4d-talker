@@ -1,4 +1,3 @@
-//CRITERIA
 criterion "ConceptC6M2EllisStoryStart03a" "Concept" "C6M2EllisStoryStart03a" required
 criterion "ConceptC6M3EllisBridgeStoryStart02a" "Concept" "C6M3EllisBridgeStoryStart02a" required
 criterion "ConceptC6M3EllisBridgeStoryStart02b" "Concept" "C6M3EllisBridgeStoryStart02b" required
@@ -360,7 +359,6 @@ Rule FinaleSceneTriggerGambler02 {
 	Response FinaleSceneTriggerGambler02
 }
 
-
 Response FinaleSceneTriggerProducer03 {
 	scene "scenes/dlc1_finalechat_03.vcd" //what's your name? Don't worry about him.
 }
@@ -371,7 +369,6 @@ Rule FinaleSceneTriggerProducer03 {
 	forceweight 1
 	Response FinaleSceneTriggerProducer03
 }
-
 
 Response FinaleSceneTriggerProducer04 {
 	scene "scenes/dlc1_finalechat_04.vcd"
@@ -408,7 +405,6 @@ Rule FinaleSceneTriggerGambler06 {
 	forceweight 1
 	Response FinaleSceneTriggerGambler06
 }
-
 
 Response FinaleSceneTriggerCoach07 {
 	scene "scenes/dlc1_finalechat_07.vcd"
@@ -448,7 +444,6 @@ Rule FinaleSceneTriggerProducer09 {
 	Response FinaleSceneTriggerProducer09
 }
 
-
 Response FinaleSceneTriggerProducer10 {
 	scene "scenes/dlc1_finalechat_10.vcd"
 }
@@ -471,7 +466,6 @@ Rule FinaleSceneTriggerGambler10 {
 	Response FinaleSceneTriggerGambler10
 }
 
-
 Response FinaleSceneTriggerMechanic11 {
 	scene "scenes/dlc1_finalechat_11.vcd"
 }
@@ -483,7 +477,6 @@ Rule FinaleSceneTriggerMechanic11 {
 	Response FinaleSceneTriggerMechanic11
 }
 
-
 Response FinaleSceneTriggerMechanic12 {
 	scene "scenes/dlc1_finalechat_12.vcd"
 }
@@ -494,7 +487,6 @@ Rule FinaleSceneTriggerMechanic12 {
 	forceweight 1
 	Response FinaleSceneTriggerMechanic12
 }
-
 
 Response FinaleSceneTriggerMechanic13 {
 	scene "scenes/dlc1_finalechat_13.vcd"
@@ -545,7 +537,6 @@ Rule FinaleSceneTriggerCoach16 {
 	Response FinaleSceneTriggerCoach16
 }
 
-
 Response FinaleSceneTriggerCoach17 {
 	scene "scenes/dlc1_finalechat_17.vcd"
 }
@@ -594,7 +585,6 @@ Rule C6M2EllisStoryStartMechanic02 {
 	Response C6M2EllisStoryStartMechanic02
 }
 
-
 Response C6M2EllisStoryStartMechanic03 {
 	scene "scenes/Mechanic/DLC1_KeithStories02a.vcd" then self C6M2EllisStoryStart03a foo:0 -9.23 //This one time my buddy Keith started up a historic tour, on account of his mom took him to Colonial Williamsburg, and it is like a license to print money at them places.
 }
@@ -614,7 +604,6 @@ Rule C6M2EllisStoryStart03aMechanic {
 	Response C6M2EllisStoryStart03aMechanic
 }
 
-
 Response C6M3EllisStoryInitMechanic {
 	scene "scenes/Mechanic/blank.vcd"
 }
@@ -626,7 +615,6 @@ Rule C6M3EllisStoryInitMechanic {
 	Response C6M3EllisStoryInitMechanic
 }
 
-
 Response C6M3EllisStoryStartMechanic01 {
 	scene "scenes/Mechanic/DLC1_CommunityE08.vcd" then any EllisInterrupt foo:0 -21.73 //I ever tell you about the time my buddy Keith wanted to see what it felt like to be in snow storm? He ain't ever seen real snow, only snow we got is from that big machine that cleans the ice at the local rink. So he figured to make do and when that machine went to dump its load, he would just lay under it. Took us 2 hours to dig him out. He lost two fingers and a thumb to frostbite.
 }
@@ -637,7 +625,6 @@ Rule C6M3EllisStoryStartMechanic01 {
 	forceweight 1
 	Response C6M3EllisStoryStartMechanic01
 }
-
 
 Response C6M3EllisStoryStartMechanic02 {
 	scene "scenes/Mechanic/DLC1_KeithStories04.vcd" then any EllisInterrupt foo:0 -41.19 //I ever tell you about the time Keith made sushi? Yeah, his mom took him to a sushi place for his birthday and he didn't want to go, and it turned out he LOVED it, man. But it's like 10 bucks a su-sho in one of them places, so Keith figures hey, how hard can it be to roll up some raw food in seaweed, right? As it turns out, it's hard. Now, they say that experience is the best teacher, and experience taught Keith that if you ever eat three pounds of raw chicken, it kills you. Now luckily, Keith's brain went into self-defense mode and started shutting organs down to head the chicken off at the pass, and the doctors were able to get 'em out before his heart stopped. But to this day, Keith has no sensation in his right foot, and he don't recognize his own brother Paul no more.
@@ -662,8 +649,7 @@ Rule C6M3EllisStoryStartMechanic03 {
 }
 
 
-//////////////////////////Ellis bridge story
-
+//Ellis bridge story
 Response C6M3EllisBridgeStoryStartMechanic01 {
 	scene "scenes/Mechanic/DLC1_KeithStories05.vcd" then Gambler C5M3GraveNags02 foo:0 -20.0 //Hey ya'll, yeah, I like this bridge you got. You know, this reminds me the my buddy Keith and I were once on a bridge just like this, man. Well, I mean kinda, I mean I was on the bridge and Keith thought he could jump the river without the bridge, so I raised the bridge, and well.. Did you know cars can float? I mean, for a little while at least..
 }
@@ -674,7 +660,6 @@ Rule C6M3EllisBridgeStoryStartMechanic01 {
 	forceweight 1
 	Response C6M3EllisBridgeStoryStartMechanic01
 }
-
 
 Response C6M3EllisBridgeStoryStartMechanic02 {
 	scene "scenes/Mechanic/DLC1_KeithStories03a.vcd" then self C6M3EllisBridgeStoryStart02a foo:0 -14.21 //Ya know, my buddy Keith had his car drop in a lake off a bridge like this one here. See he was drivin' over it late at night, and there in the middle of the bridge was what looked, in Keith's estimation, like a dead bear. So Keith gets out of his car to ick to poke it with, right?
@@ -702,4 +687,3 @@ Rule C6M3EllisBridgeStoryStart02bMechanic {
 	criteria ConceptC6M3EllisBridgeStoryStart02b IsMechanic IsNotSaidC6M3Elevator
 	Response C6M3EllisBridgeStoryStart02bMechanic
 }
-

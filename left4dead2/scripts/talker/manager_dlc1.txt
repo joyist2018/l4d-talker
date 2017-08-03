@@ -35,6 +35,7 @@ Response c6m3_outroL4D1AllManager {
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic04.vcd" then TeenGirl c6m3_outroL4D103a foo:0 -1.146 //Should we have told them?
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic05.vcd" //BYE RO! BYE COACH! BYE ELLIS! BYE WHATEVER YOUR NAME IS!
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic12.vcd" then TeenGirl c6m3_outroL4D107a foo:0 -3.412 //I've got a good feeling about them. I think they're gonna be okay.
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleBridgeRun03.vcd" //Bye Rochelle! Bye Nick! Bye Coach! Bye Ellis!
 }
 Rule c6m3_outroL4D1AllManager {
 	criteria Conceptc6m3_outro3 IsManager isC6m3_port IsEveryoneAliveWeight0 IsNotVersus IsNotSaidc6m3_outro3
@@ -46,7 +47,7 @@ Rule c6m3_outroL4D1AllManager {
 
 Response c6m3_outroL4D1CoachManager {
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic06.vcd" //Bye Coach! Keep it positive!
-	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic07.vcd" //Bye Coach! Keep it positive! (Rare)
+	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic07.vcd" //Bye Coach! Keep it positive!
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleCinematic08.vcd" //I think we're gonna be seeing more of that guy!
 }
 Rule c6m3_outroL4D1CoachManager {
@@ -91,7 +92,6 @@ Rule L4D1_NiceJobPourManager {
 Response WorldC6M3_ByBridge01Manager {
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleBridgeRun01.vcd" //Get to your car, we got 'em.
 	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleBridgeRun02.vcd" //Get going! Get going!
-	scene "scenes/Manager/DLC1_C6M3_L4D1FinaleBridgeRun03.vcd"
 }
 Rule WorldC6M3_ByBridge01Manager {
 	criteria ConceptWorldC6M3_ByBridge01 IsManager
@@ -105,7 +105,7 @@ Response L4D1SpottedTankManager {
 	scene "scenes/Manager/DLC1_L4D1Tank02.vcd" //I am going to rip those tanks up!
 	scene "scenes/Manager/DLC1_L4D1Tank03.vcd" //This is just why we put this up here!
 	scene "scenes/Manager/DLC1_L4D1Tank04.vcd" //This is why we put this baby up here!
-	scene "scenes/Manager/DLC1_L4D1Tank05.vcd" odds 1 //TWO TANKS!
+	scene "scenes/Manager/DLC1_L4D1Tank05.vcd" odds 50 //TWO TANKS!
 }
 Rule L4D1SpottedTankManager {
 	criteria ConceptPlayerWarnSpecial IsSpecialTypeTank IsNotCoughing IsManager IsTalk IsTalkManager IsWorldTalkManager Isc6m3_port IsNotSpeakingWeight0
